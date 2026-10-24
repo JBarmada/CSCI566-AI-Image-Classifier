@@ -1,0 +1,36 @@
+
+# GenImage data
+data/
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.zip
+*.tar
+*.tar.gz
+
+# Large model artifacts
+features/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# Slurm outputs and temporary files
+slurm-*.out
+logs/
+tmp/
+
+# OS files
+.DS_Store
