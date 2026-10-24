@@ -11,6 +11,7 @@ set -eo pipefail
 trap 'printf "\nSetup stopped at line %s. Fix the error above, then rerun this script.\n" "$LINENO" >&2' ERR
 
 ENV_NAME="csci566-vit"
+export VIT_CUDA_WHEEL="${VIT_CUDA_WHEEL:-cu118}"
 CLIP_COMMIT="a1d071733d7111c9c014f024669f959182114e33"
 
 printf '\n=== 1/6: Connect to Conda ===\n'
@@ -68,13 +69,13 @@ python -m pip install --upgrade pip
 python -m pip install "torch==2.7.1+${CUDA_WHEEL}" "torchvision==0.22.1+${CUDA_WHEEL}" \
     --index-url "https://download.pytorch.org/whl/${CUDA_WHEEL}"
 python -m pip install pandas numpy scikit-learn matplotlib pillow tqdm ipykernel \
-    ftfy regex "setuptools<81"
+    ftfy regex "setuptools==80.9.0" wheel
 
 printf '\n=== 4/6: Install the original CLIP implementation ===\n'
 if ! command -v git >/dev/null 2>&1; then
     conda install --name "$ENV_NAME" git -y
 fi
-python -m pip install "git+https://github.com/openai/CLIP.git@${CLIP_COMMIT}"
+python -m pip install --no-build-isolation "git+https://github.com/openai/CLIP.git@${CLIP_COMMIT}"
 python -m pip check
 
 printf '\n=== 5/6: Check packages, cache CLIP weights and check GPU ===\n'
