@@ -34,3 +34,8 @@ tmp/
 
 # OS files
 .DS_Store
+
+# CARC shared directory symlinks
+/data
+/features
+/checkpoints
