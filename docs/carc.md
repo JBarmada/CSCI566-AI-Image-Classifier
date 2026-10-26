@@ -58,7 +58,7 @@ work is still subject to its allocation's time limit.
 From a terminal in your repository folder:
 
 ```bash
-bash setup_carc_vit.sh
+bash code/vit/setup_carc_vit.sh
 ```
 
 The script creates/reuses `csci566-vit`, installs PyTorch and pinned OpenAI CLIP,
@@ -105,5 +105,5 @@ du -sh /project2/yzhao010_1531/csci566-genimage/data
 - [CARC: Conda](https://www.carc.usc.edu/user-guides/hpc-systems/software/conda)
 - [CARC: Jupyter kernels](https://www.carc.usc.edu/user-guides/hpc-systems/software/jupyter-kernels)
 
-The [setup script](../setup_carc_vit.sh) specifies the project's actual package
+The [setup script](../code/vit/setup_carc_vit.sh) specifies the project's actual package
 installation.

@@ -2,13 +2,14 @@
 import contextlib
 import importlib.util
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location('vit_batch', ROOT / 'run_vit_master.py')
+spec = importlib.util.spec_from_file_location('vit_batch', ROOT / 'code/vit/run_vit_master.py')
 batch = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(batch)
 
@@ -69,6 +70,32 @@ directory.mkdir(parents=True)
         code, status = self.run_case('failed', preflight=True)
         self.assertEqual(code, 0)
         self.assertEqual(status['state'], 'preflight_passed')
+
+    def test_default_notebook_from_another_working_directory(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            notebook = self.notebook(root, 'failed')
+            notebook = notebook.rename(root / 'ViT_Master_Experiments.ipynb')
+            script = root / 'code/vit/run_vit_master.py'
+            script.parent.mkdir(parents=True)
+            script.touch()
+            elsewhere = root / 'elsewhere'
+            elsewhere.mkdir()
+            original_cwd = Path.cwd()
+            try:
+                os.chdir(elsewhere)
+                with patch.object(batch, '__file__', str(script)), \
+                     patch.object(batch, 'study_lock', no_flock), \
+                     patch.object(batch.signal, 'signal'):
+                    code = batch.main(['--preflight-only'])
+            finally:
+                os.chdir(original_cwd)
+            statuses = list((root / 'results/study/batch_jobs').glob('*/status.json'))
+            self.assertEqual(code, 0)
+            self.assertEqual(len(statuses), 1)
+            status = json.loads(statuses[0].read_text())
+            self.assertEqual(status['state'], 'preflight_passed')
+            self.assertEqual(status['notebook'], str(notebook.resolve()))
 
     def test_interruption_is_resumable_not_success(self):
         code, status = self.run_case('interrupted')

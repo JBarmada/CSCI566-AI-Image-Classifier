@@ -19,9 +19,9 @@ k = 1, 2, 4, 7 training generators at a fixed total training size.
 | File | Purpose |
 |---|---|
 | [ViT_Master_Experiments.ipynb](ViT_Master_Experiments.ipynb) | Model, settings, training, evaluation, and summaries |
-| [run_vit_master.py](run_vit_master.py) | Runs that notebook without an interactive Jupyter session |
-| [run_vit_master.slurm](run_vit_master.slurm) | Submits the runner to CARC |
-| [setup_carc_vit.sh](setup_carc_vit.sh) | One-time environment/kernel setup per teammate |
+| [code/vit/run_vit_master.py](code/vit/run_vit_master.py) | Runs that notebook without an interactive Jupyter session |
+| [code/vit/run_vit_master.slurm](code/vit/run_vit_master.slurm) | Submits the runner to CARC |
+| [code/vit/setup_carc_vit.sh](code/vit/setup_carc_vit.sh) | One-time environment/kernel setup per teammate |
 | [tests/](tests/) | Synthetic checks for the notebook and runner |
 
 Run from your CARC repository folder when you are the assigned study operator.
@@ -30,16 +30,16 @@ Only one process may write to a study at a time.
 
 ```bash
 # Once per teammate, in a GPU-backed CARC session:
-bash setup_carc_vit.sh
+bash code/vit/setup_carc_vit.sh
 
 # Submit preflight:
-sbatch --time=00:30:00 run_vit_master.slurm --preflight-only
+sbatch --time=00:30:00 code/vit/run_vit_master.slurm --preflight-only
 ```
 
 After that job finishes with `Preflight passed` and exit code 0, submit training:
 
 ```bash
-sbatch run_vit_master.slurm
+sbatch code/vit/run_vit_master.slurm
 ```
 
 The master covers all four k values. The earlier k=1/k=2 notebooks are retained
