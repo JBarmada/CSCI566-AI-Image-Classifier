@@ -4,7 +4,8 @@ The [master notebook](../ViT_Master_Experiments.ipynb) is the one current ViT
 implementation. The [Python runner](../code/vit/run_vit_master.py) executes its cells;
 the [Slurm file](../code/vit/run_vit_master.slurm) submits that runner. The notebook
 stays at the root; launcher/setup scripts live in `code/vit/`. Run the commands
-below from the repository root. The older starters are [archived](../archive/vit/).
+below from the repository root. The Slurm launcher also finds the root when
+submitted from any subdirectory. The older starters are [archived](../archive/vit/).
 
 Jad owns the current 24-run study. Other teammates should analyze its exports
 rather than start another writer or change its protocol. See the
@@ -54,6 +55,12 @@ From your repository directory on CARC (not inside a notebook cell):
 ```bash
 sbatch code/vit/run_vit_master.slurm
 ```
+
+Alternatively, from `code/vit/`, submit `sbatch run_vit_master.slurm`. The launcher
+walks up from Slurm's submission directory to find the master notebook and runner,
+then starts the runner at the repository root. It does not rely on the script's
+location because Slurm executes a spool copy. Submission from outside the checkout
+stops with an explanatory error. Logs remain in the directory you submitted from.
 
 The job requests one GPU, four CPUs, 24 GB RAM and 24 hours using account
 `yzhao010_1531`. It activates your existing `csci566-vit` environment. It does not
