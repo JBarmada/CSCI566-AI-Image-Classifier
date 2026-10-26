@@ -12,6 +12,8 @@ import sys
 import tempfile
 import types
 import unittest
+from unittest.mock import patch
+import ast
 
 os.environ.setdefault('MPLBACKEND', 'Agg')
 import numpy as np
@@ -126,6 +128,36 @@ class NotebookTests(unittest.TestCase):
         for bad in [[float('nan'), .2], [-.1, 1], [0, 1.1]]:
             with self.assertRaises(ValueError):
                 m.classification_metrics([0,1], bad)
+
+    def test_fingerprint_without_source_or_class_file(self):
+        m = self.m
+        original = m.ManifestImages
+        class_source = None
+        for cell in self.nb['cells']:
+            if cell['cell_type'] != 'code':
+                continue
+            source = ''.join(cell['source'])
+            for node in ast.parse(source).body:
+                if isinstance(node, ast.ClassDef) and node.name == 'ManifestImages':
+                    class_source = ast.get_source_segment(source, node)
+        namespace = {**m.__dict__, '__name__': '__main__'}
+        # Match notebook-style classes whose module has no usable source file.
+        exec(compile('\n\n' + class_source, '<ipython-input-999>', 'exec'), namespace)
+        try:
+            m.ManifestImages = namespace['ManifestImages']
+            with patch.object(m.inspect, 'getsource', side_effect=OSError('source code not available')):
+                before = m.code_fingerprint()
+                # Compare equivalent cell compilations, not file-vs-cell compiler
+                # optimizations (Python 3.12 may optimize imported module attributes).
+                exec(compile('\n\n\n' + class_source, '<ipython-input-1000>', 'exec'), namespace)
+                m.ManifestImages = namespace['ManifestImages']
+                self.assertEqual(before, m.code_fingerprint())
+                def changed_length(self):
+                    return 999
+                m.ManifestImages.__len__ = changed_length
+                self.assertNotEqual(before, m.code_fingerprint())
+        finally:
+            m.ManifestImages = original
 
     def test_paths_hashes_and_leakage(self):
         m = self.m

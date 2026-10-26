@@ -79,6 +79,10 @@ separate augmentation ablations need additional explicitly named protocols.
 
 ## Verification
 
+The code-version check fingerprints live Python implementations, including class
+methods, without requiring source files. This supports Jupyter-defined classes
+and stays stable when the same cells are executed again.
+
 The included `tests/test_vit_master.py` uses tiny synthetic images and a toy frozen
 encoder. It checks notebook compilation, metric/calibration boundaries, path and
 hash validation, split leakage detection, deterministic degradation/caching,
