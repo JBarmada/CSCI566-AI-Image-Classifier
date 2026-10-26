@@ -1,0 +1,16 @@
+{
+  "state": "complete",
+  "started_utc": "20261026T090735_793182Z",
+  "slurm_job_id": "13458685",
+  "host": "d13-11.hpc.usc.edu",
+  "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+  "argv": [
+    "run_vit_master.py",
+    "--recover-stale-locks"
+  ],
+  "notebook": "/home1/barmada/CSCI566-AI-Image-Classifier/ViT_Master_Experiments.ipynb",
+  "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_master_v1",
+  "selected_runs": 24,
+  "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_master_v1/summaries/0e9eeb5f22d9",
+  "finished_utc": "2026-10-26T11:53:27.013264+00:00"
+}

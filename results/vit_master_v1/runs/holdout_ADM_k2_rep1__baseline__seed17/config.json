@@ -1,0 +1,74 @@
+{
+  "experiment": "holdout_ADM_k2_rep1",
+  "holdout": "ADM",
+  "k": 2,
+  "rep": 1,
+  "train_generators": [
+    "stable_diffusion_v_1_4",
+    "stable_diffusion_v_1_5"
+  ],
+  "nature_generator": "ADM",
+  "manifest_sha256": {
+    "train": "156c409ca94ad1a44d2bbf28e6de9eaddfcf3023a254db98e656f882f6b61fb4",
+    "val": "78e5cc1b605cc2380555dcc2371caa946fdfb1013f0dc06058e9a33c78b6cdd8",
+    "test": "acdba9b08658e8e6cfd7d21abcea3f37c45dc93b810bf1f77f35a405f37e1cef"
+  },
+  "seed": 17,
+  "mode": "baseline",
+  "model": "ViT-L/14",
+  "backbone_frozen": true,
+  "features_l2_normalized": true,
+  "label_mapping": {
+    "real": 0,
+    "fake": 1
+  },
+  "threshold": 0.5,
+  "augmentation": null,
+  "image_batch_size": 16,
+  "head_batch_size": 128,
+  "max_epochs": 20,
+  "patience": 3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "selection": "validation AUROC; ties use validation BCE",
+  "content_hashes_verified": true,
+  "num_workers": 0,
+  "expected_counts": {
+    "train": {
+      "0": 1400,
+      "1": 1400
+    },
+    "val": {
+      "0": 280,
+      "1": 280
+    },
+    "test": {
+      "0": 280,
+      "1": 280
+    }
+  },
+  "preprocessing": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "engine_hash": "603bd00da5a09013b262c7cf6bda49441418b1af61dd176f3ab0b3e9964b0cdf",
+  "environment": {
+    "python": "3.11.17",
+    "torch": "2.7.1+cu118",
+    "torchvision": "0.22.1+cu118",
+    "numpy": "2.4.3",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "pillow": "12.1.1",
+    "clip": "1.0",
+    "clip_source": {
+      "url": "https://github.com/openai/CLIP.git",
+      "vcs_info": {
+        "commit_id": "a1d071733d7111c9c014f024669f959182114e33",
+        "requested_revision": "a1d071733d7111c9c014f024669f959182114e33",
+        "vcs": "git"
+      }
+    }
+  },
+  "device_type": "cuda",
+  "protocol_hash": "bd83058589d16ae68f03088562d9e59d1029314931e96f0510ae566774198e5b",
+  "created_utc": "2026-10-26T09:40:48.332024+00:00",
+  "gpu": "Tesla V100-PCIE-32GB"
+}

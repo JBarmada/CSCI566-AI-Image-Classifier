@@ -1,0 +1,15 @@
+{
+  "study": "vit_master_v1",
+  "source_host": "discovery.usc.edu",
+  "source_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_master_v1",
+  "source_summary": "/project2/yzhao010_1531/csci566-genimage/results/vit_master_v1/summaries/0e9eeb5f22d9",
+  "source_batch": "/project2/yzhao010_1531/csci566-genimage/results/vit_master_v1/batch_jobs/13458685_20261026T090735_793182Z",
+  "batch_state": "complete",
+  "finished_utc": "2026-10-26T11:53:27.013264+00:00",
+  "exported_utc": "2026-10-26T22:58:33.652183+00:00",
+  "run_count": 24,
+  "copied_files": 297,
+  "copied_bytes": 7499203,
+  "input_notebook_sha256": "b78c85c5e146cd99fb4af622d77337c829fd963cb611fdb4720261ae12bd8c47",
+  "note": "Copied existing artifacts; no training, inference, or remote writes."
+}

@@ -1,0 +1,10 @@
+{
+  "protocol_hash": "10ffb6465e7a74fe04e0f22753c6dd9d7aacf43e6558d2c4704890df26093ffc",
+  "checkpoint_sha256": "20c3658fee3487f33671f62b8756af28233ed4acae66362593f7f2a070b837bb",
+  "condition": "clean",
+  "degradation": null,
+  "evaluation_seed": 566,
+  "bins": 10,
+  "threshold": 0.5,
+  "engine_hash": "603bd00da5a09013b262c7cf6bda49441418b1af61dd176f3ab0b3e9964b0cdf"
+}

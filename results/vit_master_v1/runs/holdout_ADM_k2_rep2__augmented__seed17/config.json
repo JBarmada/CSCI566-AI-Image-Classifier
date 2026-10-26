@@ -1,0 +1,100 @@
+{
+  "experiment": "holdout_ADM_k2_rep2",
+  "holdout": "ADM",
+  "k": 2,
+  "rep": 2,
+  "train_generators": [
+    "VQDM",
+    "stable_diffusion_v_1_5"
+  ],
+  "nature_generator": "ADM",
+  "manifest_sha256": {
+    "train": "6f1353722d0d988dbca4aa26d24c3d335e1e58f7b3e6ae0ce4a679905bc4f12b",
+    "val": "82d85bbd7dc837dccbadf17757a59824e2a352158efff3db10d8b438dfa54c25",
+    "test": "56945d4fcbcb265af71b2e75c7b908fc036b768dc7fc77519c213af189ce60e7"
+  },
+  "seed": 17,
+  "mode": "augmented",
+  "model": "ViT-L/14",
+  "backbone_frozen": true,
+  "features_l2_normalized": true,
+  "label_mapping": {
+    "real": 0,
+    "fake": 1
+  },
+  "threshold": 0.5,
+  "augmentation": {
+    "blur_p": 0.3,
+    "blur_radius": [
+      0.1,
+      2.0
+    ],
+    "jpeg_p": 0.3,
+    "jpeg_quality": [
+      40,
+      95
+    ],
+    "resize_p": 0.3,
+    "resize_scale": [
+      0.5,
+      1.0
+    ],
+    "noise_p": 0.3,
+    "noise_sigma": [
+      0.005,
+      0.03
+    ],
+    "lowpass_p": 0.3,
+    "lowpass_cutoff": [
+      0.35,
+      0.9
+    ]
+  },
+  "image_batch_size": 16,
+  "head_batch_size": 128,
+  "max_epochs": 20,
+  "patience": 3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "selection": "validation AUROC; ties use validation BCE",
+  "content_hashes_verified": true,
+  "num_workers": 0,
+  "expected_counts": {
+    "train": {
+      "0": 1400,
+      "1": 1400
+    },
+    "val": {
+      "0": 280,
+      "1": 280
+    },
+    "test": {
+      "0": 280,
+      "1": 280
+    }
+  },
+  "preprocessing": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "engine_hash": "603bd00da5a09013b262c7cf6bda49441418b1af61dd176f3ab0b3e9964b0cdf",
+  "environment": {
+    "python": "3.11.17",
+    "torch": "2.7.1+cu118",
+    "torchvision": "0.22.1+cu118",
+    "numpy": "2.4.3",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "pillow": "12.1.1",
+    "clip": "1.0",
+    "clip_source": {
+      "url": "https://github.com/openai/CLIP.git",
+      "vcs_info": {
+        "commit_id": "a1d071733d7111c9c014f024669f959182114e33",
+        "requested_revision": "a1d071733d7111c9c014f024669f959182114e33",
+        "vcs": "git"
+      }
+    }
+  },
+  "device_type": "cuda",
+  "protocol_hash": "8218219037aca5050cf56076fa33d65238cf06ad4d5bf9d1c096098e86f7aab5",
+  "created_utc": "2026-10-26T09:58:39.492706+00:00",
+  "gpu": "Tesla V100-PCIE-32GB"
+}
