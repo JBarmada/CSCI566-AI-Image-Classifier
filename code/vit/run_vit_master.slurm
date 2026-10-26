@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Submit from the repository root: sbatch code/vit/run_vit_master.slurm
+# Or from code/vit: sbatch run_vit_master.slurm
 # To change time: sbatch --time=12:00:00 code/vit/run_vit_master.slurm
 #SBATCH --job-name=vit-master
 #SBATCH --account=yzhao010_1531
@@ -15,9 +16,17 @@
 #SBATCH --open-mode=append
 
 set -eo pipefail
-cd "${SLURM_SUBMIT_DIR:?Submit this script with sbatch from the repository folder}"
-test -f code/vit/run_vit_master.py
-test -f ViT_Master_Experiments.ipynb
+# Slurm runs a spool copy, so BASH_SOURCE is not the checkout's script path.
+# Walk up from the submission folder to support the root or any subdirectory.
+repo_dir="$(cd "${SLURM_SUBMIT_DIR:?Submit from inside the repository checkout}" && pwd -P)"
+while [[ ! -f "$repo_dir/ViT_Master_Experiments.ipynb" || ! -f "$repo_dir/code/vit/run_vit_master.py" ]]; do
+    if [[ "$repo_dir" == / ]]; then
+        printf 'Cannot find the ViT repository above %s. Submit from inside its checkout.\n' "$SLURM_SUBMIT_DIR" >&2
+        exit 1
+    fi
+    repo_dir="$(dirname "$repo_dir")"
+done
+cd "$repo_dir"
 
 module purge
 module load conda

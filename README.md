@@ -27,6 +27,8 @@ k = 1, 2, 4, 7 training generators at a fixed total training size.
 Run from your CARC repository folder when you are the assigned study operator.
 Jad handles the current study; other teammates can work from its exports.
 Only one process may write to a study at a time.
+The Slurm launcher also supports submission from any folder inside the checkout;
+from `code/vit/`, use `sbatch run_vit_master.slurm`.
 
 ```bash
 # Once per teammate, in a GPU-backed CARC session:

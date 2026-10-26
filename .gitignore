@@ -29,8 +29,8 @@ venv/
 
 # Slurm outputs and temporary files
 slurm-*.out
-/vit-master-*.log
-/vit-full-run.log
+vit-master-*.log
+vit-full-run.log
 logs/
 tmp/
 
