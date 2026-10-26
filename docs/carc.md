@@ -106,4 +106,4 @@ du -sh /project2/yzhao010_1531/csci566-genimage/data
 - [CARC: Jupyter kernels](https://www.carc.usc.edu/user-guides/hpc-systems/software/jupyter-kernels)
 
 The [setup script](../setup_carc_vit.sh) specifies the project's actual package
-installation. The empty root `requirements.txt` is not the ViT environment spec.
+installation.
