@@ -1,0 +1,5 @@
+# Preserve exported artifact bytes and source checksums across operating systems.
+*.csv -text
+*.json -text
+*.png binary
+README.md text eol=lf

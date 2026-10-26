@@ -9,6 +9,7 @@ k = 1, 2, 4, 7 training generators at a fixed total training size.
 | Need | Read |
 |---|---|
 | Progress, proposed team tasks, and next experiments | [Team plan](docs/team-plan.md) |
+| Completed ViT pilot, predictions, and evaluation handoff | [ViT results](results/vit_master_v1/README.md) |
 | CARC environment and shared storage | [CARC setup](docs/carc.md) |
 | Run, resume, or understand the ViT study | [ViT guide](docs/vit.md) |
 | CNN workflow | [CNN team's notebook](cnn.ipynb) |

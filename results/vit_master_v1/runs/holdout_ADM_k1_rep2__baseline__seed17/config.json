@@ -1,0 +1,73 @@
+{
+  "experiment": "holdout_ADM_k1_rep2",
+  "holdout": "ADM",
+  "k": 1,
+  "rep": 2,
+  "train_generators": [
+    "VQDM"
+  ],
+  "nature_generator": "ADM",
+  "manifest_sha256": {
+    "train": "517ca9df73ada4861fee8ef19d1d68ed9df86f4b9a014b379a6eb32b26a6735e",
+    "val": "28d5fca175ebbea226736e338f4861fa9dd7093dbbf95524f11c32367435cb15",
+    "test": "cd77be5f7ec3c6f55b57b388d54624a0f110a78dce707905f6e4e90af1967fdb"
+  },
+  "seed": 17,
+  "mode": "baseline",
+  "model": "ViT-L/14",
+  "backbone_frozen": true,
+  "features_l2_normalized": true,
+  "label_mapping": {
+    "real": 0,
+    "fake": 1
+  },
+  "threshold": 0.5,
+  "augmentation": null,
+  "image_batch_size": 16,
+  "head_batch_size": 128,
+  "max_epochs": 20,
+  "patience": 3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "selection": "validation AUROC; ties use validation BCE",
+  "content_hashes_verified": true,
+  "num_workers": 0,
+  "expected_counts": {
+    "train": {
+      "0": 1400,
+      "1": 1400
+    },
+    "val": {
+      "0": 280,
+      "1": 280
+    },
+    "test": {
+      "0": 280,
+      "1": 280
+    }
+  },
+  "preprocessing": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb at 0x7f946bdb37e0>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "engine_hash": "603bd00da5a09013b262c7cf6bda49441418b1af61dd176f3ab0b3e9964b0cdf",
+  "environment": {
+    "python": "3.11.17",
+    "torch": "2.7.1+cu118",
+    "torchvision": "0.22.1+cu118",
+    "numpy": "2.4.3",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "pillow": "12.1.1",
+    "clip": "1.0",
+    "clip_source": {
+      "url": "https://github.com/openai/CLIP.git",
+      "vcs_info": {
+        "commit_id": "a1d071733d7111c9c014f024669f959182114e33",
+        "requested_revision": "a1d071733d7111c9c014f024669f959182114e33",
+        "vcs": "git"
+      }
+    }
+  },
+  "device_type": "cuda",
+  "protocol_hash": "acb62716184ee2dac215f793343189b15b41db77a0da2bf8650b44c3b9d53582",
+  "created_utc": "2026-10-26T05:31:14.119669+00:00",
+  "gpu": "Tesla P100-PCIE-16GB"
+}

@@ -4,6 +4,10 @@ Planning snapshot: **October 26, 2026**. The next progress report is approximate
 two weeks away: progress, literature review, initial results, and an updated plan.
 A final report and an in-person poster defense follow later.
 
+**Completion update (October 26):** CARC job 13458685 reports all 24 ViT runs and
+24 clean test evaluations complete. See the [results and evaluation handoff](../results/vit_master_v1/README.md).
+Progress statements below describe the earlier planning snapshot.
+
 Findings below were reviewed by Jad with ChatGPT. The work split is a proposal
 for the seven-person team, not a record of agreed assignments.
 
