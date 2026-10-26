@@ -1,8 +1,18 @@
 # ViT master notebook
 
+The [master notebook](../ViT_Master_Experiments.ipynb) is the one current ViT
+implementation. The [Python runner](../run_vit_master.py) executes its cells;
+the [Slurm file](../run_vit_master.slurm) submits that runner. Keep those three
+files together at the repository root. The older starters are [archived](../archive/vit/).
+
+Jad owns the current 24-run study. Other teammates should analyze its exports
+rather than start another writer or change its protocol. See the
+[team plan](team-plan.md) for proposed parallel tasks and dataset issues.
+
 Open `ViT_Master_Experiments.ipynb` at the repository root and select the existing
 **CSCI566 ViT** kernel in a GPU-backed CARC OnDemand session. The notebook is
-self-contained: no companion Python module is required.
+self-contained; the runner is only needed for terminal/batch execution. For a
+new environment or storage details, follow [CARC setup](carc.md).
 
 ## Default experiment plan
 
@@ -19,14 +29,13 @@ self-contained: no companion Python module is required.
 
 ## Run
 
-1. Set all options in Section 1. Defaults use the shared CARC paths in the README.
+1. For a new study, set options in Section 1. Keep the active pilot's options unchanged.
 2. Run all cells. Section 8 shows the verified 24-run plan; Section 9 runs it.
 3. Section 10 generates tables, paired augmentation deltas, calibration diagnostics,
    comparison plots, and heatmaps. Existing source images/manifests are never edited.
 
-`RUN_FINAL_TEST=True` is the default for a fixed benchmark. Change it to `False`
-if test reporting is not yet authorized by the team. Test results never affect
-checkpoint selection or the threshold. Do not tune this protocol on those results.
+`RUN_FINAL_TEST=True` is the default. Test results never affect checkpoint
+selection or the threshold. Do not tune this protocol on those results.
 
 All configurable options are in the first code cell, including seeds, batch sizes,
 epoch limits, augmentation strengths, evaluation conditions, and output paths.
@@ -146,9 +155,9 @@ session limits, completed-run skipping, configuration protection, and aggregatio
 Run in an environment with the notebook dependencies:
 
 ```bash
-python -m unittest discover -s tests -p 'test_vit_master.py' -v
+python -m unittest discover -s tests -p 'test_vit_*.py' -v
 ```
 
-These CPU checks do not validate actual CLIP weights, V100 execution, CARC permissions,
+These CPU checks do not validate actual CLIP weights, real GPU execution, CARC permissions,
 or the real dataset. The notebook performs those environment/data checks when run on
 CARC. No real-data training results are shipped with this notebook.
