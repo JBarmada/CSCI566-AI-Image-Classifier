@@ -159,6 +159,39 @@ class NotebookTests(unittest.TestCase):
         finally:
             m.ManifestImages = original
 
+    def test_restart_preprocessing_address_keeps_saved_checkpoint_identity(self):
+        m = self.m
+        directory = self.root / 'restart-address'
+        directory.mkdir()
+        payload = {'experiment': 'holdout_ADM_k1_rep0', 'mode': 'baseline',
+                   'preprocessing': 'Compose(<function _convert_image_to_rgb at 0x7f123abc>)',
+                   'learning_rate': .001, 'engine_hash': 'same-training-code',
+                   'expected_counts': {0: 1400, 1: 1400}, 'environment': {'torch': 'unchanged'}}
+        legacy_hash = m.raw_digest_json(payload)
+        m.atomic_json(directory / 'config.json', {**payload, 'protocol_hash': legacy_hash,
+                      'created_utc': 'original', 'gpu': 'P100'})
+        previous_bytes = (directory / 'config.json').read_bytes()
+        restarted = {**payload, 'preprocessing': payload['preprocessing'].replace('0x7f123abc', '0x7654def')}
+        restarted['protocol_hash'] = m.digest_json(restarted)
+        adopted = m.resolve_run_config(directory, restarted)
+        self.assertEqual(adopted['protocol_hash'], legacy_hash)
+        self.assertEqual(m.digest_json(payload), m.digest_json({k:v for k,v in restarted.items() if k != 'protocol_hash'}))
+        self.assertEqual((directory / 'config.json').read_bytes(), previous_bytes)
+        # Addresses must not be stripped out of unrelated scientific settings.
+        self.assertNotEqual(m.digest_json({'setting': '0x123'}), m.digest_json({'setting': '0x456'}))
+        for key, value in [('learning_rate', .002), ('engine_hash', 'different-code'),
+                           ('preprocessing', 'Compose(Resize(256))'), ('environment', {'torch': 'changed'})]:
+            with self.assertRaisesRegex(ValueError, 'Protocol changed.*' + key):
+                m.resolve_run_config(directory, {**restarted, key: value})
+
+    def test_invalid_saved_protocol_is_not_adopted(self):
+        m = self.m
+        directory = self.root / 'invalid-protocol'
+        directory.mkdir()
+        m.atomic_json(directory / 'config.json', {'learning_rate': .001, 'protocol_hash': 'tampered'})
+        with self.assertRaisesRegex(ValueError, 'Saved configuration hash is invalid'):
+            m.resolve_run_config(directory, {'learning_rate': .001, 'protocol_hash': 'new'})
+
     def test_paths_hashes_and_leakage(self):
         m = self.m
         with self.assertRaises(ValueError):
@@ -209,9 +242,12 @@ class NotebookTests(unittest.TestCase):
         m = self.m
         for mode in ['baseline','augmented']:
             config = self.make_config(mode)
+            config['preprocessing'] = 'Compose(<function _convert_image_to_rgb at 0x111abc>)'
+            config['protocol_hash'] = m.raw_digest_json({k:v for k,v in config.items() if k != 'protocol_hash'})
             full = self.root / f'full-{mode}'
             resumed = self.root / f'resumed-{mode}'
             full.mkdir(); resumed.mkdir()
+            m.atomic_json(resumed / 'config.json', config)
             m.train_one(full, self.frames, config)
             original_save = m.atomic_torch
             def interrupt_after_epoch(path, value):
@@ -224,7 +260,11 @@ class NotebookTests(unittest.TestCase):
                     m.train_one(resumed, self.frames, config)
             finally:
                 m.atomic_torch = original_save
-            m.train_one(resumed, self.frames, config)
+            restarted = {**config, 'preprocessing': config['preprocessing'].replace('0x111abc', '0x222def')}
+            restarted['protocol_hash'] = m.digest_json({k:v for k,v in restarted.items() if k != 'protocol_hash'})
+            restarted = m.resolve_run_config(resumed, restarted)
+            self.assertEqual(restarted['protocol_hash'], config['protocol_hash'])
+            m.train_one(resumed, self.frames, restarted)
             a = torch.load(full/'best_head.pt', weights_only=True)
             b = torch.load(resumed/'best_head.pt', weights_only=True)
             for key in a['head_state_dict']:
@@ -285,9 +325,8 @@ class NotebookTests(unittest.TestCase):
         self.assertTrue((m.SUMMARY_DIR/'baseline_clean_auroc_heatmap.png').is_file())
         # Changing training settings must reject existing run identities.
         m.LEARNING_RATE *= 2
-        exec(compile(plan, 'plan-cell', 'exec'), m.__dict__)
         with self.assertRaisesRegex(ValueError, 'Protocol changed'):
-            exec(compile(runner, 'runner-cell', 'exec'), m.__dict__)
+            exec(compile(plan, 'plan-cell', 'exec'), m.__dict__)
         m.LEARNING_RATE /= 2
 
 

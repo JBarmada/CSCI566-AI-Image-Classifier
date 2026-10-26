@@ -34,6 +34,60 @@ epoch limits, augmentation strengths, evaluation conditions, and output paths.
 
 ## Storage and resume
 
+### Run overnight with Slurm
+
+From your repository directory on CARC (not inside a notebook cell):
+
+```bash
+sbatch run_vit_master.slurm
+```
+
+The job requests one GPU, four CPUs, 24 GB RAM and 24 hours using account
+`yzhao010_1531`. It activates your existing `csci566-vit` environment. It does not
+reinstall packages or pull code while running. You may close the browser once
+`sbatch` returns a job ID. Queue time and completion within 24 hours are not guaranteed.
+
+The runner executes the code cells of this same notebook, using its selected plan
+(24 baseline/augmented runs by default), without depending on a Jupyter session.
+It removes the interactive session work cap and stops on errors. Existing verified
+training is skipped, partial training resumes at the last saved epoch, missing tests
+are run, and summaries are generated. It never treats the presence of `last.pt` alone
+as completed training. To validate without training:
+
+```bash
+sbatch run_vit_master.slurm --preflight-only
+```
+
+Watch `vit-master-JOBID.log` in the directory where you submitted the job.
+The study's `batch_jobs/JOBID_TIMESTAMP/status.json` records `complete`,
+`preflight_passed`, `failed`, or `interrupted_resumable`, with diagnostics.
+A completed benchmark ends with `ALL SELECTED RUNS COMPLETE` and a summaries path.
+Resubmit the same command after an interruption; do not change `STUDY_NAME` merely
+because a session ended. A scheduler warning requests a clean stop 120 seconds before
+the time limit; if a hard kill happens first, resume still uses the last full epoch.
+
+Only one batch writer per study is allowed. The batch runner archives a stale
+per-run lock only if the recorded PID is absent on the current host, or a successful
+Slurm query shows no allocations at all on its recorded remote node. A failed query
+or possibly active owner keeps the lock and stops with a diagnostic. Stop any old
+notebook training before submission; never run both against the same study.
+
+### Kernel-restart protocol fix
+
+CLIP's transform `repr` contains a Python function memory address, for example
+`<function _convert_image_to_rgb at 0x7f...>`. The address changes on restart and
+previously caused a false `Protocol changed` error and unnecessary feature-cache
+misses. Protocol/cache identities now strip only this transient address. Transform
+names/parameters, manifests, settings, environment and numerical engine still match
+strictly. When an old config differs only in this representation, the run retains
+its original protocol hash so existing checkpoint/marker files remain valid. Original
+configs/checkpoints are not rewritten. Each used run records `last_resume_check.json`.
+Real differences list the changed fields and stop before training. Restore the original
+settings or use a new study for actual protocol changes.
+
+The traceback's `torch.cuda.empty_cache()` line is cleanup, not the source of the
+protocol mismatch. Cleanup errors now cannot replace the original exception.
+
 Outputs: `/project2/yzhao010_1531/csci566-genimage/results/vit_master_v1/`.
 
 Each experiment/mode/seed has its own stable directory under `runs/`. A configuration
