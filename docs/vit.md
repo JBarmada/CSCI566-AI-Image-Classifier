@@ -1,13 +1,17 @@
 # ViT master notebook
 
 The [master notebook](../ViT_Master_Experiments.ipynb) is the one current ViT
-implementation. The [Python runner](../run_vit_master.py) executes its cells;
-the [Slurm file](../run_vit_master.slurm) submits that runner. Keep those three
-files together at the repository root. The older starters are [archived](../archive/vit/).
+implementation. The [Python runner](../code/vit/run_vit_master.py) executes its cells;
+the [Slurm file](../code/vit/run_vit_master.slurm) submits that runner. The notebook
+stays at the root; launcher/setup scripts live in `code/vit/`. Run the commands
+below from the repository root. The older starters are [archived](../archive/vit/).
 
 Jad owns the current 24-run study. Other teammates should analyze its exports
 rather than start another writer or change its protocol. See the
 [team plan](team-plan.md) for proposed parallel tasks and dataset issues.
+
+This layout change preserves the notebook's code cells and experiment settings.
+Finish an active CARC job before updating its checkout to the new paths.
 
 Open `ViT_Master_Experiments.ipynb` at the repository root and select the existing
 **CSCI566 ViT** kernel in a GPU-backed CARC OnDemand session. The notebook is
@@ -48,7 +52,7 @@ epoch limits, augmentation strengths, evaluation conditions, and output paths.
 From your repository directory on CARC (not inside a notebook cell):
 
 ```bash
-sbatch run_vit_master.slurm
+sbatch code/vit/run_vit_master.slurm
 ```
 
 The job requests one GPU, four CPUs, 24 GB RAM and 24 hours using account
@@ -64,7 +68,7 @@ are run, and summaries are generated. It never treats the presence of `last.pt` 
 as completed training. To validate without training:
 
 ```bash
-sbatch run_vit_master.slurm --preflight-only
+sbatch code/vit/run_vit_master.slurm --preflight-only
 ```
 
 Watch `vit-master-JOBID.log` in the directory where you submitted the job.

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Run once per teammate from a CARC OnDemand JupyterLab terminal:
-#   bash setup_carc_vit.sh
+#   bash code/vit/setup_carc_vit.sh
 # Safe to rerun: reuses your environment; never touches the dataset.
 # Sources:
 # https://www.carc.usc.edu/user-guides/hpc-systems/software/jupyter-kernels
@@ -40,7 +40,7 @@ PY
 
 # Older drivers use CUDA 11.8 wheels; newer drivers can use 12.6/12.8.
 # This is a conservative selection, followed by an actual GPU operation below.
-# Override if needed: VIT_CUDA_WHEEL=cu128 bash setup_carc_vit.sh
+# Override if needed: VIT_CUDA_WHEEL=cu128 bash code/vit/setup_carc_vit.sh
 printf '\n=== 3/6: Install PyTorch and notebook packages ===\n'
 DRIVER_MAJOR=0
 if command -v nvidia-smi >/dev/null 2>&1; then
