@@ -58,7 +58,7 @@ def study_lock(root):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--notebook', type=Path, default=Path(__file__).with_name('ViT_Master_Experiments.ipynb'))
+    parser.add_argument('--notebook', type=Path, default=Path(__file__).resolve().parents[2] / 'ViT_Master_Experiments.ipynb')
     parser.add_argument('--shared-root', type=Path)
     parser.add_argument('--study-name')
     parser.add_argument('--preflight-only', action='store_true', help='Validate all manifests/protocols without training.')

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Submit from this repository: sbatch run_vit_master.slurm
-# To change time: sbatch --time=12:00:00 run_vit_master.slurm
+# Submit from the repository root: sbatch code/vit/run_vit_master.slurm
+# To change time: sbatch --time=12:00:00 code/vit/run_vit_master.slurm
 #SBATCH --job-name=vit-master
 #SBATCH --account=yzhao010_1531
 #SBATCH --partition=gpu
@@ -16,7 +16,7 @@
 
 set -eo pipefail
 cd "${SLURM_SUBMIT_DIR:?Submit this script with sbatch from the repository folder}"
-test -f run_vit_master.py
+test -f code/vit/run_vit_master.py
 test -f ViT_Master_Experiments.ipynb
 
 module purge
@@ -31,7 +31,7 @@ export MKL_NUM_THREADS="${SLURM_CPUS_PER_TASK:-4}"
 printf 'Job %s | host %s | start %s\n' "$SLURM_JOB_ID" "$(hostname)" "$(date -Is)"
 # No setup/pip/Git pull in the job: run exactly the submitted code/environment.
 # Settings come from the master notebook. Optional runner arguments follow sbatch's script name.
-python -u run_vit_master.py --recover-stale-locks "$@" &
+python -u code/vit/run_vit_master.py --recover-stale-locks "$@" &
 runner_pid=$!
 forward_stop() {
     printf '\nScheduler stopping job; preserve the last complete epoch for resume.\n'
