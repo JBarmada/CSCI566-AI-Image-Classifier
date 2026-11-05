@@ -16,10 +16,10 @@ while [[ ! -f "$repo/code/vit/run_vit_master.py" ]]; do
     repo="$(dirname "$repo")"
 done
 cd "$repo"
-module purge
-module load conda
-source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate csci566-vit
+# Non-login Slurm shells may not define module or conda. Use the installed env.
+vit_env="${VIT_ENV_PREFIX:-$HOME/.conda/envs/csci566-vit}"
+[[ -x "$vit_env/bin/python" ]] || { echo "Missing Python: $vit_env/bin/python" >&2; exit 1; }
+export PATH="$vit_env/bin:$PATH"
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4
 export MPLBACKEND=Agg PYTHONUNBUFFERED=1
 CUDA_VISIBLE_DEVICES="" python -m unittest discover -s tests -v

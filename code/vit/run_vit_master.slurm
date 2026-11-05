@@ -28,10 +28,10 @@ while [[ ! -f "$repo_dir/ViT_Master_Experiments.ipynb" || ! -f "$repo_dir/code/v
 done
 cd "$repo_dir"
 
-module purge
-module load conda
-source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate csci566-vit
+# Non-login Slurm shells may not define module or conda. Use the installed env.
+vit_env="${VIT_ENV_PREFIX:-$HOME/.conda/envs/csci566-vit}"
+[[ -x "$vit_env/bin/python" ]] || { echo "Missing Python: $vit_env/bin/python" >&2; exit 1; }
+export PATH="$vit_env/bin:$PATH"
 export MPLBACKEND=Agg
 export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-4}"
