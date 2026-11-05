@@ -4,6 +4,7 @@ import json
 import os
 import platform
 import sys
+import subprocess
 import traceback
 
 
@@ -31,7 +32,10 @@ def apply_options(ns, args):
 
 
 def status_writer(ns, args, job_dir, stamp):
+    revision = subprocess.run(['git', '-C', str(args.notebook.parent), 'rev-parse', 'HEAD'],
+                              capture_output=True, text=True, check=False)
     status = {'state': 'running', 'started_utc': stamp,
+              'code_revision': revision.stdout.strip() if revision.returncode == 0 else None,
               'slurm_job_id': os.environ.get('SLURM_JOB_ID'), 'host': platform.node(),
               'python': sys.executable, 'argv': sys.argv,
               'notebook': str(args.notebook.resolve()), 'output_root': str(ns['OUTPUT_ROOT'])}
