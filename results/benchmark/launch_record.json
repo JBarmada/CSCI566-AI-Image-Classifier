@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-11-05T02:40:56.620209+00:00",
+  "dataset_fingerprint": "860156cea9b208a42fb9d481000b40864924d920700a4db00a50d44bd28c6bb6",
+  "carc_checkout": "/home1/barmada/vit_benchmark_work",
+  "deployed_code_revision": "113be21001e1e5dd0447e52698e825fc245f7c43",
+  "dataset_audit": {
+    "job_id": 13734181,
+    "state": "COMPLETED",
+    "exit_code": "0:0"
+  },
+  "gpu_smoke": {
+    "job_id": 13734196,
+    "state_at_recording": "PENDING",
+    "reason": "Priority"
+  },
+  "full_study": {
+    "job_id": 13734357,
+    "array": "0-7%2",
+    "runs": 192,
+    "depends_on_success_of": 13734196
+  },
+  "final_results_audit": {
+    "job_id": 13734358,
+    "depends_on_success_of": 13734357
+  },
+  "note": "Submission snapshot only. Query Slurm and benchmark_status.py for live state."
+}
