@@ -1,0 +1,4 @@
+left,right,distance,same_pixels
+_release_v2/jpeg_ai/stable_diffusion_v_1_4/train/ai/00951.png.jpg,_release_v2/jpeg_ai/stable_diffusion_v_1_5/train/ai/00379.png.jpg,2,False
+_release_v2/jpeg_ai/stable_diffusion_v_1_4/train/ai/01217.png.jpg,_release_v2/jpeg_ai/stable_diffusion_v_1_5/train/ai/00842.png.jpg,4,False
+_release_v2/jpeg_ai/stable_diffusion_v_1_4/train/ai/01471.png.jpg,_release_v2/jpeg_ai/stable_diffusion_v_1_5/train/ai/01192.png.jpg,4,False

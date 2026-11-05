@@ -1,0 +1,28 @@
+{
+  "all_96_experiments_metadata_checked": true,
+  "benchmark_real_pool_counts": {
+    "test": 280,
+    "train": 1400,
+    "val": 280
+  },
+  "benchmark_test_counts": [
+    560,
+    560
+  ],
+  "benchmark_test_shared_images": 560,
+  "benchmark_unique_images": 17640,
+  "distinct_original_real_files": 15996,
+  "matching_real_candidates": 11261,
+  "original_real_files_hashed": 16000,
+  "perceptual_candidates_excluded": 6,
+  "pilot_preserved": true,
+  "pilot_test_counts": [
+    560,
+    560
+  ],
+  "pilot_test_shared_images": 223,
+  "supplied_v2_real_pool_counts": {
+    "train": 700,
+    "val": 80
+  }
+}

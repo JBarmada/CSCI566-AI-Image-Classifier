@@ -36,6 +36,7 @@ export MPLBACKEND=Agg
 export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-4}"
 export MKL_NUM_THREADS="${SLURM_CPUS_PER_TASK:-4}"
+export OPENBLAS_NUM_THREADS=1
 
 printf 'Job %s | host %s | start %s\n' "$SLURM_JOB_ID" "$(hostname)" "$(date -Is)"
 # No setup/pip/Git pull in the job: run exactly the submitted code/environment.

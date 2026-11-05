@@ -1,0 +1,23 @@
+{
+  "counts_per_class": {
+    "test": 280,
+    "train": 1400,
+    "val": 280
+  },
+  "experiments": 96,
+  "fingerprint": "3c3efdbd6a0343ee1ddbbbcf5b2f8b442fc435f661ba69bc8056edf9aea83a06",
+  "fixed_real_sets": true,
+  "fixed_test_sets": true,
+  "global_split_roles_fixed": true,
+  "heldout_exclusion": true,
+  "images": 17640,
+  "installed_image_bytes_verified": true,
+  "jpeg_settings_matched": true,
+  "limitations": [
+    "JPEG history, image size and semantic content are not matched.",
+    "Perceptual-hash filtering is conservative, not exhaustive."
+  ],
+  "near_duplicate_cross_split_candidates": 0,
+  "planned_training_runs": 192,
+  "status": "passed"
+}

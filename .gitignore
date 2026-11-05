@@ -31,6 +31,10 @@ venv/
 slurm-*.out
 vit-master-*.log
 vit-full-run.log
+vit-benchmark-*.log
+vit-smoke-*.log
+vit-final-audit-*.log
+benchmark-audit-*.log
 logs/
 tmp/
 
