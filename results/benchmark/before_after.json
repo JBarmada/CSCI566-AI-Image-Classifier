@@ -24,5 +24,6 @@
   "supplied_v2_real_pool_counts": {
     "train": 700,
     "val": 80
-  }
+  },
+  "distinct_generator_combinations_k1_k2_k4": true
 }

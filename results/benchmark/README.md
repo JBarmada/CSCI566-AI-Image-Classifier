@@ -9,6 +9,9 @@ The image files remain in their original real-image folders and `_release_v2/jpe
 - [Installed-image acceptance](installed_acceptance.json): all 17,640 selected
   image bytes, source hashes, JPEG settings and split identities checked on CARC.
 - [Release identity](RELEASE.json): immutable fingerprint and hashes of all manifests/audits.
+- [Experiment plan](experiments.json): all 96 generator combinations and repeats.
+- [Launch record](launch_record.json): CARC job IDs and deployed code revision;
+  this is a submission snapshot, not live job status.
 - [Local metadata acceptance](local_acceptance.json): all 96 experiments checked.
 - [Similarity candidates](near_duplicate_candidates.csv): three candidate pairs;
   all six images excluded from the benchmark. Perceptual similarity is not proof

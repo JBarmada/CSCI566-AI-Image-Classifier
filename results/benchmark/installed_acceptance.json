@@ -4,8 +4,9 @@
     "train": 1400,
     "val": 280
   },
+  "distinct_generator_mixes_for_k1_k2_k4": true,
   "experiments": 96,
-  "fingerprint": "3c3efdbd6a0343ee1ddbbbcf5b2f8b442fc435f661ba69bc8056edf9aea83a06",
+  "fingerprint": "860156cea9b208a42fb9d481000b40864924d920700a4db00a50d44bd28c6bb6",
   "fixed_real_sets": true,
   "fixed_test_sets": true,
   "global_split_roles_fixed": true,

@@ -1,0 +1,1106 @@
+[
+  {
+    "experiment": "holdout_ADM_k1_rep0",
+    "holdout": "ADM",
+    "k": 1,
+    "rep": 0,
+    "train_generators": [
+      "glide"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k1_rep1",
+    "holdout": "ADM",
+    "k": 1,
+    "rep": 1,
+    "train_generators": [
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k1_rep2",
+    "holdout": "ADM",
+    "k": 1,
+    "rep": 2,
+    "train_generators": [
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k2_rep0",
+    "holdout": "ADM",
+    "k": 2,
+    "rep": 0,
+    "train_generators": [
+      "VQDM",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k2_rep1",
+    "holdout": "ADM",
+    "k": 2,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k2_rep2",
+    "holdout": "ADM",
+    "k": 2,
+    "rep": 2,
+    "train_generators": [
+      "Midjourney",
+      "VQDM"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k4_rep0",
+    "holdout": "ADM",
+    "k": 4,
+    "rep": 0,
+    "train_generators": [
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k4_rep1",
+    "holdout": "ADM",
+    "k": 4,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN",
+      "Midjourney",
+      "glide",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k4_rep2",
+    "holdout": "ADM",
+    "k": 4,
+    "rep": 2,
+    "train_generators": [
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k7_rep0",
+    "holdout": "ADM",
+    "k": 7,
+    "rep": 0,
+    "train_generators": [
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k7_rep1",
+    "holdout": "ADM",
+    "k": 7,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_ADM_k7_rep2",
+    "holdout": "ADM",
+    "k": 7,
+    "rep": 2,
+    "train_generators": [
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k1_rep0",
+    "holdout": "BigGAN",
+    "k": 1,
+    "rep": 0,
+    "train_generators": [
+      "VQDM"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k1_rep1",
+    "holdout": "BigGAN",
+    "k": 1,
+    "rep": 1,
+    "train_generators": [
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k1_rep2",
+    "holdout": "BigGAN",
+    "k": 1,
+    "rep": 2,
+    "train_generators": [
+      "ADM"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k2_rep0",
+    "holdout": "BigGAN",
+    "k": 2,
+    "rep": 0,
+    "train_generators": [
+      "stable_diffusion_v_1_4",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k2_rep1",
+    "holdout": "BigGAN",
+    "k": 2,
+    "rep": 1,
+    "train_generators": [
+      "Midjourney",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k2_rep2",
+    "holdout": "BigGAN",
+    "k": 2,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k4_rep0",
+    "holdout": "BigGAN",
+    "k": 4,
+    "rep": 0,
+    "train_generators": [
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k4_rep1",
+    "holdout": "BigGAN",
+    "k": 4,
+    "rep": 1,
+    "train_generators": [
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k4_rep2",
+    "holdout": "BigGAN",
+    "k": 4,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "Midjourney",
+      "VQDM",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k7_rep0",
+    "holdout": "BigGAN",
+    "k": 7,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k7_rep1",
+    "holdout": "BigGAN",
+    "k": 7,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_BigGAN_k7_rep2",
+    "holdout": "BigGAN",
+    "k": 7,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k1_rep0",
+    "holdout": "glide",
+    "k": 1,
+    "rep": 0,
+    "train_generators": [
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k1_rep1",
+    "holdout": "glide",
+    "k": 1,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k1_rep2",
+    "holdout": "glide",
+    "k": 1,
+    "rep": 2,
+    "train_generators": [
+      "Midjourney"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k2_rep0",
+    "holdout": "glide",
+    "k": 2,
+    "rep": 0,
+    "train_generators": [
+      "VQDM",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k2_rep1",
+    "holdout": "glide",
+    "k": 2,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k2_rep2",
+    "holdout": "glide",
+    "k": 2,
+    "rep": 2,
+    "train_generators": [
+      "BigGAN",
+      "Midjourney"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k4_rep0",
+    "holdout": "glide",
+    "k": 4,
+    "rep": 0,
+    "train_generators": [
+      "BigGAN",
+      "VQDM",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k4_rep1",
+    "holdout": "glide",
+    "k": 4,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "VQDM",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k4_rep2",
+    "holdout": "glide",
+    "k": 4,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "VQDM",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k7_rep0",
+    "holdout": "glide",
+    "k": 7,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k7_rep1",
+    "holdout": "glide",
+    "k": 7,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_glide_k7_rep2",
+    "holdout": "glide",
+    "k": 7,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k1_rep0",
+    "holdout": "Midjourney",
+    "k": 1,
+    "rep": 0,
+    "train_generators": [
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k1_rep1",
+    "holdout": "Midjourney",
+    "k": 1,
+    "rep": 1,
+    "train_generators": [
+      "ADM"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k1_rep2",
+    "holdout": "Midjourney",
+    "k": 1,
+    "rep": 2,
+    "train_generators": [
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k2_rep0",
+    "holdout": "Midjourney",
+    "k": 2,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k2_rep1",
+    "holdout": "Midjourney",
+    "k": 2,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k2_rep2",
+    "holdout": "Midjourney",
+    "k": 2,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "glide"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k4_rep0",
+    "holdout": "Midjourney",
+    "k": 4,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "VQDM",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k4_rep1",
+    "holdout": "Midjourney",
+    "k": 4,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k4_rep2",
+    "holdout": "Midjourney",
+    "k": 4,
+    "rep": 2,
+    "train_generators": [
+      "BigGAN",
+      "VQDM",
+      "glide",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k7_rep0",
+    "holdout": "Midjourney",
+    "k": 7,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k7_rep1",
+    "holdout": "Midjourney",
+    "k": 7,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_Midjourney_k7_rep2",
+    "holdout": "Midjourney",
+    "k": 7,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k1_rep0",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 1,
+    "rep": 0,
+    "train_generators": [
+      "VQDM"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k1_rep1",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 1,
+    "rep": 1,
+    "train_generators": [
+      "Midjourney"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k1_rep2",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 1,
+    "rep": 2,
+    "train_generators": [
+      "glide"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k2_rep0",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 2,
+    "rep": 0,
+    "train_generators": [
+      "VQDM",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k2_rep1",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 2,
+    "rep": 1,
+    "train_generators": [
+      "glide",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k2_rep2",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 2,
+    "rep": 2,
+    "train_generators": [
+      "BigGAN",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k4_rep0",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 4,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "Midjourney",
+      "VQDM",
+      "glide"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k4_rep1",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 4,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k4_rep2",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 4,
+    "rep": 2,
+    "train_generators": [
+      "BigGAN",
+      "Midjourney",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k7_rep0",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 7,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k7_rep1",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 7,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_4_k7_rep2",
+    "holdout": "stable_diffusion_v_1_4",
+    "k": 7,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k1_rep0",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 1,
+    "rep": 0,
+    "train_generators": [
+      "VQDM"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k1_rep1",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 1,
+    "rep": 1,
+    "train_generators": [
+      "Midjourney"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k1_rep2",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 1,
+    "rep": 2,
+    "train_generators": [
+      "BigGAN"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k2_rep0",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 2,
+    "rep": 0,
+    "train_generators": [
+      "stable_diffusion_v_1_4",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k2_rep1",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 2,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN",
+      "glide"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k2_rep2",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 2,
+    "rep": 2,
+    "train_generators": [
+      "BigGAN",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k4_rep0",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 4,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "Midjourney",
+      "glide",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k4_rep1",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 4,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k4_rep2",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 4,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "Midjourney",
+      "glide",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k7_rep0",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 7,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k7_rep1",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 7,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_stable_diffusion_v_1_5_k7_rep2",
+    "holdout": "stable_diffusion_v_1_5",
+    "k": 7,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k1_rep0",
+    "holdout": "VQDM",
+    "k": 1,
+    "rep": 0,
+    "train_generators": [
+      "glide"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k1_rep1",
+    "holdout": "VQDM",
+    "k": 1,
+    "rep": 1,
+    "train_generators": [
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k1_rep2",
+    "holdout": "VQDM",
+    "k": 1,
+    "rep": 2,
+    "train_generators": [
+      "ADM"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k2_rep0",
+    "holdout": "VQDM",
+    "k": 2,
+    "rep": 0,
+    "train_generators": [
+      "Midjourney",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k2_rep1",
+    "holdout": "VQDM",
+    "k": 2,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k2_rep2",
+    "holdout": "VQDM",
+    "k": 2,
+    "rep": 2,
+    "train_generators": [
+      "BigGAN",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k4_rep0",
+    "holdout": "VQDM",
+    "k": 4,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "glide",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k4_rep1",
+    "holdout": "VQDM",
+    "k": 4,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "Midjourney",
+      "glide",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k4_rep2",
+    "holdout": "VQDM",
+    "k": 4,
+    "rep": 2,
+    "train_generators": [
+      "Midjourney",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k7_rep0",
+    "holdout": "VQDM",
+    "k": 7,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k7_rep1",
+    "holdout": "VQDM",
+    "k": 7,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_VQDM_k7_rep2",
+    "holdout": "VQDM",
+    "k": 7,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5",
+      "wukong"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k1_rep0",
+    "holdout": "wukong",
+    "k": 1,
+    "rep": 0,
+    "train_generators": [
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k1_rep1",
+    "holdout": "wukong",
+    "k": 1,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k1_rep2",
+    "holdout": "wukong",
+    "k": 1,
+    "rep": 2,
+    "train_generators": [
+      "glide"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k2_rep0",
+    "holdout": "wukong",
+    "k": 2,
+    "rep": 0,
+    "train_generators": [
+      "VQDM",
+      "glide"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k2_rep1",
+    "holdout": "wukong",
+    "k": 2,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN",
+      "VQDM"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k2_rep2",
+    "holdout": "wukong",
+    "k": 2,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "BigGAN"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k4_rep0",
+    "holdout": "wukong",
+    "k": 4,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "Midjourney",
+      "glide",
+      "stable_diffusion_v_1_4"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k4_rep1",
+    "holdout": "wukong",
+    "k": 4,
+    "rep": 1,
+    "train_generators": [
+      "BigGAN",
+      "VQDM",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k4_rep2",
+    "holdout": "wukong",
+    "k": 4,
+    "rep": 2,
+    "train_generators": [
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k7_rep0",
+    "holdout": "wukong",
+    "k": 7,
+    "rep": 0,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k7_rep1",
+    "holdout": "wukong",
+    "k": 7,
+    "rep": 1,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5"
+    ]
+  },
+  {
+    "experiment": "holdout_wukong_k7_rep2",
+    "holdout": "wukong",
+    "k": 7,
+    "rep": 2,
+    "train_generators": [
+      "ADM",
+      "BigGAN",
+      "Midjourney",
+      "VQDM",
+      "glide",
+      "stable_diffusion_v_1_4",
+      "stable_diffusion_v_1_5"
+    ]
+  }
+]
