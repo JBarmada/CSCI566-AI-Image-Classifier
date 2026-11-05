@@ -87,6 +87,11 @@ def audit(root, data_root=None):
     expected = {f'holdout_{g}_k{k}_rep{r}' for g in GENERATORS for k in [1, 2, 4, 7] for r in range(3)}
     require(len(experiments) == 96 and {e['experiment'] for e in experiments} == expected,
             'Incomplete experiment grid')
+    for holdout in GENERATORS:
+        for k in [1, 2, 4]:
+            mixes = {tuple(e['train_generators']) for e in experiments
+                     if e['holdout'] == holdout and e['k'] == k}
+            require(len(mixes) == 3, f'{holdout}/k{k}: repeated generator combinations')
     real_sets, test_sets, roles = {}, {}, defaultdict(set)
     for experiment in experiments:
         check_experiment(root, experiment, inventory, real_sets, test_sets, roles)
@@ -106,6 +111,7 @@ def audit(root, data_root=None):
             'installed_image_bytes_verified': data_root is not None,
             'fixed_test_sets': True, 'fixed_real_sets': True, 'heldout_exclusion': True,
             'global_split_roles_fixed': True, 'jpeg_settings_matched': True,
+            'distinct_generator_mixes_for_k1_k2_k4': True,
             'near_duplicate_cross_split_candidates': 0, 'limitations': release['limitations']}
 
 

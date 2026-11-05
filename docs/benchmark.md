@@ -27,6 +27,8 @@ Fake training/validation counts are divided equally among k generators. Reserve
 into 1,400 training and 280 validation candidates. Original source-folder labels
 remain provenance; the new split assignments are authoritative. Image roles do
 not change across experiments. Fake test selections from v2 are preserved.
+For k=1,2,4, the three repeats use distinct generator combinations. At k=7 there
+is only one possible combination; repeats instead vary the sampled fake images.
 
 The release fingerprint and file hashes are in `benchmark/RELEASE.json`.
 The installed-data acceptance report is at

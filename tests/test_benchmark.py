@@ -12,12 +12,20 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'code/benchmark'))
 import audit_benchmark as audit
-from build_benchmark import choose, unique
+from build_benchmark import choose, unique, training_mixes
 from image_inventory import properties, write_csv
 from near_duplicates import candidates
 
 
 class DatasetTests(unittest.TestCase):
+    def test_repeats_use_distinct_generator_combinations(self):
+        for holdout in audit.GENERATORS:
+            for k in [1, 2, 4]:
+                mixes = training_mixes(holdout, k)
+                self.assertEqual(len(set(tuple(sorted(x)) for x in mixes)), 3)
+                self.assertTrue(all(len(x) == k and holdout not in x for x in mixes))
+            self.assertEqual(len(set(tuple(x) for x in training_mixes(holdout, 7))), 1)
+
     def fixture(self, root, suffix='rep0'):
         name = 'holdout_ADM_k1_' + suffix
         experiment = {'experiment': name, 'holdout': 'ADM', 'k': 1, 'train_generators': ['BigGAN']}

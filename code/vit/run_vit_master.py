@@ -89,11 +89,12 @@ def main(argv=None):
         job_dir.mkdir(parents=True, exist_ok=False)
         (job_dir / 'input_notebook.ipynb').write_bytes(args.notebook.read_bytes())
         # Archive the source files behind the thin notebook, not just its wrapper cells.
-        engine = args.notebook.parent / 'code/vit'
-        for source in engine.rglob('*.py') if engine.is_dir() else []:
-            destination = job_dir / 'source/code/vit' / source.relative_to(engine)
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            destination.write_bytes(source.read_bytes())
+        for component in ['vit', 'benchmark']:
+            engine = args.notebook.parent / 'code' / component
+            for source in engine.rglob('*.py') if engine.is_dir() else []:
+                destination = job_dir / 'source/code' / component / source.relative_to(engine)
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes(source.read_bytes())
         if hasattr(signal, 'SIGUSR1'):
             signal.signal(signal.SIGUSR1, stop_requested)
         signal.signal(signal.SIGTERM, stop_requested)

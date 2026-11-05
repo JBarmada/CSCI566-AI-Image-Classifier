@@ -2,6 +2,7 @@
 import argparse
 from collections import Counter
 import hashlib
+import itertools
 import json
 from pathlib import Path
 import random
@@ -34,6 +35,14 @@ def choose(rows, count, key):
     if len(rows) < count:
         raise ValueError(f'{key}: need {count} distinct images, only {len(rows)} eligible')
     return rng(key).sample(sorted(rows, key=lambda r: r['path']), count)
+
+
+def training_mixes(heldout, k):
+    eligible = [g for g in GENERATORS if g != heldout]
+    if k == 7:
+        return [eligible] * 3
+    choices = list(itertools.combinations(eligible, k))
+    return rng(f'{heldout}:k{k}:mixes').sample(choices, 3)
 
 
 def reserve_tests(store, inventory):
@@ -71,11 +80,11 @@ def partition(inventory, tests, excluded):
 def export_experiments(pools, output):
     experiments = []
     for heldout in GENERATORS:
-        eligible = [g for g in GENERATORS if g != heldout]
         for k in [1, 2, 4, 7]:
+            mixes = training_mixes(heldout, k)
             for rep in range(3):
                 name = f'holdout_{heldout}_k{k}_rep{rep}'
-                gens = sorted(rng(name + ':generators').sample(eligible, k))
+                gens = sorted(mixes[rep])
                 for split, count in COUNTS.items():
                     fake = pools[heldout]['test'] if split == 'test' else [
                         r for gen in gens for r in choose(pools[gen][split], count // k,
