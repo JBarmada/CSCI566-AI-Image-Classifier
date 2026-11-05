@@ -3,6 +3,8 @@
 #SBATCH --job-name=vit-benchmark
 #SBATCH --account=yzhao010_1531
 #SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
 #SBATCH --gpus-per-task=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=24G
