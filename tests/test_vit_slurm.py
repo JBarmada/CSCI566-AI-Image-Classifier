@@ -1,4 +1,4 @@
-"""Exercise the actual Slurm launcher with fake modules, Conda, and Python."""
+"""Exercise the Slurm launcher without module or conda shell initialization."""
 import os
 from pathlib import Path
 import shutil
@@ -16,22 +16,24 @@ else:
 
 WRAPPER = r'''
 export SLURM_SUBMIT_DIR="$1"
-export FAKE_CONDA_BASE="$2"
+export VIT_ENV_PREFIX="$2"
+if command -v cygpath >/dev/null 2>&1; then
+    VIT_ENV_PREFIX="$(cygpath -u "$VIT_ENV_PREFIX")"
+fi
 export LAUNCH_RECORD="$3"
 export RUNNER_EXIT_CODE="$4"
 export SLURM_JOB_ID=1234
 export SLURM_CPUS_PER_TASK=4
-module() { :; }
-conda() { if [[ "$1" == info ]]; then printf '%s\n' "$FAKE_CONDA_BASE"; fi; }
-python() {
-    {
-        if command -v cygpath >/dev/null 2>&1; then cygpath -m "$PWD";
-        else printf '%s\n' "$PWD"; fi
-        printf '%s\n' "$@"
-    } > "$LAUNCH_RECORD"
-    return "$RUNNER_EXIT_CODE"
-}
 source "$5" --preflight-only
+'''
+
+FAKE_PYTHON = r'''#!/usr/bin/env bash
+{
+    if command -v cygpath >/dev/null 2>&1; then cygpath -m "$PWD";
+    else printf '%s\n' "$PWD"; fi
+    printf '%s\n' "$@"
+} > "$LAUNCH_RECORD"
+exit "$RUNNER_EXIT_CODE"
 '''
 
 
@@ -48,9 +50,10 @@ class SlurmTests(unittest.TestCase):
             spool = temporary / 'slurm spool/job.sh'
             spool.parent.mkdir()
             spool.write_bytes(SCRIPT.read_bytes())
-            conda = temporary / 'conda/etc/profile.d/conda.sh'
-            conda.parent.mkdir(parents=True)
-            conda.touch()
+            python = temporary / 'conda/bin/python'
+            python.parent.mkdir(parents=True)
+            python.write_text(FAKE_PYTHON, newline='\n')
+            python.chmod(0o755)
             submit = temporary / 'unrelated' if location == 'outside' else repo / location
             submit.mkdir(parents=True, exist_ok=True)
             record = temporary / 'launch.txt'
