@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "runs": 192,
+  "prediction_exports": 384,
+  "prediction_rows": 215040,
+  "dataset_fingerprint": "860156cea9b208a42fb9d481000b40864924d920700a4db00a50d44bd28c6bb6",
+  "manifest_hashes_labels_identities_metrics_checked": true,
+  "image_bytes_and_checkpoints_rechecked_locally": false,
+  "note": "Original CARC audit checked installed data and checkpoint hashes; this export omits those binaries."
+}

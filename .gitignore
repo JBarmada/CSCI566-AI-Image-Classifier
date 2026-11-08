@@ -48,3 +48,4 @@ tmp/
 
 # Small published ViT summary figures; original dataset images remain ignored.
 !/results/vit_master_v1/summary/*.png
+!/results/vit_benchmark/figures/*.png

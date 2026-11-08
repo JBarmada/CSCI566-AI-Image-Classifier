@@ -1,6 +1,12 @@
 # Corrected GenImage benchmark
 
 `benchmark` is the accepted image-list release; `vit_benchmark` is the ViT study.
+
+**Completion verified November 8, 2026:** all 192 clean evaluations passed the
+final CARC audit and local export checks. See the
+[completed analysis handoff](../results/vit_benchmark/README.md) and
+[current remaining work](vit-status-2026-11-08.md). Run instructions below are
+for reproducibility; the accepted study does not need to be relaunched.
 The original `_experiment_manifests`, supplied `_release_v2`, and completed
 `results/vit_master_v1` remain intact. Do not mix pilot and benchmark results.
 
