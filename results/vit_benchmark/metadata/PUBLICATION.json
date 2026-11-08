@@ -1,0 +1,28 @@
+{
+  "verified_date": "2026-11-08",
+  "timezone": "America/Los_Angeles",
+  "source_host": "discovery.usc.edu",
+  "source_shared_root": "/project2/yzhao010_1531/csci566-genimage",
+  "source_checkout": "/home1/barmada/vit_benchmark_work",
+  "source_checkout_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+  "github_base_revision": "ef63a58ab1cc77be03f594bf5b57ac16f07f2593",
+  "drive_handoff_url": "https://drive.google.com/drive/folders/155zGH4KJr_cifkuqI29l0BbEocfMlb74",
+  "drive_team_sharing": "not_shared; editor must move/share the handoff folder",
+  "original_shared_folder_write_error": "403 insufficientParentPermissions",
+  "archives": {
+    "benchmark_manifests.tar.gz": {
+      "sha256": "44d3a559d80f635c9528e97262e23b53cf8002323cbd57caf3711f443032ba22",
+      "bytes": 45556416
+    },
+    "vit_analysis_exports.tar.gz": {
+      "sha256": "cb68ef52ced06891855ffbe5c09b6c25e94d072110eafdaad4cf66536bddcaa9",
+      "bytes": 28259811
+    }
+  },
+  "checkpoint_inventory_on_carc": 192,
+  "cnn_completion_markers_observed": 47,
+  "cnn_test_exports_observed": 47,
+  "cnn_observation": "Live read during November 8 review; count can change",
+  "cnn_exports_independently_audited": false,
+  "scope": "192 clean ViT evaluations; image bytes and checkpoint binaries remain on CARC"
+}

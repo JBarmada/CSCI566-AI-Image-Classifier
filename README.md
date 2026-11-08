@@ -6,8 +6,13 @@ k = 1, 2, 4, 7 training generators at a fixed total training size.
 
 ## Start here
 
+**November 8 update:** the corrected **192-run ViT benchmark is complete and
+audited**. Use the [completed benchmark analysis handoff](results/vit_benchmark/README.md)
+and [current remaining-work review](docs/vit-status-2026-11-08.md) for current status.
+
 | Need | Read |
 |---|---|
+| Completed 192-run benchmark tables, all predictions, calibration and figures | [Benchmark results](results/vit_benchmark/README.md) |
 | Corrected dataset, acceptance checks, and the 192-run ViT study | [Benchmark guide](docs/benchmark.md) |
 | Progress, proposed team tasks, and next experiments | [Team plan](docs/team-plan.md) |
 | Completed ViT pilot, predictions, and evaluation handoff | [ViT results](results/vit_master_v1/README.md) |

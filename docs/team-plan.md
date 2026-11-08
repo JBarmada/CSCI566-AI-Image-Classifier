@@ -1,5 +1,10 @@
 # Project status and proposed team plan
 
+**Current status:** this page preserves an October planning snapshot. All 192
+corrected ViT benchmark evaluations are now complete; use the
+[November 8 remaining-work review](vit-status-2026-11-08.md) and
+[completed benchmark handoff](../results/vit_benchmark/README.md) for current work.
+
 Planning snapshot: **October 26, 2026**. The next progress report is approximately
 two weeks away: progress, literature review, initial results, and an updated plan.
 A final report and an in-person poster defense follow later.

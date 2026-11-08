@@ -1,0 +1,130 @@
+{
+  ".gitattributes": {
+    "sha256": "7a72b903415f1829c34a0f6eea0b2b68392a458bdb3e32f6dfef97ad9fb07bb5",
+    "bytes": 66
+  },
+  "figures/holdout_auroc.png": {
+    "sha256": "d6f53a13d86a44a20cbc1d71d2a98d8490ce825962373d5ed1665cb73c009a51",
+    "bytes": 206609
+  },
+  "figures/performance_vs_k.png": {
+    "sha256": "71b53905b0263e3598633f50a692886267c8c5845b83537c5725fdd9f256ce39",
+    "bytes": 172501
+  },
+  "figures/raw_reliability_k7.png": {
+    "sha256": "15c25044c79782afda047b5e254deb12aa0dc68f687d52145b7f19d431d6ce6a",
+    "bytes": 113749
+  },
+  "metadata/batch_statuses.json": {
+    "sha256": "a3c646f556f9a38cd80d15456519ba2c0e0a5504699875c737765740b905c65f",
+    "bytes": 8049
+  },
+  "metadata/calibration_bins.csv.gz": {
+    "sha256": "a5a51e7ee99b5236eee64555727829bb05ca4ce990c61f7eed6e1d1a02cd7ccf",
+    "bytes": 53034
+  },
+  "metadata/CARC_ACCEPTANCE.json": {
+    "sha256": "7c073f1962ad901aa59a181c6256ed11ed5264638e5ea7c4ba1e44fe0718911d",
+    "bytes": 230
+  },
+  "metadata/EXPORT_AUDIT.json": {
+    "sha256": "5f8718f94ad6759ad2b7ae3008f9f5cf57a2aa4900385211cc308331af9d4f70",
+    "bytes": 423
+  },
+  "metadata/INSTALLED_DATA_ACCEPTANCE.json": {
+    "sha256": "1a598e019f4487cd0a26e18c72af81371ccfedb310b111da6cbe14234cb6a84a",
+    "bytes": 710
+  },
+  "metadata/LOCAL_MANIFEST_AUDIT.json": {
+    "sha256": "87bacf07f52f18162eae3e2dc91929e201a1811f5e7a54fa3154d60b0816da1b",
+    "bytes": 711
+  },
+  "metadata/PUBLICATION.json": {
+    "sha256": "0f31de2acc7b9b72f8d7165566329b3f4e534dc9c81f7cc88045d3f3fb3a6942",
+    "bytes": 1291
+  },
+  "metadata/run_records.jsonl.gz": {
+    "sha256": "eea450b7850f32172b6c0a97d888deca204f555d445d1411c83e2ebcb65198e1",
+    "bytes": 70263
+  },
+  "metadata/training_history.csv.gz": {
+    "sha256": "ca29e897b0dfe34d6f0ac7c477865e667c354982d80f6be8c8ff9fb5d7e287e7",
+    "bytes": 285053
+  },
+  "predictions/ADM.csv.gz": {
+    "sha256": "57e21b54b8ec523f1dbc6f75615cc3bd4dab06af168363e509a268265ce12e05",
+    "bytes": 3270169
+  },
+  "predictions/BigGAN.csv.gz": {
+    "sha256": "e4b05300d81cc8b0b675790fda51bac582a1506faec6bf8735bcee3c18bea72f",
+    "bytes": 3272151
+  },
+  "predictions/glide.csv.gz": {
+    "sha256": "5a8c3efc4ad6388caa9f970f6a7195d0ce25c8759314935fab2432807a9efad8",
+    "bytes": 3271722
+  },
+  "predictions/Midjourney.csv.gz": {
+    "sha256": "1117c212199f342ebce205eb27c7767c7fcdcc73b47599a6d1a490e20c4de65c",
+    "bytes": 3275805
+  },
+  "predictions/stable_diffusion_v_1_4.csv.gz": {
+    "sha256": "d99ad377b24f5aded20d2a9df34b2b41454db06ce3d923978fbbb7472a1e5a2f",
+    "bytes": 3284480
+  },
+  "predictions/stable_diffusion_v_1_5.csv.gz": {
+    "sha256": "9a84a0707017227fadfb9a951acda47eb5731169c58e3a2a9f0403183728c4a7",
+    "bytes": 3283081
+  },
+  "predictions/VQDM.csv.gz": {
+    "sha256": "312eaa634bf3d6edd7bb0d81845afbd02a8f21c111e05b87dd728ba9e8dfb6a3",
+    "bytes": 3270304
+  },
+  "predictions/wukong.csv.gz": {
+    "sha256": "450f452850455b358d35122dece15ac0068140ca99137b8646809857a98f54a2",
+    "bytes": 3270607
+  },
+  "README.md": {
+    "sha256": "c1a4695ea1785411775b4a9ff95b40ec4dc71d7f55c1ba21855af9a649092842",
+    "bytes": 8539
+  },
+  "summary/all_results.csv": {
+    "sha256": "b451007195057f5ac6730e1f8c5d3888811a0546b0b5723ed9e73153427c45d6",
+    "bytes": 124157
+  },
+  "summary/augmentation_deltas.csv": {
+    "sha256": "3fb9ceabf957e0b816dde32899fee86895eb0ee1b08e51dc69d129715707da9f",
+    "bytes": 20441
+  },
+  "summary/by_holdout_k.csv": {
+    "sha256": "50dbb890d84baa3177049c18c391f696171c4eec880567b55180d3a6ea13c2bd",
+    "bytes": 23030
+  },
+  "summary/heatmap_accuracy.csv": {
+    "sha256": "00296cc308d654cc9857ad8567795371cff087bfe753840109871df44c2fac62",
+    "bytes": 1410
+  },
+  "summary/heatmap_auroc.csv": {
+    "sha256": "41c410ad814abbb48460e8e077220e3f25dc3b08c724bc42d3e84289747e26cf",
+    "bytes": 1415
+  },
+  "summary/heatmap_f1_fake.csv": {
+    "sha256": "8db37eab466f09a89c13ef1111e463600b77a7769f2246f34528f4db0c60e928",
+    "bytes": 1417
+  },
+  "summary/heatmap_recall_fake.csv": {
+    "sha256": "659241dad278d05fb3452db178cea6ab13b9857c2157be266d0df216e59fa3fc",
+    "bytes": 1402
+  },
+  "summary/macro_across_holdouts.csv": {
+    "sha256": "8df3d29ac363ce5048db677acbfa425d51956f859fbbe109e42cb01bd33b4070",
+    "bytes": 3052
+  },
+  "summary/run_details.csv": {
+    "sha256": "c3c7ccd8026d4f36fc052ca6037263c69403fbc4d742faaa85cb2d9e6ed9b035",
+    "bytes": 520806
+  },
+  "summary/validation_test_gaps.csv": {
+    "sha256": "a88f765ae6c44f5b88d65f20b8850bc302d76634f7fcba650ed7220c603fb0fe",
+    "bytes": 42083
+  }
+}

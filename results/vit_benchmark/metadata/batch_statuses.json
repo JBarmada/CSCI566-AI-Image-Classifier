@@ -1,0 +1,191 @@
+[
+  {
+    "state": "complete",
+    "started_utc": "20261105T225204_983774Z",
+    "code_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+    "slurm_job_id": "13741582",
+    "host": "e22-07.hpc.usc.edu",
+    "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+    "argv": [
+      "code/vit/run_vit_master.py",
+      "--recover-stale-locks",
+      "--holdout",
+      "ADM"
+    ],
+    "notebook": "/home1/barmada/vit_benchmark_work/ViT_Master_Experiments.ipynb",
+    "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/ADM",
+    "selected_runs": 24,
+    "completed": 24,
+    "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/ADM/summaries/0ffa69377075",
+    "finished_utc": "2026-11-06T06:08:33.559929+00:00",
+    "source_status_path": "ADM/batch_jobs/13741582_20261105T225204_983774Z/status.json"
+  },
+  {
+    "state": "complete",
+    "started_utc": "20261106T135555_643414Z",
+    "code_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+    "slurm_job_id": "13757885",
+    "host": "d11-03.hpc.usc.edu",
+    "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+    "argv": [
+      "code/vit/run_vit_master.py",
+      "--recover-stale-locks",
+      "--holdout",
+      "ADM"
+    ],
+    "notebook": "/home1/barmada/vit_benchmark_work/ViT_Master_Experiments.ipynb",
+    "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/ADM",
+    "selected_runs": 24,
+    "completed": 24,
+    "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/ADM/summaries/0ffa69377075",
+    "finished_utc": "2026-11-06T13:57:31.004440+00:00",
+    "source_status_path": "ADM/batch_jobs/13757885_20261106T135555_643414Z/status.json"
+  },
+  {
+    "state": "complete",
+    "started_utc": "20261105T225227_855438Z",
+    "code_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+    "slurm_job_id": "13757887",
+    "host": "d23-10.hpc.usc.edu",
+    "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+    "argv": [
+      "code/vit/run_vit_master.py",
+      "--recover-stale-locks",
+      "--holdout",
+      "BigGAN"
+    ],
+    "notebook": "/home1/barmada/vit_benchmark_work/ViT_Master_Experiments.ipynb",
+    "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/BigGAN",
+    "selected_runs": 24,
+    "completed": 24,
+    "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/BigGAN/summaries/d843b128ede5",
+    "finished_utc": "2026-11-06T06:20:52.837801+00:00",
+    "source_status_path": "BigGAN/batch_jobs/13757887_20261105T225227_855438Z/status.json"
+  },
+  {
+    "state": "complete",
+    "started_utc": "20261106T065118_772885Z",
+    "code_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+    "slurm_job_id": "13757888",
+    "host": "d13-02.hpc.usc.edu",
+    "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+    "argv": [
+      "code/vit/run_vit_master.py",
+      "--recover-stale-locks",
+      "--holdout",
+      "glide"
+    ],
+    "notebook": "/home1/barmada/vit_benchmark_work/ViT_Master_Experiments.ipynb",
+    "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/glide",
+    "selected_runs": 24,
+    "completed": 24,
+    "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/glide/summaries/68eed6f25e55",
+    "finished_utc": "2026-11-06T10:01:44.418756+00:00",
+    "source_status_path": "glide/batch_jobs/13757888_20261106T065118_772885Z/status.json"
+  },
+  {
+    "state": "complete",
+    "started_utc": "20261106T065732_976519Z",
+    "code_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+    "slurm_job_id": "13757889",
+    "host": "e22-06.hpc.usc.edu",
+    "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+    "argv": [
+      "code/vit/run_vit_master.py",
+      "--recover-stale-locks",
+      "--holdout",
+      "Midjourney"
+    ],
+    "notebook": "/home1/barmada/vit_benchmark_work/ViT_Master_Experiments.ipynb",
+    "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/Midjourney",
+    "selected_runs": 24,
+    "completed": 24,
+    "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/Midjourney/summaries/e2312d3fd7df",
+    "finished_utc": "2026-11-06T14:11:36.658718+00:00",
+    "source_status_path": "Midjourney/batch_jobs/13757889_20261106T065732_976519Z/status.json"
+  },
+  {
+    "state": "complete",
+    "started_utc": "20261106T065905_882939Z",
+    "code_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+    "slurm_job_id": "13757890",
+    "host": "d23-16.hpc.usc.edu",
+    "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+    "argv": [
+      "code/vit/run_vit_master.py",
+      "--recover-stale-locks",
+      "--holdout",
+      "stable_diffusion_v_1_4"
+    ],
+    "notebook": "/home1/barmada/vit_benchmark_work/ViT_Master_Experiments.ipynb",
+    "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/stable_diffusion_v_1_4",
+    "selected_runs": 24,
+    "completed": 24,
+    "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/stable_diffusion_v_1_4/summaries/75bb28c47324",
+    "finished_utc": "2026-11-06T14:18:57.860808+00:00",
+    "source_status_path": "stable_diffusion_v_1_4/batch_jobs/13757890_20261106T065905_882939Z/status.json"
+  },
+  {
+    "state": "complete",
+    "started_utc": "20261106T100203_296043Z",
+    "code_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+    "slurm_job_id": "13757891",
+    "host": "d13-02.hpc.usc.edu",
+    "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+    "argv": [
+      "code/vit/run_vit_master.py",
+      "--recover-stale-locks",
+      "--holdout",
+      "stable_diffusion_v_1_5"
+    ],
+    "notebook": "/home1/barmada/vit_benchmark_work/ViT_Master_Experiments.ipynb",
+    "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/stable_diffusion_v_1_5",
+    "selected_runs": 24,
+    "completed": 24,
+    "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/stable_diffusion_v_1_5/summaries/9c9710edef1f",
+    "finished_utc": "2026-11-06T13:13:06.573071+00:00",
+    "source_status_path": "stable_diffusion_v_1_5/batch_jobs/13757891_20261106T100203_296043Z/status.json"
+  },
+  {
+    "state": "complete",
+    "started_utc": "20261106T131336_867576Z",
+    "code_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+    "slurm_job_id": "13757892",
+    "host": "d13-02.hpc.usc.edu",
+    "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+    "argv": [
+      "code/vit/run_vit_master.py",
+      "--recover-stale-locks",
+      "--holdout",
+      "VQDM"
+    ],
+    "notebook": "/home1/barmada/vit_benchmark_work/ViT_Master_Experiments.ipynb",
+    "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/VQDM",
+    "selected_runs": 24,
+    "completed": 24,
+    "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/VQDM/summaries/759e8c058baa",
+    "finished_utc": "2026-11-06T16:22:39.458168+00:00",
+    "source_status_path": "VQDM/batch_jobs/13757892_20261106T131336_867576Z/status.json"
+  },
+  {
+    "state": "complete",
+    "started_utc": "20261106T141153_797976Z",
+    "code_revision": "4fecd4ca6fd47ea835fa94375e9d3964a7ec5d49",
+    "slurm_job_id": "13757884",
+    "host": "d14-07.hpc.usc.edu",
+    "python": "/home1/barmada/.conda/envs/csci566-vit/bin/python",
+    "argv": [
+      "code/vit/run_vit_master.py",
+      "--recover-stale-locks",
+      "--holdout",
+      "wukong"
+    ],
+    "notebook": "/home1/barmada/vit_benchmark_work/ViT_Master_Experiments.ipynb",
+    "output_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/wukong",
+    "selected_runs": 24,
+    "completed": 24,
+    "summary_dir": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/wukong/summaries/bf9b018aaa1b",
+    "finished_utc": "2026-11-06T16:49:11.244027+00:00",
+    "source_status_path": "wukong/batch_jobs/13757884_20261106T141153_797976Z/status.json"
+  }
+]
