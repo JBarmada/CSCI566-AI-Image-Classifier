@@ -17,7 +17,6 @@ SPEC.loader.exec_module(FINALIZE)
 class CnnFinalizeTests(unittest.TestCase):
     def notebook(self, root: Path, complete: bool) -> Path:
         imports = '''from dataclasses import dataclass
-import os
 class Device:
     type = "cpu"
 DEVICE = Device()

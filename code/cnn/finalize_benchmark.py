@@ -12,7 +12,7 @@ import sys
 LEGACY_GPU_GUARD = '''if DEVICE.type != "cuda":
     raise RuntimeError("Select a GPU-backed Jupyter kernel before running the CNN benchmark.")
 '''
-AUDIT_GPU_GUARD = '''if DEVICE.type != "cuda" and os.environ.get("CNN_AUDIT_ONLY") != "1":
+AUDIT_GPU_GUARD = '''if DEVICE.type != "cuda" and __import__("os").environ.get("CNN_AUDIT_ONLY") != "1":
     raise RuntimeError("Select a GPU-backed Jupyter kernel before running the CNN benchmark.")
 '''
 
