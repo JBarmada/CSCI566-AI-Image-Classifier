@@ -26,15 +26,16 @@ done
 cd "$repo_dir"
 
 cnn_env="${CNN_ENV_PREFIX:-$HOME/.conda/envs/csci566-vit}"
-[[ -x "$cnn_env/bin/python" ]] || { echo "Missing Python: $cnn_env/bin/python" >&2; exit 1; }
-export PATH="$cnn_env/bin:$PATH"
+cnn_python="${CNN_PYTHON:-$cnn_env/bin/python}"
+[[ -x "$cnn_python" ]] || { echo "Missing Python: $cnn_python" >&2; exit 1; }
+export PATH="$(dirname "$cnn_python"):$PATH"
 export MPLBACKEND=Agg PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-4}"
 export MKL_NUM_THREADS="${SLURM_CPUS_PER_TASK:-4}"
 export OPENBLAS_NUM_THREADS=1
 
 printf 'Job %s | host %s | start %s\n' "$SLURM_JOB_ID" "$(hostname)" "$(date -Is)"
-python -u code/cnn/run_cnn_master.py --recover-stale-locks "$@" &
+"$cnn_python" -u code/cnn/run_cnn_master.py --recover-stale-locks "$@" &
 runner_pid=$!
 forward_stop() {
     printf '\nScheduler stopping job; preserving the last complete epoch.\n'

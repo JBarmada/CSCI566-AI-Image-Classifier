@@ -16,7 +16,8 @@ while [[ ! -f "$repo/code/cnn/finalize_benchmark.py" ]]; do
 done
 cd "$repo"
 cnn_env="${CNN_ENV_PREFIX:-$HOME/.conda/envs/csci566-vit}"
-[[ -x "$cnn_env/bin/python" ]] || { echo "Missing Python: $cnn_env/bin/python" >&2; exit 1; }
+cnn_python="${CNN_PYTHON:-$cnn_env/bin/python}"
+[[ -x "$cnn_python" ]] || { echo "Missing Python: $cnn_python" >&2; exit 1; }
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2
 export MPLBACKEND=Agg
-"$cnn_env/bin/python" -u code/cnn/finalize_benchmark.py
+"$cnn_python" -u code/cnn/finalize_benchmark.py

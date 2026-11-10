@@ -23,6 +23,13 @@ class CnnSlurmTests(unittest.TestCase):
         self.assertIn("#SBATCH --signal=B:USR1@120", source)
         self.assertIn("kill -USR1", source)
 
+    def test_direct_python_override_is_supported(self):
+        for name in ["run_cnn_master.slurm", "finalize_benchmark.slurm"]:
+            with self.subTest(name=name):
+                source = (CNN / name).read_text()
+                self.assertIn('cnn_python="${CNN_PYTHON:-$cnn_env/bin/python}"', source)
+                self.assertIn('"$cnn_python" -u', source)
+
     def test_finalizer_is_cpu_and_dependency_is_documented(self):
         source = (CNN / "finalize_benchmark.slurm").read_text()
         self.assertIn("--dependency=afterok:ARRAY_JOB_ID", source)
