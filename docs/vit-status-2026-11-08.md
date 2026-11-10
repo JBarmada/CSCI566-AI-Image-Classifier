@@ -55,11 +55,10 @@ check. This is a snapshot and an inventory count, not an independent CNN audit.
 The count can increase as the CNN team's jobs continue under their own account.
 
 The example new CNN ADM/k1/rep0 config trains on `glide`, matching the corrected
-plan. Committed `results/cnn_outputs/all_experiment_results.csv` instead contains
-24 old ADM-pilot rows, with k1/rep0 using `Midjourney`. Reusing the same experiment
-name does not make the datasets comparable. Do not join those old rows to the
-new ViT benchmark. Collect the new CNN predictions and verify saved input CSV
-hashes and labels first.
+plan. The incompatible ADM-only pilot tables, whose k1/rep0 used `Midjourney`,
+have been removed from the repository. Collect the corrected-benchmark CNN
+predictions and verify saved input CSV hashes and labels before joining them to
+the ViT benchmark.
 
 Compare complete pipelines with their pretraining/fine-tuning differences:
 CNN is fine-tuned ResNet-50; ViT is a frozen CLIP encoder with a linear probe.

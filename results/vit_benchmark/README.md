@@ -87,10 +87,10 @@ alternative threshold is included.
   conservative and does not prove complete removal of related images.
 - Only **clean** test conditions are exported. Evaluate existing checkpoints
   under fixed JPEG/blur/resize/noise/filter conditions before robustness claims.
-- Use matching corrected-benchmark CNN exports for comparison. Old ADM pilot
-  CNN tables in `results/cnn_outputs/` are a separate study. At the live check,
-  47 CNN completion markers and test exports existed on CARC; those outputs
-  have not been independently audited in this handoff.
+- Use matching corrected-benchmark CNN exports for comparison. The incompatible
+  ADM-only pilot tables have been removed from this repository. At the live
+  check, 47 CNN completion markers and test exports existed on CARC; those
+  outputs have not been independently audited in this handoff.
 - Domain-adversarial/contrastive training, multimodal zero-shot comparison,
   deepfake transfer, fitted calibration and final paper/poster remain separate
   follow-up work. See [the current remaining-work review](../../docs/vit-status-2026-11-08.md).
