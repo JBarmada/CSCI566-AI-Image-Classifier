@@ -10,12 +10,23 @@ three dataset repeats and baseline/augmented training: 24 runs per holdout and
 Run from a complete, unchanged CARC checkout. The launcher uses the existing
 `csci566-vit` environment by default because it contains the project's PyTorch
 stack. Set `CNN_ENV_PREFIX` before submission if the CNN environment lives
-elsewhere.
+elsewhere. For a centrally managed interpreter that is not inside a conventional
+environment prefix, set `CNN_PYTHON` to its executable path instead. Both values
+are inherited by the final audit job.
 
 ```bash
 sbatch code/cnn/run_benchmark.slurm
 python code/cnn/benchmark_status.py --watch
 squeue --me
+```
+
+For example, CARC's GenImage Jupyter kernel may use a Spack interpreter named
+`python3`. After verifying its imports with `OPENBLAS_NUM_THREADS=1`, submit it
+directly without creating a wrapper environment:
+
+```bash
+export CNN_PYTHON=/absolute/path/to/python3
+sbatch --export=ALL,CNN_PYTHON="$CNN_PYTHON" code/cnn/run_benchmark.slurm
 ```
 
 The array has eight tasks with at most two active at once. Index order is ADM,
