@@ -36,6 +36,7 @@ The accepted ViT clean study is ready for analysis; use its published exports.
 | CARC environment and shared storage | [CARC setup](docs/carc.md) |
 | ViT notebook and runner | [ViT guide](docs/vit.md) |
 | CNN workflow | [CNN notebook](cnn.ipynb) |
+| CNN k=7 JPEG/resize robustness evaluation | [Robustness notebook](CNN_K7_Robustness_Evaluation.ipynb) |
 | Original dataset workflow | [Dataset notebook](GenImage_Final_Dataset_Workflow.ipynb) |
 | Earlier ADM-only study | [Archived pilot results](results/vit_master_v1/README.md) |
 
