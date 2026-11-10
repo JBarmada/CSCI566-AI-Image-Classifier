@@ -22,6 +22,10 @@ class Device:
 DEVICE = Device()
 if DEVICE.type != "cuda":
     raise RuntimeError("Select a GPU-backed Jupyter kernel before running the CNN benchmark.")
+x = torch.ones((16, 16), device=DEVICE)
+assert (x @ x).sum().item() == 4096
+torch.cuda.synchronize()
+print("GPU operation passed:", torch.cuda.get_device_name(0))
 '''
         config = '''@dataclass
 class Config:
