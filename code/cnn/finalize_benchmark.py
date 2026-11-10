@@ -9,6 +9,19 @@ from pathlib import Path
 import sys
 
 
+LEGACY_GPU_GUARD = '''if DEVICE.type != "cuda":
+    raise RuntimeError("Select a GPU-backed Jupyter kernel before running the CNN benchmark.")
+'''
+AUDIT_GPU_GUARD = '''if DEVICE.type != "cuda" and os.environ.get("CNN_AUDIT_ONLY") != "1":
+    raise RuntimeError("Select a GPU-backed Jupyter kernel before running the CNN benchmark.")
+'''
+
+
+def audit_compatible_source(source: str) -> str:
+    """Allow the CPU finalizer to audit notebooks with the legacy GPU guard."""
+    return source.replace(LEGACY_GPU_GUARD, AUDIT_GPU_GUARD)
+
+
 @contextlib.contextmanager
 def audit_lock(output_root: Path):
     output_root.mkdir(parents=True, exist_ok=True)
@@ -50,6 +63,7 @@ def main(argv=None) -> int:
             if stripped.startswith("selected_runs ="):
                 continue
             print(f"\n--- Notebook cell {index} ---", flush=True)
+            source = audit_compatible_source(source)
             exec(compile(source, f"<cnn-audit-cell-{index}>", "exec"), ns)
             if stripped.startswith("@dataclass"):
                 data_root = shared_root / "data/extracted/GenImage_Compact"

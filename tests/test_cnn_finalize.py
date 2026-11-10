@@ -16,7 +16,14 @@ SPEC.loader.exec_module(FINALIZE)
 
 class CnnFinalizeTests(unittest.TestCase):
     def notebook(self, root: Path, complete: bool) -> Path:
-        imports = "from dataclasses import dataclass\n"
+        imports = '''from dataclasses import dataclass
+import os
+class Device:
+    type = "cpu"
+DEVICE = Device()
+if DEVICE.type != "cuda":
+    raise RuntimeError("Select a GPU-backed Jupyter kernel before running the CNN benchmark.")
+'''
         config = '''@dataclass
 class Config:
     data_root: str = ""
