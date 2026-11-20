@@ -10,24 +10,65 @@ fixed.
 
 ## Current status
 
-**Verified November 10, 2026: both corrected clean benchmarks are complete.**
-The ViT and CNN studies each contain 192 runs and passed their final CARC audits.
-The published ViT export independently checked all **384 validation/test
-prediction files (215,040 rows)** against the exact manifests, labels and
-recorded metrics. The audited CNN results and checkpoints currently remain on
-CARC and still need a small, shareable analysis export for matched reporting.
+**Status refreshed November 20, 2026. The midterm report has been submitted.**
+Both corrected clean benchmarks are complete: 192 CNN runs and 192 ViT runs,
+with final CARC audits passed. The submitted midterm includes the matched
+192-pair CNN–ViT comparison. Publishing the corrected CNN and matched-comparison
+analysis exports in this repository remains a separate handoff task.
+
+The published ViT clean export independently checked all **384 validation/test
+prediction files (215,040 rows)** against the manifests, labels and recorded
+metrics. Saved checkpoints and full raw outputs remain on CARC.
 
 | Component | Status |
 |---|---|
 | Corrected dataset | 96 experiments, 288 split CSVs, fixed test membership per holdout, shared real partitions, release hashes and acceptance checks |
 | ViT clean benchmark | 192/192 completed and audited: 8 holdouts x 4 k values x 3 repeats x 2 training modes |
-| Published ViT analysis | Per-run results/settings, image-level predictions, training histories, calibration, paired augmentation differences and figures |
-| CNN clean benchmark | 192/192 completed and audited; checkpoint hashes, frozen split membership, predictions, labels and metrics verified |
-| CNN k=7 robustness | Evaluation notebook ready for clean, JPEG-60 and 224→112→224 bicubic tests; default selection is ADM across repeats 0–2 |
-| Remaining analysis | Run/expand CNN robustness, export audited CNN summaries, perform matched CNN–ViT analysis and finish the report/poster |
+| Published ViT clean analysis | Per-run settings/results, image-level predictions, histories, calibration metrics and figures |
+| CNN clean benchmark | 192/192 completed and audited |
+| Matched CNN–ViT comparison | 192 pairs verified and analyzed; included in the submitted midterm |
+| ViT k=7 robustness | All 8 holdouts complete: 48 clean references and 96 JPEG60/resize evaluations; independent audit passed |
+| CNN k=7 robustness | ADM complete: 6 saved models x 3 conditions = 18 evaluations; remaining 7 holdouts pending |
+| Midterm report | Submitted; final report, poster and demonstration remain |
 
 The accepted clean studies do not need retraining. Robustness evaluation reuses
-saved checkpoints and must not modify the clean benchmark outputs.
+saved checkpoints and writes separate outputs.
+
+## Remaining work
+
+- **Test ViT transfer to face-manipulation deepfakes.** Select a public dataset,
+  freeze the evaluation subset and checkpoint selection, and test the saved
+  baseline/augmented models without retraining first. Keep video/identity
+  separation where applicable. Report accuracy, AUROC, fake recall and example
+  errors; treat any later adaptation as a separate experiment.
+- **Analyze confidence and failure cases using existing predictions.** Produce
+  reliability plots and Brier/ECE summaries, inspect confident mistakes, and
+  compare CNN–ViT disagreements by holdout and generator family. Fit any
+  calibrator or decision threshold on validation data only. Account for reused
+  test images and distinguish dataset repeats from classifier seeds.
+- **Extend CNN k=7 robustness beyond ADM.** Evaluate the remaining seven holdouts
+  using the frozen JPEG60 and bicubic 224→112→224 protocol, three repeats and
+  both training modes. This adds **84 degraded evaluations**; verify the matching
+  clean references, checkpoint hashes, image identities, labels and recomputed
+  metrics before reporting an equally weighted eight-holdout CNN–ViT comparison.
+- **Complete the zero-shot multimodal comparison.** Agree on a shared image
+  subset, exact model versions, fixed prompts, scoring rules and a cost limit
+  before collecting predictions. Compare on identical images and retain raw
+  responses, including refusals or invalid outputs.
+- **Publish the completed analysis and reproducibility artifacts.** Add the
+  corrected CNN summaries, matched CNN–ViT tables, and completed robustness
+  summaries with source versions and hashes. Verify team access to the exact
+  manifests and preserve checkpoint backups. Update historical status links so
+  completed experiments are not mistaken for pending work.
+- **Resolve the proposed extra-training scope.** Domain-adversarial training and
+  task-specific contrastive learning are not implemented in the reviewed
+  pipeline. Explicitly defer them in the final report unless the team retains
+  one controlled follow-up experiment. CLIP's pretrained contrastive features
+  do not constitute implementing the proposed training objective.
+- **Finish the final report, poster and demonstration.** Combine the verified
+  clean, robustness, transfer and multimodal results; explain pipeline
+  differences and limitations, quantify uncertainty appropriately, and check
+  that every reported figure/table can be reproduced from saved exports.
 
 ## Start here
 
@@ -44,10 +85,10 @@ saved checkpoints and must not modify the clean benchmark outputs.
 | Original dataset workflow | [Dataset notebook](GenImage_Final_Dataset_Workflow.ipynb) |
 | Earlier ADM-only study | [Archived pilot results](results/vit_master_v1/README.md) |
 
-**Drive access:** the handoff was uploaded to the connected account's My Drive.
-At verification it was private; creation under the original shared dataset
-folder returned `403 insufficientParentPermissions`. An editor must share or
-move the handoff so teammates can access it.
+**Historical Drive access note:** the original handoff upload was private when
+first checked, and creation under the shared dataset folder failed with
+`403 insufficientParentPermissions`. Verify current team access before treating
+the manifest handoff as complete.
 
 ## Experimental design
 
@@ -93,8 +134,9 @@ decision threshold of 0.5.
 
 Average clean performance improves with k for both modes; individual holdouts
 can behave differently. The combined augmentation recipe scores lower on clean
-tests at each k. Its intended robustness benefit still needs degraded-image
-evaluation. Raw probability calibration also remains imperfect.
+tests at each k. Completed k=7 JPEG60 and resize tests show higher accuracy for
+augmented ViT models on degraded inputs; JPEG60 AUROC is nearly unchanged
+between training modes. Raw probability calibration also remains imperfect.
 
 ![Clean ViT performance versus training-generator count](results/vit_benchmark/figures/performance_vs_k.png)
 
@@ -125,6 +167,12 @@ The source-of-truth CNN directory is
 corrected exports are not the removed ADM-only pilot tables.
 
 ## k=7 robustness evaluation
+
+**Verified coverage on CARC (November 20):** ViT has completed all eight
+holdouts, with 96 degraded evaluations and 53,760 degraded prediction rows;
+its independent acceptance audit passed. CNN has completed ADM only, with
+three repeats per mode: 6 clean, 6 JPEG60 and 6 resize evaluations. Do not
+compare the ADM-only CNN average directly with the eight-holdout ViT average.
 
 [`CNN_K7_Robustness_Evaluation.ipynb`](CNN_K7_Robustness_Evaluation.ipynb)
 evaluates existing corrected-benchmark checkpoints without retraining. It makes
@@ -190,6 +238,7 @@ Large artifacts live under `/project2/yzhao010_1531/csci566-genimage`:
 | ViT frozen-feature cache | `features/vit_benchmark/<holdout>/` |
 | Corrected CNN outputs | `results/cnn_benchmark/notebook/` |
 | CNN k=7 robustness outputs | `results/cnn_robustness_k7_v1/` |
+| ViT k=7 robustness outputs and acceptance audit | `results/vit_robustness_k7_v1/summary/` |
 | Earlier ViT pilot | `results/vit_master_v1/` |
 
 The Drive manifest archive contains the exact `benchmark/` directory and its
@@ -253,9 +302,10 @@ python code/vit/export_analysis.py --source PATH/vit_benchmark --benchmark PATH/
 python code/vit/plot_analysis.py --root results/vit_benchmark
 ```
 
-See the [current work review](docs/vit-status-2026-11-08.md) for robustness,
-matched CNN comparisons, uncertainty, calibration and reporting tasks. The
-[older team plan](docs/team-plan.md) preserves the historical planning snapshot.
+Use the remaining-work bullets above for current priorities. The
+[November 8 review](docs/vit-status-2026-11-08.md) and
+[older team plan](docs/team-plan.md) are historical snapshots; their pending-run
+counts and completion statements are superseded by the current status above.
 
 ## Interpretation limits
 
