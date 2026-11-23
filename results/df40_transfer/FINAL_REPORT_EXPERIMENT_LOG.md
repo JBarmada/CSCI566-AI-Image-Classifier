@@ -234,7 +234,10 @@ aggregates are therefore preliminary, not fully accepted by the replay gate.
 A repeat of Stable Diffusion 1.4 clean inference matched the new results
 exactly. Repeating with deterministic cuDNN and replaying one checkpoint
 through the original notebook functions did not restore the prior scores.
-The cause is unverified. See `cnn_robustness_extension/README.md` and
+Diagnostic job 14482900 initially failed because the original notebook imports
+`seaborn`, which was absent in the inference environment. Job 14482918 skipped
+that plotting-only import and completed the notebook-function replay. The cause
+of the score discrepancy remains unverified. See `cnn_robustness_extension/README.md` and
 `AUDIT_INVENTORY.json` for full checks, results and scripts.
 
 ## FaceForensics++ DF40 calibration and test

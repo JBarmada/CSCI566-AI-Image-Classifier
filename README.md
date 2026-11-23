@@ -10,11 +10,11 @@ fixed.
 
 ## Current status
 
-**Status refreshed November 20, 2026. The midterm report has been submitted.**
+**Status refreshed November 23, 2026. The midterm report has been submitted.**
 Both corrected clean benchmarks are complete: 192 CNN runs and 192 ViT runs,
 with final CARC audits passed. The submitted midterm includes the matched
-192-pair CNN–ViT comparison. Publishing the corrected CNN and matched-comparison
-analysis exports in this repository remains a separate handoff task.
+192-pair CNN–ViT comparison. The corrected CNN and matched-comparison
+analysis exports are available in the [research results directory](results/df40_transfer/).
 
 The published ViT clean export independently checked all **384 validation/test
 prediction files (215,040 rows)** against the manifests, labels and recorded
@@ -28,7 +28,10 @@ metrics. Saved checkpoints and full raw outputs remain on CARC.
 | CNN clean benchmark | 192/192 completed and audited |
 | Matched CNN–ViT comparison | 192 pairs verified and analyzed; included in the submitted midterm |
 | ViT k=7 robustness | All 8 holdouts complete: 48 clean references and 96 JPEG60/resize evaluations; independent audit passed |
-| CNN k=7 robustness | ADM complete: 6 saved models x 3 conditions = 18 evaluations; remaining 7 holdouts pending |
+| CNN k=7 robustness | Eight holdouts evaluated; four fail the strict clean-score replay tolerance, so the full comparison is provisional |
+| DF40 face transfer | Celeb-DF and FaceForensics++ subsets evaluated; a supervised face-adapted head is exploratory |
+| Zero-shot comparison | CLIP evaluated on face crops; Qwen2.5-VL-3B evaluated on a 64-image ADM subset |
+| Generator objectives | One exploratory ADM comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
 | Midterm report | Submitted; final report, poster and demonstration remain |
 
 The accepted clean studies do not need retraining. Robustness evaluation reuses
@@ -36,35 +39,37 @@ saved checkpoints and writes separate outputs.
 
 ## Remaining work
 
-- **Test ViT transfer to face-manipulation deepfakes.** Select a public dataset,
-  freeze the evaluation subset and checkpoint selection, and test the saved
-  baseline/augmented models without retraining first. Keep video/identity
-  separation where applicable. Report accuracy, AUROC, fake recall and example
-  errors; treat any later adaptation as a separate experiment.
+The current [research results index](results/df40_transfer/README.md) and
+[team-review report draft](results/df40_transfer/FINAL_REPORT_DRAFT.md) record
+new results and limitations. The list below preserves the original project
+plan; several items now have exploratory or provisional results.
+
+- **Extend face-manipulation transfer analysis.** Initial saved-model DF40
+  results and a separate supervised face-adaptation experiment are available.
+  Check source and identity overlap and evaluate additional methods if feasible.
 - **Analyze confidence and failure cases using existing predictions.** Produce
   reliability plots and Brier/ECE summaries, inspect confident mistakes, and
   compare CNN–ViT disagreements by holdout and generator family. Fit any
   calibrator or decision threshold on validation data only. Account for reused
   test images and distinguish dataset repeats from classifier seeds.
-- **Extend CNN k=7 robustness beyond ADM.** Evaluate the remaining seven holdouts
+- **Resolve CNN k=7 robustness replay differences.** The remaining seven holdouts were evaluated.
+  Four holdouts exceed the original clean-score replay tolerance. Diagnose or
+  explicitly report this limitation before treating the eight-holdout CNN result
+  as fully accepted. The original plan was to evaluate the remaining holdouts
   using the frozen JPEG60 and bicubic 224→112→224 protocol, three repeats and
   both training modes. This adds **84 degraded evaluations**; verify the matching
   clean references, checkpoint hashes, image identities, labels and recomputed
   metrics before reporting an equally weighted eight-holdout CNN–ViT comparison.
-- **Complete the zero-shot multimodal comparison.** Agree on a shared image
-  subset, exact model versions, fixed prompts, scoring rules and a cost limit
-  before collecting predictions. Compare on identical images and retain raw
-  responses, including refusals or invalid outputs.
-- **Publish the completed analysis and reproducibility artifacts.** Add the
-  corrected CNN summaries, matched CNN–ViT tables, and completed robustness
-  summaries with source versions and hashes. Verify team access to the exact
-  manifests and preserve checkpoint backups. Update historical status links so
-  completed experiments are not mistaken for pending work.
-- **Resolve the proposed extra-training scope.** Domain-adversarial training and
-  task-specific contrastive learning are not implemented in the reviewed
-  pipeline. Explicitly defer them in the final report unless the team retains
-  one controlled follow-up experiment. CLIP's pretrained contrastive features
-  do not constitute implementing the proposed training objective.
+- **Extend the zero-shot multimodal comparison.** One open vision-language model
+  has been evaluated on a fixed 64-image ADM subset. Additional models, prompts,
+  generators or paid APIs require a documented protocol and team cost decision.
+- **Verify team access and reproducibility.** Corrected CNN summaries,
+  matched tables and robustness outputs are published. Verify teammate access
+  to exact datasets, manifests and checkpoint backups.
+- **Extend the generator-objective experiments.** Controlled feature-adapter
+  comparisons of domain-adversarial and supervised contrastive objectives are
+  available for one ADM holdout and seed. Additional holdouts and seeds are
+  needed before making generalization claims.
 - **Finish the final report, poster and demonstration.** Combine the verified
   clean, robustness, transfer and multimodal results; explain pipeline
   differences and limitations, quantify uncertainty appropriately, and check
@@ -167,6 +172,10 @@ The source-of-truth CNN directory is
 corrected exports are not the removed ADM-only pilot tables.
 
 ## k=7 robustness evaluation
+
+The later [eight-holdout CNN extension](results/df40_transfer/cnn_robustness_extension/README.md)
+is provisional because four holdouts exceeded the strict clean-score replay
+tolerance. The November 20 coverage below is a historical checkpoint.
 
 **Verified coverage on CARC (November 20):** ViT has completed all eight
 holdouts, with 96 degraded evaluations and 53,760 degraded prediction rows;
