@@ -1,0 +1,102 @@
+[
+  {
+    "repo": "ManhQuangAI/df-40-test-full",
+    "files": [
+      {
+        "path": "fomm.zip",
+        "size": 1585909985,
+        "lfs": {
+          "oid": "23f9d7ca9321ea4b950f6c29a0b250edc1bb2a75d261c8acf15dac8528f3960e",
+          "size": 1585909985,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "simswap.zip",
+        "size": 2084511297,
+        "lfs": {
+          "oid": "f8cf619a98277d8f0807efa04616070f435f80b5bface34b347590c493b973c4",
+          "size": 2084511297,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "wav2lip.zip",
+        "size": 2099533197,
+        "lfs": {
+          "oid": "80d165b2358fd7d24976c158f85b4370bc2d710a934d30ed180226c59d4ea560",
+          "size": 2099533197,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "whichfaceisreal.zip",
+        "size": 818182774,
+        "lfs": {
+          "oid": "0c7a154c20407bfa726dc26dbcb63c9f1746a9c505d5a26364fc2f48d7d91541",
+          "size": 818182774,
+          "pointerSize": 134
+        }
+      }
+    ]
+  },
+  {
+    "repo": "ohjoonhee/DF40-Fake-Videos",
+    "files": [
+      {
+        "path": "test/fomm.zip",
+        "size": 487847301,
+        "lfs": {
+          "oid": "17a941556ce062e849385b5a361faebd6e53b0753c232b362b30184bbc397bff",
+          "size": 487847301,
+          "pointerSize": 134
+        }
+      },
+      {
+        "path": "test/simswap.zip",
+        "size": 4053478826,
+        "lfs": {
+          "oid": "844abf24a2871a6f4f8fa539a331e607e051b3380d89a4df779869cef331b987",
+          "size": 4053478826,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "test/wav2lip.zip",
+        "size": 1831741006,
+        "lfs": {
+          "oid": "d9f8dff2d97da783680a6086ac2b5045a35ed64189467cca6f4ec622a2f2d9d9",
+          "size": 1831741006,
+          "pointerSize": 135
+        }
+      },
+      {
+        "path": "train/fomm.zip",
+        "size": 627808160,
+        "lfs": {
+          "oid": "3088f97ad1ef35e4aa8d494c217d418d0fbd551c42be4b6b60aa9be667de51aa",
+          "size": 627808160,
+          "pointerSize": 134
+        }
+      },
+      {
+        "path": "train/simswap.zip",
+        "size": 11179351178,
+        "lfs": {
+          "oid": "d46f0d3f35f42ed8bd93bea97e9e9e277f617480cebb05b01964e79fce51a3ab",
+          "size": 11179351178,
+          "pointerSize": 136
+        }
+      },
+      {
+        "path": "train/wav2lip.zip",
+        "size": 2854773348,
+        "lfs": {
+          "oid": "15a27557a425490b11dc3c3f3018bbf4d2253fa1f40a27410e5c669bf606f7cf",
+          "size": 2854773348,
+          "pointerSize": 135
+        }
+      }
+    ]
+  }
+]

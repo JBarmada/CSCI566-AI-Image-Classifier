@@ -1,0 +1,44 @@
+[
+  {
+    "query": "celeb-df",
+    "repos": [
+      "Ruchi2003/Celeb_DF_Frames",
+      "thenewsupercell/celeb-df-audio-dataset",
+      "thenewsupercell/audio_embeddings_celeb-df-dataset",
+      "thenewsupercell/celeb-df-image-dataset",
+      "thenewsupercell/V2_audio_embeddings_celeb-df-dataset",
+      "thenewsupercell/V1_finetuned_audio_embeddings_celeb-df-dataset",
+      "thenewsupercell/with_id_celeb-df-image-dataset",
+      "thenewsupercell/V1_finetuned_image_embeddings_celeb-df-dataset",
+      "thenewsupercell/V1_image_embeddings_celeb-df-dataset",
+      "thenewsupercell/finetuned_image_embeddings_celeb-df-dataset",
+      "thenewsupercell/emotion_image_embeddings_celeb-df-dataset",
+      "thenewsupercell/new_with_id_celeb-df-image-dataset",
+      "thenewsupercell/g_r_celeb-df-image-dataset",
+      "Soltani2022/Celeb_Df"
+    ]
+  },
+  {
+    "query": "celebdf",
+    "repos": [
+      "Ruchi2003/Celeb_DF_Frames",
+      "thenewsupercell/celeb-df-audio-dataset",
+      "thenewsupercell/celeb-df-image-dataset",
+      "Soltani2022/Celeb_Df"
+    ]
+  },
+  {
+    "query": "df40",
+    "repos": [
+      "ej2/df40",
+      "ohjoonhee/DF40-Fake-Videos",
+      "anon-frozen-experts/df40-frozen-experts-anon",
+      "Randomizer-1999/DF-40-cut",
+      "01Yassine/DF40",
+      "ManhQuangAI/df40-test-data-v3",
+      "ManhQuangAI/DF40_train",
+      "sinister007/df40_dataset",
+      "ManhQuangAI/df-40-test-full"
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "model": "cnn",
+    "mode": "baseline",
+    "source": "Celeb-real",
+    "total": 62,
+    "false_positives": 62
+  },
+  {
+    "model": "cnn",
+    "mode": "baseline",
+    "source": "YouTube-real",
+    "total": 38,
+    "false_positives": 37
+  },
+  {
+    "model": "cnn",
+    "mode": "augmented",
+    "source": "Celeb-real",
+    "total": 62,
+    "false_positives": 34
+  },
+  {
+    "model": "cnn",
+    "mode": "augmented",
+    "source": "YouTube-real",
+    "total": 38,
+    "false_positives": 23
+  },
+  {
+    "model": "vit",
+    "mode": "baseline",
+    "source": "Celeb-real",
+    "total": 62,
+    "false_positives": 58
+  },
+  {
+    "model": "vit",
+    "mode": "baseline",
+    "source": "YouTube-real",
+    "total": 38,
+    "false_positives": 32
+  },
+  {
+    "model": "vit",
+    "mode": "augmented",
+    "source": "Celeb-real",
+    "total": 62,
+    "false_positives": 54
+  },
+  {
+    "model": "vit",
+    "mode": "augmented",
+    "source": "YouTube-real",
+    "total": 38,
+    "false_positives": 29
+  }
+]

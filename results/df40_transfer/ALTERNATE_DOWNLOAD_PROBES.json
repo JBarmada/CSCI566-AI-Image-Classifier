@@ -1,0 +1,93 @@
+[
+  {
+    "name": "DFF_inpainting",
+    "repo": "OpenRL/DeepFakeFace",
+    "revision": "eb2a54fbf2567790bd3dc61d09fdaade6bb6c31c",
+    "file": "inpainting.zip",
+    "status": 206,
+    "content_range": "bytes 1081962129-1082027664/1082027665",
+    "bytes_read": 65536,
+    "zip_entries": 30101,
+    "directory_bytes": 3588973,
+    "directory_offset": 1078438670,
+    "tail_member_examples": [
+      "inpainting/22/45532822_1955-01-05_2014.jpg",
+      "inpainting/22/9174122_1983-09-11_2011.jpg",
+      "inpainting/22/5229022_1987-09-16_2012.jpg",
+      "inpainting/22/1490922_1984-03-04_2011.jpg"
+    ]
+  },
+  {
+    "name": "DF40_simswap_mirror",
+    "repo": "ej2/df40",
+    "revision": "e0d28c7b8ca85aa5a8102e1850e2c271fb23f24e",
+    "file": "simswap.zip",
+    "status": 206,
+    "content_range": "bytes 2081245854-2081311389/2081311390",
+    "bytes_read": 65536,
+    "zip_entries": 49580,
+    "directory_bytes": 3893700,
+    "directory_offset": 2077417668,
+    "tail_member_examples": [
+      "ff/landmarks/847_906/222.npy",
+      "ff/landmarks/847_906/009.npy",
+      "ff/landmarks/847_906/145.npy",
+      "ff/landmarks/847_906/164.npy"
+    ]
+  },
+  {
+    "name": "DF40_repackaged",
+    "repo": "scaledf/ScaleDF",
+    "revision": "fdc0f92f1f133d5c8742578917aa280b32d9d8ce",
+    "file": "Established_benchmarks/DF40.tar",
+    "status": 206,
+    "content_range": "bytes 33132847104-33132912639/33132912640",
+    "bytes_read": 65536
+  },
+  {
+    "file": "wiki.zip",
+    "status": 206,
+    "content_range": "bytes 1766568419-1766572514/1766572515",
+    "bytes_read": 4096
+  },
+  {
+    "file": "insight.zip",
+    "status": 206,
+    "content_range": "bytes 1081371341-1081375436/1081375437",
+    "bytes_read": 4096
+  },
+  {
+    "file": "text2img.zip",
+    "status": 206,
+    "content_range": "bytes 1134388611-1134392706/1134392707",
+    "bytes_read": 4096
+  },
+  {
+    "repo": "ManhQuangAI/df-40-test-full",
+    "revision": "b052e68b675c4c52b36439cfa1c88bdb49bb92b8",
+    "file": "fomm.zip",
+    "status": 206,
+    "content_range": "bytes 1585844449-1585909984/1585909985",
+    "bytes_read": 65536,
+    "zip_entries": 51047,
+    "tail_member_examples": [
+      "fomm/ff/landmarks/995_233/764.npy",
+      "fomm/ff/landmarks/995_233/1019.npy",
+      "fomm/ff/landmarks/995_233/000.npy"
+    ]
+  },
+  {
+    "repo": "ManhQuangAI/df-40-test-full",
+    "revision": "b052e68b675c4c52b36439cfa1c88bdb49bb92b8",
+    "file": "wav2lip.zip",
+    "status": 206,
+    "content_range": "bytes 2099467661-2099533196/2099533197",
+    "bytes_read": 65536,
+    "zip_entries": 52005,
+    "tail_member_examples": [
+      "wav2lip/ff/landmarks/855_5Dn08yo9aiM_50006/137.npy",
+      "wav2lip/ff/landmarks/855_5Dn08yo9aiM_50006/127.npy",
+      "wav2lip/ff/landmarks/855_5Dn08yo9aiM_50006/132.npy"
+    ]
+  }
+]

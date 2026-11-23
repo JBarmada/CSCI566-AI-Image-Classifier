@@ -1,0 +1,8 @@
+{
+  "experiment": "fixed two-prompt zero-shot CLIP baseline",
+  "real_prompt": "a photo of a real face",
+  "fake_prompt": "a photo of a manipulated face",
+  "score": "softmax over scaled cosine similarities to the two prompts",
+  "threshold": 0.5,
+  "note": "Fixed before evaluating these prompts on the DF40 subset; exploratory, not a calibrated probability."
+}

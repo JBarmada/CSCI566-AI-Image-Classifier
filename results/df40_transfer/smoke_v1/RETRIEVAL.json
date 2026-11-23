@@ -1,0 +1,28 @@
+{
+  "status": "blocked_no_images_retrieved",
+  "errors": {
+    "simswap": "Google Drive download quota exceeded for this archive",
+    "fomm": "Google Drive download quota exceeded for this archive",
+    "wav2lip": "Google Drive download quota exceeded for this archive",
+    "real": "Google Drive download quota exceeded for this archive"
+  },
+  "zip_range_bytes": 44,
+  "metadata": {
+    "selection_snapshot_sha256": "32899fa775c379c44e7aeffbc95c3b71d531ac4cfb8c2c6659b38baa9168eb50",
+    "selection": "FNV1a32 rank of 566:method:video_group; six distinct known primary identity IDs per class/method; median numeric available frame.",
+    "source_metadata": {
+      "simswap": {
+        "url": "https://drive.google.com/file/d/1isStEussymA6ToZZHl87TqWJR0feobpA/view?usp=drivesdk",
+        "bytes": 4164167
+      },
+      "fomm": {
+        "url": "https://drive.google.com/file/d/1x7VF-A_1IWURHU6JZ60rIDaqWE14IvzO/view?usp=drivesdk",
+        "bytes": 4036914
+      },
+      "wav2lip": {
+        "url": "https://drive.google.com/file/d/1sYGDj4oX9MRffjtxXxflTIp2wjHsDFzt/view?usp=drivesdk",
+        "bytes": 4816587
+      }
+    }
+  }
+}

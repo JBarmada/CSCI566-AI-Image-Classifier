@@ -1,0 +1,42 @@
+{
+  "source": "Official DF40 Drive JSON files inspected through connected Drive on2026-11-20",
+  "fingerprint": "Two independent32-bit rolling fingerprints over sorted unique canonical paths joined by LF; metadata consistency check, not a cryptographic image integrity guarantee.",
+  "expected": {
+    "simswap": {
+      "real": {
+        "groups": 178,
+        "frames": 5620,
+        "path_set_fingerprint": "5d57b3224ae5d086"
+      },
+      "fake": {
+        "groups": 641,
+        "frames": 20322,
+        "path_set_fingerprint": "3b58bbad911cad89"
+      }
+    },
+    "fomm": {
+      "real": {
+        "groups": 178,
+        "frames": 5620,
+        "path_set_fingerprint": "5d57b3224ae5d086"
+      },
+      "fake": {
+        "groups": 647,
+        "frames": 20278,
+        "path_set_fingerprint": "a7db9ceb2eb230b3"
+      }
+    },
+    "wav2lip": {
+      "real": {
+        "groups": 178,
+        "frames": 5620,
+        "path_set_fingerprint": "5d57b3224ae5d086"
+      },
+      "fake": {
+        "groups": 666,
+        "frames": 20814,
+        "path_set_fingerprint": "f7cc37bfe2d8e977"
+      }
+    }
+  }
+}

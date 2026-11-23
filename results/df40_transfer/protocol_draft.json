@@ -1,0 +1,137 @@
+{
+  "status": "alternative_only_not_adopted_team_has_no_access",
+  "user_clarification": "Team has no access. Prefer an easier image-only source. See access_review.json for the OpenForensics option. This video protocol is not agreed.",
+  "reviewed_date": "2026-11-20",
+  "repository": "JBarmada/CSCI566-AI-Image-Classifier",
+  "inspected_github_revision": "492ef5768fdb9ef96366fa1b9f32f1ba4cb1ee87",
+  "question": "Do saved GenImage-trained detectors transfer to localized face manipulation without adaptation?",
+  "dataset": {
+    "recommended": "FaceForensics++",
+    "subset": "Deepfakes",
+    "compression": "c23",
+    "official_access": "https://github.com/ondyari/FaceForensics/blob/master/dataset/README.md",
+    "split_metadata": "https://github.com/ondyari/FaceForensics/blob/master/dataset/splits/test.json",
+    "snapshot": "metadata/ffpp_official_test_pairs.json",
+    "access_status": "Not established; team member must obtain author approval and accept terms.",
+    "alternative": "Celeb-DF v2 official test list; requires a separate protocol version and access approval.",
+    "rationale": "Matched source scenes, explicit manipulation method and compression, official source-video pairs, limited-download support.",
+    "download_status": "Only public split metadata retrieved; no videos, frames, or model weights downloaded.",
+    "license_questions": [
+      "Confirm every participating teammate has permitted access.",
+      "Confirm terms permit any proposed external multimodal image upload before calls.",
+      "Keep licensed media out of GitHub."
+    ]
+  },
+  "sampling": {
+    "candidates": "candidate_video_plan.csv",
+    "selection": "Canonicalize each official test pair by sorting its two IDs. Rank by SHA256('566:'+pair_id), ascending. Choose orientation from low bit of first eight digest hex digits.",
+    "roles": "First two source-pair groups are smoke-only; next twenty are evaluation-only.",
+    "grouping": "Keep both source IDs and all derivatives in one role; verify source-video disjointness.",
+    "identity_limit": "Official source-video groups do not prove person-identity disjointness. Record known identities, check overlap, and do not claim identity separation without evidence.",
+    "smoke": {
+      "groups": 2,
+      "real_videos": 2,
+      "fake_videos": 2,
+      "frames_per_video": 3,
+      "total_frames": 12
+    },
+    "evaluation": {
+      "groups": 20,
+      "real_videos": 20,
+      "fake_videos": 20,
+      "frames_per_video": 3,
+      "total_frames": 120
+    },
+    "exclusions": "Decode/availability failures logged before inference; no replacement based on model performance. Any changed membership requires a reviewed version.",
+    "transfer_split": "No deepfake training, validation, threshold fitting, calibration fitting, or prompt tuning on evaluation media.",
+    "media_budget": "Before retrieval, estimate bytes; no full archive fallback. Initial smoke cap proposed at 100 MiB, later evaluation cap 500 MiB, subject to team agreement."
+  },
+  "frames": {
+    "quantiles": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "selection": "On decoded target-original frame count N, choose floor(q*(N-1)); use corresponding frame indices for the fake. Fail the pair if synchronization/indices cannot be validated.",
+    "output": "Lossless RGB PNG; record decoder/version, source-video SHA256, frame index, timestamp, native dimensions, image SHA256 and decoded-pixel SHA256.",
+    "primary_view": "Full frame with the existing deterministic resize and 224 center crop; no new face detector or stochastic augmentation.",
+    "limitation": "Center crop can miss/suppress a manipulated face; review and record face visibility without choosing frames from detector scores. A face-crop study would be a separate agreed condition.",
+    "conditions": [
+      "clean"
+    ],
+    "future_conditions": "JPEG60 and resize_112 only after clean transfer agreement, under separate identities."
+  },
+  "checkpoints": {
+    "source_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark",
+    "smoke": [
+      "ADM/runs/holdout_ADM_k7_rep0__baseline__seed17",
+      "ADM/runs/holdout_ADM_k7_rep0__augmented__seed17"
+    ],
+    "selection_reason": "Fixed operational pair, not selected from deepfake scores.",
+    "later_evaluation": "All 48 saved k=7 heads: 8 GenImage holdouts x 3 dataset repeats x 2 modes, seed17. No winner selection on deepfake labels; no cross-head ensembling in primary analysis.",
+    "interpretation": "The same deepfake evaluation is reused across heads. Their GenImage holdout names identify training provenance; they are not eight independent deepfake test datasets.",
+    "cnn_alignment": "Use corresponding 48 corrected CNN k=7 checkpoints with the exact same image manifest if the CNN team agrees.",
+    "checks": [
+      "Match config to TRAINING_COMPLETE.json protocol hash.",
+      "Match best_head.pt SHA256 to completion marker.",
+      "Confirm corrected dataset fingerprint and smoke_test=false.",
+      "Record backbone weight SHA256 and package/source versions."
+    ]
+  },
+  "vit_inference": {
+    "model": "OpenAI CLIP ViT-L/14",
+    "features": "L2-normalize float image embeddings before saved nn.Linear(feature_dim,1).",
+    "scores": "sigmoid(logit), prob_fake; real=0, fake=1; threshold >= 0.5.",
+    "runtime": "Encoder and head eval(), requires_grad=False, torch.inference_mode(); no optimizer or training entry point.",
+    "loading": "Load existing backbone file explicitly by local path; fail if missing, no automatic clip.load model-name download.",
+    "warning": "Existing run_vit_master.py --smoke-test exercises training and must not be used for this milestone.",
+    "outputs": "Separate results/deepfake_transfer_smoke_v1; never write into accepted training or robustness folders."
+  },
+  "acceptance": {
+    "precheck": "Reproduce saved clean predictions for at least two original benchmark images per class and each smoke head, joined by SHA256; record max probability difference (proposed tolerance 1e-5 in matching environment).",
+    "smoke": "12 unique deepfake-domain frames x 2 heads = 24 scores, all finite in [0,1], exactly one score per image/head; validated labels and joins; same probabilities within 1e-6 across two passes in the same environment.",
+    "immutable": "Checkpoint and backbone SHA256 unchanged before/after; no gradient state, optimizer state or training artifact created.",
+    "record": "Manifest/policy/code/checkpoint/backbone hashes; device, versions, timing, raw predictions and explicit pass/fail checks.",
+    "interpretation": "Smoke pass establishes inference plumbing only, with no accuracy target and no generalization conclusion."
+  },
+  "metrics": {
+    "primary_unit": "Video, score = arithmetic mean of its three frame prob_fake values.",
+    "primary": [
+      "AUROC",
+      "accuracy@0.5",
+      "balanced_accuracy@0.5",
+      "fake_recall@0.5",
+      "real_false_positive_rate@0.5",
+      "fake_F1@0.5",
+      "confusion_counts"
+    ],
+    "secondary": "Frame-level same metrics, explicitly correlated within video.",
+    "comparisons": "Pair baseline vs augmented and CNN vs ViT by image_id and source group; average per-head metrics over repeats then training-provenance holdouts; also retain per-head results.",
+    "uncertainty": "If intervals are reported, paired cluster bootstrap over 20 source-pair groups, reusing each bootstrap draw across all models/heads (seed566, 2000 draws). State small sample and unresolved identity overlap; never treat heads x frames as independent data.",
+    "planned_counts": "120 frame scores and 40 video scores per head; 5760 frame scores and 1920 video scores for 48 ViT heads.",
+    "k_question": "k=7 transfer alone does not test whether generator diversity improves deepfake transfer. Extending to k=1/2/4 is a separately agreed follow-up."
+  },
+  "multimodal": {
+    "status": "Await owner, exact available model/version, fixed prompt/parser and cost limit approval.",
+    "inputs": "Same 120 canonical PNG files, one image per request, neutral names; no dataset, label, source-path or pair context in prompts.",
+    "prompt_draft": "Does this image contain an AI-generated or digitally replaced face? Return JSON with label REAL or FAKE. Judge visible content only.",
+    "scoring": "Fixed parsing; retain raw response and invalid/refused/timeout states. Report coverage and all-sample accuracy with invalid counted incorrect, plus valid-only metrics. If only labels exist, do not report AUROC.",
+    "video_rule": "Majority vote of three valid frame labels; any missing/invalid response makes the video invalid in the primary all-sample report.",
+    "consistency": "Prompts, retries and aggregation frozen before evaluation; no tuning after seeing labels.",
+    "budget": "Zero API calls authorized/launched in this planning milestone; freeze a dollar/request cap before execution."
+  },
+  "team_decisions_pending": [
+    "Dataset access holder and terms acceptance",
+    "Approve candidate membership and full-frame primary view",
+    "Approve 48-head k=7 evaluation after smoke acceptance",
+    "CNN owner confirms corresponding checkpoints and manifest",
+    "Multimodal owner confirms model, scoring, upload permission and budget"
+  ],
+  "live_blocker": "discovery.usc.edu DNS resolution failed twice, including network-enabled attempt; no local .pt/.pth files found in the two project roots. Inference smoke has not run.",
+  "completed_status_evidence": {
+    "vit_clean": "Fresh local reaudit: 192 runs, 384 prediction files, 215040 rows; image/checkpoint bytes excluded.",
+    "cnn_clean_and_pairs": "Submitted report and current GitHub README confirm 192 CNN runs and 192 matched pairs; raw CARC audits not refreshed due connection failure.",
+    "vit_robustness": "Local ACCEPTANCE.json passed: 48 clean references, 96 degraded evaluations, 53760 rows; summary coverage checked locally; raw degraded predictions remain on CARC.",
+    "cnn_robustness": "Current README and submitted report: ADM only, 18 condition evaluations; remaining seven holdouts have 84 degraded evaluations pending."
+  }
+}

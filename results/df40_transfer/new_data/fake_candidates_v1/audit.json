@@ -1,0 +1,36 @@
+{
+  "counts": {
+    "simswap": 78,
+    "fomm": 78,
+    "wav2lip": 78
+  },
+  "transfer_bytes": 64040498,
+  "methods": {
+    "simswap": {
+      "archive_url": "https://huggingface.co/datasets/ej2/df40/resolve/e0d28c7b8ca85aa5a8102e1850e2c271fb23f24e/simswap.zip?download=true",
+      "metadata_sha256": "c280f30e086170d973453b6295aea1bb06b5bd6c691f6e99f6242c53dbf81910",
+      "listed_paths_present": 20322,
+      "mirror_cdf_paths": 20322,
+      "samples": 78,
+      "possible_prior_clip_overlap": 53
+    },
+    "fomm": {
+      "archive_url": "https://huggingface.co/datasets/ManhQuangAI/df-40-test-full/resolve/b052e68b675c4c52b36439cfa1c88bdb49bb92b8/fomm.zip?download=true",
+      "metadata_sha256": "d8447b58ea8d23686c12a9a1b7a0b1813cfb0e0447ccb06ecf919acfac46d017",
+      "listed_paths_present": 20278,
+      "mirror_cdf_paths": 20278,
+      "samples": 78,
+      "possible_prior_clip_overlap": 77
+    },
+    "wav2lip": {
+      "archive_url": "https://huggingface.co/datasets/ManhQuangAI/df-40-test-full/resolve/b052e68b675c4c52b36439cfa1c88bdb49bb92b8/wav2lip.zip?download=true",
+      "metadata_sha256": "4e5a728f4d23a779c1315112a755553f3e2483b74278703f3e16fef1c1f4d137",
+      "listed_paths_present": 20814,
+      "mirror_cdf_paths": 20814,
+      "samples": 78,
+      "possible_prior_clip_overlap": 12
+    }
+  },
+  "selection": "Prioritize fewer inferred clip overlaps, then SHA-256 rank of seed 566/method/group; lower middle frame.",
+  "limitations": "Fake source clips are inferred from filenames. Exact group and byte exclusions do not establish source or identity independence. Labels follow DF40 metadata."
+}

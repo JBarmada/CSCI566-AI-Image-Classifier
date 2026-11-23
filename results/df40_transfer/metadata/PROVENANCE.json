@@ -1,0 +1,11 @@
+{
+  "source_url": "https://github.com/ondyari/FaceForensics/blob/master/dataset/splits/test.json",
+  "retrieved_date": "2026-11-20",
+  "official_pair_count": 70,
+  "snapshot_sha256": "c5e7bbdfbb01e8658821b176ac05afe5cf35b6d0d042a373f3c313eeee133bb1",
+  "plan_sha256": "36595fddef9ef3154e065dc9c140d714b19340105810a40caa87bbbb1af33c7f",
+  "smoke_videos": 4,
+  "evaluation_videos": 40,
+  "media_retrieved": false,
+  "identity_disjointness_verified": false
+}

@@ -1,0 +1,35 @@
+{
+  "status": "image_only_candidate_for_review_no_evaluation_launched",
+  "dataset": "OpenForensics v1.0.0",
+  "official_repository": "https://github.com/ltnghia/openforensics",
+  "official_download": "https://zenodo.org/records/5528418",
+  "official_paper": "https://arxiv.org/html/2107.14480v1",
+  "contents": "Still photos with multiple faces; GAN-synthesized identities placed into real photos. Per-face genuine/forged labels, boxes, masks and landmarks. Some photos contain both genuine and forged faces.",
+  "access": "Public Zenodo download links; no author-approval gate shown. Repository restricts use to academic purposes.",
+  "size": "Smallest image archive 2.0 GB; Val.zip 3.1 GB plus 121.7 MB annotations. Do not retrieve full archives for smoke.",
+  "verified_small_access": {
+    "http_status": 206,
+    "metadata_bytes_read": 131072,
+    "archive": "Val.zip",
+    "archive_bytes": 3120227393,
+    "central_directory_bytes": 495110,
+    "central_directory_entries": 7309,
+    "observation": "Two bounded 64-KiB reads verified HTTP ranges, ZIP directory metadata and Val/<id>.jpg filenames. Selective member extraction appears feasible; image payload extraction is untested."
+  },
+  "media_downloaded": false,
+  "proposed_smoke": "4 genuine + 4 forged face crops from distinct source photos; predetermined ADM/k7/rep0 baseline and augmented heads, seed17. No retraining.",
+  "annotation_gate": "Verify official category mapping and genuine/forged labels before constructing an image manifest. Stop on ambiguity.",
+  "proposed_crop": "One square crop centered on annotated face box, side 1.2*max(width,height), clipped to image. Reject genuine crops intersecting any forged region. Record exact crop coordinates and actual saved bytes SHA256; all model groups use identical crops.",
+  "proposed_later_evaluation": "50 genuine + 50 forged crops from distinct source-image groups, separate from smoke; clean only. Freeze seeded membership and hashes before predictions. Group known related identities/photos; disclose unresolved identity overlap.",
+  "metrics": "Image-level AUROC, accuracy@0.5, fake recall, real false-positive rate, fake F1, confusion counts; no video aggregation.",
+  "checkpoint_plan": "Two heads for smoke; all 48 k=7 ViT heads only after agreement. CNN corresponding checkpoints and multimodal subset require owner coordination.",
+  "scope": "Transfer to this GAN-based face replacement workflow; cannot establish detection of every face manipulation or video deepfake.",
+  "blockers": [
+    "Small labeled crop extraction not yet verified",
+    "No local CLIP/checkpoint weights found; CARC hostname resolution failed",
+    "Dataset and final crop protocol await agreement",
+    "Multimodal model/version, prompt/parser, budget and image-sharing terms await agreement"
+  ],
+  "previous_candidate": "protocol_draft.json and candidate_video_plan.csv preserve an alternative FaceForensics++ plan only; no media retrieval is authorized by those artifacts.",
+  "clean_verification": "verification/VIT_CLEAN_REAUDIT.json: fresh checks passed for 192 ViT runs, 384 prediction files, 215040 rows."
+}

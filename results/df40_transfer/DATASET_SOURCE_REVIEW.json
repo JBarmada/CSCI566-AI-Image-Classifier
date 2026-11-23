@@ -1,0 +1,70 @@
+{
+  "checked_date": "2026-11-20",
+  "decision": "Keep DF40 as selected; DeepFakeFace is a researched fallback, not an adopted replacement.",
+  "df40": {
+    "official_alternative": {
+      "type": "Baidu Disk",
+      "fake_test_url": "https://pan.baidu.com/s/15JJCbstvBvdfpb4_WaZ98w?pwd=DF40",
+      "access": "Link listed by authors; access not verified in this session."
+    },
+    "working_partial_downloads": [
+      {
+        "repo": "ej2/df40",
+        "revision": "e0d28c7b8ca85aa5a8102e1850e2c271fb23f24e",
+        "file": "simswap.zip",
+        "bytes": 2081311390,
+        "official_size_matches": true
+      },
+      {
+        "repo": "ManhQuangAI/df-40-test-full",
+        "revision": "b052e68b675c4c52b36439cfa1c88bdb49bb92b8",
+        "file": "fomm.zip",
+        "bytes": 1585909985,
+        "official_size_matches": false
+      },
+      {
+        "repo": "ManhQuangAI/df-40-test-full",
+        "revision": "b052e68b675c4c52b36439cfa1c88bdb49bb92b8",
+        "file": "wav2lip.zip",
+        "bytes": 2099533197,
+        "official_size_matches": false
+      }
+    ],
+    "verification": "HTTP206 byte ranges and ZIP directory tails confirmed. Third-party provenance, exact candidate membership and image bytes still require audit. Equal archive sizes alone do not prove byte identity.",
+    "other_repackaging": "scaledf/ScaleDF Established_benchmarks/DF40.tar:33.13GB, HTTP206 verified; membership and preprocessing not yet audited.",
+    "remaining_gap": "Matching preprocessed Celeb-DF real-image archive remains quota-blocked on official Drive; no complete three-method release or smoke yet."
+  },
+  "deepfakeface": {
+    "official_repo": "https://github.com/OpenRL-Lab/DeepFakeFace",
+    "dataset": "https://huggingface.co/datasets/OpenRL/DeepFakeFace",
+    "revision": "eb2a54fbf2567790bd3dc61d09fdaade6bb6c31c",
+    "gated": false,
+    "reported_counts": {
+      "real": 30000,
+      "inpainting": 30000,
+      "insightface_swap": 30000,
+      "sd15_text_to_image": 30000,
+      "total": 120000
+    },
+    "archive_bytes": {
+      "wiki": 1766572515,
+      "inpainting": 1082027665,
+      "insight": 1081375437,
+      "text2img": 1134392707
+    },
+    "access": "Partial HTTP206 downloads verified for all four archives; only small ZIP metadata read.",
+    "research_value": "Separates fully generated faces, local face inpainting and identity swapping using a shared real-image collection.",
+    "limitations": [
+      "No FOMM/Wav2Lip-style reenactment coverage.",
+      "SD1.5 is represented in the selected ADM-holdout GenImage training mix: do not describe its text2img portion as wholly unseen-generator transfer.",
+      "Source identity grouping, manipulation success and source-to-output mapping require inspection.",
+      "Dataset card lists openrail and an apache-2.0 snippet; resolve applicable data terms before redistribution."
+    ]
+  },
+  "media_status": "No dataset images retrieved or evaluated in this source review.",
+  "evidence_files": [
+    "ALTERNATE_DOWNLOAD_PROBES.json",
+    "DF40_MIRROR_CATALOGUE.json",
+    "DF40_SELECTED_MIRRORS.json"
+  ]
+}

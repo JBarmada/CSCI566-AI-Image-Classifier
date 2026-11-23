@@ -1,0 +1,20 @@
+{
+  "archive_filename": "Celeb-DF-v2_real_data_for_DF40.zip",
+  "archive_size": 2168805771,
+  "archive_png_members": 28174,
+  "metadata_sha256": "c280f30e086170d973453b6295aea1bb06b5bd6c691f6e99f6242c53dbf81910",
+  "metadata_video_groups": 178,
+  "metadata_listed_crops_present": 5620,
+  "previously_evaluated_real_sha256_verified": 100,
+  "candidate_groups": 78,
+  "identity_status": {
+    "unknown": 32,
+    "known-token-overlap": 46
+  },
+  "source": {
+    "YouTube-real": 32,
+    "Celeb-real": 46
+  },
+  "selection": "One lower-middle frame by numeric frame ID per unused exact metadata group",
+  "limitations": "Candidate pool only. Exact group names and bytes were checked. Related source clips and unknown identities have not been resolved."
+}

@@ -1,0 +1,1 @@
+sample_id,image_id,path,label,dataset,dataset_version,official_split,role,source_group_id,video_id,source_video_id,target_video_id,known_identity_ids,manipulation,compression,video_sha256,frame_index,timestamp_seconds,width,height,sha256,pixel_sha256,decoder_version,view,face_visibility,exclusion_reason

@@ -1,0 +1,76 @@
+{
+  "checked_date": "2026-11-20",
+  "source": "Official DF40 linked Drive metadata; counts are listed entries, not verified image bytes.",
+  "methods": [
+    {
+      "method": "simswap",
+      "metadata_url": "https://drive.google.com/file/d/1isStEussymA6ToZZHl87TqWJR0feobpA/view?usp=drivesdk",
+      "metadata_bytes": 4164167,
+      "counts": [
+        {
+          "label": "simswap_Real",
+          "groups": 178,
+          "listed_test_frames": 5620,
+          "unique_paths": 5620,
+          "validation_identical_to_test": true
+        },
+        {
+          "label": "simswap_Fake",
+          "groups": 641,
+          "listed_test_frames": 20322,
+          "unique_paths": 20322,
+          "validation_identical_to_test": true
+        }
+      ]
+    },
+    {
+      "method": "fomm",
+      "metadata_url": "https://drive.google.com/file/d/1x7VF-A_1IWURHU6JZ60rIDaqWE14IvzO/view?usp=drivesdk",
+      "metadata_bytes": 4036914,
+      "counts": [
+        {
+          "label": "fomm_Real",
+          "groups": 178,
+          "listed_test_frames": 5620,
+          "unique_paths": 5620,
+          "validation_identical_to_test": true
+        },
+        {
+          "label": "fomm_Fake",
+          "groups": 647,
+          "listed_test_frames": 20278,
+          "unique_paths": 20278,
+          "validation_identical_to_test": true
+        }
+      ]
+    },
+    {
+      "method": "wav2lip",
+      "metadata_url": "https://drive.google.com/file/d/1sYGDj4oX9MRffjtxXxflTIp2wjHsDFzt/view?usp=drivesdk",
+      "metadata_bytes": 4816587,
+      "counts": [
+        {
+          "label": "wav2lip_Real",
+          "groups": 178,
+          "listed_test_frames": 5620,
+          "unique_paths": 5620,
+          "validation_identical_to_test": true
+        },
+        {
+          "label": "wav2lip_Fake",
+          "groups": 666,
+          "listed_test_frames": 20814,
+          "unique_paths": 20814,
+          "validation_identical_to_test": true
+        }
+      ]
+    }
+  ],
+  "real_sets_identical": true,
+  "test_archive_catalogue": {
+    "files": 40,
+    "total_bytes": 103684767188,
+    "scope": "Fake test archives; corresponding real data separate for known methods.",
+    "file_inventory": "DF40_TEST_ARCHIVES.csv"
+  }
+}

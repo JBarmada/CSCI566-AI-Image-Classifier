@@ -1,0 +1,89 @@
+{
+  "status": "candidates_frozen_media_blocked_reference_queued",
+  "date": "2026-11-20",
+  "dataset": "DF40",
+  "domain": "cdf",
+  "user_decision": "Use DF40 as sole release source for this extension, including its linked real-data package.",
+  "scope": "Inference-only evaluation of existing GenImage-trained detectors; no DF40 training or fitted calibration.",
+  "methods": [
+    {
+      "method": "simswap",
+      "category": "face_swapping",
+      "reason": "Identity replacement with a single-frame face-swapping method."
+    },
+    {
+      "method": "fomm",
+      "category": "face_reenactment",
+      "reason": "Image-driven facial motion/animation; contrasts identity replacement."
+    },
+    {
+      "method": "wav2lip",
+      "category": "face_reenactment",
+      "reason": "Audio-driven mouth modification; localized facial alteration. Evaluate still-image artifacts only, not audiovisual synchronization."
+    }
+  ],
+  "selection_limit": "Three operationally different manipulations spanning two of four DF40 categories. This smoke does not represent all 40 methods.",
+  "metadata_audit": "DF40_METADATA_AUDIT.json",
+  "split_policy": {
+    "train": false,
+    "validation": false,
+    "smoke": "Separate operational test set, excluded from final reported test metrics.",
+    "test": "Frozen official CDF test-pool subset, with all known source/identity links to smoke excluded.",
+    "warning": "In all three audited CDF JSON files, val and test contain identical normalized image paths. Do not use these aliases as independent splits.",
+    "tuning": "Any checkpoint, threshold, prompt, preprocessing or ensemble selection based on DF40 labels requires a separate development/validation pool and untouched test groups.",
+    "future_training": "If adaptation is later requested, create group-disjoint train/validation/test sets as a new experiment, respecting official split roles."
+  },
+  "sample": {
+    "smoke_real": 6,
+    "smoke_fake_per_method": 6,
+    "smoke_unique_images": 24,
+    "selection": "FNV1a32 rank of 566:method:video_group; six distinct known primary identity IDs per class/method; median numeric available frame.",
+    "reuse": "Same six real images in each of the three method comparisons. Do not count them as eighteen independent real samples.",
+    "frame_policy": "Use released face crops without additional face recropping or re-encoding. Retain supplied image bytes and compute SHA256. Model-specific deterministic resize/crop and normalization remain as in training.",
+    "membership_status": "Pending source-group mapping and archive-member verification; no fabricated image hashes or claimed extracted files.",
+    "quality_review": [
+      "Trace official metadata and archive member",
+      "Check face crop, relevant region, readability and wrong-face risk",
+      "Compare reliably corresponding originals where available; record mapping uncertainty",
+      "Retain subtle fakes; do not filter by detector score or obviousness",
+      "Log confirmed failures and unresolved frame-edit status before inference"
+    ]
+  },
+  "vit": {
+    "heads": [
+      "holdout_ADM_k7_rep0__baseline__seed17",
+      "holdout_ADM_k7_rep0__augmented__seed17"
+    ],
+    "source_root": "/project2/yzhao010_1531/csci566-genimage/results/vit_benchmark/ADM/runs",
+    "backbone": "Existing OpenAI CLIP ViT-L/14 weights, frozen.",
+    "feature_policy": "L2-normalized float image features; saved linear head; sigmoid; fake=1 and threshold0.5.",
+    "expected_scores": 48,
+    "runtime": "eval(), requires_grad=False and inference_mode(); no training runner, optimizer, adaptation or automatic model download."
+  },
+  "acceptance": [
+    "Verify head SHA256 and source protocol against saved completion markers.",
+    "Replay a small original GenImage clean reference and compare probabilities before domain transfer.",
+    "Verify decoded images, labels, SHA256 identities and exactly24 rows per head.",
+    "Finite scores in[0,1], reproducible repeated inference, unchanged checkpoint/backbone hashes.",
+    "Record per-method metrics and raw scores descriptively; no accuracy threshold for smoke acceptance.",
+    "Create explicit PASS only after these checks execute; retain failures and resolve before larger evaluation."
+  ],
+  "after_pass": {
+    "team_release": "Create versioned shared media subset plus manifest, policy, source citations, archive/member provenance, exact hashes and source-group exclusions.",
+    "initial_test_proposal": "100 shared real images +100 fake images per method=400 unique images; one frame per video group where available. Each method has a balanced200-image comparison; final count subject to grouping audit.",
+    "evaluation": "AUROC, accuracy@0.5, fake recall, real FPR, F1 and confusion counts per manipulation; equal-weight method summary. Shared real images induce dependence.",
+    "model_coordination": "Same image bytes and test membership for ViT, CNN and multimodal; CNN head choices and multimodal prompt/model/budget recorded before test.",
+    "expansion": "Add methods in versioned releases chosen by category coverage and data availability, preserving prior test IDs and avoiding selection by favorable detection scores."
+  },
+  "media_policy": "No full dataset archive download in this milestone; first verify bounded archive-member access. Stop if a small subset cannot be retrieved without a substantial download.",
+  "current_limits": [
+    "All four official Drive image archives return quota exceeded; no DF40 images retrieved",
+    "CARC access restored after VPN connection; original checkpoints and local backbone present",
+    "GPU reference replay14427782 queued; no DF40 inference yet",
+    "Frame inspection and successful-edit verification pending media retrieval"
+  ],
+  "sources": [
+    "https://github.com/YZY-stack/DF40",
+    "https://arxiv.org/html/2406.13495v2"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "simswap": {
+    "images": 78,
+    "exact_image_hash_matches": 0,
+    "exact_group_name_matches": 0,
+    "shared_identity_tokens": 78,
+    "possible_clip_matches": 53
+  },
+  "fomm": {
+    "images": 78,
+    "exact_image_hash_matches": 0,
+    "exact_group_name_matches": 0,
+    "shared_identity_tokens": 78,
+    "possible_clip_matches": 77
+  },
+  "wav2lip": {
+    "images": 78,
+    "exact_image_hash_matches": 0,
+    "exact_group_name_matches": 0,
+    "shared_identity_tokens": 78,
+    "possible_clip_matches": 12
+  }
+}

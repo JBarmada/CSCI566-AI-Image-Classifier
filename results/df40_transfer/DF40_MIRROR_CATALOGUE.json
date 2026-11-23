@@ -1,0 +1,148 @@
+[
+  {
+    "repo": "ej2/df40",
+    "gated": false,
+    "revision": "e0d28c7b8ca85aa5a8102e1850e2c271fb23f24e",
+    "file_count": 8,
+    "relevant_files": [
+      "simswap.zip"
+    ]
+  },
+  {
+    "repo": "ohjoonhee/DF40-Fake-Videos",
+    "gated": false,
+    "revision": "0f9e21e80fec2f8ef78cc105569b1f39b8feeb3c",
+    "file_count": 43,
+    "relevant_files": [
+      "test/fomm.zip",
+      "test/simswap.zip",
+      "test/wav2lip.zip",
+      "train/fomm.zip",
+      "train/simswap.zip",
+      "train/wav2lip.zip"
+    ]
+  },
+  {
+    "repo": "anon-frozen-experts/df40-frozen-experts-anon",
+    "gated": false,
+    "revision": "a6608f85e8cdefc331b993002ae0d902a0641745",
+    "file_count": 467,
+    "relevant_files": [
+      "stargan/df40-clip-base_features.npy",
+      "stargan/df40-clip-base_logits.npy",
+      "stargan/df40-clip-large_features.npy",
+      "stargan/df40-clip-large_logits.npy",
+      "stargan/df40-xception_features.npy",
+      "stargan/df40-xception_logits.npy",
+      "stargan/efs-clip-base_features.npy",
+      "stargan/efs-clip-base_logits.npy",
+      "stargan/efs-clip-large_features.npy",
+      "stargan/efs-clip-large_logits.npy",
+      "stargan/efs-recce_features.npy",
+      "stargan/efs-recce_logits.npy",
+      "stargan/efs-rfm_features.npy",
+      "stargan/efs-rfm_logits.npy",
+      "stargan/efs-srm_features.npy",
+      "stargan/efs-srm_logits.npy",
+      "stargan/efs-xception_features.npy",
+      "stargan/efs-xception_logits.npy",
+      "stargan/fingerprint.txt",
+      "stargan/fr-clip-base_features.npy"
+    ]
+  },
+  {
+    "repo": "Randomizer-1999/DF-40-cut",
+    "gated": false,
+    "revision": "9eb1b818fc5f2995e319bec770f5da2012020d9f",
+    "file_count": 1,
+    "relevant_files": []
+  },
+  {
+    "repo": "01Yassine/DF40",
+    "gated": "manual",
+    "revision": "e5d2d19c896d4fe0a958037e64df4d2bcfa8137d",
+    "file_count": 66,
+    "relevant_files": [
+      "compressed/images/images_shard_0000.tar.gz",
+      "compressed/images/images_shard_0001.tar.gz",
+      "compressed/images/images_shard_0002.tar.gz",
+      "compressed/images/images_shard_0003.tar.gz",
+      "compressed/images/images_shard_0004.tar.gz",
+      "compressed/images/images_shard_0005.tar.gz",
+      "compressed/images/images_shard_0006.tar.gz",
+      "compressed/images/images_shard_0007.tar.gz",
+      "compressed/images/images_shard_0008.tar.gz",
+      "compressed/images/images_shard_0009.tar.gz",
+      "compressed/images/images_shard_0010.tar.gz",
+      "compressed/images/images_shard_0011.tar.gz",
+      "compressed/images/images_shard_0012.tar.gz",
+      "compressed/images/images_shard_0013.tar.gz",
+      "compressed/images/images_shard_0014.tar.gz",
+      "compressed/images/images_shard_0015.tar.gz",
+      "compressed/images/images_shard_0016.tar.gz",
+      "compressed/images/images_shard_0017.tar.gz",
+      "compressed/images/images_shard_0018.tar.gz",
+      "compressed/images/images_shard_0019.tar.gz"
+    ]
+  },
+  {
+    "repo": "ManhQuangAI/df40-test-data-v3",
+    "gated": false,
+    "revision": "20c48a7d378b87ac42d78e0bf259e867a0646d34",
+    "file_count": 2,
+    "relevant_files": []
+  },
+  {
+    "repo": "ManhQuangAI/DF40_train",
+    "gated": false,
+    "revision": "ef0577c67506afea6df7a8bb46dd4ed4a8e138a0",
+    "file_count": 32,
+    "relevant_files": [
+      "fomm.zip",
+      "simswap.zip",
+      "wav2lip.zip"
+    ]
+  },
+  {
+    "repo": "sinister007/df40_dataset",
+    "gated": false,
+    "revision": "a203e9b880d69339178f1a6aacd937b07a8ef199",
+    "file_count": 247,
+    "relevant_files": [
+      "dataset_180gb.tar.gz",
+      "dataset_json/Subset/fomm_cdf.json",
+      "dataset_json/Subset/fomm_ff.json",
+      "dataset_json/Subset/simswap.json",
+      "dataset_json/Subset/simswap_cdf.json",
+      "dataset_json/Subset/simswap_ff.json",
+      "dataset_json/Subset/stargan.json",
+      "dataset_json/Subset/starganv2.json",
+      "dataset_json/Subset/wav2lip_cdf.json",
+      "dataset_json/Subset/wav2lip_ff.json",
+      "dataset_json/Subset/whichisreal.json",
+      "dataset_json/fomm_cdf.json",
+      "dataset_json/fomm_ff.json",
+      "dataset_json/simswap.json",
+      "dataset_json/simswap_cdf.json",
+      "dataset_json/simswap_ff.json",
+      "dataset_json/stargan.json",
+      "dataset_json/starganv2.json",
+      "dataset_json/wav2lip_cdf.json",
+      "dataset_json/wav2lip_ff.json"
+    ]
+  },
+  {
+    "repo": "ManhQuangAI/df-40-test-full",
+    "gated": false,
+    "revision": "b052e68b675c4c52b36439cfa1c88bdb49bb92b8",
+    "file_count": 39,
+    "relevant_files": [
+      "fomm.zip",
+      "simswap.zip",
+      "stargan.zip",
+      "starganv2.zip",
+      "wav2lip.zip",
+      "whichfaceisreal.zip"
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "method": "simswap",
+    "real": 100,
+    "fake": 200,
+    "fp": 24,
+    "tn": 76,
+    "tp": 86,
+    "fn": 114,
+    "real_fpr": 0.24,
+    "fake_recall": 0.43,
+    "auroc": 0.6316
+  },
+  {
+    "method": "fomm",
+    "real": 100,
+    "fake": 100,
+    "fp": 24,
+    "tn": 76,
+    "tp": 60,
+    "fn": 40,
+    "real_fpr": 0.24,
+    "fake_recall": 0.6,
+    "auroc": 0.7459
+  },
+  {
+    "method": "wav2lip",
+    "real": 100,
+    "fake": 100,
+    "fp": 24,
+    "tn": 76,
+    "tp": 27,
+    "fn": 73,
+    "real_fpr": 0.24,
+    "fake_recall": 0.27,
+    "auroc": 0.552
+  }
+]

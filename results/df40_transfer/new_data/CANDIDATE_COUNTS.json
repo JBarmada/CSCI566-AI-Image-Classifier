@@ -1,0 +1,50 @@
+{
+  "simswap_Real": {
+    "total_groups": 178,
+    "group_names_not_in_existing_test": 78,
+    "known_id_tokens_not_in_existing_test": 0,
+    "unknown_id_group_names": 32,
+    "known_id_disjoint_groups": []
+  },
+  "simswap_Fake": {
+    "total_groups": 641,
+    "group_names_not_in_existing_test": 377,
+    "known_id_tokens_not_in_existing_test": 0,
+    "unknown_id_group_names": 0,
+    "known_id_disjoint_groups": []
+  },
+  "fomm_Real": {
+    "total_groups": 178,
+    "group_names_not_in_existing_test": 78,
+    "known_id_tokens_not_in_existing_test": 0,
+    "unknown_id_group_names": 32,
+    "known_id_disjoint_groups": []
+  },
+  "fomm_Fake": {
+    "total_groups": 647,
+    "group_names_not_in_existing_test": 383,
+    "known_id_tokens_not_in_existing_test": 0,
+    "unknown_id_group_names": 0,
+    "known_id_disjoint_groups": []
+  },
+  "wav2lip_Real": {
+    "total_groups": 178,
+    "group_names_not_in_existing_test": 78,
+    "known_id_tokens_not_in_existing_test": 0,
+    "unknown_id_group_names": 32,
+    "known_id_disjoint_groups": []
+  },
+  "wav2lip_Fake": {
+    "total_groups": 666,
+    "group_names_not_in_existing_test": 566,
+    "known_id_tokens_not_in_existing_test": 0,
+    "unknown_id_group_names": 0,
+    "known_id_disjoint_groups": []
+  },
+  "existing_test_known_id_count": 56,
+  "limitations": [
+    "Group name IDs are not a verified source-target mapping.",
+    "Numeric YouTube group identities are unknown.",
+    "Official CDF val and test metadata contain identical paths."
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "selection": "FNV1a32 rank of 566:method:video_group; six distinct known primary identity IDs per class/method; median numeric available frame.",
+  "source_metadata": {
+    "simswap": {
+      "url": "https://drive.google.com/file/d/1isStEussymA6ToZZHl87TqWJR0feobpA/view?usp=drivesdk",
+      "bytes": 4164167
+    },
+    "fomm": {
+      "url": "https://drive.google.com/file/d/1x7VF-A_1IWURHU6JZ60rIDaqWE14IvzO/view?usp=drivesdk",
+      "bytes": 4036914
+    },
+    "wav2lip": {
+      "url": "https://drive.google.com/file/d/1sYGDj4oX9MRffjtxXxflTIp2wjHsDFzt/view?usp=drivesdk",
+      "bytes": 4816587
+    }
+  },
+  "rows": [
+    {
+      "method": "real",
+      "label": 0,
+      "video_group": "id3_0002",
+      "known_identity_ids": "3",
+      "official_path": "Celeb-DF-v2/Celeb-real/frames/id3_0002/220.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "real",
+      "label": 0,
+      "video_group": "id36_0002",
+      "known_identity_ids": "36",
+      "official_path": "Celeb-DF-v2/Celeb-real/frames/id36_0002/220.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "real",
+      "label": 0,
+      "video_group": "id35_0003",
+      "known_identity_ids": "35",
+      "official_path": "Celeb-DF-v2/Celeb-real/frames/id35_0003/233.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "real",
+      "label": 0,
+      "video_group": "id30_0007",
+      "known_identity_ids": "30",
+      "official_path": "Celeb-DF-v2/Celeb-real/frames/id30_0007/234.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "real",
+      "label": 0,
+      "video_group": "id16_0010",
+      "known_identity_ids": "16",
+      "official_path": "Celeb-DF-v2/Celeb-real/frames/id16_0010/167.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "real",
+      "label": 0,
+      "video_group": "id2_0008",
+      "known_identity_ids": "2",
+      "official_path": "Celeb-DF-v2/Celeb-real/frames/id2_0008/265.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "simswap",
+      "label": 1,
+      "video_group": "id6_id8_0002",
+      "known_identity_ids": "6|8",
+      "official_path": "DF40/simswap/cdf/frames/id6_id8_0002/314.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "simswap",
+      "label": 1,
+      "video_group": "id8_id5_0008",
+      "known_identity_ids": "5|8",
+      "official_path": "DF40/simswap/cdf/frames/id8_id5_0008/293.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "simswap",
+      "label": 1,
+      "video_group": "id0_id17_0000",
+      "known_identity_ids": "0|17",
+      "official_path": "DF40/simswap/cdf/frames/id0_id17_0000/241.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "simswap",
+      "label": 1,
+      "video_group": "id32_id33_0002",
+      "known_identity_ids": "32|33",
+      "official_path": "DF40/simswap/cdf/frames/id32_id33_0002/254.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "simswap",
+      "label": 1,
+      "video_group": "id23_id30_0002",
+      "known_identity_ids": "23|30",
+      "official_path": "DF40/simswap/cdf/frames/id23_id30_0002/133.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "simswap",
+      "label": 1,
+      "video_group": "id16_id17_0007",
+      "known_identity_ids": "16|17",
+      "official_path": "DF40/simswap/cdf/frames/id16_id17_0007/146.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "fomm",
+      "label": 1,
+      "video_group": "id4_id37_0000",
+      "known_identity_ids": "37|4",
+      "official_path": "DF40/fomm/cdf/frames/id4_id37_0000/738.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "fomm",
+      "label": 1,
+      "video_group": "id31_id35_0007",
+      "known_identity_ids": "31|35",
+      "official_path": "DF40/fomm/cdf/frames/id31_id35_0007/706.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "fomm",
+      "label": 1,
+      "video_group": "id25_id19_0002",
+      "known_identity_ids": "19|25",
+      "official_path": "DF40/fomm/cdf/frames/id25_id19_0002/463.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "fomm",
+      "label": 1,
+      "video_group": "id1_id20_0007",
+      "known_identity_ids": "1|20",
+      "official_path": "DF40/fomm/cdf/frames/id1_id20_0007/507.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "fomm",
+      "label": 1,
+      "video_group": "id3_id16_0001",
+      "known_identity_ids": "16|3",
+      "official_path": "DF40/fomm/cdf/frames/id3_id16_0001/589.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "fomm",
+      "label": 1,
+      "video_group": "id21_id9_0008",
+      "known_identity_ids": "21|9",
+      "official_path": "DF40/fomm/cdf/frames/id21_id9_0008/498.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "wav2lip",
+      "label": 1,
+      "video_group": "id17_0000_1YO1FmVAPrA_50013",
+      "known_identity_ids": "17",
+      "official_path": "DF40/wav2lip/cdf/frames/id17_0000_1YO1FmVAPrA_50013/082.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "wav2lip",
+      "label": 1,
+      "video_group": "id37_0009_BnC6IABJXOI_50020",
+      "known_identity_ids": "37",
+      "official_path": "DF40/wav2lip/cdf/frames/id37_0009_BnC6IABJXOI_50020/085.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "wav2lip",
+      "label": 1,
+      "video_group": "id21_0005_0ZOqbO2jIKg_50012",
+      "known_identity_ids": "21",
+      "official_path": "DF40/wav2lip/cdf/frames/id21_0005_0ZOqbO2jIKg_50012/084.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "wav2lip",
+      "label": 1,
+      "video_group": "id11_0009_56WGgJNBRxQ_50006",
+      "known_identity_ids": "11",
+      "official_path": "DF40/wav2lip/cdf/frames/id11_0009_56WGgJNBRxQ_50006/086.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "wav2lip",
+      "label": 1,
+      "video_group": "id10_0009_855Now8h5Rs_50024",
+      "known_identity_ids": "10",
+      "official_path": "DF40/wav2lip/cdf/frames/id10_0009_855Now8h5Rs_50024/094.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    },
+    {
+      "method": "wav2lip",
+      "label": 1,
+      "video_group": "id32_0007_CMeRySbMXDU_50001",
+      "known_identity_ids": "32",
+      "official_path": "DF40/wav2lip/cdf/frames/id32_0007_CMeRySbMXDU_50001/091.png",
+      "role": "smoke",
+      "label_basis": "official_video_group_metadata",
+      "frame_edit_verified": false
+    }
+  ]
+}

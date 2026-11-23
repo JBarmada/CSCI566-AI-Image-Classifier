@@ -1,0 +1,9 @@
+mode,method,n,both_correct,cnn_only_correct,vit_only_correct,both_wrong,disagree
+baseline,real,100,0,1,10,89,11
+baseline,simswap,200,164,35,1,0,36
+baseline,fomm,100,99,1,0,0,1
+baseline,wav2lip,100,87,13,0,0,13
+augmented,real,100,11,32,6,51,38
+augmented,simswap,200,101,28,50,21,78
+augmented,fomm,100,51,2,43,4,45
+augmented,wav2lip,100,53,15,25,7,40

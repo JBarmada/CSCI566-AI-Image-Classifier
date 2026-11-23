@@ -1,0 +1,47 @@
+{
+  "checked_date": "2026-11-20",
+  "inference_smoke": "not_run",
+  "carc_access": "restored_after_user_connected_VPN",
+  "models": "Both selected saved heads and existing CLIP ViT-L/14 backbone present; original runtime imports successfully",
+  "reference_job": {
+    "job_id": "14432567",
+    "state": "submitted",
+    "directory": "/project2/yzhao010_1531/csci566-genimage/results/df40_transfer_smoke_v1/reference_driver_v2",
+    "scope": "Original contiguous16-image batches; P100 GPU; two frozen heads"
+  },
+  "df40_images_retrieved": 0,
+  "download_errors": {
+    "simswap": "Google Drive download quota exceeded for this archive",
+    "fomm": "Google Drive download quota exceeded for this archive",
+    "wav2lip": "Google Drive download quota exceeded for this archive",
+    "real": "Google Drive download quota exceeded for this archive"
+  },
+  "candidates": {
+    "count": 24,
+    "sha256": "32899fa775c379c44e7aeffbc95c3b71d531ac4cfb8c2c6659b38baa9168eb50",
+    "status": "Metadata-derived paths frozen; image-byte hashes and visual review pending"
+  },
+  "validation": [
+    "24 distinct candidate paths, six per class/method",
+    "Python syntax checked",
+    "Each authored Python file <=250 code lines and every function <75 code lines"
+  ],
+  "pending": [
+    "Official archive quota clearance, or existing authorized local/team archive paths",
+    "Frame retrieval and visual review",
+    "Reference job completion and acceptance",
+    "24-image inference smoke",
+    "Team test subset only after smoke acceptance"
+  ],
+  "shared_storage_search": "No existing DF40/Celeb-DF/method directories found under shared data root to depth4",
+  "previous_reference": {
+    "job_id": "14427782",
+    "state": "FAILED",
+    "gpu": "L40S",
+    "reason": "Strict original-score replay tolerance exceeded",
+    "baseline_max_difference": 0.00012673301544186,
+    "augmented_max_difference": 1.639589157109711e-05,
+    "tolerance": 1e-05
+  },
+  "latest_download_retry": "All four archives still returned Google Drive quota exceeded; no DF40 images retrieved"
+}

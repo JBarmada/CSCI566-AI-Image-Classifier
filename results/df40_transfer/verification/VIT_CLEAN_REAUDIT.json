@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "runs": 192,
+  "prediction_files": 384,
+  "prediction_rows": 215040,
+  "dataset_fingerprint": "860156cea9b208a42fb9d481000b40864924d920700a4db00a50d44bd28c6bb6",
+  "checks": [
+    "manifest hashes",
+    "prediction identities and labels",
+    "threshold",
+    "training and evaluation markers",
+    "recomputed metrics including rank AUROC"
+  ],
+  "not_rechecked": [
+    "image bytes",
+    "checkpoint bytes",
+    "CNN raw predictions",
+    "paired CNN-ViT raw exports",
+    "robustness raw predictions"
+  ]
+}
