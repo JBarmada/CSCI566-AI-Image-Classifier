@@ -364,3 +364,17 @@ images repeat across runs and the values are not independent samples.
 Disagreement counts were cross-checked against the previously audited
 per-run table. No ensemble was trained or evaluated. See
 `clean_cnn_audit/README.md` and `error_breakdown_by_holdout.csv`.
+
+## Eight-holdout generator-objective extension
+
+After inspecting the ADM pilot, the same settings were fixed and extended to
+all seven other k=7 repeat-0 holdouts. CARC array 14483084 completed all seven
+tasks successfully; each independently replayed its selected heads. Including
+the original ADM pilot, equal-holdout mean accuracy/AUROC was 0.9172/0.9741
+for the binary adapter, 0.9217/0.9744 for the adversarial objective and
+0.9161/0.9742 for supervised contrastive learning. Adversarial accuracy was
+higher in six holdouts and lower in two. One seed and previously inspected
+test sets limit inference; the extension was chosen after seeing the pilot.
+The encoder remained frozen and the adapter was trained. See
+`generator_objectives_extended/README.md` for per-holdout data, validation,
+checkpoint and replay evidence, plus the collection error and resolution.

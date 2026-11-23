@@ -31,7 +31,7 @@ metrics. Saved checkpoints and full raw outputs remain on CARC.
 | CNN k=7 robustness | Eight holdouts evaluated; four fail the strict clean-score replay tolerance, so the full comparison is provisional |
 | DF40 face transfer | Celeb-DF and FaceForensics++ subsets evaluated; a supervised face-adapted head is exploratory |
 | Zero-shot comparison | CLIP evaluated on face crops; Qwen2.5-VL-3B evaluated on a 64-image ADM subset |
-| Generator objectives | One exploratory ADM comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
+| Generator objectives | Exploratory eight-holdout comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
 | Midterm report | Submitted; final report, poster and demonstration remain |
 
 The accepted clean studies do not need retraining. Robustness evaluation reuses
@@ -68,8 +68,8 @@ plan; several items now have exploratory or provisional results.
   to exact datasets, manifests and checkpoint backups.
 - **Extend the generator-objective experiments.** Controlled feature-adapter
   comparisons of domain-adversarial and supervised contrastive objectives are
-  available for one ADM holdout and seed. Additional holdouts and seeds are
-  needed before making generalization claims.
+  available for all eight holdouts with one dataset repeat and optimization seed
+  each. More repeats, seeds and a fresh test are needed for generalization claims.
 - **Finish the final report, poster and demonstration.** Combine the verified
   clean, robustness, transfer and multimodal results; explain pipeline
   differences and limitations, quantify uncertainty appropriately, and check
@@ -211,7 +211,9 @@ Report accuracy and AUROC with holdout, repeat, variant and condition.
 | [Training/calibration metadata](results/vit_benchmark/metadata/) | Epoch histories, reliability bins, original run records, audit reports and checksums |
 | [Figures](results/vit_benchmark/figures/) | Performance versus k, holdout AUROC heatmaps and raw reliability |
 
-Audited CNN files currently live on CARC rather than in this GitHub checkout:
+The CNN checkpoints and full run directories live on CARC. Corrected summaries
+and an audited prediction archive are also in the [research results](results/df40_transfer/clean_cnn_audit/).
+CARC paths include:
 
 | CARC path under `results/cnn_benchmark/notebook/` | Use |
 |---|---|
