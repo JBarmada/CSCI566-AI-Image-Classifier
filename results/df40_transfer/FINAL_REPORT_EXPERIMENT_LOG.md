@@ -393,3 +393,14 @@ small differences do not establish a reliable improvement. Test samples and
 dataset splits were reused; the seeds measure optimization, not data-split,
 variability. See `generator_objectives_seeds/README.md` for methods, outputs,
 checksum and verification.
+
+## Publication and fresh-extraction check
+
+The repository ignore rules initially omitted compressed result archives and
+small `.pt` model heads. These were explicitly added in subsequent commits,
+including all three ADM objective-pilot heads and the supervised face head.
+A clean temporary extraction of the two published objective archives, together
+with the published ADM pilot files, reproduced the complete 72-result summary
+and both published CSV files exactly. The test did not require source images or
+training. Remote GitHub main was verified after each push; individual teammate
+Drive/CARC permissions were not tested.

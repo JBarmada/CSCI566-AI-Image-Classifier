@@ -30,7 +30,8 @@ validation/test scores. The summary audit checks per-seed manifest hashes,
 matched test image hashes/labels across objectives, recomputes all 72 test
 metrics from predictions, and verifies selected checkpoint hashes and replay
 records. `per_holdout_seed.csv` contains all objective/holdout/seed rows.
-Detailed new outputs, weights and job logs are in
+A fresh extraction of the published archives and ADM pilot files reproduced
+both summary CSV files exactly. Detailed new outputs, weights and job logs are in
 `objective_seed_outputs_14483127.tar.gz`, SHA-256
 `0b23a1802791cab01c8969cc3a21f1648b931c0968c773a95b1a7b76704d78b9`.
 The seed-17 runs and their artifacts are in the neighboring
