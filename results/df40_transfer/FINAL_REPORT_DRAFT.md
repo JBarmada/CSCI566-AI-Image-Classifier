@@ -86,6 +86,22 @@ scores remain authoritative for clean-benchmark reporting.
 
 ## Face-manipulation transfer
 
+An additional exploratory still-photo test used 50 IMDB-WIKI real photos and
+50 matched-path outputs for each of InsightFace and Stable Diffusion inpainting
+from DeepFakeFace. At threshold 0.5, the baseline CNN falsely flagged 23/50
+reals and detected 31/50 InsightFace and 34/50 inpainting samples; the baseline
+ViT falsely flagged 4/50 and detected 28/50 and 33/50, respectively. The
+augmented models and AUROC values are in the [still-photo results](still_face_v1/README.md).
+The differing samples cannot explain the DF40 real-image errors. In this sample
+all fake files were 512x512 while real files varied in size, introducing a
+potential class-correlated shortcut. Source-image and identity overlap and
+successful face edits are not independently established.
+In a paired follow-up applying a common square crop, 512x512 resize, and JPEG
+encoding to all images, baseline CNN real false positives changed from 23/50
+to 28/50 and ViT from 4/50 to 6/50. This combined intervention cannot isolate
+the effects of any one processing operation or identify camera effects; see
+[the processing follow-up](still_face_uniform_v1/README.md).
+
 The first DF40 subset contains 100 real Celeb-DF crops, 200 SimSwap, 100 FOMM
 and 100 Wav2Lip crops. The 100 real images are reused for each per-method
 comparison. Existing CNN and ViT models were evaluated without retraining.

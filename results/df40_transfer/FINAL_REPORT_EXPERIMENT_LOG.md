@@ -1,5 +1,36 @@
 # Final report evidence log: DF40 transfer
 
+## 2026-11-23 — exploratory DeepFakeFace still-photo inference
+
+CARC job 14488658 completed with exit code 0. A fixed seed selected 50 shared
+archive paths, producing 50 IMDB-WIKI real images, 50 InsightFace, and 50
+inpainting outputs. All 150 decoded and had unique matching SHA-256 hashes.
+CNN and ViT baseline/augmented checkpoints passed original-reference replay and
+repeat checks before evaluation at the original 0.5 threshold. The 18-image
+smoke is included in the 150-image descriptive analysis. No training or
+threshold selection was performed. Baseline CNN false positives were 23/50;
+InsightFace and inpainting true positives were 31/50 and 34/50. Baseline ViT
+false positives were 4/50; true positives were 28/50 and 33/50. For all modes,
+metrics, manifests, scores, replay evidence, and important image-size and
+identity limitations, see [still-face results](still_face_v1/README.md). The
+candidate comparison and discussion of real-image errors are in
+[still-face research](STILL_FACE_RESEARCH.md).
+
+A read-only recheck of the original SD 1.4 repeat-0 baseline CNN configuration
+reported a Tesla P100 and AMP enabled. An extension job log also reports a
+Tesla P100 and AMP enabled, with PyTorch 2.7.1+cu118. Matching GPU model names
+and AMP flags do not establish identical software or numerical behavior; the
+original runtime history is incomplete. The strict clean-score replay failure
+remains unresolved and the full CNN robustness comparison stays provisional.
+
+CARC follow-up job 14488912 completed with exit code 0 after applying common
+center crop, 512x512 bicubic resize, and JPEG quality 95 (no chroma
+subsampling). Baseline CNN and ViT real false positives changed from 23/50 to
+28/50 and from 4/50 to 6/50, respectively; both augmented models changed by
+smaller counts. This intervention combines operations, treats geometry of the
+already-square fake images differently from varied-size reals, and cannot
+isolate camera effects. See [paired results](still_face_uniform_v1/README.md).
+
 ## 2026-11-23 — completed inference-only evaluation
 
 **Question.** Do existing GenImage-trained CNN and ViT detectors transfer to

@@ -31,6 +31,15 @@ history is insufficient to establish the cause. The original benchmark's
 saved clean scores remain authoritative for that benchmark; do not describe
 the new CNN robustness results as fully passing the strict replay gate.
 
+On November 23, a further read-only check of the original Stable Diffusion 1.4
+repeat-0 baseline `config.json` found `gpu: Tesla P100-PCIE-16GB` and
+`use_amp: true`. The extension job log `cnn-robust-14482672_1.log` also reports
+a Tesla P100, PyTorch 2.7.1+cu118, and `use_amp: True`. Thus a difference in
+the reported GPU *model* or the on/off AMP setting alone does not explain the
+discrepancy for those records. This does not establish identical driver,
+library, kernel, or per-device numerical behavior; the original runtime history
+is incomplete, and the cause and strict audit failures remain unresolved.
+
 Both model pipelines use bicubic geometry before applying the same individual
 JPEG or resize degradation, then their respective normalization. They differ
 in architecture, pretraining and training strategy. The plots are descriptive,

@@ -1,0 +1,13 @@
+{
+  "revision": "eb2a54fbf2567790bd3dc61d09fdaade6bb6c31c",
+  "seed": 5662026,
+  "common_paths": 30000,
+  "sampled_paths": 50,
+  "smoke_per_group": 6,
+  "bytes_transferred": {
+    "wiki": 6832162,
+    "insight": 5297854,
+    "inpainting": 5290126
+  },
+  "selection": "uniform sample of sorted common relative paths"
+}
