@@ -350,3 +350,17 @@ calibrated probabilities. This one prompt pair and the already inspected shared
 set make the findings exploratory; the test contains shared people and uses
 the same real images across methods. See `zeroshot/prompts.json`,
 `zeroshot/ACCEPTANCE.json`, `zeroshot/predictions.csv`, and `zeroshot/metrics.csv`.
+
+## Matched clean k=7 error breakdown
+
+A follow-up joined the saved CNN and ViT predictions by image SHA-256 and
+true label across all 48 k=7 runs. It splits false positives, missed fakes
+and model disagreements by holdout and training mode. At the fixed 0.5
+threshold, baseline CNN/ViT averaged 39.04/17.21 false positives among 280
+real images and 54.50/48.33 missed fakes among 280 per run. Augmented
+CNN/ViT averaged 49.04/12.08 false positives and 106.42/84.38 missed fakes.
+Counts are descriptive averages of three repeats for each of eight holdouts;
+images repeat across runs and the values are not independent samples.
+Disagreement counts were cross-checked against the previously audited
+per-run table. No ensemble was trained or evaluated. See
+`clean_cnn_audit/README.md` and `error_breakdown_by_holdout.csv`.
