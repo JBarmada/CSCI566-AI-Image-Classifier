@@ -1,0 +1,12 @@
+{
+  "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+  "prompt": "Is this image a real photograph or an AI-generated image? Choose the more likely option. Reply with exactly REAL or FAKE.",
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 8
+  },
+  "subset": "32 real and 32 ADM fake; SHA-256 rank with seed 566; shared ADM k7 rep0 test images",
+  "selection": "Frozen before model inference. Labels are not included in model input.",
+  "interpretation": "Greedy text labels only; invalid responses retained and reported."
+}

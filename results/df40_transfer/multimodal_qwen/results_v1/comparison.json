@@ -1,0 +1,66 @@
+[
+  {
+    "model": "Qwen2.5-VL-3B",
+    "mode": "zero-shot",
+    "valid": 64,
+    "invalid": 0,
+    "n": 64,
+    "tn": 31,
+    "fp": 1,
+    "fn": 21,
+    "tp": 11,
+    "accuracy": 0.65625
+  },
+  {
+    "model": "cnn",
+    "mode": "baseline",
+    "valid": 64,
+    "invalid": 0,
+    "n": 64,
+    "tn": 25,
+    "fp": 7,
+    "fn": 9,
+    "tp": 23,
+    "accuracy": 0.75,
+    "auroc": 0.7802734375
+  },
+  {
+    "model": "cnn",
+    "mode": "augmented",
+    "valid": 64,
+    "invalid": 0,
+    "n": 64,
+    "tn": 22,
+    "fp": 10,
+    "fn": 14,
+    "tp": 18,
+    "accuracy": 0.625,
+    "auroc": 0.65478515625
+  },
+  {
+    "model": "vit",
+    "mode": "baseline",
+    "valid": 64,
+    "invalid": 0,
+    "n": 64,
+    "tn": 30,
+    "fp": 2,
+    "fn": 1,
+    "tp": 31,
+    "accuracy": 0.953125,
+    "auroc": 0.990234375
+  },
+  {
+    "model": "vit",
+    "mode": "augmented",
+    "valid": 64,
+    "invalid": 0,
+    "n": 64,
+    "tn": 30,
+    "fp": 2,
+    "fn": 6,
+    "tp": 26,
+    "accuracy": 0.875,
+    "auroc": 0.9580078125
+  }
+]

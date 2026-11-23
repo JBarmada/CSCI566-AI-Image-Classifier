@@ -1,0 +1,454 @@
+{
+  "strict_tolerance": 0.001,
+  "holdouts": {
+    "ADM": [
+      {
+        "run": "holdout_ADM_k7_rep0__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_ADM_k7_rep0__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_ADM_k7_rep1__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_ADM_k7_rep1__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_ADM_k7_rep2__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_ADM_k7_rep2__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      }
+    ],
+    "BigGAN": [
+      {
+        "run": "holdout_BigGAN_k7_rep0__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_BigGAN_k7_rep0__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_BigGAN_k7_rep1__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_BigGAN_k7_rep1__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_BigGAN_k7_rep2__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_BigGAN_k7_rep2__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      }
+    ],
+    "glide": [
+      {
+        "run": "holdout_glide_k7_rep0__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_glide_k7_rep0__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_glide_k7_rep1__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_glide_k7_rep1__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_glide_k7_rep2__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_glide_k7_rep2__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      }
+    ],
+    "Midjourney": [
+      {
+        "run": "holdout_Midjourney_k7_rep0__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_Midjourney_k7_rep0__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_Midjourney_k7_rep1__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_Midjourney_k7_rep1__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_Midjourney_k7_rep2__augmented__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      },
+      {
+        "run": "holdout_Midjourney_k7_rep2__baseline__seed17",
+        "status": "passed",
+        "max_probability_difference": 0.0,
+        "probabilities_over_001": 0,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 0.0
+      }
+    ],
+    "stable_diffusion_v_1_4": [
+      {
+        "run": "holdout_stable_diffusion_v_1_4_k7_rep0__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.001953125,
+        "probabilities_over_001": 6,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 4.4642857143006864e-05
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_4_k7_rep0__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.001953125,
+        "probabilities_over_001": 6,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -6.377551020286809e-06
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_4_k7_rep1__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.00146484375,
+        "probabilities_over_001": 4,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 2.220446049250313e-16
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_4_k7_rep1__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.002685546875,
+        "probabilities_over_001": 15,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -4.4642857143006864e-05
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_4_k7_rep2__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.0029296875,
+        "probabilities_over_001": 18,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 5.102040816318265e-05
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_4_k7_rep2__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.00244140625,
+        "probabilities_over_001": 9,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 1.9132653061193494e-05
+      }
+    ],
+    "stable_diffusion_v_1_5": [
+      {
+        "run": "holdout_stable_diffusion_v_1_5_k7_rep0__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.001708984375,
+        "probabilities_over_001": 10,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 5.102040816318265e-05
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_5_k7_rep0__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.004638671875,
+        "probabilities_over_001": 9,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 6.377551020508854e-06
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_5_k7_rep1__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.0029296875,
+        "probabilities_over_001": 12,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 2.5510204081591326e-05
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_5_k7_rep1__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.00390625,
+        "probabilities_over_001": 9,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -1.1102230246251565e-16
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_5_k7_rep2__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.00244140625,
+        "probabilities_over_001": 7,
+        "changed_threshold_labels": 1,
+        "accuracy_delta": -0.0017857142857143904,
+        "auroc_delta": -1.9132653061304516e-05
+      },
+      {
+        "run": "holdout_stable_diffusion_v_1_5_k7_rep2__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.001953125,
+        "probabilities_over_001": 4,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -6.377551020286809e-06
+      }
+    ],
+    "VQDM": [
+      {
+        "run": "holdout_VQDM_k7_rep0__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.003173828125,
+        "probabilities_over_001": 8,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -6.377551020397831e-06
+      },
+      {
+        "run": "holdout_VQDM_k7_rep0__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.0029296875,
+        "probabilities_over_001": 10,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -4.464285714289584e-05
+      },
+      {
+        "run": "holdout_VQDM_k7_rep1__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.001953125,
+        "probabilities_over_001": 4,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 2.220446049250313e-16
+      },
+      {
+        "run": "holdout_VQDM_k7_rep1__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.001708984375,
+        "probabilities_over_001": 11,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -6.377551020408934e-05
+      },
+      {
+        "run": "holdout_VQDM_k7_rep2__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.0029296875,
+        "probabilities_over_001": 4,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -3.826530612249801e-05
+      },
+      {
+        "run": "holdout_VQDM_k7_rep2__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.00390625,
+        "probabilities_over_001": 25,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -1.2755102040795663e-05
+      }
+    ],
+    "wukong": [
+      {
+        "run": "holdout_wukong_k7_rep0__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.0020751953125,
+        "probabilities_over_001": 10,
+        "changed_threshold_labels": 1,
+        "accuracy_delta": -0.0017857142857142794,
+        "auroc_delta": 6.377551020286809e-06
+      },
+      {
+        "run": "holdout_wukong_k7_rep0__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.00146484375,
+        "probabilities_over_001": 2,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -6.377551020420036e-05
+      },
+      {
+        "run": "holdout_wukong_k7_rep1__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.00146484375,
+        "probabilities_over_001": 7,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": -6.377551020397831e-05
+      },
+      {
+        "run": "holdout_wukong_k7_rep1__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.001953125,
+        "probabilities_over_001": 9,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 4.4642857143006864e-05
+      },
+      {
+        "run": "holdout_wukong_k7_rep2__augmented__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.0029296875,
+        "probabilities_over_001": 14,
+        "changed_threshold_labels": 0,
+        "accuracy_delta": 0.0,
+        "auroc_delta": 7.6530612244885e-05
+      },
+      {
+        "run": "holdout_wukong_k7_rep2__baseline__seed17",
+        "status": "strict_clean_replay_failed",
+        "max_probability_difference": 0.00146484375,
+        "probabilities_over_001": 4,
+        "changed_threshold_labels": 1,
+        "accuracy_delta": -0.0017857142857142794,
+        "auroc_delta": -1.9132653061193494e-05
+      }
+    ]
+  },
+  "status": "complete_with_strict_replay_failures"
+}

@@ -189,6 +189,40 @@ hashes against the shared manifest and reproduced the published 0.5 counts.
 The cutoff choice and its outcome use the same exploratory data. Independent
 calibration and test performance remain unmeasured.
 
+## Open multimodal LLM on a shared GenImage subset
+
+Qwen2.5-VL-3B-Instruct revision 66285546d2b821cf421d4f5eb2576359d3770cd3
+was run locally on CARC with a fixed prompt and greedy decoding, using 64
+hash-ranked images from the ADM k7 rep0 benchmark test (32 real, 32 fake).
+The model weights, input hashes and protocol were verified, and all raw
+responses retained. All 64 parsed as the requested labels. Qwen achieved
+42/64 accuracy, 1/32 real false positives and 11/32 fake detections. On
+the same hashes, baseline CNN scored 48/64, augmented CNN 40/64, baseline
+ViT 61/64 and augmented ViT 56/64. This small single-prompt, single-generator
+subset is exploratory and does not establish broad model rankings. Model
+preprocessing differs. Qwen is an open VLM, not GPT or Claude. No paid API
+was used. `multimodal_qwen/README.md` documents the protocol and outputs.
+
+## Eight-holdout CNN robustness extension
+
+The seven previously missing CNN k=7 holdouts completed for clean, JPEG60,
+and resize_112 conditions (84 new degraded evaluations). All eight holdouts
+now have result files. The CNN and ViT rows can be matched by holdout, repeat,
+training mode and condition. Checkpoints, manifest identities, labels and
+recomputed accuracy/AUROC passed the independent audit. The original 0.001
+clean-score replay gate passed in ADM, BigGAN, glide and Midjourney, and failed
+for six runs each in Stable Diffusion 1.4, Stable Diffusion 1.5, VQDM and
+wukong. Across those 24 affected runs the largest probability difference was
+0.004638671875 and three of 13,440 prediction labels changed at 0.5. The
+largest per-run AUROC change was approximately 0.000077. All eight holdout
+aggregates are therefore preliminary, not fully accepted by the replay gate.
+
+A repeat of Stable Diffusion 1.4 clean inference matched the new results
+exactly. Repeating with deterministic cuDNN and replaying one checkpoint
+through the original notebook functions did not restore the prior scores.
+The cause is unverified. See `cnn_robustness_extension/README.md` and
+`AUDIT_INVENTORY.json` for full checks, results and scripts.
+
 ## FaceForensics++ DF40 calibration and test
 
 After the user selected FaceForensics++, the user downloaded the DF40 real
