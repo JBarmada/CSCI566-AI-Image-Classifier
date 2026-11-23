@@ -1,0 +1,13 @@
+model,mode,group,n,original_positive,uniform_positive,mean_score_change,changed_decisions
+cnn,baseline,real,50,23,23,-0.01119536280632019,0
+cnn,baseline,insight,50,31,31,-0.0034975433349609376,0
+cnn,baseline,inpainting,50,34,34,-0.0037506103515625,0
+cnn,augmented,real,50,18,18,-0.003039822578430176,0
+cnn,augmented,insight,50,24,24,-0.0015793800354003905,0
+cnn,augmented,inpainting,50,19,20,0.0008909988403320312,1
+vit,baseline,real,50,4,4,0.0020590120553970336,0
+vit,baseline,insight,50,28,29,0.0005765587091445922,1
+vit,baseline,inpainting,50,33,33,0.0016306567192077637,0
+vit,augmented,real,50,5,5,0.0009435772895812988,0
+vit,augmented,insight,50,20,19,0.00022420763969421386,1
+vit,augmented,inpainting,50,20,22,0.001420418620109558,2

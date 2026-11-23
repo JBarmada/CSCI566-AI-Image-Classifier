@@ -1,0 +1,13 @@
+model,mode,group,n,original_positive,uniform_positive,mean_score_change,changed_decisions
+cnn,baseline,real,50,23,28,0.06226243019104004,5
+cnn,baseline,insight,50,31,31,0.0,0
+cnn,baseline,inpainting,50,34,34,0.0,0
+cnn,augmented,real,50,18,20,0.018538126945495604,2
+cnn,augmented,insight,50,24,24,0.0,0
+cnn,augmented,inpainting,50,19,19,0.0,0
+vit,baseline,real,50,4,5,0.006725416183471679,1
+vit,baseline,insight,50,28,28,0.0,0
+vit,baseline,inpainting,50,33,33,0.0,0
+vit,augmented,real,50,5,5,0.0010243284702301026,0
+vit,augmented,insight,50,20,20,0.0,0
+vit,augmented,inpainting,50,20,20,0.0,0

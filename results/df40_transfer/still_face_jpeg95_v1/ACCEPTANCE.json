@@ -1,0 +1,34 @@
+{
+  "images": 150,
+  "smoke_images": 18,
+  "training": false,
+  "smoke_in_full_set": true,
+  "threshold": 0.5,
+  "manifest_sha256": "dbe3fdfc6d77696a7081bc019c829ed317673ce2b4a11c045f02f6fae4543906",
+  "gpu": "Tesla P100-PCIE-16GB",
+  "models": {
+    "cnn_baseline": {
+      "reference_max_difference": 0.0,
+      "repeat_max_difference": 0.0,
+      "checkpoint_sha256": "582b0d7a9a61b22e16631850811b7692a6b3343282a26f973058c802aef07b56"
+    },
+    "cnn_augmented": {
+      "reference_max_difference": 0.0,
+      "repeat_max_difference": 0.0,
+      "checkpoint_sha256": "1159af6ca7d46182cade0337f26b9109dba6205fd2d75489661ab38c07808d8e"
+    },
+    "vit": {
+      "reference_max_differences": {
+        "baseline": 2.7872467001088808e-08,
+        "augmented": 2.486267092205452e-08
+      },
+      "repeat_max_difference": 0.0,
+      "backbone_sha256": "b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836",
+      "checkpoint_sha256": {
+        "baseline": "f56ac231eb283b5bccbbe92397bb4c14b2998aeaabf3402e2d465c1ed75057dc",
+        "augmented": "e0acb23028b99649e857910fac0768e6e7acfd6e07bf754ef3bb511705392864"
+      }
+    }
+  },
+  "status": "passed"
+}

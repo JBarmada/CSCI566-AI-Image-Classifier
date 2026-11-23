@@ -31,6 +31,15 @@ smaller counts. This intervention combines operations, treats geometry of the
 already-square fake images differently from varied-size reals, and cannot
 isolate camera effects. See [paired results](still_face_uniform_v1/README.md).
 
+Two further inference-only follow-ups each started from the original images:
+job 14489331 applied square center crop and 512x512 resize with lossless PNG;
+job 14489332 applied JPEG quality 95 with subsampling disabled at original
+dimensions. Both completed and passed their replay checks. For baseline CNN,
+real false positives changed from 23/50 to 28/50 for geometry and 23/50 for
+JPEG. For baseline ViT, they changed from 4/50 to 5/50 and 4/50. This is
+specific to these transformations and images; it does not establish a camera
+effect or explain prior video-crop errors. See [separate factor results](still_face_geometry_v1/README.md).
+
 ## 2026-11-23 — completed inference-only evaluation
 
 **Question.** Do existing GenImage-trained CNN and ViT detectors transfer to

@@ -101,6 +101,10 @@ encoding to all images, baseline CNN real false positives changed from 23/50
 to 28/50 and ViT from 4/50 to 6/50. This combined intervention cannot isolate
 the effects of any one processing operation or identify camera effects; see
 [the processing follow-up](still_face_uniform_v1/README.md).
+Subsequent separate, post-hoc geometry-only and JPEG-quality-95 tests showed
+that geometry changed five baseline CNN and one baseline ViT real decisions,
+while that JPEG variant changed none. This is limited to these 50 reals and
+these settings; see [factor analysis](still_face_geometry_v1/README.md).
 
 The first DF40 subset contains 100 real Celeb-DF crops, 200 SimSwap, 100 FOMM
 and 100 Wav2Lip crops. The 100 real images are reused for each per-method

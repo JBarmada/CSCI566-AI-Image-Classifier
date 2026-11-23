@@ -46,6 +46,14 @@ Camera model, compression, video extraction, crop geometry, image size,
 population, and threshold can change together. We lack controlled camera
 metadata and have not isolated their separate causal effects.
 
+An EXIF count on the 50 selected DeepFakeFace real files found camera-make
+and camera-model fields in only four images, and any EXIF in six. None of the
+100 selected fake files had EXIF. The fields are incomplete and have not been
+independently verified, making camera-specific comparisons infeasible in this
+sample. The count can be reproduced with
+[`audit_camera_metadata.py`](still_face_v1/audit_camera_metadata.py) and the
+locally obtained, hash-checked images; it does not publish metadata contents.
+
 Suggested controlled follow-up: take held-out real photographs with documented
 provenance; apply the same detector and crop once, then vary only JPEG quality
 or resize per copy and compare paired score changes. For camera effects use
