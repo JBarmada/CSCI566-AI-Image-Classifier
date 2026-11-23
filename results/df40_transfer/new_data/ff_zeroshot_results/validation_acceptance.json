@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "images": 280,
+  "training": false,
+  "backbone_sha256": "b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836",
+  "manifest_sha256": "ddde2f2589f5b5d7ca273907ffb07ae6d7ce2948a787083249c9ede71068f667",
+  "prompt_sha256": "3ee31e485f6c6aec4a4f702bec273f8a05aa1f890277ba53015d5f63e90f5de4",
+  "prompts": {
+    "experiment": "fixed two-prompt zero-shot CLIP baseline",
+    "real_prompt": "a photo of a real face",
+    "fake_prompt": "a photo of a manipulated face",
+    "score": "softmax over scaled cosine similarities to the two prompts",
+    "threshold": 0.5,
+    "note": "Fixed before evaluating these prompts on the DF40 subset; exploratory, not a calibrated probability."
+  },
+  "gpu": "Tesla P100-PCIE-16GB",
+  "logit_scale": 100.0,
+  "preprocessing": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb at 0x7f0fb31e53a0>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)"
+}

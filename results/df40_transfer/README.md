@@ -10,6 +10,7 @@ state at the time; later entries record subsequent work.
 - [Paired CNN–ViT error analysis](paired_analysis/README.md)
 - [Zero-shot CLIP prompts and results](zeroshot/README.md)
 - [FaceForensics++ frozen thresholds and test report](new_data/ff_results_v1/test_report.json)
+- [FaceForensics++ zero-shot CLIP test report](new_data/ff_zeroshot_results/test_report.json)
 - [FaceForensics++ validation and test manifests](new_data/ff_complete_v1/)
 - [Team notebook audit](notebook_audit.md)
 - [Threshold calibration protocol](calibration_protocol.md)

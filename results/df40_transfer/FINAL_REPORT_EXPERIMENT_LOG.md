@@ -223,6 +223,21 @@ checkpoints and 70 real/70 fake samples per method. Shared identities and
 relationships beyond the parsed IDs remain unverified. No CLIP text-prompt
 baseline was run in this experiment.
 
+## Zero-shot CLIP on FaceForensics++
+
+CARC jobs 14482439 and 14482488 evaluated the same fixed two prompts as the
+Celeb-DF experiment, with the frozen CLIP ViT-L/14 encoder. The validation
+job completed first and a threshold of 0.5726159214973451 was saved before the
+test run, using the same at-most-10%-validation-real-FPR procedure as the
+trained models. The 70-real held-out test yielded 9 false positives. Fake
+recall was 21/70 SimSwap, 24/70 FOMM and 11/70 Wav2Lip. Test AUROC was
+0.6220, 0.6753 and 0.5431, respectively. At the uncalibrated two-prompt 0.5
+threshold the corresponding counts were 11 false positives and 25, 30 and 15
+fakes detected. Source-video IDs were separated by the split plan; identity
+and cross-dataset independence remain unverified. Scores are prompt-relative,
+not calibrated probabilities. Results and checks are in
+`new_data/ff_zeroshot_results/`.
+
 ## Public alternative real images
 
 The public `afatwapas/deepfake_face_classification` Hugging Face repository
