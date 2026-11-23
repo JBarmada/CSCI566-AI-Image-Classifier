@@ -39,6 +39,9 @@ saved checkpoints and writes separate outputs.
 
 ## Remaining work
 
+**Current priorities and course deliverables:** see the [project backlog](BACKLOG.md).
+The list below is a historical snapshot and includes superseded statuses.
+
 The current [research results index](results/df40_transfer/README.md) and
 [team-review report draft](results/df40_transfer/FINAL_REPORT_DRAFT.md) record
 new results and limitations. The list below preserves the original project
