@@ -20,6 +20,7 @@ state at the time; later entries record subsequent work.
 - [First-seed eight-holdout objective comparison](generator_objectives_extended/README.md)
 - [Original ADM objective pilot](generator_objectives/README.md)
 - [Team-review report draft](FINAL_REPORT_DRAFT.md)
+- [Team handoff and demonstration](TEAM_HANDOFF.md)
 - [FaceForensics++ validation and test manifests](new_data/ff_complete_v1/)
 - [Team notebook audit](notebook_audit.md)
 - [Threshold calibration protocol](calibration_protocol.md)
