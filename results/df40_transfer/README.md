@@ -7,6 +7,9 @@ limitations, and the history of decisions. Historical entries describe the
 state at the time; later entries record subsequent work.
 
 - [Celeb-DF evaluation and per-image predictions](shared_results_v1/README.md)
+- [DeepFakeFace still-photo CNN–ViT evaluation](still_face_v1/README.md)
+- [Still-photo geometry and JPEG follow-up](still_face_geometry_v1/README.md)
+- [Still-image dataset comparison and real-error research](STILL_FACE_RESEARCH.md)
 - [Paired CNN–ViT error analysis](paired_analysis/README.md)
 - [Zero-shot CLIP prompts and results](zeroshot/README.md)
 - [FaceForensics++ frozen thresholds and test report](new_data/ff_results_v1/test_report.json)

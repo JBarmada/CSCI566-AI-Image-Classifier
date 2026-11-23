@@ -26,6 +26,16 @@ Its 72 per-objective outputs and selected-head replays are available in the
 [three-seed results](generator_objectives_seeds/README.md). The small average
 differences do not establish a reliable winner.
 
+The [DeepFakeFace still-photo pilot](still_face_v1/README.md) adds a shared
+50-real, 100-fake inference-only comparison and a
+[crop/resize and JPEG follow-up](still_face_geometry_v1/README.md). The baseline
+ViT falsely flagged 4/50 real still photos; baseline CNN flagged 23/50. These
+are small exploratory samples with unverified identity independence and
+class-correlated image dimensions; they do not by themselves explain DF40
+video-crop errors. No exact file or recorded decoded-pixel matches were found
+against the compact GenImage inventory; altered images and pretraining overlap
+remain possible.
+
 ## What needs care
 
 1. **CNN robustness remains provisional.** Four holdouts exceeded the original
