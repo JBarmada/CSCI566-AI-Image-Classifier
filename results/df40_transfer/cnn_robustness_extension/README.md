@@ -1,10 +1,14 @@
 # CNN and ViT k=7 robustness comparison
 
+**Update:** The affected runs were rerun and audited on V100. The current
+paired results are in [the V100 rerun](../cnn_robustness_v100/README.md).
+This page preserves the earlier P100 comparison and its limitations.
+
 All eight CNN holdouts now have six checkpoints evaluated under clean,
 JPEG 60 and resize-to-112-and-back conditions. The seven new holdouts add 84
 degraded evaluations and 42 clean replays to the existing ADM results. The
 existing ViT robustness study supplies the matching 144 condition/run rows.
-`robustness_results_v1.tar.gz` preserves CNN predictions, configuration,
+[robustness_results_v1.tar.gz](robustness_results_v1.tar.gz) preserves CNN predictions, configuration,
 completion markers, summaries and notebook source. `paired_per_run.csv`,
 `paired_by_holdout.csv`, and `paired_macro_provisional.csv` contain the matched
 comparison. The plot shows the equal-weight mean over three repeats within

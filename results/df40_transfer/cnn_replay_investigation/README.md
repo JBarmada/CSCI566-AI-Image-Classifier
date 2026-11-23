@@ -1,5 +1,9 @@
 # CNN clean-score replay investigation
 
+**Update:** The affected conditions were subsequently rerun and audited;
+see [the V100 robustness results](../cnn_robustness_v100/README.md). The
+historical interpretation below describes the earlier P100 outputs.
+
 ## Finding
 
 The failed clean-score replays are explained by a GPU-dependent numerical

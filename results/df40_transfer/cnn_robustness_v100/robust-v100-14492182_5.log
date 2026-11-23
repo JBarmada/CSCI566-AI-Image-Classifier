@@ -1,0 +1,116 @@
+Tesla V100-PCIE-32GB, 580.159.04
+versions 2.7.1+cu118 0.22.1+cu118 12.1.1 cudnn 90701
+PyTorch: 2.7.1+cu118
+Device: cuda
+GPU: Tesla V100-PCIE-32GB
+{'data_root': '/project2/yzhao010_1531/csci566-genimage/data/extracted/GenImage_Compact', 'output_root': '/project2/yzhao010_1531/csci566-genimage/results/cnn_robustness_k7_v1', 'image_size': 224, 'batch_size': 64, 'num_workers': 0, 'use_amp': True, 'threshold': 0.5, 'calibration_bins': 10, 'verify_image_hashes': True, 'skip_completed': True}
+Run roots: ['/project2/yzhao010_1531/csci566-genimage/results/cnn_benchmark/notebook/runs']
+Selection: ['ADM'] [0, 1, 2] ['baseline', 'augmented'] ['clean', 'jpeg60', 'resize_112']
+verify holdout_VQDM_k7_rep0__baseline__seed17:   0%|          | 0/560 [00:00<?, ?it/s]verify holdout_VQDM_k7_rep0__baseline__seed17:  13%|█▎        | 74/560 [00:00<00:00, 738.12it/s]verify holdout_VQDM_k7_rep0__baseline__seed17:  30%|██▉       | 166/560 [00:00<00:00, 841.26it/s]verify holdout_VQDM_k7_rep0__baseline__seed17:  47%|████▋     | 264/560 [00:00<00:00, 902.32it/s]verify holdout_VQDM_k7_rep0__baseline__seed17:  67%|██████▋   | 373/560 [00:00<00:00, 974.21it/s]verify holdout_VQDM_k7_rep0__baseline__seed17:  85%|████████▍ | 475/560 [00:00<00:00, 988.63it/s]                                                                                                 verify holdout_VQDM_k7_rep0__augmented__seed17:   0%|          | 0/560 [00:00<?, ?it/s]verify holdout_VQDM_k7_rep0__augmented__seed17:  37%|███▋      | 205/560 [00:00<00:00, 2047.80it/s]verify holdout_VQDM_k7_rep0__augmented__seed17:  76%|███████▌  | 423/560 [00:00<00:00, 2125.20it/s]                                                                                                   verify holdout_VQDM_k7_rep1__baseline__seed17:   0%|          | 0/560 [00:00<?, ?it/s]verify holdout_VQDM_k7_rep1__baseline__seed17:  38%|███▊      | 215/560 [00:00<00:00, 2149.33it/s]verify holdout_VQDM_k7_rep1__baseline__seed17:  77%|███████▋  | 430/560 [00:00<00:00, 2101.41it/s]                                                                                                  verify holdout_VQDM_k7_rep1__augmented__seed17:   0%|          | 0/560 [00:00<?, ?it/s]verify holdout_VQDM_k7_rep1__augmented__seed17:  38%|███▊      | 210/560 [00:00<00:00, 2091.57it/s]verify holdout_VQDM_k7_rep1__augmented__seed17:  75%|███████▌  | 420/560 [00:00<00:00, 2031.10it/s]                                                                                                   verify holdout_VQDM_k7_rep2__baseline__seed17:   0%|          | 0/560 [00:00<?, ?it/s]verify holdout_VQDM_k7_rep2__baseline__seed17:  36%|███▌      | 201/560 [00:00<00:00, 2005.27it/s]verify holdout_VQDM_k7_rep2__baseline__seed17:  72%|███████▏  | 402/560 [00:00<00:00, 1998.34it/s]                                                                                                  verify holdout_VQDM_k7_rep2__augmented__seed17:   0%|          | 0/560 [00:00<?, ?it/s]verify holdout_VQDM_k7_rep2__augmented__seed17:  33%|███▎      | 187/560 [00:00<00:00, 1861.11it/s]verify holdout_VQDM_k7_rep2__augmented__seed17:  69%|██████▉   | 389/560 [00:00<00:00, 1952.49it/s]                                                                                                   Preflight passed for 6 saved models.
+  holdout  ...                               test_manifest_sha256
+0    VQDM  ...  b80be26a349fae7c118eaf0c1a12e3e71558356946c1c6...
+1    VQDM  ...  b80be26a349fae7c118eaf0c1a12e3e71558356946c1c6...
+2    VQDM  ...  189860e43eb4759f49460c0162328b589a89ec29e990e2...
+3    VQDM  ...  189860e43eb4759f49460c0162328b589a89ec29e990e2...
+4    VQDM  ...  b22c92f5cc455afd9e41bb3bae4ab6036f708b53e31bf4...
+5    VQDM  ...  b22c92f5cc455afd9e41bb3bae4ab6036f708b53e31bf4...
+
+[6 rows x 9 columns]
+
+========================================================================================
+holdout_VQDM_k7_rep0__baseline__seed17 checkpoint e2ea621ec39f
+clean:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+clean:  11%|█         | 1/9 [00:00<00:04,  1.64it/s]clean:  22%|██▏       | 2/9 [00:00<00:03,  2.16it/s]clean:  33%|███▎      | 3/9 [00:01<00:02,  2.57it/s]clean:  44%|████▍     | 4/9 [00:01<00:01,  2.80it/s]clean:  56%|█████▌    | 5/9 [00:01<00:01,  2.89it/s]clean:  67%|██████▋   | 6/9 [00:02<00:01,  2.95it/s]clean:  78%|███████▊  | 7/9 [00:02<00:00,  2.98it/s]clean:  89%|████████▉ | 8/9 [00:02<00:00,  3.01it/s]clean: 100%|██████████| 9/9 [00:03<00:00,  3.23it/s]                                                    jpeg60:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+jpeg60:  11%|█         | 1/9 [00:00<00:02,  2.88it/s]jpeg60:  22%|██▏       | 2/9 [00:00<00:02,  2.89it/s]jpeg60:  33%|███▎      | 3/9 [00:01<00:02,  2.85it/s]jpeg60:  44%|████▍     | 4/9 [00:01<00:01,  2.79it/s]jpeg60:  56%|█████▌    | 5/9 [00:01<00:01,  2.75it/s]jpeg60:  67%|██████▋   | 6/9 [00:02<00:01,  2.81it/s]jpeg60:  78%|███████▊  | 7/9 [00:02<00:00,  2.83it/s]jpeg60:  89%|████████▉ | 8/9 [00:02<00:00,  2.82it/s]jpeg60: 100%|██████████| 9/9 [00:03<00:00,  3.08it/s]                                                     resize_112:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+resize_112:  11%|█         | 1/9 [00:00<00:03,  2.66it/s]resize_112:  22%|██▏       | 2/9 [00:00<00:02,  2.66it/s]resize_112:  33%|███▎      | 3/9 [00:01<00:02,  2.68it/s]resize_112:  44%|████▍     | 4/9 [00:01<00:01,  2.66it/s]resize_112:  56%|█████▌    | 5/9 [00:01<00:01,  2.59it/s]resize_112:  67%|██████▋   | 6/9 [00:02<00:01,  2.59it/s]resize_112:  78%|███████▊  | 7/9 [00:02<00:00,  2.58it/s]resize_112:  89%|████████▉ | 8/9 [00:03<00:00,  2.55it/s]resize_112: 100%|██████████| 9/9 [00:03<00:00,  2.79it/s]                                                         
+========================================================================================
+holdout_VQDM_k7_rep0__augmented__seed17 checkpoint ba7a48119c87
+clean:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+clean:  11%|█         | 1/9 [00:00<00:02,  3.32it/s]clean:  22%|██▏       | 2/9 [00:00<00:02,  3.31it/s]clean:  33%|███▎      | 3/9 [00:00<00:01,  3.25it/s]clean:  44%|████▍     | 4/9 [00:01<00:01,  3.23it/s]clean:  56%|█████▌    | 5/9 [00:01<00:01,  3.16it/s]clean:  67%|██████▋   | 6/9 [00:01<00:00,  3.19it/s]clean:  78%|███████▊  | 7/9 [00:02<00:00,  3.19it/s]clean:  89%|████████▉ | 8/9 [00:02<00:00,  3.17it/s]clean: 100%|██████████| 9/9 [00:02<00:00,  3.47it/s]                                                    jpeg60:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+jpeg60:  11%|█         | 1/9 [00:00<00:02,  2.95it/s]jpeg60:  22%|██▏       | 2/9 [00:00<00:02,  2.96it/s]jpeg60:  33%|███▎      | 3/9 [00:01<00:02,  2.97it/s]jpeg60:  44%|████▍     | 4/9 [00:01<00:01,  2.95it/s]jpeg60:  56%|█████▌    | 5/9 [00:01<00:01,  2.88it/s]jpeg60:  67%|██████▋   | 6/9 [00:02<00:01,  2.92it/s]jpeg60:  78%|███████▊  | 7/9 [00:02<00:00,  2.90it/s]jpeg60:  89%|████████▉ | 8/9 [00:02<00:00,  2.86it/s]jpeg60: 100%|██████████| 9/9 [00:03<00:00,  3.12it/s]                                                     resize_112:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+resize_112:  11%|█         | 1/9 [00:00<00:02,  2.68it/s]resize_112:  22%|██▏       | 2/9 [00:00<00:02,  2.68it/s]resize_112:  33%|███▎      | 3/9 [00:01<00:02,  2.68it/s]resize_112:  44%|████▍     | 4/9 [00:01<00:01,  2.67it/s]resize_112:  56%|█████▌    | 5/9 [00:01<00:01,  2.60it/s]resize_112:  67%|██████▋   | 6/9 [00:02<00:01,  2.63it/s]resize_112:  78%|███████▊  | 7/9 [00:02<00:00,  2.62it/s]resize_112:  89%|████████▉ | 8/9 [00:03<00:00,  2.60it/s]resize_112: 100%|██████████| 9/9 [00:03<00:00,  2.83it/s]                                                         
+========================================================================================
+holdout_VQDM_k7_rep1__baseline__seed17 checkpoint f973272e1a13
+clean:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+clean:  11%|█         | 1/9 [00:00<00:02,  3.22it/s]clean:  22%|██▏       | 2/9 [00:00<00:02,  3.33it/s]clean:  33%|███▎      | 3/9 [00:00<00:01,  3.21it/s]clean:  44%|████▍     | 4/9 [00:01<00:01,  3.18it/s]clean:  56%|█████▌    | 5/9 [00:01<00:01,  3.21it/s]clean:  67%|██████▋   | 6/9 [00:01<00:00,  3.22it/s]clean:  78%|███████▊  | 7/9 [00:02<00:00,  3.17it/s]clean:  89%|████████▉ | 8/9 [00:02<00:00,  3.21it/s]clean: 100%|██████████| 9/9 [00:02<00:00,  3.50it/s]                                                    jpeg60:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+jpeg60:  11%|█         | 1/9 [00:00<00:02,  2.85it/s]jpeg60:  22%|██▏       | 2/9 [00:00<00:02,  2.97it/s]jpeg60:  33%|███▎      | 3/9 [00:01<00:02,  2.85it/s]jpeg60:  44%|████▍     | 4/9 [00:01<00:01,  2.87it/s]jpeg60:  56%|█████▌    | 5/9 [00:01<00:01,  2.87it/s]jpeg60:  67%|██████▋   | 6/9 [00:02<00:01,  2.88it/s]jpeg60:  78%|███████▊  | 7/9 [00:02<00:00,  2.84it/s]jpeg60:  89%|████████▉ | 8/9 [00:02<00:00,  2.85it/s]jpeg60: 100%|██████████| 9/9 [00:03<00:00,  3.11it/s]                                                     resize_112:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+resize_112:  11%|█         | 1/9 [00:00<00:03,  2.58it/s]resize_112:  22%|██▏       | 2/9 [00:00<00:02,  2.66it/s]resize_112:  33%|███▎      | 3/9 [00:01<00:02,  2.61it/s]resize_112:  44%|████▍     | 4/9 [00:01<00:01,  2.61it/s]resize_112:  56%|█████▌    | 5/9 [00:01<00:01,  2.60it/s]resize_112:  67%|██████▋   | 6/9 [00:02<00:01,  2.60it/s]resize_112:  78%|███████▊  | 7/9 [00:02<00:00,  2.56it/s]resize_112:  89%|████████▉ | 8/9 [00:03<00:00,  2.59it/s]resize_112: 100%|██████████| 9/9 [00:03<00:00,  2.82it/s]                                                         
+========================================================================================
+holdout_VQDM_k7_rep1__augmented__seed17 checkpoint 757654d50eb0
+clean:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+clean:  11%|█         | 1/9 [00:00<00:02,  3.19it/s]clean:  22%|██▏       | 2/9 [00:00<00:02,  3.31it/s]clean:  33%|███▎      | 3/9 [00:00<00:01,  3.22it/s]clean:  44%|████▍     | 4/9 [00:01<00:01,  3.21it/s]clean:  56%|█████▌    | 5/9 [00:01<00:01,  3.20it/s]clean:  67%|██████▋   | 6/9 [00:01<00:00,  3.19it/s]clean:  78%|███████▊  | 7/9 [00:02<00:00,  3.14it/s]clean:  89%|████████▉ | 8/9 [00:02<00:00,  3.18it/s]clean: 100%|██████████| 9/9 [00:02<00:00,  3.48it/s]                                                    jpeg60:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+jpeg60:  11%|█         | 1/9 [00:00<00:02,  2.85it/s]jpeg60:  22%|██▏       | 2/9 [00:00<00:02,  2.95it/s]jpeg60:  33%|███▎      | 3/9 [00:01<00:02,  2.89it/s]jpeg60:  44%|████▍     | 4/9 [00:01<00:01,  2.89it/s]jpeg60:  56%|█████▌    | 5/9 [00:01<00:01,  2.89it/s]jpeg60:  67%|██████▋   | 6/9 [00:02<00:01,  2.88it/s]jpeg60:  78%|███████▊  | 7/9 [00:02<00:00,  2.83it/s]jpeg60:  89%|████████▉ | 8/9 [00:02<00:00,  2.86it/s]jpeg60: 100%|██████████| 9/9 [00:03<00:00,  3.11it/s]                                                     resize_112:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+resize_112:  11%|█         | 1/9 [00:00<00:03,  2.58it/s]resize_112:  22%|██▏       | 2/9 [00:00<00:02,  2.67it/s]resize_112:  33%|███▎      | 3/9 [00:01<00:02,  2.58it/s]resize_112:  44%|████▍     | 4/9 [00:01<00:01,  2.59it/s]resize_112:  56%|█████▌    | 5/9 [00:01<00:01,  2.59it/s]resize_112:  67%|██████▋   | 6/9 [00:02<00:01,  2.58it/s]resize_112:  78%|███████▊  | 7/9 [00:02<00:00,  2.55it/s]resize_112:  89%|████████▉ | 8/9 [00:03<00:00,  2.57it/s]resize_112: 100%|██████████| 9/9 [00:03<00:00,  2.80it/s]                                                         
+========================================================================================
+holdout_VQDM_k7_rep2__baseline__seed17 checkpoint f44a51cb7add
+clean:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+clean:  11%|█         | 1/9 [00:00<00:02,  3.14it/s]clean:  22%|██▏       | 2/9 [00:00<00:02,  3.14it/s]clean:  33%|███▎      | 3/9 [00:00<00:01,  3.12it/s]clean:  44%|████▍     | 4/9 [00:01<00:01,  3.11it/s]clean:  56%|█████▌    | 5/9 [00:01<00:01,  3.11it/s]clean:  67%|██████▋   | 6/9 [00:01<00:00,  3.12it/s]clean:  78%|███████▊  | 7/9 [00:02<00:00,  3.09it/s]clean:  89%|████████▉ | 8/9 [00:02<00:00,  3.12it/s]clean: 100%|██████████| 9/9 [00:02<00:00,  3.36it/s]                                                    jpeg60:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+jpeg60:  11%|█         | 1/9 [00:00<00:02,  2.91it/s]jpeg60:  22%|██▏       | 2/9 [00:00<00:02,  2.89it/s]jpeg60:  33%|███▎      | 3/9 [00:01<00:02,  2.88it/s]jpeg60:  44%|████▍     | 4/9 [00:01<00:01,  2.87it/s]jpeg60:  56%|█████▌    | 5/9 [00:01<00:01,  2.85it/s]jpeg60:  67%|██████▋   | 6/9 [00:02<00:01,  2.86it/s]jpeg60:  78%|███████▊  | 7/9 [00:02<00:00,  2.82it/s]jpeg60:  89%|████████▉ | 8/9 [00:02<00:00,  2.87it/s]jpeg60: 100%|██████████| 9/9 [00:03<00:00,  3.10it/s]                                                     resize_112:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+resize_112:  11%|█         | 1/9 [00:00<00:03,  2.62it/s]resize_112:  22%|██▏       | 2/9 [00:00<00:02,  2.60it/s]resize_112:  33%|███▎      | 3/9 [00:01<00:02,  2.60it/s]resize_112:  44%|████▍     | 4/9 [00:01<00:01,  2.59it/s]resize_112:  56%|█████▌    | 5/9 [00:01<00:01,  2.58it/s]resize_112:  67%|██████▋   | 6/9 [00:02<00:01,  2.60it/s]resize_112:  78%|███████▊  | 7/9 [00:02<00:00,  2.59it/s]resize_112:  89%|████████▉ | 8/9 [00:03<00:00,  2.62it/s]resize_112: 100%|██████████| 9/9 [00:03<00:00,  2.84it/s]                                                         
+========================================================================================
+holdout_VQDM_k7_rep2__augmented__seed17 checkpoint 1835f81458d3
+clean:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+clean:  11%|█         | 1/9 [00:00<00:02,  3.27it/s]clean:  22%|██▏       | 2/9 [00:00<00:02,  3.23it/s]clean:  33%|███▎      | 3/9 [00:00<00:01,  3.23it/s]clean:  44%|████▍     | 4/9 [00:01<00:01,  3.24it/s]clean:  56%|█████▌    | 5/9 [00:01<00:01,  3.22it/s]clean:  67%|██████▋   | 6/9 [00:01<00:00,  3.25it/s]clean:  78%|███████▊  | 7/9 [00:02<00:00,  3.22it/s]clean:  89%|████████▉ | 8/9 [00:02<00:00,  3.26it/s]clean: 100%|██████████| 9/9 [00:02<00:00,  3.51it/s]                                                    jpeg60:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+jpeg60:  11%|█         | 1/9 [00:00<00:02,  2.88it/s]jpeg60:  22%|██▏       | 2/9 [00:00<00:02,  2.87it/s]jpeg60:  33%|███▎      | 3/9 [00:01<00:02,  2.87it/s]jpeg60:  44%|████▍     | 4/9 [00:01<00:01,  2.88it/s]jpeg60:  56%|█████▌    | 5/9 [00:01<00:01,  2.87it/s]jpeg60:  67%|██████▋   | 6/9 [00:02<00:01,  2.88it/s]jpeg60:  78%|███████▊  | 7/9 [00:02<00:00,  2.87it/s]jpeg60:  89%|████████▉ | 8/9 [00:02<00:00,  2.91it/s]jpeg60: 100%|██████████| 9/9 [00:03<00:00,  3.15it/s]                                                     resize_112:   0%|          | 0/9 [00:00<?, ?it/s]<notebook-cell-10>:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+resize_112:  11%|█         | 1/9 [00:00<00:03,  2.65it/s]resize_112:  22%|██▏       | 2/9 [00:00<00:02,  2.62it/s]resize_112:  33%|███▎      | 3/9 [00:01<00:02,  2.59it/s]resize_112:  44%|████▍     | 4/9 [00:01<00:01,  2.60it/s]resize_112:  56%|█████▌    | 5/9 [00:01<00:01,  2.57it/s]resize_112:  67%|██████▋   | 6/9 [00:02<00:01,  2.57it/s]resize_112:  78%|███████▊  | 7/9 [00:02<00:00,  2.57it/s]resize_112:  89%|████████▉ | 8/9 [00:03<00:00,  2.60it/s]resize_112: 100%|██████████| 9/9 [00:03<00:00,  2.82it/s]                                                            holdout  rep    variant   condition  accuracy     auroc   f1_fake
+3     VQDM    0  augmented       clean  0.616071  0.684133  0.519016
+0     VQDM    0   baseline       clean  0.671429  0.786052  0.581818
+4     VQDM    0  augmented      jpeg60  0.607143  0.677168  0.493088
+1     VQDM    0   baseline      jpeg60  0.630357  0.686116  0.672986
+5     VQDM    0  augmented  resize_112  0.600000  0.636633  0.567568
+2     VQDM    0   baseline  resize_112  0.501786  0.442136  0.666667
+9     VQDM    1  augmented       clean  0.655357  0.735249  0.573951
+6     VQDM    1   baseline       clean  0.664286  0.769732  0.574661
+10    VQDM    1  augmented      jpeg60  0.655357  0.719228  0.598753
+7     VQDM    1   baseline      jpeg60  0.651786  0.698712  0.713656
+11    VQDM    1  augmented  resize_112  0.625000  0.673431  0.623656
+8     VQDM    1   baseline  resize_112  0.501786  0.489126  0.667461
+15    VQDM    2  augmented       clean  0.628571  0.694681  0.547826
+12    VQDM    2   baseline       clean  0.692857  0.783731  0.630901
+16    VQDM    2  augmented      jpeg60  0.639286  0.709286  0.568376
+13    VQDM    2   baseline      jpeg60  0.617857  0.707940  0.704420
+17    VQDM    2  augmented  resize_112  0.598214  0.627698  0.587156
+14    VQDM    2   baseline  resize_112  0.508929  0.470708  0.669868
+Per-run accuracy and AUROC:
+   holdout  rep    variant   condition  accuracy     auroc
+3     VQDM    0  augmented       clean  0.616071  0.684133
+0     VQDM    0   baseline       clean  0.671429  0.786052
+4     VQDM    0  augmented      jpeg60  0.607143  0.677168
+1     VQDM    0   baseline      jpeg60  0.630357  0.686116
+5     VQDM    0  augmented  resize_112  0.600000  0.636633
+2     VQDM    0   baseline  resize_112  0.501786  0.442136
+9     VQDM    1  augmented       clean  0.655357  0.735249
+6     VQDM    1   baseline       clean  0.664286  0.769732
+10    VQDM    1  augmented      jpeg60  0.655357  0.719228
+7     VQDM    1   baseline      jpeg60  0.651786  0.698712
+11    VQDM    1  augmented  resize_112  0.625000  0.673431
+8     VQDM    1   baseline  resize_112  0.501786  0.489126
+15    VQDM    2  augmented       clean  0.628571  0.694681
+12    VQDM    2   baseline       clean  0.692857  0.783731
+16    VQDM    2  augmented      jpeg60  0.639286  0.709286
+13    VQDM    2   baseline      jpeg60  0.617857  0.707940
+17    VQDM    2  augmented  resize_112  0.598214  0.627698
+14    VQDM    2   baseline  resize_112  0.508929  0.470708
+Augmented minus baseline (positive accuracy/AUROC is better):
+  holdout  rep   condition  delta_accuracy  delta_auroc
+0    VQDM    0       clean       -0.055357    -0.101920
+1    VQDM    0      jpeg60       -0.023214    -0.008948
+2    VQDM    0  resize_112        0.098214     0.194496
+3    VQDM    1       clean       -0.008929    -0.034483
+4    VQDM    1      jpeg60        0.003571     0.020517
+5    VQDM    1  resize_112        0.123214     0.184305
+6    VQDM    2       clean       -0.064286    -0.089050
+7    VQDM    2      jpeg60        0.021429     0.001346
+8    VQDM    2  resize_112        0.089286     0.156990
+Mean across selected holdouts/repeats:
+    condition    variant  mean_accuracy  ...  std_auroc  mean_f1_fake  n_runs
+0       clean  augmented       0.633333  ...   0.026987      0.546931       3
+1       clean   baseline       0.676190  ...   0.008829      0.595793       3
+2      jpeg60  augmented       0.633929  ...   0.021983      0.553405       3
+3      jpeg60   baseline       0.633333  ...   0.010955      0.697021       3
+4  resize_112  augmented       0.607738  ...   0.024240      0.592793       3
+5  resize_112   baseline       0.504167  ...   0.023677      0.667999       3
+
+[6 rows x 8 columns]
+Saved to: /home1/barmada/cnn_robustness_v100_20261123/task_14492182_5/outputs/VQDM
+Completed holdout: VQDM

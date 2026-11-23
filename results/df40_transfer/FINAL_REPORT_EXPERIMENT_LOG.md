@@ -1,5 +1,19 @@
 # Final report evidence log: DF40 transfer
 
+## 2026-11-23 — V100 CNN robustness rerun
+
+The four affected CNN holdouts were rerun on V100 GPUs with the original
+checkpoints, clean/JPEG60/resize conditions, and unchanged thresholds. All
+24 checkpoints passed the original 0.001 clean replay gate with maximum
+difference zero. An independent audit verified 72 evaluations and the original
+four unaffected holdouts retained their previously passing results. Six of
+40,320 P100-versus-V100 prediction rows changed classification (3 clean,
+1 JPEG, 2 resize); repeated images mean rows are not independent samples.
+The updated 144-row CNN–ViT comparison and full methods, audit, GPU provenance,
+limitations and preserved outputs are in
+[the V100 robustness rerun](cnn_robustness_v100/README.md). This supersedes
+the preliminary aggregate derived from the P100 outputs, which remains saved.
+
 ## 2026-11-23 — exploratory DeepFakeFace still-photo inference
 
 CARC job 14488658 completed with exit code 0. A fixed seed selected 50 shared

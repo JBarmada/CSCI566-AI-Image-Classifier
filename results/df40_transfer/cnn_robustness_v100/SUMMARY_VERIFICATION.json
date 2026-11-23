@@ -1,0 +1,10 @@
+{
+  "old_paired_sha256": "33cffae36fc5d652f0a1985877fe4bf4cbbab455ce29712f4455f51632cb5446",
+  "rows": 144,
+  "v100_replacements": 72,
+  "max_cnn_metric_change": {
+    "accuracy": 0.0017857142857143904,
+    "auroc": 0.000688775510203965,
+    "ece": 0.0032126127609184083
+  }
+}
