@@ -1,0 +1,24 @@
+{
+  "inventory_sha256": "2489c92c04fc9288890f2339d3d1774fee81b67526615dd1b5ff1ba0f735865a",
+  "inventory_rows": 17640,
+  "groups": {
+    "real": {
+      "n": 50,
+      "file_sha256_matches_inventory_file": 0,
+      "file_sha256_matches_inventory_source": 0,
+      "pixel_sha256_matches_inventory_pixels": 0
+    },
+    "insight": {
+      "n": 50,
+      "file_sha256_matches_inventory_file": 0,
+      "file_sha256_matches_inventory_source": 0,
+      "pixel_sha256_matches_inventory_pixels": 0
+    },
+    "inpainting": {
+      "n": 50,
+      "file_sha256_matches_inventory_file": 0,
+      "file_sha256_matches_inventory_source": 0,
+      "pixel_sha256_matches_inventory_pixels": 0
+    }
+  }
+}

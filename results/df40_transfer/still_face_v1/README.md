@@ -41,6 +41,16 @@ processed data before making a strong generalization claim. Identity and source
 overlap with training data remain unverified; the inpainting generator is
 related to Stable Diffusion, a family represented in GenImage.
 
+A subsequent check compared all 150 samples with the 17,640 entries in the
+project's GenImage image inventory. No sample file SHA-256 matched either the
+inventory file or source-file SHA-256, and no decoded RGB pixel SHA-256 matched
+the inventoried decoded pixels. The inventory covers the compact benchmark's
+train, validation and test pools; see [the check](GENIMAGE_OVERLAP.json) and
+[script](audit_genimage_overlap.py). This does not rule out re-encoded or
+cropped versions, identities, related photographs, or overlap with model
+pretraining data. The inventory's pixel hashes refer to its recorded image
+versions and may differ from the underlying originals.
+
 The archived manifest contains filenames and hashes but no image bytes.
 `provenance.json` records selection and transfer sizes. `ACCEPTANCE.json`
 records checkpoint hashes, original-reference replays, and repeat-smoke

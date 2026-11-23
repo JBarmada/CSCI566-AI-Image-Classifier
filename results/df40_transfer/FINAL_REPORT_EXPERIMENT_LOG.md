@@ -16,6 +16,12 @@ identity limitations, see [still-face results](still_face_v1/README.md). The
 candidate comparison and discussion of real-image errors are in
 [still-face research](STILL_FACE_RESEARCH.md).
 
+An exact-overlap audit compared all 150 selected file hashes with the 17,640
+records in the GenImage compact benchmark image inventory, including source
+file hashes, and compared decoded RGB pixel hashes against inventory versions.
+It found no matches. This does not rule out altered copies, identity overlap,
+or overlap with pretraining data. See [audit](still_face_v1/GENIMAGE_OVERLAP.json).
+
 A read-only recheck of the original SD 1.4 repeat-0 baseline CNN configuration
 reported a Tesla P100 and AMP enabled. An extension job log also reports a
 Tesla P100 and AMP enabled, with PyTorch 2.7.1+cu118. Matching GPU model names
