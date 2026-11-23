@@ -15,8 +15,8 @@
 The corrected clean studies have 192 CNN and 192 ViT runs; 192 matched model
 pairs were audited against shared test-image hashes and labels. The ViT k=7
 JPEG60 and resize evaluation covers all eight holdouts and passed its audit.
-The CNN extension completed the seven remaining holdouts, so outputs exist for
-all eight; see the qualification below. Saved-model face transfer, fixed-prompt
+The CNN extension covers all eight holdouts; the affected runs were rerun
+and verified on V100. Saved-model face transfer, fixed-prompt
 zero-shot CLIP, a small Qwen vision-language test and exploratory face-adapted
 and generator-objective experiments are documented in the results index.
 
@@ -38,13 +38,10 @@ remain possible.
 
 ## What needs care
 
-1. **CNN robustness remains provisional.** Four holdouts exceeded the original
-   0.001 clean-score replay tolerance. The maximum absolute score difference was
-   0.0046387, and 3 of 13,440 affected predictions crossed the 0.5 threshold.
-   Identity, labels, checkpoints and recomputed metrics passed other checks, but
-   the reason for the discrepancy remains unknown. Do not describe the complete
-   eight-holdout comparison as fully passing that audit. See the
-   [robustness report](cnn_robustness_extension/README.md).
+1. **CNN robustness rerun passed.** All 24 affected V100 clean replays
+   matched the original scores exactly, and the new 72 evaluations passed
+   independent checks. The old P100 results remain preserved. See the
+   [updated comparison](cnn_robustness_v100/README.md).
 2. **DF40 transfer is exploratory.** Person-level independence and cross-data
    overlap are not established. Fake labels come from dataset provenance and do
    not prove every selected crop visibly exhibits manipulation. The adapted head
@@ -89,6 +86,6 @@ published report files are also available directly on GitHub without a pull.
 
 Have the team review and accept the dataset protocol and report wording. For a
 stronger research claim, establish source/person separation and evaluate on a
-fresh untouched face test, and investigate or explicitly document the CNN
-clean-score replay discrepancy before treating its robustness comparison as
-fully verified. Prepare the poster and final presentation using reviewed figures.
+fresh untouched face test. The CNN replay discrepancy has been investigated
+and the affected robustness runs have passed on V100. Prepare the poster and
+final presentation using reviewed figures.

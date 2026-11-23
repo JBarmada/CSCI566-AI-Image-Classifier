@@ -1,5 +1,20 @@
 # Final report evidence log: DF40 transfer
 
+## 2026-11-23 — poster preparation and face follow-up planning
+
+The main README, team handoff and report draft were corrected to reflect the
+validated V100 robustness reruns. A [draft poster story and three figures](poster_assets/README.md)
+cover generator diversity, audited JPEG/resize robustness and descriptive
+real-image errors. The plots are generated from saved result CSVs and are
+proposals for team review, not a completed poster. A separate
+[follow-up decision document](FACE_FOLLOWUP_DECISIONS.md) recommends a fresh
+traceable test if feasible, a limited additional-method extension only with
+verified access and provenance, and distinct protocols for face-adapted heads
+and generator-objective adapters. A [paired adaptation review](adaptation_paired_review/README.md) summarizes
+matched seed/holdout differences without treating reused tests as independent.
+No new images were collected, new models trained, or test scores produced for
+these recommendations.
+
 ## 2026-11-23 — V100 CNN robustness rerun
 
 The four affected CNN holdouts were rerun on V100 GPUs with the original

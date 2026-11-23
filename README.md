@@ -28,7 +28,7 @@ metrics. Saved checkpoints and full raw outputs remain on CARC.
 | CNN clean benchmark | 192/192 completed and audited |
 | Matched CNN–ViT comparison | 192 pairs verified and analyzed; included in the submitted midterm |
 | ViT k=7 robustness | All 8 holdouts complete: 48 clean references and 96 JPEG60/resize evaluations; independent audit passed |
-| CNN k=7 robustness | Eight holdouts evaluated; four fail the strict clean-score replay tolerance, so the full comparison is provisional |
+| CNN k=7 robustness | Eight holdouts audited; four affected holdouts were rerun on V100 and all clean checks passed |
 | DF40 face transfer | Celeb-DF and FaceForensics++ subsets evaluated; a supervised face-adapted head is exploratory |
 | Zero-shot comparison | CLIP evaluated on face crops; Qwen2.5-VL-3B evaluated on a 64-image ADM subset |
 | Generator objectives | Exploratory eight-holdout, three-seed comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
@@ -40,7 +40,6 @@ saved checkpoints and writes separate outputs.
 ## Remaining work
 
 **Current priorities and course deliverables:** see the [project backlog](BACKLOG.md).
-The list below is a historical snapshot and includes superseded statuses.
 
 The current [research results index](results/df40_transfer/README.md) and
 [team-review report draft](results/df40_transfer/FINAL_REPORT_DRAFT.md) record
@@ -55,14 +54,10 @@ plan; several items now have exploratory or provisional results.
   compare CNN–ViT disagreements by holdout and generator family. Fit any
   calibrator or decision threshold on validation data only. Account for reused
   test images and distinguish dataset repeats from classifier seeds.
-- **Resolve CNN k=7 robustness replay differences.** The remaining seven holdouts were evaluated.
-  Four holdouts exceed the original clean-score replay tolerance. Diagnose or
-  explicitly report this limitation before treating the eight-holdout CNN result
-  as fully accepted. The original plan was to evaluate the remaining holdouts
-  using the frozen JPEG60 and bicubic 224→112→224 protocol, three repeats and
-  both training modes. This adds **84 degraded evaluations**; verify the matching
-  clean references, checkpoint hashes, image identities, labels and recomputed
-  metrics before reporting an equally weighted eight-holdout CNN–ViT comparison.
+- **Use the verified CNN k=7 robustness results.** Four holdouts were rerun
+  on V100 with clean, JPEG60 and resize conditions; all 24 affected clean
+  replays matched the original scores exactly. See the [audited matched
+  comparison](results/df40_transfer/cnn_robustness_v100/README.md).
 - **Extend the zero-shot multimodal comparison.** One open vision-language model
   has been evaluated on a fixed 64-image ADM subset. Additional models, prompts,
   generators or paid APIs require a documented protocol and team cost decision.
@@ -176,15 +171,13 @@ corrected exports are not the removed ADM-only pilot tables.
 
 ## k=7 robustness evaluation
 
-The later [eight-holdout CNN extension](results/df40_transfer/cnn_robustness_extension/README.md)
-is provisional because four holdouts exceeded the strict clean-score replay
-tolerance. The November 20 coverage below is a historical checkpoint.
-
-**Verified coverage on CARC (November 20):** ViT has completed all eight
-holdouts, with 96 degraded evaluations and 53,760 degraded prediction rows;
-its independent acceptance audit passed. CNN has completed ADM only, with
-three repeats per mode: 6 clean, 6 JPEG60 and 6 resize evaluations. Do not
-compare the ADM-only CNN average directly with the eight-holdout ViT average.
+The [updated eight-holdout CNN–ViT comparison](results/df40_transfer/cnn_robustness_v100/README.md)
+uses verified CNN results for 48 checkpoints under clean, JPEG60 and resize
+conditions. Four holdouts were rerun on V100 after the original P100 replays
+exceeded the 0.001 clean-score tolerance; all 24 affected V100 clean replays
+matched their original scores exactly. The four other holdouts had already
+passed on P100. The previous outputs and the GPU-dependent discrepancy remain
+documented for provenance. ViT covers all eight holdouts and passed its audit.
 
 [`CNN_K7_Robustness_Evaluation.ipynb`](CNN_K7_Robustness_Evaluation.ipynb)
 evaluates existing corrected-benchmark checkpoints without retraining. It makes

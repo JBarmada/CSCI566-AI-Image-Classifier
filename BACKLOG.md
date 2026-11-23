@@ -13,12 +13,12 @@ questions about the project.
 
 ## Before the poster session
 
-- [ ] **Update the main README and final report draft.** **Owner: Jad.** Both still describe the
-      earlier CNN replay discrepancy as unresolved. The affected V100 reruns
-      passed the original clean replay check; use the [audited comparison](results/df40_transfer/cnn_robustness_v100/README.md).
+- [x] **Update the main README and final report draft.** **Owner: Jad.**
+      Corrected the stale replay status and linked the [audited comparison](results/df40_transfer/cnn_robustness_v100/README.md).
 - [ ] **Choose the main story and figures.** **Owner: Jad.** Cover generator diversity, the
       CNN–ViT comparison, JPEG/resize robustness and transfer to manipulated
-      faces. Decide which exploratory results fit the poster.
+      faces. A [draft story and three figures](results/df40_transfer/poster_assets/README.md)
+      are ready for team review; choose which exploratory results fit the poster.
 - [ ] **Create the poster and prepare the demo.** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.
@@ -37,10 +37,10 @@ questions about the project.
 - [ ] **Explain errors on real images.** Report what our processing tests showed;
       treat camera, source and other differences as hypotheses unless directly
       supported by suitable metadata and controls.
-- [ ] **Document face-data limitations.** **Owner: Jad.** Known FaceForensics++ video IDs are
-      separated, but person-level and cross-dataset independence remain
-      unverified. The face-adapted model used a previously inspected test set,
-      so its findings are exploratory.
+- [x] **Document face-data limitations.** **Owner: Jad.** See the report draft
+      and [follow-up decisions](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md).
+      Person-level independence is unverified and the adapted head used a
+      previously inspected test set.
 - [ ] **Check citations and reproducibility.** Verify references, dataset
       provenance, manifests, model settings, and team access to GitHub, CARC and
       the shared data. Confirm all reported figures can be regenerated.
@@ -52,14 +52,20 @@ questions about the project.
 
 - [ ] **Decide whether to collect a fresh face test set.** **Owner: Jad.** A test with verified
       source-video and person separation would strengthen transfer claims.
-      Keep any calibration data separate from that test.
+      Keep any calibration data separate from that test. [Recommendation and
+      pilot protocol](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md) are ready
+      for team review; no fresh test has yet been assembled.
 - [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The reported
       DF40 tests cover SimSwap, FOMM and Wav2Lip. Add methods only with
-      documented provenance, sampling and comparable evaluation.
+      documented provenance, sampling and comparable evaluation. A limited
+      extension is [recommended](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md)
+      if access, verification and time allow.
 - [ ] **Strengthen adaptation comparisons if useful.** **Owner: Jad.** More independent data
       splits and a fresh test would help assess the exploratory adversarial and
       contrastive results; their present small differences do not establish a
-      reliable improvement.
+      reliable improvement. See the [separate face and generator-objective
+      plans](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md) and [paired
+      review of existing runs](results/df40_transfer/adaptation_paired_review/README.md).
 - [ ] **Coordinate the frontier-model comparison with its owner.** Include the
       teammate's verified results if ready; that work remains theirs.
 
@@ -75,5 +81,5 @@ questions about the project.
   data and generalization limitations are recorded in the
   [experiment log](results/df40_transfer/FINAL_REPORT_EXPERIMENT_LOG.md).
 
-**Recommended first step:** update the outdated README and report draft with
-the V100 results, then select the poster figures.
+**Recommended next step:** review the draft poster figures and decide whether
+the team can assemble a fresh, traceable face test before the deadlines.

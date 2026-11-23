@@ -14,9 +14,10 @@ experimental matrix. Mean clean accuracy increases with training-generator
 count for both models. At k=7, the baseline CNN and ViT achieve 83.30% and
 88.30% mean accuracy over eight held-out generators, respectively. The full
 k=7 ViT robustness study shows that augmentation improves accuracy under JPEG
-compression and resizing, although it reduces clean accuracy. New CNN
-robustness results are preliminary because four holdouts exceed the strict
-clean-score replay tolerance. In a small DF40 face-manipulation evaluation,
+compression and resizing, although it reduces clean accuracy. The CNN
+robustness comparison passed the original clean-score replay check after four
+affected holdouts were rerun on V100. In a small DF40 face-manipulation
+evaluation,
 the original detectors have high false-positive rates. A supervised
 face-adapted linear head improves results on the selected FaceForensics++
 sample, but the test had been examined previously and person-level separation
@@ -75,14 +76,16 @@ contains 48 clean references and 96 degraded evaluations. ViT baseline mean
 accuracy was 88.30% clean, 69.24% JPEG and 56.96% resize. ViT augmented mean
 accuracy was 82.78%, 75.99% and 81.85%, respectively.
 
-CNN output now covers all eight holdouts. Its full eight-holdout comparison
-is **provisional**. Four holdouts failed the independent 0.001 maximum
-clean-score replay gate. The largest difference was 0.00464 and three of the
-13,440 affected clean predictions changed their 0.5-threshold labels. Repeated
-new inference was reproducible; the reason for the difference from older
-saved scores is unresolved. Checkpoints, image membership, labels and
-recomputed accuracy/AUROC passed other checks. The original CNN benchmark
-scores remain authoritative for clean-benchmark reporting.
+The matching CNN study covers all eight holdouts. After an initial P100 replay
+failed the 0.001 maximum-score tolerance for four holdouts, the affected 24
+checkpoints were rerun on V100. All reproduced their original clean scores
+exactly, and the 72 new clean/JPEG/resize evaluations passed an independent
+audit. The original P100 results are preserved. The validated CNN baseline
+mean accuracy was 83.30% clean, 64.43% JPEG, and 50.20% resize; the augmented
+CNN achieved 72.24%, 70.65%, and 68.85%, respectively. These are equally
+weighted averages across eight holdouts after averaging three repeats. GPU
+differences explain the observed replay mismatch in the tested setup; see
+[the audit](cnn_robustness_v100/README.md).
 
 ## Face-manipulation transfer
 
@@ -157,10 +160,10 @@ The held-out FF video IDs are separated, but person independence is unknown.
 Fake labels follow released dataset provenance and do not prove that each
 frame exhibits a successful manipulation. Face crop preprocessing and source
 differences can create confounding cues. Qwen represents one small open VLM,
-not the proprietary models named as examples in the proposal. CNN robustness
-results require resolution or explicit acceptance of the clean-score replay
-discrepancy. The regularized objectives need more dataset repeats and a fresh
-test before claims about improvement.
+not the proprietary models named as examples in the proposal. The CNN
+robustness rerun passed the original replay tolerance; the earlier P100 results
+and their discrepancy are retained for provenance. The regularized objectives
+need more dataset repeats and a fresh test before claims about improvement.
 
 ## References
 
