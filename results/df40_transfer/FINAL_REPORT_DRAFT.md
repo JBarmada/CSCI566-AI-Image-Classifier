@@ -120,13 +120,14 @@ for broad rankings. Image preprocessing differs among model families.
 
 On the k=7 repeat-0 frozen CLIP features for all eight holdouts, a common
 feature adapter was trained with binary loss, a generator-adversarial loss,
-or supervised contrastive loss. Equal-holdout mean test accuracy was 0.9172,
-0.9217 and 0.9161, with mean AUROC 0.9741, 0.9744 and 0.9742, respectively.
-The adversarial objective had higher accuracy in six holdouts and lower
-accuracy in two. The extension was decided after observing the ADM pilot,
-the test sets were previously examined, and only one optimization seed and
-one dataset repeat were used per holdout. These exploratory results do not
-establish generalization gains. The CLIP backbone was frozen.
+or supervised contrastive loss. After the first seed, two optimization seeds
+were added. Averaging three seeds within each holdout and then across holdouts,
+test accuracy was 0.9162, 0.9185 and 0.9150, with mean AUROC 0.9742, 0.9741
+and 0.9742, respectively. Adversarial accuracy was higher in five holdouts and
+lower in three. The extension and additional seeds were decided after seeing
+previous results; the test sets were previously examined, and just one dataset
+repeat was used per holdout. These exploratory findings do not establish a
+reliable improvement. The CLIP backbone was frozen.
 
 ## Limitations and next checks
 
@@ -138,7 +139,7 @@ frame exhibits a successful manipulation. Face crop preprocessing and source
 differences can create confounding cues. Qwen represents one small open VLM,
 not the proprietary models named as examples in the proposal. CNN robustness
 results require resolution or explicit acceptance of the clean-score replay
-discrepancy. The regularized objectives need more repeats, seeds and a fresh
+discrepancy. The regularized objectives need more dataset repeats and a fresh
 test before claims about improvement.
 
 ## References

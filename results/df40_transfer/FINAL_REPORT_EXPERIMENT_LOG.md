@@ -378,3 +378,18 @@ test sets limit inference; the extension was chosen after seeing the pilot.
 The encoder remained frozen and the adapter was trained. See
 `generator_objectives_extended/README.md` for per-holdout data, validation,
 checkpoint and replay evidence, plus the collection error and resolution.
+
+## Additional optimizer-seed comparison
+
+The same objective comparison was repeated for seeds 29 and 43 on all eight
+previously examined k=7 repeat-0 holdouts. Array 14483127 completed 16/16
+jobs with exit code 0 and independent checkpoint replay. The original seed 17
+plus these two seeds give 72 objective/holdout/seed results. Averaging seeds
+within each holdout and then averaging holdouts gives binary, adversarial and
+contrastive accuracy of 0.9162, 0.9185 and 0.9150, respectively, and AUROC
+of 0.9742, 0.9741 and 0.9742. The adversarial mean accuracy exceeded the
+binary mean in five holdouts and fell below it in three. These post-hoc,
+small differences do not establish a reliable improvement. Test samples and
+dataset splits were reused; the seeds measure optimization, not data-split,
+variability. See `generator_objectives_seeds/README.md` for methods, outputs,
+checksum and verification.

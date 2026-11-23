@@ -31,7 +31,7 @@ metrics. Saved checkpoints and full raw outputs remain on CARC.
 | CNN k=7 robustness | Eight holdouts evaluated; four fail the strict clean-score replay tolerance, so the full comparison is provisional |
 | DF40 face transfer | Celeb-DF and FaceForensics++ subsets evaluated; a supervised face-adapted head is exploratory |
 | Zero-shot comparison | CLIP evaluated on face crops; Qwen2.5-VL-3B evaluated on a 64-image ADM subset |
-| Generator objectives | Exploratory eight-holdout comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
+| Generator objectives | Exploratory eight-holdout, three-seed comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
 | Midterm report | Submitted; final report, poster and demonstration remain |
 
 The accepted clean studies do not need retraining. Robustness evaluation reuses
@@ -68,8 +68,8 @@ plan; several items now have exploratory or provisional results.
   to exact datasets, manifests and checkpoint backups.
 - **Extend the generator-objective experiments.** Controlled feature-adapter
   comparisons of domain-adversarial and supervised contrastive objectives are
-  available for all eight holdouts with one dataset repeat and optimization seed
-  each. More repeats, seeds and a fresh test are needed for generalization claims.
+  available for all eight holdouts with one dataset repeat and three optimization
+  seeds each. More dataset repeats and a fresh test are needed for generalization claims.
 - **Finish the final report, poster and demonstration.** Combine the verified
   clean, robustness, transfer and multimodal results; explain pipeline
   differences and limitations, quantify uncertainty appropriately, and check
