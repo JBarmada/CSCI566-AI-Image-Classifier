@@ -13,10 +13,10 @@ questions about the project.
 
 ## Before the poster session
 
-- [ ] **Update the main README and final report draft.** Both still describe the
+- [ ] **Update the main README and final report draft.** **Owner: Jad.** Both still describe the
       earlier CNN replay discrepancy as unresolved. The affected V100 reruns
       passed the original clean replay check; use the [audited comparison](results/df40_transfer/cnn_robustness_v100/README.md).
-- [ ] **Choose the main story and figures.** Cover generator diversity, the
+- [ ] **Choose the main story and figures.** **Owner: Jad.** Cover generator diversity, the
       CNN–ViT comparison, JPEG/resize robustness and transfer to manipulated
       faces. Decide which exploratory results fit the poster.
 - [ ] **Create the poster and prepare the demo.** Explain the question, methods,
@@ -37,7 +37,7 @@ questions about the project.
 - [ ] **Explain errors on real images.** Report what our processing tests showed;
       treat camera, source and other differences as hypotheses unless directly
       supported by suitable metadata and controls.
-- [ ] **Document face-data limitations.** Known FaceForensics++ video IDs are
+- [ ] **Document face-data limitations.** **Owner: Jad.** Known FaceForensics++ video IDs are
       separated, but person-level and cross-dataset independence remain
       unverified. The face-adapted model used a previously inspected test set,
       so its findings are exploratory.
@@ -50,13 +50,13 @@ questions about the project.
 
 ## Research choices if time permits
 
-- [ ] **Decide whether to collect a fresh face test set.** A test with verified
+- [ ] **Decide whether to collect a fresh face test set.** **Owner: Jad.** A test with verified
       source-video and person separation would strengthen transfer claims.
       Keep any calibration data separate from that test.
-- [ ] **Decide whether to include more manipulation methods.** The reported
+- [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The reported
       DF40 tests cover SimSwap, FOMM and Wav2Lip. Add methods only with
       documented provenance, sampling and comparable evaluation.
-- [ ] **Strengthen adaptation comparisons if useful.** More independent data
+- [ ] **Strengthen adaptation comparisons if useful.** **Owner: Jad.** More independent data
       splits and a fresh test would help assess the exploratory adversarial and
       contrastive results; their present small differences do not establish a
       reliable improvement.
