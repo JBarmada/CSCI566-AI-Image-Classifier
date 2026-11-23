@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "replay_max_difference": {
+    "val": 1.2196182253010335e-07,
+    "test": 9.14653014993938e-08
+  },
+  "domains": [
+    "BigGAN",
+    "Midjourney",
+    "VQDM",
+    "glide",
+    "stable_diffusion_v_1_4",
+    "stable_diffusion_v_1_5",
+    "wukong"
+  ],
+  "cache": {
+    "train": {
+      "key": "a456ff2f0eda7e78d5d52c1757f3bea9b83ca59bfbce8af5f18bc07ab605a8c2",
+      "cache_sha256": "eaf4b6d13d8f397240cc3e0d452be68f29825b6f4caa4271b1af3131e3d87132",
+      "manifest_sha256": "ca68728f12761a050d37ca2cb556b460a76500d90c0cdaf5ea598bb34115ce7b"
+    },
+    "val": {
+      "key": "f0a5fe84158277084e0a782ce992cb18c05116ca31b693e976a74973de63395e",
+      "cache_sha256": "de947b45e189bf0e8da16d1d980ef301511e2c125d43652168a156156285372d",
+      "manifest_sha256": "39741e3109e315b74319c14b94b502e8bc79d1a31b7902d35dec31b246186393"
+    },
+    "test": {
+      "key": "bd6bb6e66f091692916437a5428188f35c1d960946d2db03247f703d161b2a0b",
+      "cache_sha256": "69bb9b9dc68e32bc21cf32ebe8be2a5dc9e73fe7060c3bb8960f404b8ba485f5",
+      "manifest_sha256": "7ca38cc11153426f7a3a83d0ed25bad397e3b489c61f9cb9cf72b04315b741a0"
+    }
+  },
+  "results": [
+    {
+      "objective": "baseline",
+      "n": 560,
+      "accuracy": 0.8892857142857142,
+      "auroc": 0.9664413265306123,
+      "real_fp": 17,
+      "fake_tp": 235
+    },
+    {
+      "objective": "adversarial",
+      "n": 560,
+      "accuracy": 0.9035714285714286,
+      "auroc": 0.9678571428571429,
+      "real_fp": 18,
+      "fake_tp": 244
+    },
+    {
+      "objective": "contrastive",
+      "n": 560,
+      "accuracy": 0.8875,
+      "auroc": 0.9675510204081632,
+      "real_fp": 17,
+      "fake_tp": 234
+    }
+  ],
+  "limit": "One previously inspected ADM holdout; frozen features and one seed."
+}

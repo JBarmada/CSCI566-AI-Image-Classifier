@@ -16,6 +16,7 @@ state at the time; later entries record subsequent work.
 - [Matched clean CNN–ViT confidence audit](clean_cnn_audit/README.md)
 - [Provisional eight-holdout CNN–ViT robustness comparison](cnn_robustness_extension/README.md)
 - [Open vision-language model comparison](multimodal_qwen/README.md)
+- [Exploratory generator-objective comparison](generator_objectives/README.md)
 - [FaceForensics++ validation and test manifests](new_data/ff_complete_v1/)
 - [Team notebook audit](notebook_audit.md)
 - [Threshold calibration protocol](calibration_protocol.md)

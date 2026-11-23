@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checks": {
+    "baseline": {
+      "validation_auc": 0.9844132653061225,
+      "test_max_abs_difference": 2.9742431628676513e-08,
+      "checkpoint_sha256": "27e811bb70d568a3869dfdebf3f4a3ae6b862244b407fadc8cf40ade2aa80587"
+    },
+    "adversarial": {
+      "validation_auc": 0.9829591836734695,
+      "test_max_abs_difference": 2.9449462868313958e-08,
+      "checkpoint_sha256": "18c7092fdfef992b6a6012afcdbf4bd25dc28bf127c07e46fa31b1f4d4033311"
+    },
+    "contrastive": {
+      "validation_auc": 0.9847576530612245,
+      "test_max_abs_difference": 2.913208008159529e-08,
+      "checkpoint_sha256": "92b7d4fc573027ad6f146a444fe37d260fe8bdd9a85ad6ab91fc642751a9c206"
+    }
+  }
+}

@@ -189,6 +189,20 @@ hashes against the shared manifest and reproduced the published 0.5 counts.
 The cutoff choice and its outcome use the same exploratory data. Independent
 calibration and test performance remain unmeasured.
 
+## Exploratory GenImage feature-objective comparison
+
+Using the verified ADM k=7 rep0 frozen CLIP feature caches and one seed, a
+shared 128-dimensional feature adapter was trained with binary loss alone,
+binary plus generator-adversarial loss, and binary plus supervised contrastive
+loss. The seven known fake generators supplied adversarial domain labels;
+ADM was held out. Validation AUROC chose each checkpoint before test scoring.
+On 560 test images, baseline/adversarial/contrastive accuracy was 0.8893,
+0.9036 and 0.8875; AUROC was 0.9664, 0.9679 and 0.9676. See
+`generator_objectives/PROTOCOL.md` and `generator_objectives/README.md` for
+architecture, loss weights, split, verification and limitations. This is an
+exploratory one-seed, one-holdout result on a previously inspected test set;
+it does not establish a generalizable improvement or fine-tune CLIP.
+
 ## Open multimodal LLM on a shared GenImage subset
 
 Qwen2.5-VL-3B-Instruct revision 66285546d2b821cf421d4f5eb2576359d3770cd3
