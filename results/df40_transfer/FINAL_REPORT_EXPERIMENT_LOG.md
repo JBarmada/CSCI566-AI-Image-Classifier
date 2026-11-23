@@ -223,6 +223,33 @@ checkpoints and 70 real/70 fake samples per method. Shared identities and
 relationships beyond the parsed IDs remain unverified. No CLIP text-prompt
 baseline was run in this experiment.
 
+## Supervised face adaptation on FaceForensics++
+
+A new linear classifier was trained on frozen CLIP ViT-L/14 features using
+240 FF training images (120 real and 40 fakes per method). A separate set of
+120 images supplied checkpoint selection and the 10% validation-real FPR
+threshold. The test group was the previously evaluated 280-image FF set;
+its earlier results were already inspected, so this is an exploratory
+follow-up, not a pristine final test. All three fake methods appear in
+training; this is not an unseen-manipulation test. Source video IDs were
+disjoint under the recorded parser; person identity independence and linked
+videos outside those IDs remain unverified.
+
+Best validation AUROC was 0.800 at epoch 100, the configured maximum, and
+the chosen threshold was 0.5676835775375367. At that threshold, the test
+had 4/70 real false positives and detected 31/70 SimSwap, 51/70 FOMM and
+15/70 Wav2Lip. Per-method test AUROC was 0.8033, 0.9388 and 0.6849.
+See `new_data/ADAPTATION_PROTOCOL.md` and `new_data/ff_model_comparison.csv`.
+
+The original job 14482534 selected and saved the model and test predictions,
+but failed while serializing a NumPy integer in its final JSON summary. The
+original job and files were retained. The separate read-only replay job
+14482608 independently reproduced validation AUROC, threshold, and every
+test score (maximum difference zero); see `adaptation_results_v1/REPLAY_VERIFIED.json`.
+The code was fixed after the original job, and its original version remains
+on CARC. Epoch 100 being selected means further training could help, but no
+additional epochs or test-driven tuning were performed.
+
 ## Zero-shot CLIP on FaceForensics++
 
 CARC jobs 14482439 and 14482488 evaluated the same fixed two prompts as the

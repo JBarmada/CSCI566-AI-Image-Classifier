@@ -1,0 +1,3366 @@
+{
+  "seed": 566,
+  "samples": [
+    {
+      "group": "561_simswap",
+      "source_ids": [
+        "561"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/561/200.png"
+    },
+    {
+      "group": "952_simswap",
+      "source_ids": [
+        "952"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/952/338.png"
+    },
+    {
+      "group": "357_simswap",
+      "source_ids": [
+        "357"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/357/166.png"
+    },
+    {
+      "group": "477_simswap",
+      "source_ids": [
+        "477"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/477/176.png"
+    },
+    {
+      "group": "251_simswap",
+      "source_ids": [
+        "251"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/251/166.png"
+    },
+    {
+      "group": "184_simswap",
+      "source_ids": [
+        "184"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/184/606.png"
+    },
+    {
+      "group": "002_simswap",
+      "source_ids": [
+        "002"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/002/334.png"
+    },
+    {
+      "group": "753_simswap",
+      "source_ids": [
+        "753"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/753/331.png"
+    },
+    {
+      "group": "062_simswap",
+      "source_ids": [
+        "062"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/062/204.png"
+    },
+    {
+      "group": "487_simswap",
+      "source_ids": [
+        "487"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/487/153.png"
+    },
+    {
+      "group": "833_simswap",
+      "source_ids": [
+        "833"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/833/289.png"
+    },
+    {
+      "group": "531_simswap",
+      "source_ids": [
+        "531"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/531/153.png"
+    },
+    {
+      "group": "829_simswap",
+      "source_ids": [
+        "829"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/829/387.png"
+    },
+    {
+      "group": "549_simswap",
+      "source_ids": [
+        "549"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/549/301.png"
+    },
+    {
+      "group": "464_simswap",
+      "source_ids": [
+        "464"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/464/195.png"
+    },
+    {
+      "group": "322_simswap",
+      "source_ids": [
+        "322"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/322/150.png"
+    },
+    {
+      "group": "620_simswap",
+      "source_ids": [
+        "620"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/620/303.png"
+    },
+    {
+      "group": "324_simswap",
+      "source_ids": [
+        "324"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/324/603.png"
+    },
+    {
+      "group": "061_simswap",
+      "source_ids": [
+        "061"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/061/162.png"
+    },
+    {
+      "group": "382_simswap",
+      "source_ids": [
+        "382"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/382/150.png"
+    },
+    {
+      "group": "553_simswap",
+      "source_ids": [
+        "553"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/553/175.png"
+    },
+    {
+      "group": "411_simswap",
+      "source_ids": [
+        "411"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/411/255.png"
+    },
+    {
+      "group": "642_simswap",
+      "source_ids": [
+        "642"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/642/276.png"
+    },
+    {
+      "group": "978_simswap",
+      "source_ids": [
+        "978"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/978/365.png"
+    },
+    {
+      "group": "334_simswap",
+      "source_ids": [
+        "334"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/334/647.png"
+    },
+    {
+      "group": "484_simswap",
+      "source_ids": [
+        "484"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/484/153.png"
+    },
+    {
+      "group": "302_simswap",
+      "source_ids": [
+        "302"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/302/422.png"
+    },
+    {
+      "group": "636_simswap",
+      "source_ids": [
+        "636"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/636/161.png"
+    },
+    {
+      "group": "296_simswap",
+      "source_ids": [
+        "296"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/296/162.png"
+    },
+    {
+      "group": "994_simswap",
+      "source_ids": [
+        "994"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/994/152.png"
+    },
+    {
+      "group": "591_simswap",
+      "source_ids": [
+        "591"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/591/261.png"
+    },
+    {
+      "group": "911_simswap",
+      "source_ids": [
+        "911"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/911/158.png"
+    },
+    {
+      "group": "989_simswap",
+      "source_ids": [
+        "989"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/989/464.png"
+    },
+    {
+      "group": "618_simswap",
+      "source_ids": [
+        "618"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/618/184.png"
+    },
+    {
+      "group": "563_simswap",
+      "source_ids": [
+        "563"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/563/188.png"
+    },
+    {
+      "group": "624_simswap",
+      "source_ids": [
+        "624"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/624/168.png"
+    },
+    {
+      "group": "065_simswap",
+      "source_ids": [
+        "065"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/065/213.png"
+    },
+    {
+      "group": "395_simswap",
+      "source_ids": [
+        "395"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/395/216.png"
+    },
+    {
+      "group": "513_simswap",
+      "source_ids": [
+        "513"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/513/238.png"
+    },
+    {
+      "group": "435_simswap",
+      "source_ids": [
+        "435"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/435/229.png"
+    },
+    {
+      "group": "815_simswap",
+      "source_ids": [
+        "815"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/815/218.png"
+    },
+    {
+      "group": "409_simswap",
+      "source_ids": [
+        "409"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/409/174.png"
+    },
+    {
+      "group": "882_simswap",
+      "source_ids": [
+        "882"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/882/160.png"
+    },
+    {
+      "group": "870_simswap",
+      "source_ids": [
+        "870"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/870/291.png"
+    },
+    {
+      "group": "394_simswap",
+      "source_ids": [
+        "394"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/394/202.png"
+    },
+    {
+      "group": "211_simswap",
+      "source_ids": [
+        "211"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/211/254.png"
+    },
+    {
+      "group": "845_simswap",
+      "source_ids": [
+        "845"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/845/171.png"
+    },
+    {
+      "group": "045_simswap",
+      "source_ids": [
+        "045"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/045/168.png"
+    },
+    {
+      "group": "965_simswap",
+      "source_ids": [
+        "965"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/965/167.png"
+    },
+    {
+      "group": "860_simswap",
+      "source_ids": [
+        "860"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/860/221.png"
+    },
+    {
+      "group": "743_simswap",
+      "source_ids": [
+        "743"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/743/150.png"
+    },
+    {
+      "group": "509_simswap",
+      "source_ids": [
+        "509"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/509/308.png"
+    },
+    {
+      "group": "877_simswap",
+      "source_ids": [
+        "877"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/877/275.png"
+    },
+    {
+      "group": "738_simswap",
+      "source_ids": [
+        "738"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/738/201.png"
+    },
+    {
+      "group": "778_simswap",
+      "source_ids": [
+        "778"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/778/158.png"
+    },
+    {
+      "group": "728_simswap",
+      "source_ids": [
+        "728"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/728/274.png"
+    },
+    {
+      "group": "463_simswap",
+      "source_ids": [
+        "463"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/463/151.png"
+    },
+    {
+      "group": "043_simswap",
+      "source_ids": [
+        "043"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/043/239.png"
+    },
+    {
+      "group": "948_simswap",
+      "source_ids": [
+        "948"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/948/209.png"
+    },
+    {
+      "group": "147_simswap",
+      "source_ids": [
+        "147"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/147/322.png"
+    },
+    {
+      "group": "929_simswap",
+      "source_ids": [
+        "929"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/929/223.png"
+    },
+    {
+      "group": "252_simswap",
+      "source_ids": [
+        "252"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/252/276.png"
+    },
+    {
+      "group": "221_simswap",
+      "source_ids": [
+        "221"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/221/346.png"
+    },
+    {
+      "group": "721_simswap",
+      "source_ids": [
+        "721"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/721/280.png"
+    },
+    {
+      "group": "772_simswap",
+      "source_ids": [
+        "772"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/772/164.png"
+    },
+    {
+      "group": "008_simswap",
+      "source_ids": [
+        "008"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/008/307.png"
+    },
+    {
+      "group": "988_simswap",
+      "source_ids": [
+        "988"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/988/219.png"
+    },
+    {
+      "group": "088_simswap",
+      "source_ids": [
+        "088"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/088/321.png"
+    },
+    {
+      "group": "942_simswap",
+      "source_ids": [
+        "942"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/942/239.png"
+    },
+    {
+      "group": "637_simswap",
+      "source_ids": [
+        "637"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/637/246.png"
+    },
+    {
+      "group": "771_simswap",
+      "source_ids": [
+        "771"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/771/306.png"
+    },
+    {
+      "group": "393_simswap",
+      "source_ids": [
+        "393"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/393/279.png"
+    },
+    {
+      "group": "570_simswap",
+      "source_ids": [
+        "570"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/570/207.png"
+    },
+    {
+      "group": "230_simswap",
+      "source_ids": [
+        "230"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/230/179.png"
+    },
+    {
+      "group": "613_simswap",
+      "source_ids": [
+        "613"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/613/200.png"
+    },
+    {
+      "group": "813_simswap",
+      "source_ids": [
+        "813"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/813/173.png"
+    },
+    {
+      "group": "850_simswap",
+      "source_ids": [
+        "850"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/850/315.png"
+    },
+    {
+      "group": "293_simswap",
+      "source_ids": [
+        "293"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/293/366.png"
+    },
+    {
+      "group": "766_simswap",
+      "source_ids": [
+        "766"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/766/415.png"
+    },
+    {
+      "group": "938_simswap",
+      "source_ids": [
+        "938"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/938/178.png"
+    },
+    {
+      "group": "769_simswap",
+      "source_ids": [
+        "769"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/769/233.png"
+    },
+    {
+      "group": "652_simswap",
+      "source_ids": [
+        "652"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/652/220.png"
+    },
+    {
+      "group": "751_simswap",
+      "source_ids": [
+        "751"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/751/159.png"
+    },
+    {
+      "group": "152_simswap",
+      "source_ids": [
+        "152"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/152/150.png"
+    },
+    {
+      "group": "554_simswap",
+      "source_ids": [
+        "554"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/554/400.png"
+    },
+    {
+      "group": "016_simswap",
+      "source_ids": [
+        "016"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/016/327.png"
+    },
+    {
+      "group": "011_simswap",
+      "source_ids": [
+        "011"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/011/305.png"
+    },
+    {
+      "group": "708_simswap",
+      "source_ids": [
+        "708"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/708/265.png"
+    },
+    {
+      "group": "401_simswap",
+      "source_ids": [
+        "401"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/401/237.png"
+    },
+    {
+      "group": "331_simswap",
+      "source_ids": [
+        "331"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/331/226.png"
+    },
+    {
+      "group": "950_simswap",
+      "source_ids": [
+        "950"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/950/368.png"
+    },
+    {
+      "group": "332_simswap",
+      "source_ids": [
+        "332"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/332/335.png"
+    },
+    {
+      "group": "201_simswap",
+      "source_ids": [
+        "201"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/201/417.png"
+    },
+    {
+      "group": "338_simswap",
+      "source_ids": [
+        "338"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/338/429.png"
+    },
+    {
+      "group": "260_simswap",
+      "source_ids": [
+        "260"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/260/145.png"
+    },
+    {
+      "group": "858_simswap",
+      "source_ids": [
+        "858"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/858/233.png"
+    },
+    {
+      "group": "489_simswap",
+      "source_ids": [
+        "489"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/489/273.png"
+    },
+    {
+      "group": "229_simswap",
+      "source_ids": [
+        "229"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/229/189.png"
+    },
+    {
+      "group": "403_simswap",
+      "source_ids": [
+        "403"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/403/341.png"
+    },
+    {
+      "group": "207_simswap",
+      "source_ids": [
+        "207"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/207/166.png"
+    },
+    {
+      "group": "013_simswap",
+      "source_ids": [
+        "013"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/013/160.png"
+    },
+    {
+      "group": "734_simswap",
+      "source_ids": [
+        "734"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/734/530.png"
+    },
+    {
+      "group": "889_simswap",
+      "source_ids": [
+        "889"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/889/158.png"
+    },
+    {
+      "group": "196_simswap",
+      "source_ids": [
+        "196"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/196/205.png"
+    },
+    {
+      "group": "787_simswap",
+      "source_ids": [
+        "787"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/787/242.png"
+    },
+    {
+      "group": "298_simswap",
+      "source_ids": [
+        "298"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/298/274.png"
+    },
+    {
+      "group": "243_simswap",
+      "source_ids": [
+        "243"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/243/186.png"
+    },
+    {
+      "group": "232_simswap",
+      "source_ids": [
+        "232"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/232/277.png"
+    },
+    {
+      "group": "506_simswap",
+      "source_ids": [
+        "506"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/506/322.png"
+    },
+    {
+      "group": "122_simswap",
+      "source_ids": [
+        "122"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/122/149.png"
+    },
+    {
+      "group": "914_simswap",
+      "source_ids": [
+        "914"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/914/148.png"
+    },
+    {
+      "group": "644_simswap",
+      "source_ids": [
+        "644"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/644/199.png"
+    },
+    {
+      "group": "977_simswap",
+      "source_ids": [
+        "977"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/977/314.png"
+    },
+    {
+      "group": "248_simswap",
+      "source_ids": [
+        "248"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/248/239.png"
+    },
+    {
+      "group": "459_simswap",
+      "source_ids": [
+        "459"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/459/254.png"
+    },
+    {
+      "group": "090_simswap",
+      "source_ids": [
+        "090"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/090/331.png"
+    },
+    {
+      "group": "164_simswap",
+      "source_ids": [
+        "164"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/164/493.png"
+    },
+    {
+      "group": "884_simswap",
+      "source_ids": [
+        "884"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/884/165.png"
+    },
+    {
+      "group": "546_simswap",
+      "source_ids": [
+        "546"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/546/345.png"
+    },
+    {
+      "group": "143_simswap",
+      "source_ids": [
+        "143"
+      ],
+      "split": "train",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/143/199.png"
+    },
+    {
+      "group": "144_122_simswap",
+      "source_ids": [
+        "122",
+        "144"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/144_122/165.png"
+    },
+    {
+      "group": "025_067_simswap",
+      "source_ids": [
+        "025",
+        "067"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/025_067/360.png"
+    },
+    {
+      "group": "246_258_simswap",
+      "source_ids": [
+        "246",
+        "258"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/246_258/239.png"
+    },
+    {
+      "group": "977_075_simswap",
+      "source_ids": [
+        "075",
+        "977"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/977_075/314.png"
+    },
+    {
+      "group": "395_401_simswap",
+      "source_ids": [
+        "395",
+        "401"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/395_401/230.png"
+    },
+    {
+      "group": "994_986_simswap",
+      "source_ids": [
+        "986",
+        "994"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/994_986/152.png"
+    },
+    {
+      "group": "677_671_simswap",
+      "source_ids": [
+        "671",
+        "677"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/677_671/151.png"
+    },
+    {
+      "group": "891_876_simswap",
+      "source_ids": [
+        "876",
+        "891"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/891_876/142.png"
+    },
+    {
+      "group": "152_149_simswap",
+      "source_ids": [
+        "149",
+        "152"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/152_149/150.png"
+    },
+    {
+      "group": "988_966_simswap",
+      "source_ids": [
+        "966",
+        "988"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/988_966/219.png"
+    },
+    {
+      "group": "289_228_simswap",
+      "source_ids": [
+        "228",
+        "289"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/289_228/288.png"
+    },
+    {
+      "group": "952_882_simswap",
+      "source_ids": [
+        "882",
+        "952"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/952_882/338.png"
+    },
+    {
+      "group": "592_500_simswap",
+      "source_ids": [
+        "500",
+        "592"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/592_500/184.png"
+    },
+    {
+      "group": "001_870_simswap",
+      "source_ids": [
+        "001",
+        "870"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/001_870/222.png"
+    },
+    {
+      "group": "688_645_simswap",
+      "source_ids": [
+        "645",
+        "688"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/688_645/275.png"
+    },
+    {
+      "group": "781_806_simswap",
+      "source_ids": [
+        "781",
+        "806"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/781_806/229.png"
+    },
+    {
+      "group": "149_152_simswap",
+      "source_ids": [
+        "149",
+        "152"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/149_152/175.png"
+    },
+    {
+      "group": "357_432_simswap",
+      "source_ids": [
+        "357",
+        "432"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/357_432/166.png"
+    },
+    {
+      "group": "556_588_simswap",
+      "source_ids": [
+        "556",
+        "588"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/556_588/179.png"
+    },
+    {
+      "group": "853_863_simswap",
+      "source_ids": [
+        "853",
+        "863"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/853_863/297.png"
+    },
+    {
+      "group": "442_195_simswap",
+      "source_ids": [
+        "195",
+        "442"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/442_195/171.png"
+    },
+    {
+      "group": "385_414_simswap",
+      "source_ids": [
+        "385",
+        "414"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/385_414/168.png"
+    },
+    {
+      "group": "241_210_simswap",
+      "source_ids": [
+        "210",
+        "241"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/241_210/140.png"
+    },
+    {
+      "group": "879_963_simswap",
+      "source_ids": [
+        "879",
+        "963"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/879_963/405.png"
+    },
+    {
+      "group": "293_296_simswap",
+      "source_ids": [
+        "293",
+        "296"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/293_296/366.png"
+    },
+    {
+      "group": "058_039_simswap",
+      "source_ids": [
+        "039",
+        "058"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/058_039/323.png"
+    },
+    {
+      "group": "232_248_simswap",
+      "source_ids": [
+        "232",
+        "248"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/232_248/277.png"
+    },
+    {
+      "group": "708_772_simswap",
+      "source_ids": [
+        "708",
+        "772"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/708_772/265.png"
+    },
+    {
+      "group": "504_502_simswap",
+      "source_ids": [
+        "502",
+        "504"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/504_502/152.png"
+    },
+    {
+      "group": "576_155_simswap",
+      "source_ids": [
+        "155",
+        "576"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/576_155/222.png"
+    },
+    {
+      "group": "989_993_simswap",
+      "source_ids": [
+        "989",
+        "993"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/989_993/464.png"
+    },
+    {
+      "group": "993_989_simswap",
+      "source_ids": [
+        "989",
+        "993"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/993_989/197.png"
+    },
+    {
+      "group": "905_860_simswap",
+      "source_ids": [
+        "860",
+        "905"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/905_860/184.png"
+    },
+    {
+      "group": "950_836_simswap",
+      "source_ids": [
+        "836",
+        "950"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/950_836/368.png"
+    },
+    {
+      "group": "332_051_simswap",
+      "source_ids": [
+        "051",
+        "332"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/332_051/335.png"
+    },
+    {
+      "group": "377_333_simswap",
+      "source_ids": [
+        "333",
+        "377"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/377_333/192.png"
+    },
+    {
+      "group": "665_679_simswap",
+      "source_ids": [
+        "665",
+        "679"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/665_679/156.png"
+    },
+    {
+      "group": "034_590_simswap",
+      "source_ids": [
+        "034",
+        "590"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/034_590/196.png"
+    },
+    {
+      "group": "359_317_simswap",
+      "source_ids": [
+        "317",
+        "359"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/359_317/220.png"
+    },
+    {
+      "group": "430_459_simswap",
+      "source_ids": [
+        "430",
+        "459"
+      ],
+      "split": "train",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/430_459/172.png"
+    },
+    {
+      "group": "835_651_fomm",
+      "source_ids": [
+        "651",
+        "835"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/835_651/494.png"
+    },
+    {
+      "group": "508_831_fomm",
+      "source_ids": [
+        "508",
+        "831"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/508_831/700.png"
+    },
+    {
+      "group": "828_830_fomm",
+      "source_ids": [
+        "828",
+        "830"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/828_830/370.png"
+    },
+    {
+      "group": "504_502_fomm",
+      "source_ids": [
+        "502",
+        "504"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/504_502/369.png"
+    },
+    {
+      "group": "990_008_fomm",
+      "source_ids": [
+        "008",
+        "990"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/990_008/354.png"
+    },
+    {
+      "group": "197_224_fomm",
+      "source_ids": [
+        "197",
+        "224"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/197_224/1021.png"
+    },
+    {
+      "group": "562_626_fomm",
+      "source_ids": [
+        "562",
+        "626"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/562_626/543.png"
+    },
+    {
+      "group": "166_167_fomm",
+      "source_ids": [
+        "166",
+        "167"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/166_167/877.png"
+    },
+    {
+      "group": "826_833_fomm",
+      "source_ids": [
+        "826",
+        "833"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/826_833/412.png"
+    },
+    {
+      "group": "387_311_fomm",
+      "source_ids": [
+        "311",
+        "387"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/387_311/613.png"
+    },
+    {
+      "group": "636_578_fomm",
+      "source_ids": [
+        "578",
+        "636"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/636_578/390.png"
+    },
+    {
+      "group": "239_218_fomm",
+      "source_ids": [
+        "218",
+        "239"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/239_218/682.png"
+    },
+    {
+      "group": "554_572_fomm",
+      "source_ids": [
+        "554",
+        "572"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/554_572/961.png"
+    },
+    {
+      "group": "948_965_fomm",
+      "source_ids": [
+        "948",
+        "965"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/948_965/505.png"
+    },
+    {
+      "group": "069_961_fomm",
+      "source_ids": [
+        "069",
+        "961"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/069_961/899.png"
+    },
+    {
+      "group": "329_327_fomm",
+      "source_ids": [
+        "327",
+        "329"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/329_327/481.png"
+    },
+    {
+      "group": "107_109_fomm",
+      "source_ids": [
+        "107",
+        "109"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/107_109/645.png"
+    },
+    {
+      "group": "256_146_fomm",
+      "source_ids": [
+        "146",
+        "256"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/256_146/633.png"
+    },
+    {
+      "group": "975_978_fomm",
+      "source_ids": [
+        "975",
+        "978"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/975_978/353.png"
+    },
+    {
+      "group": "866_878_fomm",
+      "source_ids": [
+        "866",
+        "878"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/866_878/592.png"
+    },
+    {
+      "group": "432_357_fomm",
+      "source_ids": [
+        "357",
+        "432"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/432_357/418.png"
+    },
+    {
+      "group": "626_562_fomm",
+      "source_ids": [
+        "562",
+        "626"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/626_562/1132.png"
+    },
+    {
+      "group": "673_728_fomm",
+      "source_ids": [
+        "673",
+        "728"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/673_728/687.png"
+    },
+    {
+      "group": "792_903_fomm",
+      "source_ids": [
+        "792",
+        "903"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/792_903/445.png"
+    },
+    {
+      "group": "887_275_fomm",
+      "source_ids": [
+        "275",
+        "887"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/887_275/393.png"
+    },
+    {
+      "group": "027_009_fomm",
+      "source_ids": [
+        "009",
+        "027"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/027_009/366.png"
+    },
+    {
+      "group": "373_394_fomm",
+      "source_ids": [
+        "373",
+        "394"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/373_394/698.png"
+    },
+    {
+      "group": "658_627_fomm",
+      "source_ids": [
+        "627",
+        "658"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/658_627/468.png"
+    },
+    {
+      "group": "377_333_fomm",
+      "source_ids": [
+        "333",
+        "377"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/377_333/463.png"
+    },
+    {
+      "group": "328_320_fomm",
+      "source_ids": [
+        "320",
+        "328"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/328_320/370.png"
+    },
+    {
+      "group": "998_561_fomm",
+      "source_ids": [
+        "561",
+        "998"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/998_561/401.png"
+    },
+    {
+      "group": "311_387_fomm",
+      "source_ids": [
+        "311",
+        "387"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/311_387/428.png"
+    },
+    {
+      "group": "442_195_fomm",
+      "source_ids": [
+        "195",
+        "442"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/442_195/385.png"
+    },
+    {
+      "group": "943_942_fomm",
+      "source_ids": [
+        "942",
+        "943"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/943_942/545.png"
+    },
+    {
+      "group": "679_665_fomm",
+      "source_ids": [
+        "665",
+        "679"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/679_665/482.png"
+    },
+    {
+      "group": "010_005_fomm",
+      "source_ids": [
+        "005",
+        "010"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/010_005/550.png"
+    },
+    {
+      "group": "395_401_fomm",
+      "source_ids": [
+        "395",
+        "401"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/395_401/520.png"
+    },
+    {
+      "group": "182_242_fomm",
+      "source_ids": [
+        "182",
+        "242"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/182_242/720.png"
+    },
+    {
+      "group": "899_914_fomm",
+      "source_ids": [
+        "899",
+        "914"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/899_914/651.png"
+    },
+    {
+      "group": "588_556_fomm",
+      "source_ids": [
+        "556",
+        "588"
+      ],
+      "split": "train",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/588_556/631.png"
+    },
+    {
+      "group": "326_4yyPSZSGLOI_50015_wav2lip",
+      "source_ids": [
+        "326"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/326_4yyPSZSGLOI_50015/074.png"
+    },
+    {
+      "group": "143_BN9a8Ldy7Xc_50005_wav2lip",
+      "source_ids": [
+        "143"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/143_BN9a8Ldy7Xc_50005/074.png"
+    },
+    {
+      "group": "984_6tpsSu5O0Ws_50001_wav2lip",
+      "source_ids": [
+        "984"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/984_6tpsSu5O0Ws_50001/075.png"
+    },
+    {
+      "group": "018_bJ8Kq1wucsk_50004_wav2lip",
+      "source_ids": [
+        "018"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/018_bJ8Kq1wucsk_50004/089.png"
+    },
+    {
+      "group": "446_5nrn5fC001Q_50015_wav2lip",
+      "source_ids": [
+        "446"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/446_5nrn5fC001Q_50015/073.png"
+    },
+    {
+      "group": "518_3qyVvDGDGQs_50004_wav2lip",
+      "source_ids": [
+        "518"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/518_3qyVvDGDGQs_50004/052.png"
+    },
+    {
+      "group": "081_ATISgVUKetI_50009_wav2lip",
+      "source_ids": [
+        "081"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/081_ATISgVUKetI_50009/062.png"
+    },
+    {
+      "group": "464_5J6jAC6XxAI_50011_wav2lip",
+      "source_ids": [
+        "464"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/464_5J6jAC6XxAI_50011/073.png"
+    },
+    {
+      "group": "761_3f6xCzKx9CA_50006_wav2lip",
+      "source_ids": [
+        "761"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/761_3f6xCzKx9CA_50006/073.png"
+    },
+    {
+      "group": "137_AAkEYcmCCCk_50001_wav2lip",
+      "source_ids": [
+        "137"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/137_AAkEYcmCCCk_50001/070.png"
+    },
+    {
+      "group": "985_AzW2iKdSITM_50003_wav2lip",
+      "source_ids": [
+        "985"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/985_AzW2iKdSITM_50003/074.png"
+    },
+    {
+      "group": "988_7SjWguOXVwE_50005_wav2lip",
+      "source_ids": [
+        "988"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/988_7SjWguOXVwE_50005/069.png"
+    },
+    {
+      "group": "096_b6rAgHcuYtE_50004_wav2lip",
+      "source_ids": [
+        "096"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/096_b6rAgHcuYtE_50004/089.png"
+    },
+    {
+      "group": "722_ciStnd9Y2ak_50005_wav2lip",
+      "source_ids": [
+        "722"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/722_ciStnd9Y2ak_50005/072.png"
+    },
+    {
+      "group": "569_1YO1FmVAPrA_50009_wav2lip",
+      "source_ids": [
+        "569"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/569_1YO1FmVAPrA_50009/088.png"
+    },
+    {
+      "group": "809_56WGgJNBRxQ_50006_wav2lip",
+      "source_ids": [
+        "809"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/809_56WGgJNBRxQ_50006/072.png"
+    },
+    {
+      "group": "459_CVdPhUPO5YU_50016_wav2lip",
+      "source_ids": [
+        "459"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/459_CVdPhUPO5YU_50016/090.png"
+    },
+    {
+      "group": "929_5aH2Ppjpcho_50004_wav2lip",
+      "source_ids": [
+        "929"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/929_5aH2Ppjpcho_50004/091.png"
+    },
+    {
+      "group": "839_4jUdCy6Vghw_50011_wav2lip",
+      "source_ids": [
+        "839"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/839_4jUdCy6Vghw_50011/066.png"
+    },
+    {
+      "group": "094_0ygtX2nyexo_50014_wav2lip",
+      "source_ids": [
+        "094"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/094_0ygtX2nyexo_50014/080.png"
+    },
+    {
+      "group": "045_3sUWSDHOVn0_50015_wav2lip",
+      "source_ids": [
+        "045"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/045_3sUWSDHOVn0_50015/070.png"
+    },
+    {
+      "group": "976_CLSSiaFuLo4_50021_wav2lip",
+      "source_ids": [
+        "976"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/976_CLSSiaFuLo4_50021/074.png"
+    },
+    {
+      "group": "884_150cqgYh8sQ_50014_wav2lip",
+      "source_ids": [
+        "884"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/884_150cqgYh8sQ_50014/074.png"
+    },
+    {
+      "group": "098_1Gtc0ounD5I_50005_wav2lip",
+      "source_ids": [
+        "098"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/098_1Gtc0ounD5I_50005/075.png"
+    },
+    {
+      "group": "770_9y7YEmyzSDo_50010_wav2lip",
+      "source_ids": [
+        "770"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/770_9y7YEmyzSDo_50010/088.png"
+    },
+    {
+      "group": "728_7CmqNpCofc8_50005_wav2lip",
+      "source_ids": [
+        "728"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/728_7CmqNpCofc8_50005/079.png"
+    },
+    {
+      "group": "330_dcwuBo4PvE0_50001_wav2lip",
+      "source_ids": [
+        "330"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/330_dcwuBo4PvE0_50001/084.png"
+    },
+    {
+      "group": "831_CfmNXPMjChs_50010_wav2lip",
+      "source_ids": [
+        "831"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/831_CfmNXPMjChs_50010/090.png"
+    },
+    {
+      "group": "845_2tcEgqTWbxQ_50019_wav2lip",
+      "source_ids": [
+        "845"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/845_2tcEgqTWbxQ_50019/068.png"
+    },
+    {
+      "group": "117_bxkslfQc0EA_50002_wav2lip",
+      "source_ids": [
+        "117"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/117_bxkslfQc0EA_50002/074.png"
+    },
+    {
+      "group": "020_5ErKrSyUpEo_50003_wav2lip",
+      "source_ids": [
+        "020"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/020_5ErKrSyUpEo_50003/069.png"
+    },
+    {
+      "group": "151_0ygtX2nyexo_50010_wav2lip",
+      "source_ids": [
+        "151"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/151_0ygtX2nyexo_50010/088.png"
+    },
+    {
+      "group": "646_BT2XlI8oeh0_50015_wav2lip",
+      "source_ids": [
+        "646"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/646_BT2XlI8oeh0_50015/086.png"
+    },
+    {
+      "group": "882_289ZxBZdKvY_50007_wav2lip",
+      "source_ids": [
+        "882"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/882_289ZxBZdKvY_50007/086.png"
+    },
+    {
+      "group": "626_2tcEgqTWbxQ_50038_wav2lip",
+      "source_ids": [
+        "626"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/626_2tcEgqTWbxQ_50038/088.png"
+    },
+    {
+      "group": "189_A3Vpjwye9Mw_50005_wav2lip",
+      "source_ids": [
+        "189"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/189_A3Vpjwye9Mw_50005/072.png"
+    },
+    {
+      "group": "490_bGBamfWasNQ_50009_wav2lip",
+      "source_ids": [
+        "490"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/490_bGBamfWasNQ_50009/061.png"
+    },
+    {
+      "group": "014_8u9Wvz1edxI_50003_wav2lip",
+      "source_ids": [
+        "014"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/014_8u9Wvz1edxI_50003/090.png"
+    },
+    {
+      "group": "034_7W8OJgeYy1w_50001_wav2lip",
+      "source_ids": [
+        "034"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/034_7W8OJgeYy1w_50001/075.png"
+    },
+    {
+      "group": "328_C0nM8l9qeGY_50006_wav2lip",
+      "source_ids": [
+        "328"
+      ],
+      "split": "train",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/328_C0nM8l9qeGY_50006/087.png"
+    },
+    {
+      "group": "121_simswap",
+      "source_ids": [
+        "121"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/121/267.png"
+    },
+    {
+      "group": "222_simswap",
+      "source_ids": [
+        "222"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/222/196.png"
+    },
+    {
+      "group": "785_simswap",
+      "source_ids": [
+        "785"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/785/199.png"
+    },
+    {
+      "group": "744_simswap",
+      "source_ids": [
+        "744"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/744/141.png"
+    },
+    {
+      "group": "684_simswap",
+      "source_ids": [
+        "684"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/684/240.png"
+    },
+    {
+      "group": "294_simswap",
+      "source_ids": [
+        "294"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/294/291.png"
+    },
+    {
+      "group": "859_simswap",
+      "source_ids": [
+        "859"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/859/160.png"
+    },
+    {
+      "group": "092_simswap",
+      "source_ids": [
+        "092"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/092/222.png"
+    },
+    {
+      "group": "662_simswap",
+      "source_ids": [
+        "662"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/662/239.png"
+    },
+    {
+      "group": "202_simswap",
+      "source_ids": [
+        "202"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/202/155.png"
+    },
+    {
+      "group": "101_simswap",
+      "source_ids": [
+        "101"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/101/555.png"
+    },
+    {
+      "group": "704_simswap",
+      "source_ids": [
+        "704"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/704/217.png"
+    },
+    {
+      "group": "534_simswap",
+      "source_ids": [
+        "534"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/534/185.png"
+    },
+    {
+      "group": "441_simswap",
+      "source_ids": [
+        "441"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/441/147.png"
+    },
+    {
+      "group": "032_simswap",
+      "source_ids": [
+        "032"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/032/149.png"
+    },
+    {
+      "group": "713_simswap",
+      "source_ids": [
+        "713"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/713/254.png"
+    },
+    {
+      "group": "089_simswap",
+      "source_ids": [
+        "089"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/089/362.png"
+    },
+    {
+      "group": "237_simswap",
+      "source_ids": [
+        "237"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/237/365.png"
+    },
+    {
+      "group": "240_simswap",
+      "source_ids": [
+        "240"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/240/615.png"
+    },
+    {
+      "group": "303_simswap",
+      "source_ids": [
+        "303"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/303/275.png"
+    },
+    {
+      "group": "532_simswap",
+      "source_ids": [
+        "532"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/532/188.png"
+    },
+    {
+      "group": "083_simswap",
+      "source_ids": [
+        "083"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/083/263.png"
+    },
+    {
+      "group": "087_simswap",
+      "source_ids": [
+        "087"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/087/149.png"
+    },
+    {
+      "group": "872_simswap",
+      "source_ids": [
+        "872"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/872/228.png"
+    },
+    {
+      "group": "262_simswap",
+      "source_ids": [
+        "262"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/262/191.png"
+    },
+    {
+      "group": "204_simswap",
+      "source_ids": [
+        "204"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/204/248.png"
+    },
+    {
+      "group": "050_simswap",
+      "source_ids": [
+        "050"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/050/255.png"
+    },
+    {
+      "group": "413_simswap",
+      "source_ids": [
+        "413"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/413/182.png"
+    },
+    {
+      "group": "696_simswap",
+      "source_ids": [
+        "696"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/696/195.png"
+    },
+    {
+      "group": "417_simswap",
+      "source_ids": [
+        "417"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/417/416.png"
+    },
+    {
+      "group": "209_simswap",
+      "source_ids": [
+        "209"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/209/162.png"
+    },
+    {
+      "group": "310_simswap",
+      "source_ids": [
+        "310"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/310/180.png"
+    },
+    {
+      "group": "469_simswap",
+      "source_ids": [
+        "469"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/469/199.png"
+    },
+    {
+      "group": "124_simswap",
+      "source_ids": [
+        "124"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/124/153.png"
+    },
+    {
+      "group": "808_simswap",
+      "source_ids": [
+        "808"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/808/307.png"
+    },
+    {
+      "group": "037_simswap",
+      "source_ids": [
+        "037"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/037/219.png"
+    },
+    {
+      "group": "747_simswap",
+      "source_ids": [
+        "747"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/747/226.png"
+    },
+    {
+      "group": "996_simswap",
+      "source_ids": [
+        "996"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/996/150.png"
+    },
+    {
+      "group": "838_simswap",
+      "source_ids": [
+        "838"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/838/220.png"
+    },
+    {
+      "group": "253_simswap",
+      "source_ids": [
+        "253"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/253/241.png"
+    },
+    {
+      "group": "343_simswap",
+      "source_ids": [
+        "343"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/343/144.png"
+    },
+    {
+      "group": "655_simswap",
+      "source_ids": [
+        "655"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/655/327.png"
+    },
+    {
+      "group": "609_simswap",
+      "source_ids": [
+        "609"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/609/236.png"
+    },
+    {
+      "group": "132_simswap",
+      "source_ids": [
+        "132"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/132/199.png"
+    },
+    {
+      "group": "163_simswap",
+      "source_ids": [
+        "163"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/163/146.png"
+    },
+    {
+      "group": "822_simswap",
+      "source_ids": [
+        "822"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/822/143.png"
+    },
+    {
+      "group": "366_simswap",
+      "source_ids": [
+        "366"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/366/195.png"
+    },
+    {
+      "group": "412_simswap",
+      "source_ids": [
+        "412"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/412/276.png"
+    },
+    {
+      "group": "686_simswap",
+      "source_ids": [
+        "686"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/686/165.png"
+    },
+    {
+      "group": "616_simswap",
+      "source_ids": [
+        "616"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/616/320.png"
+    },
+    {
+      "group": "054_simswap",
+      "source_ids": [
+        "054"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/054/177.png"
+    },
+    {
+      "group": "964_simswap",
+      "source_ids": [
+        "964"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/964/217.png"
+    },
+    {
+      "group": "881_simswap",
+      "source_ids": [
+        "881"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/881/308.png"
+    },
+    {
+      "group": "476_simswap",
+      "source_ids": [
+        "476"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/476/149.png"
+    },
+    {
+      "group": "105_simswap",
+      "source_ids": [
+        "105"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/105/144.png"
+    },
+    {
+      "group": "269_simswap",
+      "source_ids": [
+        "269"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/269/186.png"
+    },
+    {
+      "group": "685_simswap",
+      "source_ids": [
+        "685"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/685/252.png"
+    },
+    {
+      "group": "428_simswap",
+      "source_ids": [
+        "428"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/428/260.png"
+    },
+    {
+      "group": "786_simswap",
+      "source_ids": [
+        "786"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/786/251.png"
+    },
+    {
+      "group": "843_simswap",
+      "source_ids": [
+        "843"
+      ],
+      "split": "validation",
+      "method": "real",
+      "metadata_path": "deepfakes_detection_datasets/FaceForensics++/original_sequences/youtube/c23/frames/843/153.png"
+    },
+    {
+      "group": "007_132_simswap",
+      "source_ids": [
+        "007",
+        "132"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/007_132/243.png"
+    },
+    {
+      "group": "451_449_simswap",
+      "source_ids": [
+        "449",
+        "451"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/451_449/184.png"
+    },
+    {
+      "group": "631_551_simswap",
+      "source_ids": [
+        "551",
+        "631"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/631_551/204.png"
+    },
+    {
+      "group": "054_071_simswap",
+      "source_ids": [
+        "054",
+        "071"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/054_071/177.png"
+    },
+    {
+      "group": "893_913_simswap",
+      "source_ids": [
+        "893",
+        "913"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/893_913/259.png"
+    },
+    {
+      "group": "132_007_simswap",
+      "source_ids": [
+        "007",
+        "132"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/132_007/199.png"
+    },
+    {
+      "group": "449_451_simswap",
+      "source_ids": [
+        "449",
+        "451"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/449_451/147.png"
+    },
+    {
+      "group": "383_353_simswap",
+      "source_ids": [
+        "353",
+        "383"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/383_353/224.png"
+    },
+    {
+      "group": "212_179_simswap",
+      "source_ids": [
+        "179",
+        "212"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/212_179/200.png"
+    },
+    {
+      "group": "843_859_simswap",
+      "source_ids": [
+        "843",
+        "859"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/843_859/153.png"
+    },
+    {
+      "group": "361_448_simswap",
+      "source_ids": [
+        "361",
+        "448"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/361_448/234.png"
+    },
+    {
+      "group": "285_136_simswap",
+      "source_ids": [
+        "136",
+        "285"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/285_136/184.png"
+    },
+    {
+      "group": "551_631_simswap",
+      "source_ids": [
+        "551",
+        "631"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/551_631/351.png"
+    },
+    {
+      "group": "913_893_simswap",
+      "source_ids": [
+        "893",
+        "913"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/913_893/306.png"
+    },
+    {
+      "group": "686_696_simswap",
+      "source_ids": [
+        "686",
+        "696"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/686_696/165.png"
+    },
+    {
+      "group": "819_786_simswap",
+      "source_ids": [
+        "786",
+        "819"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/819_786/448.png"
+    },
+    {
+      "group": "068_028_simswap",
+      "source_ids": [
+        "028",
+        "068"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/068_028/193.png"
+    },
+    {
+      "group": "118_120_simswap",
+      "source_ids": [
+        "118",
+        "120"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/118_120/169.png"
+    },
+    {
+      "group": "353_383_simswap",
+      "source_ids": [
+        "353",
+        "383"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/353_383/172.png"
+    },
+    {
+      "group": "237_236_simswap",
+      "source_ids": [
+        "236",
+        "237"
+      ],
+      "split": "validation",
+      "method": "simswap",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/simswap/frames/237_236/365.png"
+    },
+    {
+      "group": "449_451_fomm",
+      "source_ids": [
+        "449",
+        "451"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/449_451/355.png"
+    },
+    {
+      "group": "268_269_fomm",
+      "source_ids": [
+        "268",
+        "269"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/268_269/1701.png"
+    },
+    {
+      "group": "786_819_fomm",
+      "source_ids": [
+        "786",
+        "819"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/786_819/603.png"
+    },
+    {
+      "group": "085_124_fomm",
+      "source_ids": [
+        "085",
+        "124"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/085_124/382.png"
+    },
+    {
+      "group": "301_262_fomm",
+      "source_ids": [
+        "262",
+        "301"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/301_262/885.png"
+    },
+    {
+      "group": "120_118_fomm",
+      "source_ids": [
+        "118",
+        "120"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/120_118/470.png"
+    },
+    {
+      "group": "913_893_fomm",
+      "source_ids": [
+        "893",
+        "913"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/913_893/735.png"
+    },
+    {
+      "group": "291_874_fomm",
+      "source_ids": [
+        "291",
+        "874"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/291_874/383.png"
+    },
+    {
+      "group": "071_054_fomm",
+      "source_ids": [
+        "054",
+        "071"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/071_054/525.png"
+    },
+    {
+      "group": "893_913_fomm",
+      "source_ids": [
+        "893",
+        "913"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/893_913/623.png"
+    },
+    {
+      "group": "236_237_fomm",
+      "source_ids": [
+        "236",
+        "237"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/236_237/755.png"
+    },
+    {
+      "group": "551_631_fomm",
+      "source_ids": [
+        "551",
+        "631"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/551_631/843.png"
+    },
+    {
+      "group": "451_449_fomm",
+      "source_ids": [
+        "449",
+        "451"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/451_449/445.png"
+    },
+    {
+      "group": "269_268_fomm",
+      "source_ids": [
+        "268",
+        "269"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/269_268/449.png"
+    },
+    {
+      "group": "124_085_fomm",
+      "source_ids": [
+        "085",
+        "124"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/124_085/369.png"
+    },
+    {
+      "group": "361_448_fomm",
+      "source_ids": [
+        "361",
+        "448"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/361_448/529.png"
+    },
+    {
+      "group": "843_859_fomm",
+      "source_ids": [
+        "843",
+        "859"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/843_859/369.png"
+    },
+    {
+      "group": "136_285_fomm",
+      "source_ids": [
+        "136",
+        "285"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/136_285/710.png"
+    },
+    {
+      "group": "179_212_fomm",
+      "source_ids": [
+        "179",
+        "212"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/179_212/1463.png"
+    },
+    {
+      "group": "383_353_fomm",
+      "source_ids": [
+        "353",
+        "383"
+      ],
+      "split": "validation",
+      "method": "fomm",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/fomm/frames/383_353/540.png"
+    },
+    {
+      "group": "750_5vXRgT6egSU_50002_wav2lip",
+      "source_ids": [
+        "750"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/750_5vXRgT6egSU_50002/081.png"
+    },
+    {
+      "group": "643_BT2XlI8oeh0_50015_wav2lip",
+      "source_ids": [
+        "643"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/643_BT2XlI8oeh0_50015/091.png"
+    },
+    {
+      "group": "758_46wWjKTn4Ac_50002_wav2lip",
+      "source_ids": [
+        "758"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/758_46wWjKTn4Ac_50002/089.png"
+    },
+    {
+      "group": "118_5pIGDw18mIQ_50004_wav2lip",
+      "source_ids": [
+        "118"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/118_5pIGDw18mIQ_50004/075.png"
+    },
+    {
+      "group": "451_avuhY7D71sQ_50035_wav2lip",
+      "source_ids": [
+        "451"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/451_avuhY7D71sQ_50035/073.png"
+    },
+    {
+      "group": "120_5pIGDw18mIQ_50004_wav2lip",
+      "source_ids": [
+        "120"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/120_5pIGDw18mIQ_50004/075.png"
+    },
+    {
+      "group": "476_cWcVPpxezE0_50033_wav2lip",
+      "source_ids": [
+        "476"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/476_cWcVPpxezE0_50033/071.png"
+    },
+    {
+      "group": "105_70VZ1SOzSnc_50003_wav2lip",
+      "source_ids": [
+        "105"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/105_70VZ1SOzSnc_50003/084.png"
+    },
+    {
+      "group": "092_1Gtc0ounD5I_50005_wav2lip",
+      "source_ids": [
+        "092"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/092_1Gtc0ounD5I_50005/075.png"
+    },
+    {
+      "group": "808_CiSk3gmyjQ8_50009_wav2lip",
+      "source_ids": [
+        "808"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/808_CiSk3gmyjQ8_50009/090.png"
+    },
+    {
+      "group": "083_ALTvG9MIR64_50012_wav2lip",
+      "source_ids": [
+        "083"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/083_ALTvG9MIR64_50012/088.png"
+    },
+    {
+      "group": "696_4yyPSZSGLOI_50011_wav2lip",
+      "source_ids": [
+        "696"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/696_4yyPSZSGLOI_50011/076.png"
+    },
+    {
+      "group": "285_1Yz7Snu6pnI_50006_wav2lip",
+      "source_ids": [
+        "285"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/285_1Yz7Snu6pnI_50006/088.png"
+    },
+    {
+      "group": "580_cxGWGohIXiw_50003_wav2lip",
+      "source_ids": [
+        "580"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/580_cxGWGohIXiw_50003/090.png"
+    },
+    {
+      "group": "049_4oFGmxZ2nqE_50002_wav2lip",
+      "source_ids": [
+        "049"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/049_4oFGmxZ2nqE_50002/090.png"
+    },
+    {
+      "group": "279_BoRUrWcdkQ4_50002_wav2lip",
+      "source_ids": [
+        "279"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/279_BoRUrWcdkQ4_50002/073.png"
+    },
+    {
+      "group": "747_1QQ3gWmd20s_50001_wav2lip",
+      "source_ids": [
+        "747"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/747_1QQ3gWmd20s_50001/063.png"
+    },
+    {
+      "group": "461_aL00a3sfnYM_50001_wav2lip",
+      "source_ids": [
+        "461"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/461_aL00a3sfnYM_50001/075.png"
+    },
+    {
+      "group": "786_289ZxBZdKvY_50005_wav2lip",
+      "source_ids": [
+        "786"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/786_289ZxBZdKvY_50005/069.png"
+    },
+    {
+      "group": "838_5OISkgjSjkA_50015_wav2lip",
+      "source_ids": [
+        "838"
+      ],
+      "split": "validation",
+      "method": "wav2lip",
+      "metadata_path": "deepfakes_detection_datasets/DF40_train/wav2lip/frames/838_5OISkgjSjkA_50015/085.png"
+    }
+  ],
+  "notes": "Source IDs partitioned before sampling; all IDs from original FF test excluded. ID parsing and identity separation are not independently verified."
+}

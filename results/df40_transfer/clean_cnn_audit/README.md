@@ -1,0 +1,33 @@
+# Matched clean benchmark and confidence audit
+
+The CNN completion marker reports 192 valid runs and zero missing runs. The
+prediction export contains each run's validation and test predictions, config,
+and completion marker. The attached aggregate files are copied from CARC.
+
+`analyze_matched.py` matched the 192 CNN runs to the 192 existing ViT runs by
+run name. Every paired test set contained the same 560 distinct SHA-256 image
+IDs and labels, for 107,520 paired image predictions. Accuracy, AUROC, Brier
+score and 10-bin expected calibration error were recomputed; all CNN values
+agreed with saved results to numerical precision, and ViT values within 1e-6.
+`matched_confidence_per_run.csv` includes per-run results and disagreement
+counts. `matched_confidence_summary.csv` averages three dataset repeats in each
+of eight holdouts with equal weight. Dataset repeats reuse test images; they are
+not independent random seeds or 24 independent holdout datasets.
+
+![Brier score and calibration error](matched_confidence.png)
+
+At k=7 baseline, mean accuracy was 0.8330 for CNN and 0.8830 for ViT. Mean
+10-bin ECE was 0.1138 for CNN and 0.2816 for ViT. ECE depends on the bins and
+averaging scheme; it is not a universal measure of calibration. These results
+compare the full existing pipelines, which use different pretraining and
+fine-tuning, rather than isolating architecture. No recalibration was fitted.
+
+Reproduce on Windows after extracting the CNN prediction export under
+`prediction_export/runs` and placing the ViT audit export at the adjacent
+`audit_sources/vit_benchmark` workspace path:
+
+```powershell
+cd "C:\Users\creat\OneDrive - University of Southern California\Documents\ChatGPT\CSC566 Proj"
+& "C:\Users\creat\miniconda3\envs\test\python.exe" deepfake_transfer\clean_cnn_audit\analyze_matched.py
+& "C:\Users\creat\miniconda3\envs\test\python.exe" deepfake_transfer\clean_cnn_audit\plot_confidence.py
+```

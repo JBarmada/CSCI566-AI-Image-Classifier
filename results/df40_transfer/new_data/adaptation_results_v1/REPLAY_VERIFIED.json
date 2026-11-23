@@ -1,0 +1,59 @@
+{
+  "status": "recovered_after_summary_write_failure",
+  "original_job": "14482534",
+  "max_replay_difference": 0.0,
+  "threshold": 0.5676835775375367,
+  "validation_auc_replayed": 0.7999999999999999,
+  "validation_real_fpr": 0.1,
+  "training_manifest_sha256": "3471f742e68bb80c2c6c312ad074412d099c10fd04b427e0fd93f8248bf7fa41",
+  "head_sha256": "8d0fdf3893fc7362801e8801c4fae9fe87e60f069a43803af3aade394e079af2",
+  "backbone_sha256": "b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836",
+  "selection_sha256": "3a918ae425ffb6eadc6c766ddd86fe04f3ee8d35c39b65a136b326edb405f251",
+  "test_manifest_sha256": "4a2bb4dc67a68561aba02043d5515375693f9bbfd2e8b4c0d696ab67c6d2ba1b",
+  "test_calibrated": {
+    "simswap": {
+      "real": 70,
+      "fake": 70,
+      "fp": 4,
+      "tp": 31,
+      "auroc": 0.803265306122449
+    },
+    "fomm": {
+      "real": 70,
+      "fake": 70,
+      "fp": 4,
+      "tp": 51,
+      "auroc": 0.9387755102040816
+    },
+    "wav2lip": {
+      "real": 70,
+      "fake": 70,
+      "fp": 4,
+      "tp": 15,
+      "auroc": 0.6848979591836735
+    }
+  },
+  "test_0_5": {
+    "simswap": {
+      "real": 70,
+      "fake": 70,
+      "fp": 17,
+      "tp": 47,
+      "auroc": 0.803265306122449
+    },
+    "fomm": {
+      "real": 70,
+      "fake": 70,
+      "fp": 17,
+      "tp": 65,
+      "auroc": 0.9387755102040816
+    },
+    "wav2lip": {
+      "real": 70,
+      "fake": 70,
+      "fp": 17,
+      "tp": 32,
+      "auroc": 0.6848979591836735
+    }
+  }
+}

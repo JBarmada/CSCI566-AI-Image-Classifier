@@ -11,6 +11,9 @@ state at the time; later entries record subsequent work.
 - [Zero-shot CLIP prompts and results](zeroshot/README.md)
 - [FaceForensics++ frozen thresholds and test report](new_data/ff_results_v1/test_report.json)
 - [FaceForensics++ zero-shot CLIP test report](new_data/ff_zeroshot_results/test_report.json)
+- [FaceForensics++ model comparison](new_data/ff_model_comparison.csv)
+- [Supervised face adaptation protocol and recovered results](new_data/ADAPTATION_PROTOCOL.md)
+- [Matched clean CNN–ViT confidence audit](clean_cnn_audit/README.md)
 - [FaceForensics++ validation and test manifests](new_data/ff_complete_v1/)
 - [Team notebook audit](notebook_audit.md)
 - [Threshold calibration protocol](calibration_protocol.md)
@@ -19,8 +22,9 @@ The 500-image Celeb-DF subset is available in the [team Drive folder](https://dr
 The FaceForensics++ subset is staged on CARC at
 `/project2/yzhao010_1531/csci566-genimage/data/df40_ff_v1/`. These are
 external data locations and require appropriate access. Image data, contact
-sheets, archives, and model weights are not included in Git. Manifests retain
-source paths and SHA-256 values for verification.
+sheets, image archives, and the large pretrained backbone are not included in
+Git. The small adapted linear head is included. Manifests retain source paths
+and SHA-256 values for verification.
 
 Some scripts contain the original user's local or CARC paths and must be
 adapted to the environment before reuse. The saved results are preliminary;
