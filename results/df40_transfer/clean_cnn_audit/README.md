@@ -22,6 +22,11 @@ averaging scheme; it is not a universal measure of calibration. These results
 compare the full existing pipelines, which use different pretraining and
 fine-tuning, rather than isolating architecture. No recalibration was fitted.
 
+`reliability_k7.csv` and `reliability_k7.png` pool predictions within each
+score bin across the eight holdouts and three repeats. The plotted counts are
+prediction rows, not independent images, and pooling can hide holdout-specific
+differences. These figures describe the existing fixed-threshold models.
+
 Reproduce on Windows after extracting the CNN prediction export under
 `prediction_export/runs` and placing the ViT audit export at the adjacent
 `audit_sources/vit_benchmark` workspace path:
