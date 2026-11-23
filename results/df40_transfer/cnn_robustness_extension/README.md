@@ -23,22 +23,16 @@ per-run AUROC difference was about 0.000077. Details are retained in
 passed; the strict replay failures make the full eight-holdout summary
 provisional.
 
-For Stable Diffusion 1.4, a repeat of the new robustness code produced exactly
-the same new scores, and setting deterministic cuDNN did not restore the old
-scores. A replay using the original CNN notebook functions on one checkpoint
-also differed from the saved source by 0.001953125. The original runtime
-history is insufficient to establish the cause. The original benchmark's
-saved clean scores remain authoritative for that benchmark; do not describe
-the new CNN robustness results as fully passing the strict replay gate.
-
-On November 23, a further read-only check of the original Stable Diffusion 1.4
-repeat-0 baseline `config.json` found `gpu: Tesla P100-PCIE-16GB` and
-`use_amp: true`. The extension job log `cnn-robust-14482672_1.log` also reports
-a Tesla P100, PyTorch 2.7.1+cu118, and `use_amp: True`. Thus a difference in
-the reported GPU *model* or the on/off AMP setting alone does not explain the
-discrepancy for those records. This does not establish identical driver,
-library, kernel, or per-device numerical behavior; the original runtime history
-is incomplete, and the cause and strict audit failures remain unresolved.
+The discrepancy was investigated further using the original job logs and
+controlled replays. The affected original jobs used V100 GPUs; the extension
+used P100 GPUs. With the same replay software and checkpoint, one V100 replay
+matched the original scores exactly while the P100 differed. All 24 affected
+checkpoints matched exactly when replayed through both the original benchmark
+notebook and the clean robustness notebook on a V100. The earlier claim that
+the original SD 1.4 run used a P100 relied on a config field that a later audit could overwrite; original job logs show V100.
+See [the replay investigation](../cnn_replay_investigation/README.md) for
+controlled tests and limitations. The original P100 robustness outputs still
+failed the unchanged gate, so the existing aggregate remains provisional.
 
 Both model pipelines use bicubic geometry before applying the same individual
 JPEG or resize degradation, then their respective normalization. They differ

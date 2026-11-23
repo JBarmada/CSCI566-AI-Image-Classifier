@@ -22,12 +22,16 @@ file hashes, and compared decoded RGB pixel hashes against inventory versions.
 It found no matches. This does not rule out altered copies, identity overlap,
 or overlap with pretraining data. See [audit](still_face_v1/GENIMAGE_OVERLAP.json).
 
-A read-only recheck of the original SD 1.4 repeat-0 baseline CNN configuration
-reported a Tesla P100 and AMP enabled. An extension job log also reports a
-Tesla P100 and AMP enabled, with PyTorch 2.7.1+cu118. Matching GPU model names
-and AMP flags do not establish identical software or numerical behavior; the
-original runtime history is incomplete. The strict clean-score replay failure
-remains unresolved and the full CNN robustness comparison stays provisional.
+**Correction:** the SD 1.4 config GPU field cited in an earlier recheck was
+rewritten during a later audit and is not reliable original-run provenance.
+Original job logs show V100 for the four affected holdouts; the P100 extension
+ran on a different GPU model. Controlled same-software V100/P100 replay and a
+24-checkpoint V100 matrix identify a reproducible GPU-dependent score
+difference. A separate V100 replay of the robustness notebook also matched all
+24 affected clean score sets exactly (job 14491618). See the
+[replay investigation](cnn_replay_investigation/README.md).
+The original P100 robustness results still failed the 0.001 gate, so the full
+comparison remains provisional.
 
 CARC follow-up job 14488912 completed with exit code 0 after applying common
 center crop, 512x512 bicubic resize, and JPEG quality 95 (no chroma
@@ -282,8 +286,9 @@ exactly. Repeating with deterministic cuDNN and replaying one checkpoint
 through the original notebook functions did not restore the prior scores.
 Diagnostic job 14482900 initially failed because the original notebook imports
 `seaborn`, which was absent in the inference environment. Job 14482918 skipped
-that plotting-only import and completed the notebook-function replay. The cause
-of the score discrepancy remains unverified. See `cnn_robustness_extension/README.md` and
+that plotting-only import and completed the notebook-function replay. A later
+controlled investigation identified a GPU-dependent difference; see
+`cnn_replay_investigation/README.md`, `cnn_robustness_extension/README.md` and
 `AUDIT_INVENTORY.json` for full checks, results and scripts.
 
 ## FaceForensics++ DF40 calibration and test

@@ -1,0 +1,87 @@
+{
+  "logs": [
+    {
+      "name": "cnn-benchmark-13960524_0.log",
+      "sha256": "f690026918b98b1a7053cd01577baa054320d49b390a64559b443686648abdd4",
+      "gpu": "Tesla P100-PCIE-16GB",
+      "pytorch": "2.14.1+cu126",
+      "holdouts_seen": [
+        "ADM"
+      ]
+    },
+    {
+      "name": "cnn-benchmark-13960524_1.log",
+      "sha256": "dad8e32aa1b83b5e59bfadc0948c30a1d443344e89048c9e9fc2be61437d64f9",
+      "gpu": "Tesla P100-PCIE-16GB",
+      "pytorch": "2.14.1+cu126",
+      "holdouts_seen": [
+        "BigGAN"
+      ]
+    },
+    {
+      "name": "cnn-benchmark-13960524_2.log",
+      "sha256": "d8c3fc4779ea8ccb67648106a1723f1985709112c0a7b7b631ff3b960eeee280",
+      "gpu": "Tesla P100-PCIE-16GB",
+      "pytorch": "2.14.1+cu126",
+      "holdouts_seen": [
+        "glide"
+      ]
+    },
+    {
+      "name": "cnn-benchmark-13960524_3.log",
+      "sha256": "3510505d170d9d430b34e092dc6287a835d56f7431a6d09bc854aadc5d12a326",
+      "gpu": "Tesla P100-PCIE-16GB",
+      "pytorch": "2.14.1+cu126",
+      "holdouts_seen": [
+        "Midjourney"
+      ]
+    },
+    {
+      "name": "cnn-benchmark-13960524_4.log",
+      "sha256": "00282e4097af2cefba6aae3aab2baf9ff2af30729cd7c129945c86e59f2468c8",
+      "gpu": "Tesla V100-PCIE-32GB",
+      "pytorch": "2.14.1+cu126",
+      "holdouts_seen": [
+        "stable_diffusion_v_1_4"
+      ]
+    },
+    {
+      "name": "cnn-benchmark-13960524_5.log",
+      "sha256": "60d7eed5838a093ce408a30b722ddadec602476a5f2d2726349fa640857c67d0",
+      "gpu": "Tesla V100-PCIE-32GB",
+      "pytorch": "2.14.1+cu126",
+      "holdouts_seen": [
+        "stable_diffusion_v_1_5"
+      ]
+    },
+    {
+      "name": "cnn-benchmark-13960524_6.log",
+      "sha256": "d5b7165865c09f61a7b4cc39166303162f2e759c255bbec69cc95a5c79ebab1a",
+      "gpu": "Tesla V100-PCIE-32GB",
+      "pytorch": "2.14.1+cu126",
+      "holdouts_seen": [
+        "VQDM"
+      ]
+    },
+    {
+      "name": "cnn-benchmark-13960524_7.log",
+      "sha256": "4da246bbbd7b57952d3315533fa01a10b9effaa523142d2d730c48314e3b04b2",
+      "gpu": "Tesla V100-PCIE-32GB",
+      "pytorch": "2.14.1+cu126",
+      "holdouts_seen": [
+        "wukong"
+      ]
+    }
+  ],
+  "example_file_mtime_utc": {
+    "config.json": "2026-11-10T22:03:55.714682+00:00",
+    "test_predictions.csv": "2026-11-10T13:39:22.700066+00:00",
+    "TRAINING_COMPLETE.json": "2026-11-10T22:03:56.152390+00:00"
+  },
+  "example_marker": {
+    "protocol_hash": "a2e73294a9aad4e9ac2bf37fb3b930929b2ca53d05fb210c5bb0096fadd6cbbe",
+    "best_epoch": 7,
+    "checkpoint_sha256": "58769842dc6cc41a6c2a95e34edc13cbf4c3c180ce40c4703b8b1b2928db0a98",
+    "marker_upgraded_utc": "2026-11-10T22:03:56.148333+00:00"
+  }
+}

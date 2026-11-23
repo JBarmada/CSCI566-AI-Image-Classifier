@@ -1,0 +1,12 @@
+Tesla P100-PCIE-16GB, 580.159.04
+versions 2.7.1+cu118 0.22.1+cu118 12.1.1 cudnn 90701
+PyTorch: 2.7.1+cu118
+Device: cuda
+GPU operation passed: Tesla P100-PCIE-16GB
+{'data_root': '/project2/yzhao010_1531/csci566-genimage/data/extracted/GenImage_Compact', 'benchmark_root': '/project2/yzhao010_1531/csci566-genimage/data/extracted/GenImage_Compact/benchmark', 'experiment_root': '/project2/yzhao010_1531/csci566-genimage/data/extracted/GenImage_Compact/benchmark/manifests', 'output_root': '/project2/yzhao010_1531/csci566-genimage/results/cnn_benchmark/notebook', 'image_size': 224, 'batch_size': 64, 'num_workers': 0, 'epochs': 20, 'learning_rate': 0.0001, 'weight_decay': 0.0001, 'early_stopping_patience': 3, 'pretrained': True, 'use_amp': True, 'decision_threshold': 0.5, 'base_seed': 17, 'auroc_tolerance': 1e-12, 'calibration_bins': 10, 'verify_image_hashes': True, 'skip_completed': True, 'resume': True, 'continue_on_error': False, 'max_runs_this_session': None, 'debug_max_rows_per_split': None}
+Plan files: ['/project2/yzhao010_1531/csci566-genimage/data/extracted/GenImage_Compact/benchmark/experiments.json']
+Requested experiments: ['ALL']
+baseline training augmentation: none
+augmented training augmentation: ViT-matched blur/JPEG/resize/noise/low-pass
+  0%|          | 0/9 [00:00<?, ?it/s]<original-cell-15>:89: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+ 11%|█         | 1/9 [00:08<01:07,  8.43s/it] 22%|██▏       | 2/9 [00:09<00:27,  3.91s/it] 33%|███▎      | 3/9 [00:09<00:14,  2.44s/it] 44%|████▍     | 4/9 [00:10<00:08,  1.75s/it] 56%|█████▌    | 5/9 [00:11<00:05,  1.36s/it] 67%|██████▋   | 6/9 [00:11<00:03,  1.13s/it] 78%|███████▊  | 7/9 [00:12<00:01,  1.02it/s] 89%|████████▉ | 8/9 [00:13<00:00,  1.13it/s]100%|██████████| 9/9 [00:13<00:00,  1.30it/s]                                             Rows: 560 max difference: 0.001953125
