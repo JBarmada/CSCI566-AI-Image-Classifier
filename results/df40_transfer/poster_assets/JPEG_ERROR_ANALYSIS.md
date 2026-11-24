@@ -1,0 +1,38 @@
+# What the ViT JPEG accuracy gain hides
+
+Analysis of existing predictions, November 23, 2026; no model was retrained
+or rerun. The input comprises 48 saved ViT JPEG60 prediction tables: baseline
+and augmented models for three repeats of each of eight held-out generators.
+Each comparison uses the same image IDs and labels in both modes. The script
+[analyze_vit_jpeg_errors.py](analyze_vit_jpeg_errors.py) checks that pairing
+and saves [per-run counts](vit_jpeg_paired_class_rates.csv) and
+[equal-weight holdout averages](vit_jpeg_class_macro.csv).
+The source ZIP is available on CARC at
+`/project2/yzhao010_1531/csci566-genimage/analysis/df40_five_method_20261123/vit_jpeg_predictions.zip`
+(SHA-256 `d77a977c5877bce8be9d8a0f3279d4f591afa8d70e7a24f6e9be970f8c16ba23`).
+It was assembled from the saved robustness files by
+[collect_vit_jpeg.py](collect_vit_jpeg.py).
+
+At the fixed 0.5 threshold, mean real-image false-positive rate fell from
+**54.11% to 17.02%**, while mean fake recall also fell from **92.59% to
+69.00%**. With balanced real/fake test counts, those changes combine to raise
+mean accuracy from **69.24% to 75.99%**. Mean AUROC is nearly unchanged
+(0.84987 versus 0.84941). The [tradeoff figure](06_vit_jpeg_tradeoff.svg)
+shows both kinds of error, while the [metric-change figure](05_vit_jpeg_accuracy_auroc.svg)
+shows why accuracy and AUROC convey different information.
+
+At the individual score level, the augmented model assigned a lower fake
+score in 13,215 of 13,440 paired prediction rows. Across those rows, 4,079
+decisions changed from fake to real and two changed from real to fake.
+These rows are **not 13,440 independent images**: the same images recur across
+repeats, and holdout evaluations can share real images. These descriptive
+counts show a score and decision shift between the separately trained models;
+they do not establish its cause, calibrated probabilities, or a practical
+improvement at a fixed false-positive operating point. Assessing a fixed-FPR
+comparison requires a threshold selected on separate validation data.
+
+The result suggests a sharper poster question: **When accuracy improves under
+compression, is the detector recognizing more fakes, making fewer false
+alarms, or both?** Here the gain reflects the latter at the cost of fake
+recall, under this dataset and threshold. It should not be generalized to all
+augmentations, datasets or operating points.

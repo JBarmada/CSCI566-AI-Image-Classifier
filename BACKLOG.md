@@ -23,7 +23,9 @@ questions about the project.
       threshold accuracy with AUROC, examine real-image false positives alongside
       missed fakes, and show variation across held-out generators. See the
       [evidence and new draft figure](results/df40_transfer/poster_assets/STORY_REVIEW.md).
-      Locate per-image robustness scores before claiming a mechanism.
+      [JPEG error breakdown](results/df40_transfer/poster_assets/JPEG_ERROR_ANALYSIS.md)
+      shows fewer real false alarms but also fewer detected fakes; investigate
+      fixed-FPR performance using separate validation before causal claims.
 - [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel.** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.
@@ -65,7 +67,8 @@ questions about the project.
       finds possible unused video IDs, but cannot verify person independence.
       A [203-image candidate](results/df40_transfer/new_data/FRESH_CANDIDATE_REVIEW.md)
       is on CARC. One pair was excluded after cross-method duplicate bytes;
-      review provenance and freeze the protocol before scoring.
+      provenance limitations and the frozen exploratory protocol are recorded.
+      Inference job 14525004 is queued; its results are not yet available.
 - [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The reported
       DF40 tests cover SimSwap, FOMM and Wav2Lip. Add methods only with
       documented provenance, sampling and comparable evaluation. A limited

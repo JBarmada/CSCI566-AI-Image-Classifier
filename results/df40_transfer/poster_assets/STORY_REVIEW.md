@@ -16,9 +16,11 @@ diversity itself is a new discovery:
    midterm shows generator-specific exceptions.
 2. Augmentation changes clean, JPEG and resize results differently. For JPEG,
    ViT accuracy increases from 69.24% to 75.99%, while mean AUROC changes from
-   0.84987 to 0.84941. Accuracy is measured at a particular decision threshold;
-   AUROC summarizes rankings over thresholds. Similar average AUROC does not
-   imply identical individual rankings or prove a calibration mechanism.
+   0.84987 to 0.84941. The [paired error analysis](JPEG_ERROR_ANALYSIS.md)
+   shows the tradeoff: at threshold 0.5, real false positives fell from 54.11%
+   to 17.02%, while fake detection fell from 92.59% to 69.00%. Accuracy is
+   measured at a threshold; AUROC summarizes ranking across thresholds. Similar
+   mean AUROC does not imply identical rankings or prove a calibration mechanism.
 3. In exploratory face-transfer sets, false alarms on real images and missed
    fakes depend on the dataset and manipulation. This motivates testing both
    error types, rather than treating accuracy as the entire story. The sets
@@ -35,9 +37,12 @@ diversity itself is a new discovery:
   differences are descriptive, not independent confidence intervals. Consider
   a simplified single-panel JPEG version if this is too dense for the poster.
 - [Simplified ViT JPEG panel](05_vit_jpeg_accuracy_auroc.svg): a poster-sized
-  candidate for the threshold-versus-ranking question. It shows two different
-  metrics on the same 0–100 scale; the vertical axis starts at 50. The lines
-  distinguish metrics, not uncertainty or interpolation over training.
+  candidate that shows the change in each metric directly. Labels give both
+  baseline and augmented values; the common horizontal axis is in percentage
+  points (AUROC is multiplied by 100). There are no uncertainty intervals.
+- [Class-specific JPEG tradeoff](06_vit_jpeg_tradeoff.svg): shows the decrease
+  in real false alarms alongside the decrease in detected fakes. A stronger
+  candidate for the main poster than accuracy alone, subject to team review.
 - [Existing real-image error plot](03_real_image_errors.svg): include fake
   recall alongside it and prominently label the different datasets. Do not
   infer camera effects or image processing as the cause from this comparison.
@@ -63,7 +68,7 @@ course rules ([NIH](https://www.training.nih.gov/creating-a-scientific-poster/),
 
 ## Next evidence checks
 
-Locate per-image robustness scores and break down real false positives and
-fake misses before attributing the JPEG accuracy difference to a threshold
-effect. Inspect video and identity provenance before calling any new face test
+Investigate a predeclared fixed-FPR comparison using separate validation data;
+the existing score analysis does not establish a calibrated operating point.
+Inspect video and identity provenance before calling any new face test
 independent. Select the final story and figures with Jad and the team.

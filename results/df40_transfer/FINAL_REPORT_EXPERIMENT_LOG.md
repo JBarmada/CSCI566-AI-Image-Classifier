@@ -496,3 +496,22 @@ independent-person test or an evaluation result. The full selection, method
 provenance, limitations and duplicate audit are in
 [FRESH_CANDIDATE_REVIEW.md](new_data/FRESH_CANDIDATE_REVIEW.md).
 
+# November 23: ViT JPEG score and error tradeoff
+
+In the saved JPEG60 ViT runs, augmentation raised equal-weight mean accuracy
+from 69.24% to 75.99%, while mean AUROC remained approximately 0.849. At the
+0.5 threshold, the mean real false-positive rate fell from 54.11% to 17.02%,
+and fake recall fell from 92.59% to 69.00%. This is a threshold-dependent
+tradeoff, not evidence of improved detection of fakes. Existing per-image
+scores and paired comparisons are documented in the
+[JPEG error analysis](poster_assets/JPEG_ERROR_ANALYSIS.md). Test images recur
+across repeats; score counts must not be treated as independent observations.
+
+# November 23: five-method inference queued
+
+Inference-only CARC job 14525004 was submitted on V100 for the frozen
+[five-method protocol](new_data/FRESH_EVALUATION_PROTOCOL.md). As of the latest
+check it is pending due to priority; no new prediction results are available.
+The candidate contains 203 images and remains subject to the limitations in
+[the data audit](new_data/FRESH_CANDIDATE_REVIEW.md).
+
