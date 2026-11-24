@@ -30,7 +30,10 @@ it is not an independently validated deployment threshold.
 
 For discussion: both rates fall in all eight holdout means, though the fake
 recall decrease ranges from 17.02 to 41.55 percentage points. See the
-[generator-level breakdown](JPEG_ERROR_ANALYSIS.md). This is descriptive;
+[generator-level breakdown](JPEG_ERROR_ANALYSIS.md) and the optional
+[per-generator figure](09_jpeg_holdout_changes.svg)
+([PNG](09_jpeg_holdout_changes.png)). This figure only shows fake recall, so
+pair it with the main tradeoff panel if used. The results are descriptive;
 the holdouts share some real-image test data.
 
 ## Supporting figures to discuss
