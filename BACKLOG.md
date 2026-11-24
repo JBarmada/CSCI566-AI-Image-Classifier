@@ -27,7 +27,7 @@ questions about the project.
       shows fewer real false alarms but also fewer detected fakes; investigate
       a descriptive fixed-FPR ROC comparison is available; select an operating
       threshold on separate validation data before deployment claims.
-- [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel.** Explain the question, methods,
+- [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel. (probably need more people) ** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.
 - [ ] **Practice as a team.** Make sure each member can explain the models,
