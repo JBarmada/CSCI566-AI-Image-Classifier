@@ -14,7 +14,9 @@ experimental matrix. Mean clean accuracy increases with training-generator
 count for both models. At k=7, the baseline CNN and ViT achieve 83.30% and
 88.30% mean accuracy over eight held-out generators, respectively. The full
 k=7 ViT robustness study shows that augmentation improves accuracy under JPEG
-compression and resizing, although it reduces clean accuracy. The CNN
+compression and resizing, although it reduces clean accuracy. For JPEG, the
+accuracy gain at threshold 0.5 accompanies fewer real-image false alarms and
+fewer detected fakes; mean AUROC remains nearly unchanged. The CNN
 robustness comparison passed the original clean-score replay check after four
 affected holdouts were rerun on V100. In a small DF40 face-manipulation
 evaluation,
@@ -75,6 +77,15 @@ after the common geometry and before normalization. The completed ViT study
 contains 48 clean references and 96 degraded evaluations. ViT baseline mean
 accuracy was 88.30% clean, 69.24% JPEG and 56.96% resize. ViT augmented mean
 accuracy was 82.78%, 75.99% and 81.85%, respectively.
+
+The JPEG accuracy gain conceals an operating-point tradeoff. At threshold 0.5,
+equal-weight mean real-image false-positive rate fell from 54.11% to 17.02%,
+while fake recall fell from 92.59% to 69.00%. Mean AUROC changed from 0.84987
+to 0.84941. These comparisons use separately trained models, and the same test
+images recur across repeats. A descriptive test-ROC comparison at 10% empirical
+false-positive rate gives 58.78% baseline versus 60.49% augmented mean recall;
+it uses the test labels to find operating points and is not independent
+threshold calibration. See the [paired analysis](poster_assets/JPEG_ERROR_ANALYSIS.md).
 
 The matching CNN study covers all eight holdouts. After an initial P100 replay
 failed the 0.001 maximum-score tolerance for four holdouts, the affected 24
