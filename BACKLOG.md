@@ -68,11 +68,11 @@ questions about the project.
       Working decision: prepare one if provenance checks pass; an initial
       [candidate-group inventory](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md)
       finds possible unused video IDs, but cannot verify person independence.
-      A [203-image candidate](results/df40_transfer/new_data/FRESH_CANDIDATE_REVIEW.md)
-      is on CARC. One pair was excluded after cross-method duplicate bytes;
+      A [189-image candidate](results/df40_transfer/new_data/FRESH_CANDIDATE_REVIEW.md)
+      is on CARC. Three pairs were excluded during pre-score quality review;
       provenance limitations and the frozen exploratory protocol are recorded.
-      Inference job 14525004 is held after broader visual inspection flagged
-      two additional questionable pairs; review them before scoring.
+      The earlier inference job 14525004 is held after broader visual inspection;
+      the smaller candidate is prepared while Jad reviews the two exclusions.
 - [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The reported
       DF40 tests cover SimSwap, FOMM and Wav2Lip. Add methods only with
       documented provenance, sampling and comparable evaluation. A limited

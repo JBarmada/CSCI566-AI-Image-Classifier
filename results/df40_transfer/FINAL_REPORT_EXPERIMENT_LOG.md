@@ -534,3 +534,14 @@ Wav2Lip crop is incorrect. Job 14525004 was held while Jad reviews these cases;
 no candidate predictions have been produced. See the
 [candidate audit](new_data/FRESH_CANDIDATE_REVIEW.md).
 
+# November 23: conservative candidate v3 prepared
+
+Before model scoring, pairs `113_983` and `867_765` were removed from the
+previous 203-image candidate after visual quality review. The resulting v3
+candidate has 27 video pairs, 54 real images and 27 images for each of five
+fake methods (189 total); all CARC image hashes were verified. The earlier v2
+job remains held and no new results have been produced. Jad was shown both
+questionable pairs; review remains open. See the
+[candidate audit](new_data/FRESH_CANDIDATE_REVIEW.md) and
+[v3 protocol](new_data/FRESH_EVALUATION_PROTOCOL.md).
+

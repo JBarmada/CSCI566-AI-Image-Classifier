@@ -10,8 +10,13 @@ video crop at frame 433 shows a person in front of that portrait. In pair
 `867_765`, the Wav2Lip crop appears to depict a different person from the two
 selected real crops; a shared ID token alone does not establish its role or
 prove a mismatch. These issues require review, and the 203-image v2 manifest
-must not be treated as an approved test. The queued job 14525004 is held
-while Jad reviews the two pairs. No model scores have been produced.
+must not be treated as an approved test. The queued job 14525004 is held.
+A conservative v3 manifest excludes both full pairs before scoring: 27 pairs,
+54 real and 27 fake crops per method, or 189 images. The
+[v3 audit](fresh_candidate_review_v3/audit.json) and
+[manifest](fresh_candidate_review_v3/manifest.csv) preserve the decisions.
+Jad was shown the examples; review of the exclusions remains open. No model
+scores have been produced.
 The full contact sheets can be recreated locally with
 [render_all_candidate_reviews.py](render_all_candidate_reviews.py); the
 contact sheet images themselves are not committed.
@@ -56,6 +61,12 @@ All 203 transferred image hashes were checked there. The archive
 `fresh_candidate_review_v2.tar.gz` has SHA-256
 `05c9ac1d81148c71739eb414ccd44610f9892d28a73a13c9e7b515e71c5e6b4c`.
 Images are not committed to GitHub.
+
+The conservative v3 copy is separately stored at
+`/project2/yzhao010_1531/csci566-genimage/data/df40_fresh_candidate_review_v3_20261123/`.
+All 189 retained image hashes and the v3 manifest hash were checked on CARC.
+Its archive SHA-256 is
+`9c6e6ef357dde85df3ee62511b6afc4e913de75cf78cef8640f58db014e275fd`.
 
 ## Boundaries and next steps
 

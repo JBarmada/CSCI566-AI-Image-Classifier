@@ -10,9 +10,9 @@ import torch
 PROJECT = Path('/project2/yzhao010_1531/csci566-genimage')
 EVAL = PROJECT / 'results/df40_ff_eval_v1'
 ADAPT = PROJECT / 'results/df40_adaptation_v1'
-DATA = PROJECT / 'data/df40_fresh_candidate_review_v2_20261123'
+DATA = PROJECT / 'data/df40_fresh_candidate_review_v3_20261123'
 HEAD = ADAPT / 'adapt_results_14482534/head.pt'
-MANIFEST_HASH = '1ccc573a2add842afafc23dbed69ebea337e94a2c4893725e7e1b6a0d7c4b7b4'
+MANIFEST_HASH = '1f18b71d5d4ebd59ff184d1db06cb33f82f99f034274f6aaaa51b72724afae51'
 HEAD_HASH = '8d0fdf3893fc7362801e8801c4fae9fe87e60f069a43803af3aade394e079af2'
 BACKBONE_HASH = 'b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836'
 METHODS = ('real', 'simswap', 'fomm', 'wav2lip', 'inswap', 'pirender')
@@ -27,9 +27,9 @@ def load_rows():
         raise ValueError('Candidate manifest hash differs from frozen protocol')
     rows = ev.vit.read_csv(path)
     counts = {method: sum(r['method'] == method for r in rows) for method in METHODS}
-    if counts != {'real': 58, **{method: 29 for method in METHODS[1:]}}:
+    if counts != {'real': 54, **{method: 27 for method in METHODS[1:]}}:
         raise ValueError(f'Unexpected method counts: {counts}')
-    if len(rows) != 203 or len({r['sha256'] for r in rows}) != 203:
+    if len(rows) != 189 or len({r['sha256'] for r in rows}) != 189:
         raise ValueError('Duplicate or missing candidate rows')
     for row in rows:
         row['image_id'] = row['sha256']
@@ -81,7 +81,7 @@ def main():
         scores, report['models']['adapted'] = adapted(rows, smoke)
         predictions.extend({**r, 'model': 'vit', 'mode': 'face_adapted', 'prob_fake': p}
                            for r, p in zip(rows, scores))
-    if len(predictions) != 203 * 5:
+    if len(predictions) != 189 * 5:
         raise ValueError('Incomplete model predictions')
     ev.vit.write_csv(out / 'predictions.csv', predictions)
     report.update(status='passed', samples=len(rows), scores=len(predictions))

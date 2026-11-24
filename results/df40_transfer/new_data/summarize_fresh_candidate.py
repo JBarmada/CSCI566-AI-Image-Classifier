@@ -21,7 +21,7 @@ def summarize(rows, model, mode, method, threshold, name):
     subset = [r for r in rows if r['model'] == model and r['mode'] == mode]
     real = [float(r['prob_fake']) for r in subset if r['method'] == 'real']
     fake = [float(r['prob_fake']) for r in subset if r['method'] == method]
-    if len(real) != 58 or len(fake) != 29:
+    if len(real) != 54 or len(fake) != 27:
         raise ValueError('Incomplete predictions')
     fp = sum(score >= threshold for score in real)
     tp = sum(score >= threshold for score in fake)
@@ -35,7 +35,7 @@ def summarize(rows, model, mode, method, threshold, name):
 def main():
     folder = Path(sys.argv[1])
     acceptance = json.loads((folder / 'ACCEPTANCE.json').read_text())
-    if acceptance.get('status') != 'passed' or acceptance.get('scores') != 1015:
+    if acceptance.get('status') != 'passed' or acceptance.get('scores') != 945:
         raise ValueError('Inference checks did not pass')
     with (folder / 'predictions.csv').open(newline='', encoding='utf-8') as stream:
         rows = list(csv.DictReader(stream))

@@ -1,6 +1,7 @@
 # Exploratory five-method comparison: frozen protocol
 
-Prepared November 23, 2026 **before candidate scoring**. Owner: Jad. The
+Revised November 23, 2026 **before candidate scoring** after two more video
+pairs were quarantined in score-blind visual quality checks. Owner: Jad. The
 [data audit](FRESH_CANDIDATE_REVIEW.md) describes the duplicate cross-method
 pair, its exclusion, Jad's visual check and remaining unknowns. This is a
 source-ID-separated follow-up within FaceForensics++, not a person-independent
@@ -9,10 +10,10 @@ identities, mirror bytes and individual manipulation labels remain unverified.
 
 ## Sample and checkpoints
 
-Use exactly the 203 rows in `fresh_candidate_review_v2/manifest.csv`, SHA-256
-`1ccc573a2add842afafc23dbed69ebea337e94a2c4893725e7e1b6a0d7c4b7b4`.
-The set has 58 real crops and 29 crops each for SimSwap, FOMM, Wav2Lip,
-InSwapper and PIRender. It comprises 29 video-ID pairs; reusing the same real
+Use exactly the 189 rows in `fresh_candidate_review_v3/manifest.csv`, SHA-256
+`1f18b71d5d4ebd59ff184d1db06cb33f82f99f034274f6aaaa51b72724afae51`.
+The set has 54 real crops and 27 crops each for SimSwap, FOMM, Wav2Lip,
+InSwapper and PIRender. It comprises 27 video-ID pairs; reusing the same real
 images across methods does not make them separate observations. See the audit
 for the fixed score-blind exclusion; do not change samples using model scores.
 
@@ -30,9 +31,9 @@ selection or threshold fitting uses these images.
 
 ## Metrics and interpretation
 
-For each model and method, report real false positives out of 58, fake
-detections out of 29, false-positive rate, fake recall and AUROC comparing
-that method with the same 58 real crops. Report both the original 0.5 threshold
+For each model and method, report real false positives out of 54, fake
+detections out of 27, false-positive rate, fake recall and AUROC comparing
+that method with the same 54 real crops. Report both the original 0.5 threshold
 and the previously selected FF-validation threshold. The latter is 0.9990234375000001
 for CNN baseline, 0.7763671875000001 for CNN augmented, 0.615590274333954
 for ViT baseline, 0.5530025362968446 for ViT augmented, and

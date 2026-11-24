@@ -1,0 +1,14 @@
+{
+  "status": "unscored exploratory candidate",
+  "prior_manifest_sha256": "1ccc573a2add842afafc23dbed69ebea337e94a2c4893725e7e1b6a0d7c4b7b4",
+  "manifest_sha256": "1f18b71d5d4ebd59ff184d1db06cb33f82f99f034274f6aaaa51b72724afae51",
+  "excluded_pairs": {
+    "113_983": "Swap crops show a background portrait, not the selected real face.",
+    "867_765": "Wav2Lip crop appears unrelated to either selected real face; source role unverified."
+  },
+  "excluded_rows": 14,
+  "retained_pairs": 27,
+  "retained_rows": 189,
+  "unique_hashes": 189,
+  "limits": "Identity, source roles and mirror provenance remain unverified."
+}
