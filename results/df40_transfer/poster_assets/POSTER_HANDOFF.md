@@ -39,7 +39,10 @@ the holdouts share some real-image test data.
 The CNN shows the same direction on JPEG60 at its original 0.5 threshold:
 real false alarms 65.79% → 20.01%, fake detection 94.64% → 61.32%. See the
 [audited per-image analysis](JPEG_ERROR_ANALYSIS.md#does-the-cnn-show-the-same-direction).
-This is a whole-pipeline comparison, not an architecture-only result.
+An alternative [two-model figure](10_cnn_vit_jpeg_tradeoff.svg)
+([PNG](10_cnn_vit_jpeg_tradeoff.png)) places both tradeoffs side by side for
+Jad and team review. This is a whole-pipeline comparison, not an
+architecture-only result.
 
 ## Supporting figures to discuss
 

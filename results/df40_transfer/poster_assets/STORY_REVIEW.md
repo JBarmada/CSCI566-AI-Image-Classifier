@@ -92,6 +92,8 @@ diversity itself is a new discovery:
 - [Class-specific JPEG tradeoff](06_vit_jpeg_tradeoff.svg): shows the decrease
   in real false alarms alongside the decrease in detected fakes. A stronger
   candidate for the main poster than accuracy alone, subject to team review.
+- [CNN and ViT JPEG tradeoffs](10_cnn_vit_jpeg_tradeoff.svg): puts both
+  pipelines' class-specific changes side by side as an alternative lead panel.
 - [JPEG fake-detection change by holdout](09_jpeg_holdout_changes.svg): shows
   how the fake-recall decrease varies by generator; pair with the class-specific
   panel above because this breakdown does not display real false alarms.
