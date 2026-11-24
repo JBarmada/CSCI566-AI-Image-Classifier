@@ -33,7 +33,7 @@ def diversity():
            xlabel='Number of training generators (k)', ylabel='Accuracy (%)', ylim=(50, 100))
     ax.set_xticks([1, 2, 4, 7])
     ax.grid(axis='y', alpha=.2)
-    ax.legend(ncol=2, fontsize=9)
+    ax.legend(ncol=2, fontsize=9, handlelength=4.5, columnspacing=1.4)
     save(fig, '01_generator_diversity')
 
 
