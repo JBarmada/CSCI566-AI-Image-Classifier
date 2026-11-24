@@ -545,3 +545,11 @@ questionable pairs; review remains open. See the
 [candidate audit](new_data/FRESH_CANDIDATE_REVIEW.md) and
 [v3 protocol](new_data/FRESH_EVALUATION_PROTOCOL.md).
 
+# November 23: conservative inference queued
+
+Job 14529608 was submitted for inference on the 189-image v3 candidate after
+the score-blind visual exclusions; at the latest check it is pending due to
+priority. The earlier v2 job 14525004 remains held. No v3 model results are
+available. The user was shown the questionable examples and review remains
+open. See the [v3 protocol](new_data/FRESH_EVALUATION_PROTOCOL.md).
+

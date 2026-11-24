@@ -71,8 +71,9 @@ questions about the project.
       A [189-image candidate](results/df40_transfer/new_data/FRESH_CANDIDATE_REVIEW.md)
       is on CARC. Three pairs were excluded during pre-score quality review;
       provenance limitations and the frozen exploratory protocol are recorded.
-      The earlier inference job 14525004 is held after broader visual inspection;
-      the smaller candidate is prepared while Jad reviews the two exclusions.
+      The earlier inference job 14525004 remains held after visual inspection;
+      the conservative v3 inference job 14529608 is queued. Jad's review of
+      the two exclusions remains open; no new predictions are available.
 - [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The reported
       DF40 tests cover SimSwap, FOMM and Wav2Lip. Add methods only with
       documented provenance, sampling and comparable evaluation. A limited
