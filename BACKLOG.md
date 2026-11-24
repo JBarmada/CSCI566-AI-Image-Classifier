@@ -26,9 +26,12 @@ questions about the project.
       missed fakes, and show variation across held-out generators. See the
       [evidence and new draft figure](results/df40_transfer/poster_assets/STORY_REVIEW.md).
       [JPEG error breakdown](results/df40_transfer/poster_assets/JPEG_ERROR_ANALYSIS.md)
-      shows fewer real false alarms but also fewer detected fakes; investigate
-      a descriptive fixed-FPR ROC comparison is available; select an operating
-      threshold on separate validation data before deployment claims.
+      shows fewer real false alarms but also fewer detected fakes. A descriptive
+      fixed-FPR ROC comparison is available; select an operating threshold on
+      separate validation data before making deployment claims. The locally
+      available ADM validation predictions are for clean images, so they do not
+      establish a 10% false-positive rate on JPEG images. A JPEG-specific check
+      needs separate JPEG-processed validation predictions and a frozen rule.
 - [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel. (probably need more people) ** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.
