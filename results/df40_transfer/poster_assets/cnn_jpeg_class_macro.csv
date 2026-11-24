@@ -1,0 +1,5 @@
+mode,class,rate
+augmented,fake,0.6132440476190476
+augmented,real,0.20014880952380953
+baseline,fake,0.9464285714285714
+baseline,real,0.6578869047619047

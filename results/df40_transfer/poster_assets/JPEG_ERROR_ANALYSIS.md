@@ -57,3 +57,24 @@ compression, is the detector recognizing more fakes, making fewer false
 alarms, or both?** Here the gain reflects the latter at the cost of fake
 recall, under this dataset and threshold. It should not be generalized to all
 augmentations, datasets or operating points.
+
+## Does the CNN show the same direction?
+
+Yes, in this evaluated setting. At threshold 0.5, the equal-holdout mean CNN
+real false-positive rate fell from **65.79% to 20.01%**, while fake recall fell
+from **94.64% to 61.32%**. Both rates decreased in all eight holdout means.
+CNN accuracy increased from 64.43% to 70.65%, while mean AUROC changed from
+0.7888 to 0.7825. As with ViT, this describes separate trained models at one
+operating threshold and does not explain why scores changed.
+
+[The CNN analysis](analyze_cnn_jpeg_errors.py) reads the original P100
+per-image archive and replaces the four affected holdouts with audited V100
+reruns, as in the [CNN robustness audit](../cnn_robustness_v100/README.md).
+It checks paired baseline/augmented image IDs and labels, GPU selection, and
+agreement of each recomputed accuracy with the audited per-run table. The
+[per-run class counts](cnn_jpeg_class_rates.csv) and
+[macro table](cnn_jpeg_class_macro.csv) retain the results. The source archive
+SHA-256 values are `68272dbc46e1554cf72754cfcd09742da20ccc7d7a5d3507b9b7c4a478567108`
+(P100) and `a81516440c7c160b0d2eabb6142159cf4f1299cb025da398faae03e8587da2ff`
+(V100). Shared images and different model training/pretraining limit the
+interpretation; the comparison does not isolate architecture.

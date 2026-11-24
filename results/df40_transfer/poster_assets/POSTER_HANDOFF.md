@@ -36,6 +36,11 @@ recall decrease ranges from 17.02 to 41.55 percentage points. See the
 pair it with the main tradeoff panel if used. The results are descriptive;
 the holdouts share some real-image test data.
 
+The CNN shows the same direction on JPEG60 at its original 0.5 threshold:
+real false alarms 65.79% → 20.01%, fake detection 94.64% → 61.32%. See the
+[audited per-image analysis](JPEG_ERROR_ANALYSIS.md#does-the-cnn-show-the-same-direction).
+This is a whole-pipeline comparison, not an architecture-only result.
+
 ## Supporting figures to discuss
 
 1. **Where does performance vary?** The [generator heatmap](07_vit_generator_heatmap.svg)
