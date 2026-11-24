@@ -34,6 +34,10 @@ diversity itself is a new discovery:
   Rows compare separately trained baseline and augmented models. The plotted
   differences are descriptive, not independent confidence intervals. Consider
   a simplified single-panel JPEG version if this is too dense for the poster.
+- [Simplified ViT JPEG panel](05_vit_jpeg_accuracy_auroc.svg): a poster-sized
+  candidate for the threshold-versus-ranking question. It shows two different
+  metrics on the same 0–100 scale; the vertical axis starts at 50. The lines
+  distinguish metrics, not uncertainty or interpolation over training.
 - [Existing real-image error plot](03_real_image_errors.svg): include fake
   recall alongside it and prominently label the different datasets. Do not
   infer camera effects or image processing as the cause from this comparison.
