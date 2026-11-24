@@ -94,7 +94,13 @@ exactly, and the 72 new clean/JPEG/resize evaluations passed an independent
 audit. The original P100 results are preserved. The validated CNN baseline
 mean accuracy was 83.30% clean, 64.43% JPEG, and 50.20% resize; the augmented
 CNN achieved 72.24%, 70.65%, and 68.85%, respectively. These are equally
-weighted averages across eight holdouts after averaging three repeats. GPU
+weighted averages across eight holdouts after averaging three repeats. The CNN
+shows the same JPEG operating-point tradeoff as the ViT: at threshold 0.5,
+real false positives fell from 65.79% to 20.01% while fake recall fell from
+94.64% to 61.32%. Both class-specific rates fell in all eight holdout means
+for each pipeline. These descriptive results compare separately trained
+models and do not isolate architecture or establish a cause. See the
+[class-specific analysis](poster_assets/JPEG_ERROR_ANALYSIS.md). GPU
 differences explain the observed replay mismatch in the tested setup; see
 [the audit](cnn_robustness_v100/README.md).
 

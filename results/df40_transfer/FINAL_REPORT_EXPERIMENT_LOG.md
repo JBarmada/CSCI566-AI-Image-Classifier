@@ -553,3 +553,15 @@ priority. The earlier v2 job 14525004 remains held. No v3 model results are
 available. The user was shown the questionable examples and review remains
 open. See the [v3 protocol](new_data/FRESH_EVALUATION_PROTOCOL.md).
 
+# November 23: CNN JPEG class-specific analysis
+
+Recomputed class-specific outcomes from the saved, audited CNN JPEG60
+predictions, using V100 results for the four rerun holdouts and P100 results
+for the other four. No inference or training was run. At threshold 0.5, mean
+real-image false-positive rate fell from 65.79% to 20.01%, and fake recall
+fell from 94.64% to 61.32%. Each rate decreased in all eight holdout means.
+The script checks paired IDs and labels and reproduces each audited per-run
+accuracy. Results, archive hashes, aggregation and limitations are in the
+[JPEG analysis](poster_assets/JPEG_ERROR_ANALYSIS.md#does-the-cnn-show-the-same-direction).
+The result is descriptive and does not isolate architecture or establish cause.
+
