@@ -19,6 +19,11 @@ questions about the project.
       CNN–ViT comparison, JPEG/resize robustness and transfer to manipulated
       faces. A [draft story and three figures](results/df40_transfer/poster_assets/README.md)
       are ready for team review; choose which exploratory results fit the poster.
+- [ ] **Review the three linked research questions.** **Owner: Jad.** Compare
+      threshold accuracy with AUROC, examine real-image false positives alongside
+      missed fakes, and show variation across held-out generators. See the
+      [evidence and new draft figure](results/df40_transfer/poster_assets/STORY_REVIEW.md).
+      Locate per-image robustness scores before claiming a mechanism.
 - [ ] **Create the poster and prepare the demo.** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.
@@ -55,17 +60,24 @@ questions about the project.
       Keep any calibration data separate from that test. [Recommendation and
       pilot protocol](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md) are ready
       for team review; no fresh test has yet been assembled.
+      Working decision: prepare one if provenance checks pass; an initial
+      [candidate-group inventory](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md)
+      finds possible unused video IDs, but cannot verify person independence.
 - [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The reported
       DF40 tests cover SimSwap, FOMM and Wav2Lip. Add methods only with
       documented provenance, sampling and comparable evaluation. A limited
       extension is [recommended](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md)
       if access, verification and time allow.
+      Working decision: seek one additional swap and reenactment method; their
+      availability and provenance still need verification.
 - [ ] **Strengthen adaptation comparisons if useful.** **Owner: Jad.** More independent data
       splits and a fresh test would help assess the exploratory adversarial and
       contrastive results; their present small differences do not establish a
       reliable improvement. See the [separate face and generator-objective
       plans](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md) and [paired
       review of existing runs](results/df40_transfer/adaptation_paired_review/README.md).
+      Working decision: compare the frozen face-adapted head on the fresh shared
+      test first; defer new training until the test and protocol are protected.
 - [ ] **Coordinate the frontier-model comparison with its owner.** Include the
       teammate's verified results if ready; that work remains theirs.
 

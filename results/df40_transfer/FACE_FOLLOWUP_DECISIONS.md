@@ -2,6 +2,34 @@
 
 **Owner: Jad. Recommendations prepared for team review; no new dataset was built and no new models were trained for this plan.**
 
+## Current decision and audit (November 23)
+
+Proceed with preparing a fresh source-group test, subject to a provenance audit;
+prioritize the existing frozen face-adapted head against the baselines on the
+same manifest. Add one swap and one reenactment method only if a traceable
+archive is actually accessible. These are working decisions for Jad and team
+review; no fresh test, extra-method evaluation or new adaptation result is
+claimed here.
+
+The [metadata inventory](new_data/unused_group_inventory.json), reproducible
+with [audit_unused_groups.py](new_data/audit_unused_groups.py), found 484
+previously recorded source IDs across the existing FF test and face-adaptation
+plans. After excluding those parsed IDs, the upstream FF *training metadata*
+still includes 375 candidate real groups, 381 SimSwap groups, 249 FOMM groups
+and 374 Wav2Lip groups. These are candidate counts, not a verified dataset.
+Filename parsing cannot establish all source/target relationships, person
+identity or cross-dataset separation; Wav2Lip filenames have a different form.
+The upstream train split is not a new independent external dataset. Before
+freezing a sample, verify source roles, archive membership and hash-level
+overlap, and document the remaining unknowns. Do not use test scores to select
+the test set or thresholds.
+
+The [official DF40 list](https://github.com/YZY-stack/DF40) identifies
+InSwapper and PIRender as plausible additional methods, but a listing does not
+verify a downloadable archive or its provenance. A web check of two previously
+used mirror pages returned access errors during this review. Do not treat
+either method as available until its actual files and terms are checked.
+
 ## 1. Fresh face test: recommend yes, but protect the deadline
 
 A fresh test would improve the study because the FaceForensics++ test has

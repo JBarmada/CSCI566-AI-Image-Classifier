@@ -1,5 +1,10 @@
 # Poster story and figure selection
 
+**Update:** The [new story review](STORY_REVIEW.md) develops three more
+specific research questions and a new accuracy/AUROC figure. The older story
+and figures below remain available for comparison and have not been approved
+as the final poster.
+
 **Owner: Jad. Status: recommended for team review, not a finished poster.**
 
 ## One-sentence story

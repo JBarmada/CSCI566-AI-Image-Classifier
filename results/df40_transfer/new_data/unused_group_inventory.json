@@ -1,0 +1,42 @@
+{
+  "known_used_source_ids": 484,
+  "methods": {
+    "simswap": {
+      "real": {
+        "groups": 719,
+        "no_known_used_parsed_ids": 375,
+        "no_parsed_ids": 0
+      },
+      "fake": {
+        "groups": 988,
+        "no_known_used_parsed_ids": 381,
+        "no_parsed_ids": 0
+      }
+    },
+    "fomm": {
+      "real": {
+        "groups": 719,
+        "no_known_used_parsed_ids": 375,
+        "no_parsed_ids": 0
+      },
+      "fake": {
+        "groups": 719,
+        "no_known_used_parsed_ids": 249,
+        "no_parsed_ids": 0
+      }
+    },
+    "wav2lip": {
+      "real": {
+        "groups": 719,
+        "no_known_used_parsed_ids": 375,
+        "no_parsed_ids": 0
+      },
+      "fake": {
+        "groups": 715,
+        "no_known_used_parsed_ids": 374,
+        "no_parsed_ids": 0
+      }
+    }
+  },
+  "limitation": "Filename IDs are incomplete proxies; identity and source roles are unverified."
+}
