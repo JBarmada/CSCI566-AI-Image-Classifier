@@ -1,13 +1,16 @@
 # Poster story and figure selection
 
-**Update:** The [new story review](STORY_REVIEW.md) develops three more
-specific research questions and a new accuracy/AUROC figure. The older story
-and figures below remain available for comparison and have not been approved
-as the final poster.
+**Current direction:** Jad selected the JPEG tradeoff as the poster lead:
+augmentation reduced false alarms on real images but also reduced fake
+detection at the original threshold. See the [story review](STORY_REVIEW.md),
+[tradeoff figure](06_vit_jpeg_tradeoff.svg), and
+[supporting analysis](JPEG_ERROR_ANALYSIS.md). The final layout, wording and
+supporting figures remain open for team review. The older story and figures
+below are retained for comparison.
 
 **Owner: Jad. Status: recommended for team review, not a finished poster.**
 
-## One-sentence story
+## Earlier one-sentence story, retained for comparison
 
 At a fixed image budget, training on more generator families was associated
 with better detection of held-out generators; augmentation improved robustness
@@ -20,7 +23,7 @@ comparison cannot isolate architecture. All k=7 results average repeats within
 each of eight held-out generators and then weight the holdouts equally. The
 same test images recur; do not interpret repeated rows as independent samples.
 
-## Recommended primary figures
+## Earlier figure candidates
 
 1. **Generator diversity:** [PNG](01_generator_diversity.png) · [SVG](01_generator_diversity.svg). Clean accuracy versus the number of training generators, with baseline and augmented CNN and ViT. This answers the project's main question. Sources: [CNN summary](../clean_cnn_audit/equal_weight_holdout_summary.csv) and [ViT summary](../../vit_benchmark/summary/macro_across_holdouts.csv). The y-axis begins at 50%; label it clearly and avoid implying uncertainty intervals.
 2. **Robustness:** [PNG](02_robustness.png) · [SVG](02_robustness.svg). Clean, JPEG60 and resize accuracy at k=7, comparing baseline and augmented pipelines. Clean accuracy is lower with augmentation, while JPEG and resize accuracy are higher in these averages. Source: [audited V100/P100 comparison](../cnn_robustness_v100/paired_macro.csv).

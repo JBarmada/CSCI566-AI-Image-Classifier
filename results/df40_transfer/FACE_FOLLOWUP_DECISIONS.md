@@ -4,11 +4,14 @@
 
 ## Current decision and audit (November 23)
 
-**Update:** A 203-image, 29-pair candidate for five methods has now been
-assembled and transferred to CARC, with no test scoring. One full pair was
-excluded after SimSwap/InSwapper image bytes matched. See the
-[candidate review](new_data/FRESH_CANDIDATE_REVIEW.md) for the exact checks,
-Jad's visual review and unresolved provenance and identity limitations.
+**Update:** The current candidate contains 189 images from 27 source-video
+pairs, covering five methods. Three pairs were excluded during score-blind
+quality review: one had matching SimSwap/InSwapper image bytes and two raised
+visual or source-role concerns. The frozen comparison is queued on CARC; it
+has not yet produced results. Jad's review of the latter two exclusions is
+still open. See the [candidate review](new_data/FRESH_CANDIDATE_REVIEW.md) and
+[frozen protocol](new_data/FRESH_EVALUATION_PROTOCOL.md) for the checks and
+remaining provenance and identity limitations.
 
 Proceed with preparing a fresh source-group test, subject to a provenance audit;
 prioritize the existing frozen face-adapted head against the baselines on the
