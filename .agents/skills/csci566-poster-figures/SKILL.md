@@ -30,3 +30,5 @@ Design references: [NIH poster guide](https://www.training.nih.gov/creating-a-sc
 [CMU poster design](https://guides.library.cmu.edu/scienceposters/design),
 [LSU accessibility guidance](https://libguides.lsuhsc.edu/posterprinting/Design).
 Treat their dimensions and font recommendations as guidance, not course rules.
+
+For a before-and-after comparison, Jad prefers a direct difference chart to a line connecting two points. Reserve line charts for trends when possible; include the original values and label the difference units.

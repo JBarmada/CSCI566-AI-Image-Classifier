@@ -2,6 +2,39 @@
 
 **Draft for Jad and team review, November 23, 2026.**
 
+## Three directions for the main story
+
+**A. A robustness gain with a hidden cost.** On JPEG60 images, the augmented
+ViT's accuracy improved at threshold 0.5 because its false alarms fell more
+than its fake recall did. Mean AUROC barely changed. This direction connects
+the measured accuracy, decision threshold, class-specific errors and model
+ranking. The same-test fixed-FPR analysis is descriptive, not calibration.
+[Tradeoff figure](06_vit_jpeg_tradeoff.svg) ·
+[evidence](JPEG_ERROR_ANALYSIS.md).
+
+**B. A detector can appear to find nearly every fake by flagging nearly
+everything.** On the exploratory DF40 SimSwap sample, baseline CNN detected
+199/200 fakes but falsely flagged 99/100 real crops at threshold 0.5. Its
+200/300 correct predictions equal the accuracy of an always-fake classifier on
+that class-imbalanced sample. Baseline ViT similarly flagged 90/100 reals.
+The different DeepFakeFace photo sample has different results, but data source,
+processing and manipulation also differ, so the comparison does not identify
+the cause. [Face error figure](08_face_error_tradeoff.svg) ·
+[video metrics](../shared_results_v1/metrics.csv) ·
+[photo metrics](../still_face_v1/metrics.csv).
+
+**C. Diversity helps on average, but results depend on the held-out
+generator.** At a fixed image budget, the baseline ViT average improves from
+k=1 to k=7, yet seven of eight generator rows contain at least one decline
+between consecutive k settings. Different training subsets are used across
+k; this is variation in the observations, not proof that adding a particular
+generator harms performance. The broader claim that generator diversity helps
+has prior work. [Generator heatmap](07_vit_generator_heatmap.svg) ·
+[source table](../../vit_benchmark/summary/by_holdout_k.csv).
+
+These directions can be combined if the poster has space, but each needs a
+clear role and caveats. Jad and the team have not chosen the final layout.
+
 ## Research question
 
 When an image detector faces unfamiliar generators, image processing and
@@ -52,6 +85,9 @@ diversity itself is a new discovery:
 - [Existing real-image error plot](03_real_image_errors.svg): include fake
   recall alongside it and prominently label the different datasets. Do not
   infer camera effects or image processing as the cause from this comparison.
+- [Face false alarms and fake detections](08_face_error_tradeoff.svg): pairs
+  both error types for baseline CNN and ViT on two small face samples. The
+  dataset and manipulation differences must stay visible in the caption.
 - The CNN and ViT have different pretraining and training procedures, so the
   comparison does not isolate architecture. Face identity overlap and the fake
   mirror's byte equivalence remain unverified.
