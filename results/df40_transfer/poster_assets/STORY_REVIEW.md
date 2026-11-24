@@ -110,6 +110,12 @@ diversity finding is a replication/context, not a claim of novelty ([paper](http
 Grommelt and colleagues show that JPEG and size biases can affect GenImage
 detectors ([paper](https://arxiv.org/abs/2403.17608)); this motivates, but does
 not establish, an explanation for our real-face errors.
+Dolhansky and colleagues' 2019 DFDC preview also emphasize the importance of
+false positives and differences between benchmark and real-world class balance
+([paper](https://doi.org/10.48550/arXiv.1910.08854)). Our contribution is the
+specific measured tradeoff in these experiments, not the general observation
+that false positives or class balance matter. Scite returned restricted full
+text for some other search results; no claims here rely on those papers.
 
 For the actual poster, use direct labels and short, descriptive figure titles;
 ensure figure text remains readable at printed size and distinguish series by
