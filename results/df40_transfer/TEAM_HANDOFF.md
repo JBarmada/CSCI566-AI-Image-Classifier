@@ -9,6 +9,8 @@
   methods, decisions, validation and errors.
 - [All research results](README.md): links to face transfer, clean comparison,
   robustness, zero-shot vision-language results and objective comparisons.
+- [Frontier-model dataset handoff](FRONTIER_DATA_HANDOFF.md): candidate face
+  sets, matching to existing predictions, prompt setup and limitations.
 
 ## What is complete
 

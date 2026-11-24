@@ -98,7 +98,10 @@ questions about the project.
       Working decision: compare the frozen face-adapted head on the fresh shared
       test first; defer new training until the test and protocol are protected.
 - [ ] **Coordinate the frontier-model comparison with its owner.** Include the
-      teammate's verified results if ready; that work remains theirs.
+      teammate's verified results if ready; that work remains theirs. The
+      [dataset handoff](results/df40_transfer/FRONTIER_DATA_HANDOFF.md) describes
+      the still-photo pilot and optional five-method candidate, shared-image
+      comparison, prompting choices, access and limitations.
 
 ## Completed and available
 
