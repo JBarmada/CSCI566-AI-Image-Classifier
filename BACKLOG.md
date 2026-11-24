@@ -56,10 +56,10 @@ questions about the project.
       and [follow-up decisions](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md).
       Person-level independence is unverified and the adapted head used a
       previously inspected test set.
-- [ ] **Check citations and reproducibility.** Verify references, dataset
+- [ ] **Check citations and reproducibility.** **Owner: Saisha.** Verify references, dataset
       provenance, manifests, model settings, and team access to GitHub, CARC and
       the shared data. Confirm all reported figures can be regenerated.
-- [ ] **Confirm course submission requirements.** Check the latest Piazza and
+- [ ] **Confirm course submission requirements.** **Owner: Saisha.** Check the latest Piazza and
       Gradescope instructions, report format, poster logistics and peer
       evaluation; assign owners and confirm deadlines with the team.
 
