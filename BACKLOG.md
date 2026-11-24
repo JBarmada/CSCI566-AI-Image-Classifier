@@ -24,7 +24,7 @@ questions about the project.
       missed fakes, and show variation across held-out generators. See the
       [evidence and new draft figure](results/df40_transfer/poster_assets/STORY_REVIEW.md).
       Locate per-image robustness scores before claiming a mechanism.
-- [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel.**Explain the question, methods,
+- [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel.** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.
 - [ ] **Practice as a team.** Make sure each member can explain the models,
