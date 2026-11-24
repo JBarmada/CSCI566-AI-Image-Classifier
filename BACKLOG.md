@@ -19,6 +19,8 @@ questions about the project.
       CNN–ViT comparison, JPEG/resize robustness and transfer to manipulated
       faces. A [draft story and three figures](results/df40_transfer/poster_assets/README.md)
       are ready for team review; choose which exploratory results fit the poster.
+      Jad selected the JPEG false-alarm versus missed-fake tradeoff as the lead;
+      decide with the team which supporting figures fit.
 - [ ] **Review the three linked research questions.** **Owner: Jad.** Compare
       threshold accuracy with AUROC, examine real-image false positives alongside
       missed fakes, and show variation across held-out generators. See the

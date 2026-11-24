@@ -1,6 +1,16 @@
 # Poster story: evidence for discussion
 
-**Draft for Jad and team review, November 23, 2026.**
+**Jad selected direction A as the lead on November 23, 2026.** Directions B
+and C remain supporting candidates; the poster's layout and final wording are
+still for team review.
+
+## Selected lead
+
+On compressed images, an augmented ViT achieved higher accuracy by flagging
+fewer real images as fake, but it also missed more fakes. The tradeoff is
+visible at the existing 0.5 threshold; mean AUROC and test-derived fixed-FPR
+results show why that single threshold does not describe the whole detector.
+The result is specific to the evaluated models, JPEG60 images and benchmark.
 
 ## Three directions for the main story
 
@@ -32,8 +42,8 @@ generator harms performance. The broader claim that generator diversity helps
 has prior work. [Generator heatmap](07_vit_generator_heatmap.svg) ·
 [source table](../../vit_benchmark/summary/by_holdout_k.csv).
 
-These directions can be combined if the poster has space, but each needs a
-clear role and caveats. Jad and the team have not chosen the final layout.
+Jad selected A as the lead. B and C can support the story if the poster has
+space; each needs a clear role and caveats. The team has not chosen the layout.
 
 ## Research question
 
