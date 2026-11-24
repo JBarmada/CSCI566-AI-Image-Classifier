@@ -565,3 +565,21 @@ accuracy. Results, archive hashes, aggregation and limitations are in the
 [JPEG analysis](poster_assets/JPEG_ERROR_ANALYSIS.md#does-the-cnn-show-the-same-direction).
 The result is descriptive and does not isolate architecture or establish cause.
 
+# November 23: CPU replay and preliminary face evaluation
+
+At Jad's request, CPU job 14549744 replayed saved reference predictions while
+the V100 candidate job 14529608 remained queued. The 64-image CNN reference
+maximum score differences were 0.005778 baseline and 0.003015 augmented,
+above the 0.001 acceptance tolerance. The 16-image ViT reference differences
+were 0.0006933 and 0.0004745, above the 0.00001 tolerance. None of these
+reference predictions changed its decision at threshold 0.5, but the small
+reference subsets do not establish full-test or other-threshold agreement.
+CPU uses full precision; the original CNN GPU replay uses mixed precision.
+These observations do not establish the precise source of each difference.
+The [CPU audit](new_data/cpu_reference_results_v1/README.md) contains the
+per-image results. Separate CPU job 14550254 completed preliminary inference
+on the 189-image candidate and produced 945 scores. All rows, hashes, labels,
+methods and finite values were checked. The [candidate results](new_data/cpu_candidate_results_v1/README.md)
+are explicitly marked as failing the reference gate; comparison to the queued
+V100 candidate scores remains outstanding.
+

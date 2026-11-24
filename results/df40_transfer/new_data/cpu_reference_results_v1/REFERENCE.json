@@ -1,0 +1,39 @@
+{
+  "device": "cpu",
+  "training": false,
+  "torch": "2.7.1+cu118",
+  "python": "3.11.17",
+  "models": {
+    "cnn_baseline": {
+      "max_abs_difference": 0.005778133869171143,
+      "tolerance": 0.001,
+      "passed": false,
+      "images": 64,
+      "checkpoint_sha256": "582b0d7a9a61b22e16631850811b7692a6b3343282a26f973058c802aef07b56"
+    },
+    "cnn_augmented": {
+      "max_abs_difference": 0.00301516056060791,
+      "tolerance": 0.001,
+      "passed": false,
+      "images": 64,
+      "checkpoint_sha256": "1159af6ca7d46182cade0337f26b9109dba6205fd2d75489661ab38c07808d8e"
+    },
+    "vit_baseline": {
+      "max_abs_difference": 0.0006932572743224563,
+      "tolerance": 1e-05,
+      "passed": false,
+      "images": 16,
+      "checkpoint_sha256": "f56ac231eb283b5bccbbe92397bb4c14b2998aeaabf3402e2d465c1ed75057dc"
+    },
+    "vit_augmented": {
+      "max_abs_difference": 0.0004745168884277007,
+      "tolerance": 1e-05,
+      "passed": false,
+      "images": 16,
+      "checkpoint_sha256": "e0acb23028b99649e857910fac0768e6e7acfd6e07bf754ef3bb511705392864"
+    }
+  },
+  "backbone_sha256": "b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836",
+  "elapsed_seconds": 54.70332800305914,
+  "status": "mismatch"
+}

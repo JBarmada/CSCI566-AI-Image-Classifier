@@ -1,0 +1,9 @@
+{
+  "status": "exploratory_cpu_reference_mismatch",
+  "training": false,
+  "manifest_sha256": "1f18b71d5d4ebd59ff184d1db06cb33f82f99f034274f6aaaa51b72724afae51",
+  "samples": 189,
+  "scores": 945,
+  "reference_report": "/project2/yzhao010_1531/csci566-genimage/analysis/df40_cpu_reference_20261123_1/results_v1/REFERENCE.json",
+  "reference_sha256": "3f7ff81183e01c3dc61897429806f625ac96ead6173952ed06436a942c53036f"
+}
