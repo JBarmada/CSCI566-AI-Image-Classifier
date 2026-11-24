@@ -3,6 +3,19 @@
 **Status: candidate for team review, not a validated independent test. No
 model scores have been computed on these images.**
 
+**Further visual review:** The full candidate contact sheets flagged two more
+cases before inference. In pair `113_983`, the selected SimSwap and InSwapper
+crops appear to show a portrait in the background; the corresponding real
+video crop at frame 433 shows a person in front of that portrait. In pair
+`867_765`, the Wav2Lip crop appears to depict a different person from the two
+selected real crops; a shared ID token alone does not establish its role or
+prove a mismatch. These issues require review, and the 203-image v2 manifest
+must not be treated as an approved test. The queued job 14525004 is held
+while Jad reviews the two pairs. No model scores have been produced.
+The full contact sheets can be recreated locally with
+[render_all_candidate_reviews.py](render_all_candidate_reviews.py); the
+contact sheet images themselves are not committed.
+
 ## Selection and contents
 
 On November 23, a deterministic, score-blind procedure selected 30 disjoint

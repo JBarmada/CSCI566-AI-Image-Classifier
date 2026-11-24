@@ -524,3 +524,13 @@ one favored baseline and one tied. These points are test-derived, not frozen
 validation thresholds or proof of a reliable improvement; see the
 [method and per-run table](poster_assets/JPEG_ERROR_ANALYSIS.md).
 
+# November 23: candidate quality hold
+
+Broader visual inspection of the 203-image candidate flagged two additional
+pairs: `113_983` contains selected swap crops of what appears to be a portrait
+in the background, and `867_765` contains a Wav2Lip crop whose visible person
+does not match either selected real crop. A shared ID token does not prove the
+Wav2Lip crop is incorrect. Job 14525004 was held while Jad reviews these cases;
+no candidate predictions have been produced. See the
+[candidate audit](new_data/FRESH_CANDIDATE_REVIEW.md).
+
