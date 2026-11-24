@@ -12,8 +12,11 @@ The project connects three findings rather than claiming that generator
 diversity itself is a new discovery:
 
 1. More training generators are associated with higher clean held-out-generator
-   accuracy at the fixed image budget, but the heatmap in the submitted
-   midterm shows generator-specific exceptions.
+   accuracy at the fixed image budget, but results vary by held-out generator.
+   In baseline ViT means, seven of eight rows have at least one decrease
+   between consecutive k settings. Different training subsets are used at
+   different k, so these dips do not establish the effect of adding a specific
+   generator. See the [recreated heatmap](07_vit_generator_heatmap.svg).
 2. Augmentation changes clean, JPEG and resize results differently. For JPEG,
    ViT accuracy increases from 69.24% to 75.99%, while mean AUROC changes from
    0.84987 to 0.84941. The [paired error analysis](JPEG_ERROR_ANALYSIS.md)
@@ -31,6 +34,9 @@ diversity itself is a new discovery:
 - Revisit the submitted midterm's per-generator heatmap and processing examples;
   they show heterogeneity and the intervention more clearly than a macro-only
   plot. Confirm image rights and legibility before reuse.
+- [Recreated midterm-style heatmap](07_vit_generator_heatmap.svg): baseline
+  ViT clean accuracy, averaging three repeats per cell; fixed image budget.
+  Its numerical labels and color scale show where the macro trend varies.
 - [Accuracy and AUROC changes](04_accuracy_auroc_tradeoffs.svg): each dot is
   one held-out generator; the diamond weights the eight holdouts equally.
   Rows compare separately trained baseline and augmented models. The plotted
