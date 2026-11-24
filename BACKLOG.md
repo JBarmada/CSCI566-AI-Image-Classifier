@@ -68,8 +68,9 @@ questions about the project.
       documented provenance, sampling and comparable evaluation. A limited
       extension is [recommended](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md)
       if access, verification and time allow.
-      Working decision: seek one additional swap and reenactment method; their
-      availability and provenance still need verification.
+      Working decision: InSwapper and PIRender archive indexes match their
+      metadata copies. Check image bytes, source overlap, visible manipulations
+      and access terms before constructing the shared evaluation.
 - [ ] **Strengthen adaptation comparisons if useful.** **Owner: Jad.** More independent data
       splits and a fresh test would help assess the exploratory adversarial and
       contrastive results; their present small differences do not establish a

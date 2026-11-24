@@ -1,0 +1,26 @@
+{
+  "inswap": {
+    "archive_url": "https://huggingface.co/datasets/ManhQuangAI/DF40_train/resolve/ef0577c67506afea6df7a8bb46dd4ed4a8e138a0/inswap.zip?download=true",
+    "archive_bytes": 2502440755,
+    "metadata_url": "https://huggingface.co/datasets/sinister007/df40_dataset/resolve/a203e9b880d69339178f1a6aacd937b07a8ef199/dataset_json/inswap_ff.json",
+    "metadata_train_frames": 27988,
+    "archive_png_frames": 27988,
+    "metadata_frames_found_in_archive": 27988,
+    "metadata_frames_missing_from_archive": 0,
+    "extra_archive_png_frames": 0,
+    "metadata_groups": 883,
+    "bytes_identical_to_official": null
+  },
+  "pirender": {
+    "archive_url": "https://huggingface.co/datasets/ManhQuangAI/DF40_train/resolve/ef0577c67506afea6df7a8bb46dd4ed4a8e138a0/pirender.zip?download=true",
+    "archive_bytes": 1763272422,
+    "metadata_url": "https://huggingface.co/datasets/sinister007/df40_dataset/resolve/a203e9b880d69339178f1a6aacd937b07a8ef199/dataset_json/pirender_ff.json",
+    "metadata_train_frames": 22914,
+    "archive_png_frames": 22914,
+    "metadata_frames_found_in_archive": 22914,
+    "metadata_frames_missing_from_archive": 0,
+    "extra_archive_png_frames": 0,
+    "metadata_groups": 717,
+    "bytes_identical_to_official": null
+  }
+}

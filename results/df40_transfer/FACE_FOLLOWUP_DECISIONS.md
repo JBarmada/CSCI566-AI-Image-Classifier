@@ -25,10 +25,17 @@ overlap, and document the remaining unknowns. Do not use test scores to select
 the test set or thresholds.
 
 The [official DF40 list](https://github.com/YZY-stack/DF40) identifies
-InSwapper and PIRender as plausible additional methods, but a listing does not
-verify a downloadable archive or its provenance. A web check of two previously
-used mirror pages returned access errors during this review. Do not treat
-either method as available until its actual files and terms are checked.
+InSwapper and PIRender as plausible additional methods. A subsequent direct
+API and ZIP-index check found public pinned archives for both. Against a
+separately hosted copy of DF40 metadata, the archive paths match all 27,988
+InSwapper frames (883 groups) and all 22,914 PIRender frames (717 groups),
+with no extra PNG paths in either archive. See the reproducible
+[audit](new_data/extra_method_archive_audit.json) and
+[script](new_data/audit_extra_methods.py). This establishes matching path
+inventories, not official-byte identity, license permission, visible successful
+manipulation or source/person independence. Image-level checks, terms and the
+shared test protocol remain before inclusion. These are upstream training-split
+groups, not proof of independent external evaluation.
 
 ## 1. Fresh face test: recommend yes, but protect the deadline
 
