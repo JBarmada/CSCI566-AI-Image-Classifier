@@ -44,12 +44,12 @@ questions about the project.
 
 - [ ] **Finish the report draft.** Integrate the audited robustness results and
       the team's verified contributions.
-- [ ] **Verify every figure, table and number** against saved results, including
+- [ ] **Verify every figure, table and number** **Owner: Rachel.** against saved results, including
       sample counts, decision thresholds and aggregation methods.
 - [ ] **Explain the model comparison fairly.** CNN and ViT differ in pretraining
       and training as well as architecture. Repeated test images and dataset
       repeats are not independent samples.
-- [ ] **Explain errors on real images.** Report what our processing tests showed;
+- [ ] **Explain errors on real images.** **Owner: Rachel.** Report what our processing tests showed;
       treat camera, source and other differences as hypotheses unless directly
       supported by suitable metadata and controls.
 - [x] **Document face-data limitations.** **Owner: Jad.** See the report draft
