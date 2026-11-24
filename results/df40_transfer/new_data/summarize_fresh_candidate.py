@@ -4,14 +4,17 @@ import json
 from pathlib import Path
 import sys
 
-from sklearn.metrics import roc_auc_score
-
 THRESHOLDS = {('cnn', 'baseline'): 0.9990234375000001,
               ('cnn', 'augmented'): 0.7763671875000001,
               ('vit', 'baseline'): 0.615590274333954,
               ('vit', 'augmented'): 0.5530025362968446,
               ('vit', 'face_adapted'): 0.5676835775375367}
 METHODS = ('simswap', 'fomm', 'wav2lip', 'inswap', 'pirender')
+
+
+def auc(real, fake):
+    wins = sum((f > r) + .5 * (f == r) for f in fake for r in real)
+    return wins / (len(real) * len(fake))
 
 
 def summarize(rows, model, mode, method, threshold, name):
@@ -26,7 +29,7 @@ def summarize(rows, model, mode, method, threshold, name):
             'threshold': threshold, 'real_fp': fp, 'real_n': len(real), 'fake_tp': tp,
             'fake_n': len(fake), 'real_fpr': fp / len(real), 'fake_recall': tp / len(fake),
             'balanced_accuracy': (1 - fp / len(real) + tp / len(fake)) / 2,
-            'auroc': float(roc_auc_score([0] * len(real) + [1] * len(fake), real + fake))}
+            'auroc': auc(real, fake)}
 
 
 def main():

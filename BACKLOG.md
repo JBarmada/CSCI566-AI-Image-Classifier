@@ -25,7 +25,8 @@ questions about the project.
       [evidence and new draft figure](results/df40_transfer/poster_assets/STORY_REVIEW.md).
       [JPEG error breakdown](results/df40_transfer/poster_assets/JPEG_ERROR_ANALYSIS.md)
       shows fewer real false alarms but also fewer detected fakes; investigate
-      fixed-FPR performance using separate validation before causal claims.
+      a descriptive fixed-FPR ROC comparison is available; select an operating
+      threshold on separate validation data before deployment claims.
 - [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel.** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.

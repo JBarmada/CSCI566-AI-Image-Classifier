@@ -515,3 +515,12 @@ check it is pending due to priority; no new prediction results are available.
 The candidate contains 203 images and remains subject to the limitations in
 [the data audit](new_data/FRESH_CANDIDATE_REVIEW.md).
 
+# November 23: descriptive fixed-FPR JPEG comparison
+
+Using each test ROC curve itself, the best observed fake recall at or below
+10% real-image FPR averaged 58.78% for baseline and 60.49% for augmented ViT
+across eight equally weighted holdouts. Six holdout means favored augmentation,
+one favored baseline and one tied. These points are test-derived, not frozen
+validation thresholds or proof of a reliable improvement; see the
+[method and per-run table](poster_assets/JPEG_ERROR_ANALYSIS.md).
+
