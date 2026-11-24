@@ -1,0 +1,7 @@
+{
+  "plan_sha256": "2eb6b56992d49817da58f7a277afbfe6a7a87f16332d03505bfb4ad1a70912f5",
+  "total": 210,
+  "distinct_hashes": 209,
+  "prior_manifest_hash_overlaps": [],
+  "limits": "Hash checks do not establish identity or independence; no scores computed."
+}

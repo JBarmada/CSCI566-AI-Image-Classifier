@@ -1,0 +1,17 @@
+{
+  "used_recorded_source_ids": 484,
+  "common_four_method_pairs": 658,
+  "candidate_pairs_with_unused_parsed_ids_and_real_metadata": 228,
+  "metadata_sha256": {
+    "simswap": "8decca2745b37913a1bef44a0ff0c61b146ecc6bf4f20a50bc953772f6f7f9e7",
+    "fomm": "de50cd925ed05cad7688dcbc1d8e483a71367549ebee1c2de505b1165c63caf2",
+    "inswap": "eaf340bd2ab286804f7ce9200a57f8d95ef8f9da2592e18739196ed83f1be79a",
+    "pirender": "43a8b8b25901b08534c2ccf9f9167e024127a7a1d727000a45de0934731f7c18",
+    "wav2lip": "642452a318e56f64708de6667f2d995a56e480f9fb6b384dcc4a614415be5866"
+  },
+  "limitations": [
+    "Candidate names do not prove identity or source-target roles.",
+    "Archive membership and previous image hash overlap remain to check.",
+    "No model scores were used."
+  ]
+}

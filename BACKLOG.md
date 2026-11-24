@@ -59,10 +59,13 @@ questions about the project.
       source-video and person separation would strengthen transfer claims.
       Keep any calibration data separate from that test. [Recommendation and
       pilot protocol](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md) are ready
-      for team review; no fresh test has yet been assembled.
+      for team review; no validated independent test has yet been assembled.
       Working decision: prepare one if provenance checks pass; an initial
       [candidate-group inventory](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md)
       finds possible unused video IDs, but cannot verify person independence.
+      A [203-image candidate](results/df40_transfer/new_data/FRESH_CANDIDATE_REVIEW.md)
+      is on CARC. One pair was excluded after cross-method duplicate bytes;
+      review provenance and freeze the protocol before scoring.
 - [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The reported
       DF40 tests cover SimSwap, FOMM and Wav2Lip. Add methods only with
       documented provenance, sampling and comparable evaluation. A limited
@@ -71,6 +74,8 @@ questions about the project.
       Working decision: InSwapper and PIRender archive indexes match their
       metadata copies. Check image bytes, source overlap, visible manipulations
       and access terms before constructing the shared evaluation.
+      Selected candidate images for both methods exist, but a duplicate pair
+      across two method archives requires further label-provenance review.
 - [ ] **Strengthen adaptation comparisons if useful.** **Owner: Jad.** More independent data
       splits and a fresh test would help assess the exploratory adversarial and
       contrastive results; their present small differences do not establish a

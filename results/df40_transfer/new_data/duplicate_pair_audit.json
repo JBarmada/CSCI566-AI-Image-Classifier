@@ -1,0 +1,31 @@
+{
+  "group": "628_568",
+  "common_frame_names": 32,
+  "sampled_frames": [
+    "000.png",
+    "288.png",
+    "605.png",
+    "894.png"
+  ],
+  "sha256": {
+    "simswap": {
+      "000.png": "12376121a6dcfd387ad66c3bf03dbdd92a1c0ac84efa5450e30e8d9c5987cbd0",
+      "288.png": "6847bafdab59463e2f14664a3471e391bd750cfcaefdcf937c4c80c6eb5c4d82",
+      "605.png": "ac2e72d3c1932f37c5d388dd6098ec6204492d437f4b07bbb4275a80dbdf4dd2",
+      "894.png": "e8afe4dba758b4160bfb6047c0e4905d9ba8e19e1c69945d4b03eae635d7d9fc"
+    },
+    "inswap": {
+      "000.png": "12376121a6dcfd387ad66c3bf03dbdd92a1c0ac84efa5450e30e8d9c5987cbd0",
+      "288.png": "6847bafdab59463e2f14664a3471e391bd750cfcaefdcf937c4c80c6eb5c4d82",
+      "605.png": "ac2e72d3c1932f37c5d388dd6098ec6204492d437f4b07bbb4275a80dbdf4dd2",
+      "894.png": "e8afe4dba758b4160bfb6047c0e4905d9ba8e19e1c69945d4b03eae635d7d9fc"
+    }
+  },
+  "identical_frames": [
+    "000.png",
+    "288.png",
+    "605.png",
+    "894.png"
+  ],
+  "limitations": "Small selected sample; equal bytes do not establish which method label is wrong."
+}

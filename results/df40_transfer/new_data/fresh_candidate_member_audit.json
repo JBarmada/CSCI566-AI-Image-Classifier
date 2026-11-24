@@ -1,0 +1,42 @@
+{
+  "plan_sha256": "2eb6b56992d49817da58f7a277afbfe6a7a87f16332d03505bfb4ad1a70912f5",
+  "methods": {
+    "fomm": {
+      "requested": 30,
+      "unique_paths": 30,
+      "missing": [],
+      "ambiguous": []
+    },
+    "inswap": {
+      "requested": 30,
+      "unique_paths": 30,
+      "missing": [],
+      "ambiguous": []
+    },
+    "pirender": {
+      "requested": 30,
+      "unique_paths": 30,
+      "missing": [],
+      "ambiguous": []
+    },
+    "real": {
+      "requested": 60,
+      "unique_paths": 60,
+      "missing": [],
+      "ambiguous": []
+    },
+    "simswap": {
+      "requested": 30,
+      "unique_paths": 30,
+      "missing": [],
+      "ambiguous": []
+    },
+    "wav2lip": {
+      "requested": 30,
+      "unique_paths": 30,
+      "missing": [],
+      "ambiguous": []
+    }
+  },
+  "note": "Index membership only; no image bytes, identity or license verified."
+}

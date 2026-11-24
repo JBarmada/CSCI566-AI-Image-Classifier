@@ -1,15 +1,21 @@
 # Face transfer and adaptation: decisions and follow-up
 
-**Owner: Jad. Recommendations prepared for team review; no new dataset was built and no new models were trained for this plan.**
+**Owner: Jad. Recommendations and a candidate dataset are prepared for team review; no new models were trained for this plan.**
 
 ## Current decision and audit (November 23)
+
+**Update:** A 203-image, 29-pair candidate for five methods has now been
+assembled and transferred to CARC, with no test scoring. One full pair was
+excluded after SimSwap/InSwapper image bytes matched. See the
+[candidate review](new_data/FRESH_CANDIDATE_REVIEW.md) for the exact checks,
+Jad's visual review and unresolved provenance and identity limitations.
 
 Proceed with preparing a fresh source-group test, subject to a provenance audit;
 prioritize the existing frozen face-adapted head against the baselines on the
 same manifest. Add one swap and one reenactment method only if a traceable
 archive is actually accessible. These are working decisions for Jad and team
-review; no fresh test, extra-method evaluation or new adaptation result is
-claimed here.
+review; no validated independent test, extra-method evaluation or new
+adaptation result is claimed here.
 
 The [metadata inventory](new_data/unused_group_inventory.json), reproducible
 with [audit_unused_groups.py](new_data/audit_unused_groups.py), found 484

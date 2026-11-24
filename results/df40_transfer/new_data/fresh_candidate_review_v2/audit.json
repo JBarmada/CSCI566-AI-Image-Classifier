@@ -1,0 +1,12 @@
+{
+  "status": "candidate pending provenance and protocol review; no scores computed",
+  "original_plan_sha256": "2eb6b56992d49817da58f7a277afbfe6a7a87f16332d03505bfb4ad1a70912f5",
+  "excluded_pair": "628_568",
+  "excluded_rows": 7,
+  "duplicate_sha256": "0bfd2de0f43ed4a7fbf0370787158b082982d65b8927cafa662696ce02962ce5",
+  "retained_rows": 203,
+  "retained_pairs": 29,
+  "unique_hashes": 203,
+  "images_relative_to": "../fresh_candidate_data_v1/",
+  "limits": "Identities, source roles, license and mirror bytes remain unverified."
+}

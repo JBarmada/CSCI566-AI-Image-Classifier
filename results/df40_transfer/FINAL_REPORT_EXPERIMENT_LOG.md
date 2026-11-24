@@ -484,3 +484,15 @@ with the published ADM pilot files, reproduced the complete 72-result summary
 and both published CSV files exactly. The test did not require source images or
 training. Remote GitHub main was verified after each push; individual teammate
 Drive/CARC permissions were not tested.
+# November 23: five-method candidate and duplicate-method issue
+
+A score-blind candidate uses 29 retained FF video pairs, 58 real crops and 29
+crops for each of SimSwap, FOMM, Wav2Lip, InSwapper and PIRender. An initial
+30th pair was removed because its SimSwap and InSwapper crops shared identical
+SHA-256 bytes; four further sampled frames in that pair also matched. All 203
+retained image hashes differ and were verified on CARC. Jad judged three
+example pairs usable visually. This is an unscored candidate, not an
+independent-person test or an evaluation result. The full selection, method
+provenance, limitations and duplicate audit are in
+[FRESH_CANDIDATE_REVIEW.md](new_data/FRESH_CANDIDATE_REVIEW.md).
+
