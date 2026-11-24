@@ -1,0 +1,5 @@
+k,mode,metric,raw_mean,temperature_mean,improvement_mean,improvement_ci_low,improvement_ci_high,draws,resampling
+7,augmented,ece,0.253021,0.123337,0.129684,0.118043,0.142152,2000,"test images within holdout, by label"
+7,augmented,brier,0.192703,0.125212,0.067491,0.0627319,0.072295,2000,"test images within holdout, by label"
+7,baseline,ece,0.281339,0.0725758,0.208763,0.196738,0.22071,2000,"test images within holdout, by label"
+7,baseline,brier,0.172783,0.0879808,0.0848026,0.0805558,0.0888736,2000,"test images within holdout, by label"
