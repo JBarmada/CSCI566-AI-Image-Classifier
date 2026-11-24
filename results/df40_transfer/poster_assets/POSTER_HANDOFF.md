@@ -28,6 +28,11 @@ changed, or show that the same tradeoff holds at every threshold. A descriptive
 10% false-positive test-ROC comparison uses the test labels to choose points;
 it is not an independently validated deployment threshold.
 
+For discussion: both rates fall in all eight holdout means, though the fake
+recall decrease ranges from 17.02 to 41.55 percentage points. See the
+[generator-level breakdown](JPEG_ERROR_ANALYSIS.md). This is descriptive;
+the holdouts share some real-image test data.
+
 ## Supporting figures to discuss
 
 1. **Where does performance vary?** The [generator heatmap](07_vit_generator_heatmap.svg)

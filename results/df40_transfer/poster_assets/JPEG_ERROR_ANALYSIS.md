@@ -21,6 +21,15 @@ mean accuracy from **69.24% to 75.99%**. Mean AUROC is nearly unchanged
 shows both kinds of error, while the [metric-change figure](05_vit_jpeg_accuracy_auroc.svg)
 shows why accuracy and AUROC convey different information.
 
+The direction is consistent across the eight holdout means at this threshold:
+both the real false-positive rate and fake recall fall for all eight. The size
+varies: mean fake recall falls by **41.55 percentage points** for ADM
+(79.05% to 37.50%) and by **17.02 points** for Stable Diffusion v1.5 (98.21%
+to 81.19%). Each holdout mean averages its three rows in the linked per-run
+table. The real-image test partitions can overlap across holdouts; the eight
+means are not eight independent datasets. These are descriptive comparisons of
+the selected models and threshold, not uncertainty estimates or causal proof.
+
 At the individual score level, the augmented model assigned a lower fake
 score in 13,215 of 13,440 paired prediction rows. Across those rows, 4,079
 decisions changed from fake to real and two changed from real to fake.
