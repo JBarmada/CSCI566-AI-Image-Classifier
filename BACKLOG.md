@@ -34,7 +34,9 @@ questions about the project.
       available ADM validation predictions are for clean images, so they do not
       establish a 10% false-positive rate on JPEG images. A JPEG-specific check
       needs separate JPEG-processed validation predictions and a frozen rule.
-- [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel. (probably need more people) ** Explain the question, methods,
+- [ ] Test frontier models on GenImage **Owner: Shriya.** 
+- [ ] Test frontier models on face deepfakes **Owner: Jeslyn, Aditiya.** 
+- [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel. (probably need more people)** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.
 - [ ] **Practice as a team.** Make sure each member can explain the models,
