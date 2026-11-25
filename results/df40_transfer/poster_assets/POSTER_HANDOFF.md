@@ -60,8 +60,10 @@ architecture-only result.
 
 These are candidate supporting panels, subject to space and team review. A
 CNN–ViT comparison describes whole pipelines: their pretraining and training
-also differ, so it cannot isolate architecture. The five-method follow-up is
-queued and must not be shown as a result until it completes and passes checks.
+also differ, so it cannot isolate architecture. The five-method follow-up
+passed replay checks on P100 but remains exploratory; review the
+[results and data limitations](../new_data/fresh_candidate_results_v3/README.md)
+before deciding whether it belongs on the poster.
 
 ## Presenter explanation
 

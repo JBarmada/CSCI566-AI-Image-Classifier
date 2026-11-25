@@ -40,8 +40,8 @@ PIRender. It uses 27 source-video-ID pairs, with the same real crops reused
 across methods. Image bytes are in the project-restricted CARC directory
 `/project2/yzhao010_1531/csci566-genimage/data/df40_fresh_candidate_review_v3_20261123/`;
 images are not in GitHub. Verify the manifest and image hashes before use.
-The existing-model comparison is queued; do not assume those results exist.
-When available, match model predictions by image hash. See the
+The existing-model P100 comparison has completed and passed its replay checks;
+match model predictions by image hash. See the [results](new_data/fresh_candidate_results_v3/README.md),
 [frozen evaluation protocol](new_data/FRESH_EVALUATION_PROTOCOL.md) and
 [data audit](new_data/FRESH_CANDIDATE_REVIEW.md).
 

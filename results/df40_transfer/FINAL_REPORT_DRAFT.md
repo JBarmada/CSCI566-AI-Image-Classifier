@@ -106,6 +106,18 @@ differences explain the observed replay mismatch in the tested setup; see
 
 ## Face-manipulation transfer
 
+In a subsequent exploratory 189-image FaceForensics++-derived comparison,
+the five frozen model variants were tested on 54 real crops and 27 crops for
+each of five manipulation labels. A P100 replay passed reference checks. At
+threshold 0.5, the baseline CNN, baseline ViT and face-adapted ViT head
+flagged 53, 42 and 20 of the same 54 real crops, respectively. Fake-detection
+counts varied by method; all counts and the preselected validation-threshold
+results are in the [five-method results](new_data/fresh_candidate_results_v3/README.md).
+Person-level independence, source roles and some mirror method labels remain
+unverified; three video-ID pairs were excluded before scoring. The adapted
+head trained on three evaluated methods, so this small follow-up does not
+establish a reliable general adaptation improvement.
+
 An additional exploratory still-photo test used 50 IMDB-WIKI real photos and
 50 matched-path outputs for each of InsightFace and Stable Diffusion inpainting
 from DeepFakeFace. At threshold 0.5, the baseline CNN falsely flagged 23/50

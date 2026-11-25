@@ -1,7 +1,8 @@
 # Five-method face candidate: score-blind data review
 
-**Status: candidate for team review, not a validated independent test. No
-model scores have been computed on these images.**
+**Status: exploratory candidate for team review, not a validated independent
+test.** CPU and P100 scores are now available in the
+[results](fresh_candidate_results_v3/README.md).
 
 **Further visual review:** The full candidate contact sheets flagged two more
 cases before inference. In pair `113_983`, the selected SimSwap and InSwapper
@@ -15,8 +16,8 @@ A conservative v3 manifest excludes both full pairs before scoring: 27 pairs,
 54 real and 27 fake crops per method, or 189 images. The
 [v3 audit](fresh_candidate_review_v3/audit.json) and
 [manifest](fresh_candidate_review_v3/manifest.csv) preserve the decisions.
-Jad was shown the examples; review of the exclusions remains open. No model
-scores have been produced.
+Jad was shown the examples; review of the exclusions remains open. These
+exclusions were made before any model scoring.
 The full contact sheets can be recreated locally with
 [render_all_candidate_reviews.py](render_all_candidate_reviews.py); the
 contact sheet images themselves are not committed.

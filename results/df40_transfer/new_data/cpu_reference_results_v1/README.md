@@ -1,8 +1,8 @@
 # CPU reference replay
 
 At Jad's request, CARC job 14549744 replayed existing saved checkpoints on
-CPU without training. The separate GPU face evaluation remains queued as job
-14529608. The CPU reference run completed, but **all four model variants
+CPU without training. The V100 face evaluation job 14529608 later failed its
+CNN reference gate; a P100 retry passed. The CPU reference run completed, but **all four model variants
 exceeded their original maximum-score replay tolerance**:
 
 | Model | Reference images | Largest score difference | Original tolerance | Decision changes at 0.5 |
@@ -24,7 +24,7 @@ original acceptance gate. See [REFERENCE.json](REFERENCE.json),
 An additional inference-only CPU run on the frozen 189-image candidate, job
 14550254, completed and produced 945 scores across five model variants. Its
 [results](../cpu_candidate_results_v1/) are **preliminary**, because the
-original replay gate failed; its predictions can be compared directly with the
-separately queued GPU run when that run is available. Do not change the test manifest,
+original replay gate failed. See the completed [CPU/P100 comparison](../fresh_candidate_results_v3/README.md).
+Do not change the test manifest,
 select thresholds on the candidate, or represent CPU-only scores as the
 previously validated GPU results.

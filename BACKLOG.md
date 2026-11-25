@@ -77,11 +77,13 @@ questions about the project.
       is on CARC. Three pairs were excluded during pre-score quality review;
       provenance limitations and the frozen exploratory protocol are recorded.
       The earlier inference job 14525004 remains held after visual inspection;
-      the conservative v3 GPU inference job 14529608 is queued. A separate
+      V100 job 14529608 failed the reference check; P100 retry 14742998 passed
+      and produced [exploratory results](results/df40_transfer/new_data/fresh_candidate_results_v3/README.md). A separate
       [CPU candidate run](results/df40_transfer/new_data/cpu_candidate_results_v1/README.md)
       completed, but its reference replay exceeded the numerical tolerances;
-      compare its scores and decisions with the GPU run before treating them
-      as equivalent. Jad's review of the two exclusions remains open.
+      CPU and P100 comparisons show one decision difference at 0.5 and nine
+      at the CNN baseline validation threshold. Jad's review of the two
+      exclusions remains open.
 - [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The reported
       DF40 tests cover SimSwap, FOMM and Wav2Lip. Add methods only with
       documented provenance, sampling and comparable evaluation. A limited

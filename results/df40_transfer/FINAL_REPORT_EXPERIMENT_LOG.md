@@ -583,3 +583,23 @@ methods and finite values were checked. The [candidate results](new_data/cpu_can
 are explicitly marked as failing the reference gate; comparison to the queued
 V100 candidate scores remains outstanding.
 
+# November 24: five-method P100 retry and CPU comparison
+
+The prior V100 job 14529608 failed its CNN baseline reference replay with a
+maximum difference of 0.00244140625, above the unchanged 0.001 tolerance; it
+did not produce candidate predictions. Earlier successful shared-face jobs
+used P100. Retry 14742998 on P100 completed 945 predictions, reproduced both
+CNN references exactly, passed ViT reference and all repeat checks, and
+verified model hashes. Candidate manifest hashes, labels and all per-model
+prediction membership were independently checked. The [results](new_data/fresh_candidate_results_v3/README.md)
+remain exploratory because identity separation and method provenance are
+unverified and two score-blind exclusions await Jad's review.
+
+CPU/P100 comparisons on the same 945 candidate predictions found one decision
+difference at threshold 0.5 (augmented CNN) and nine at the previously selected
+baseline CNN threshold 0.9990234375000001. All other model decisions matched
+at those two sets of thresholds. CPU score replay tolerances still failed; this
+does not show that hardware alone caused the numerical differences. Per-method
+metrics and the complete [comparison](new_data/fresh_candidate_results_v3/cpu_gpu_comparison.csv)
+are preserved for review.
+

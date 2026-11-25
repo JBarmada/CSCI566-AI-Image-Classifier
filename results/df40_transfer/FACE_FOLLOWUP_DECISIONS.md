@@ -7,8 +7,9 @@
 **Update:** The current candidate contains 189 images from 27 source-video
 pairs, covering five methods. Three pairs were excluded during score-blind
 quality review: one had matching SimSwap/InSwapper image bytes and two raised
-visual or source-role concerns. The frozen comparison is queued on CARC; it
-has not yet produced results. Jad's review of the latter two exclusions is
+visual or source-role concerns. The frozen comparison completed on P100 and
+passed its replay checks; [results](new_data/fresh_candidate_results_v3/README.md)
+are exploratory. Jad's review of the latter two exclusions is
 still open. See the [candidate review](new_data/FRESH_CANDIDATE_REVIEW.md) and
 [frozen protocol](new_data/FRESH_EVALUATION_PROTOCOL.md) for the checks and
 remaining provenance and identity limitations.
@@ -17,8 +18,8 @@ Proceed with preparing a fresh source-group test, subject to a provenance audit;
 prioritize the existing frozen face-adapted head against the baselines on the
 same manifest. Add one swap and one reenactment method only if a traceable
 archive is actually accessible. These are working decisions for Jad and team
-review; no validated independent test, extra-method evaluation or new
-adaptation result is claimed here.
+review; this is not a validated independent test, and the new method and
+adaptation results remain limited by source and label uncertainty.
 
 The [metadata inventory](new_data/unused_group_inventory.json), reproducible
 with [audit_unused_groups.py](new_data/audit_unused_groups.py), found 484
