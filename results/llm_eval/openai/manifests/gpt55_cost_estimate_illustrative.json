@@ -1,0 +1,36 @@
+{
+  "illustrative_only": true,
+  "model_id": "gpt-5.5",
+  "detail": "high",
+  "source_dimensions": "Claude's saved answer-key manifests",
+  "evaluations_excluding_retries": 1890,
+  "views": {
+    "original": {
+      "images": 630,
+      "image_input_tokens": 184276,
+      "min_image_tokens": 20,
+      "max_image_tokens": 1229
+    },
+    "square": {
+      "images": 630,
+      "image_input_tokens": 180404,
+      "min_image_tokens": 20,
+      "max_image_tokens": 1229
+    },
+    "detector224": {
+      "images": 630,
+      "image_input_tokens": 37170,
+      "min_image_tokens": 59,
+      "max_image_tokens": 59
+    }
+  },
+  "estimated_image_input_tokens": 401850,
+  "estimated_prompt_tokens": 189000,
+  "estimated_output_tokens_scenario": 30240,
+  "maximum_output_tokens_by_config": 241920,
+  "input_price_usd_per_million": 5.0,
+  "output_price_usd_per_million": 30.0,
+  "estimated_cost_expected_output_scenario_usd": 3.8615,
+  "estimated_cost_max_output_bound_usd": 10.2119,
+  "caveat": "Image tokens use the published GPT-5.5 high-detail patch rules; prompt and 16-token typical-output assumptions are estimates. The maximum is a bound only for output tokens under max_output_tokens=128. Rates are public standard text-token rates, before discounts/taxes; actual billing must be checked after selecting the exact model and API tier."
+}

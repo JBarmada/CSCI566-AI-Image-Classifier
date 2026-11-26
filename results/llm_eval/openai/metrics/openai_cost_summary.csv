@@ -1,0 +1,4 @@
+view,api_attempts,input_tokens_across_attempts,output_tokens_across_attempts,estimated_cost_usd_across_attempts,reported_cost_usd_across_attempts,model_id_requested,configuration_sha256
+detector224,632,91688.0,32221.0,,,gpt-6.2-sol,40be0eda0317a7908e097d99f6df10ce1a1b2749cfbeb79d1677ea8a1bba1f93
+original,630,237378.0,26818.0,,,gpt-6.2-sol,40be0eda0317a7908e097d99f6df10ce1a1b2749cfbeb79d1677ea8a1bba1f93
+square,631,233900.0,27729.0,,,gpt-6.2-sol,40be0eda0317a7908e097d99f6df10ce1a1b2749cfbeb79d1677ea8a1bba1f93

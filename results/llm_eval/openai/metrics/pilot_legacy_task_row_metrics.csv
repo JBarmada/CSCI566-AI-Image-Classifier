@@ -1,0 +1,5 @@
+model,evaluation_unit,n_task_rows_expected,n_unique_images_in_manifest,n_task_rows_scored,n_unique_images_scored,n_valid,n_unique_images,n_real,n_fake,accuracy,precision,recall,specificity,f1,balanced_accuracy,auroc,tn,fp,fn,tp,real_false_positive_rate,fake_miss_rate
+GPT,legacy pilot task rows; repeated real images are not independent,160,90,158,88,158,88,80,78,0.7658227848101266,1.0,0.5256410256410257,1.0,0.689075630252101,0.7628205128205128,0.9948717948717949,80,0,37,41,0.0,0.47435897435897434
+Claude,legacy pilot task rows; repeated real images are not independent,160,90,160,90,160,90,80,80,0.8875,1.0,0.775,1.0,0.8732394366197184,0.8875,1.0,80,0,18,62,0.0,0.225
+Gemini,legacy pilot task rows; repeated real images are not independent,160,90,160,90,160,90,80,80,0.8375,1.0,0.675,1.0,0.8059701492537313,0.8375,0.97875,80,0,26,54,0.0,0.325
+Qwen (Groq),legacy pilot task rows; repeated real images are not independent,160,90,160,90,160,90,80,80,0.7625,0.8620689655172413,0.625,0.9,0.7246376811594203,0.7625,0.831875,72,8,30,50,0.1,0.375
