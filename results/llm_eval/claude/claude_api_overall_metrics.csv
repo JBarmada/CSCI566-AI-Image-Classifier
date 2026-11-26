@@ -1,0 +1,2 @@
+model,n,n_real,n_fake,accuracy,recall,specificity,mean_p_fake_real,mean_p_fake_fake,balanced_accuracy,auroc
+claude-opus-5-5,630,70,560,0.7825396825396825,0.7553571428571428,1.0,4.985714285714286,70.57142857142857,0.8776785714285714,0.9997704081632652
