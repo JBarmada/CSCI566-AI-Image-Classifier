@@ -13,6 +13,35 @@ The pilot successfully evaluated all 90 images with:
 
 `protocol.json` records the prompt and generation settings used by `run_pilot.py`. API inference does not need to be repeated for the matched comparison.
 
+## New team outputs awaiting integration
+
+The [consolidation plan](../../docs/results-consolidation.md) records the
+source commits and outstanding checks. These outputs are on other branches,
+not yet present in this working tree:
+
+- Claude: `e319d94` adds `results/llm_eval/claude/`, with the fixed 630-image
+  shared list, neutral-ID preparation, isolated API runner, raw scored
+  responses and metrics for original, square and detector224 views. Each
+  view has 630 successful responses; the set includes all 90 pilot hashes.
+- GPT: `7be92ec` on `zero-shot/gpt-genimage` adds
+  `code/llm-eval/genimage/openai/` and `results/llm_eval/openai/`. The
+  `gpt-6.2-sol` run has 1,844 valid scores and 46 invalid outputs across
+  1,890 final image-view rows. This branch already includes the Claude work.
+
+Use the 90-image intersection for comparisons with Gemini/Qwen, and report the
+630-image Claude/GPT study separately. Match both sides on the same valid
+source hashes and view. GPT's current pilot comparison mixes 88 valid GPT
+images with 90-image baseline metrics; recomputation is required. Its saved
+ViT table has only 1–4 all-real matches per old ADM export. Use corrected
+ViT exports and obtain matching CNN predictions from CARC before a substantive
+detector comparison. The GPT request-attempt log is not tracked at `7be92ec`
+and must be obtained for its provenance audit. Do not rerun paid inference
+to perform this consolidation.
+
+The separate [OpenAI face evaluation](../df40_transfer/openai_face/df40_five_method_v3_v2/README.md)
+uses 189 manipulated/real face images and model `gpt-6.1-terra`; its results
+must not be pooled with this synthetic-image task.
+
 ## Audit the completed Gemini pilot
 
 The independent audit checks exact manifest membership and duplicate successful

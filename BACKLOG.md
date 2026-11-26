@@ -5,6 +5,12 @@ CNN robustness rerun are complete. Focus first on communicating verified
 results and completing course deliverables; additional experiments are choices,
 not prerequisites for reporting the work already done.
 
+The next priority is a consolidated analysis of the saved outputs. The
+[consolidation plan](docs/results-consolidation.md) records completed code,
+branch locations, verification gaps and the order of work. Claude, GPT GenImage
+and the extended ViT confidence analysis are available on separate branches;
+their availability does not mean they are integrated or fully audited here.
+
 The official [course schedule](https://usc-fortis.github.io/CSCI566-F26/schedule.html)
 lists the poster and demo session on **November 30** and the final report due
 **December 7**. Check Piazza and Gradescope for submission instructions and
@@ -34,9 +40,22 @@ questions about the project.
       available ADM validation predictions are for clean images, so they do not
       establish a 10% false-positive rate on JPEG images. A JPEG-specific check
       needs separate JPEG-processed validation predictions and a frozen rule.
+- [ ] **Integrate the completed branch contributions. Owner: to confirm.**
+      Preserve our pushed OpenAI face workflow and results (`1324ffc`), add
+      Claude/GPT GenImage outputs from `zero-shot/gpt-genimage` (`7be92ec`,
+      already including Claude), and add `analysis/vit-confidence-errors`
+      (`ebeba98`). Review conflicts and source provenance before merging.
+      `main` still lacks these contributions. See the
+      [source inventory](docs/results-consolidation.md).
 - [ ] **Finish matched frontier GenImage comparison. Owner: Shriya.** Gemini and
-      Groq-Qwen each completed the 90-image pilot; reuse those saved predictions
-      with the matching CNN/ViT runs. The 2,520-image attempts are incomplete.
+      Groq-Qwen completed the 90-image pilot; Claude scored a 630-image superset
+      in three views, and GPT now has 1,844 valid / 1,890 image-view outputs.
+      Compare only shared valid images and matching views with the corrected
+      CNN/ViT exports. Recompute GPT's pilot comparison: its baseline metrics
+      currently use 90 images while GPT has 88 valid matches. Its existing
+      ViT intersections are tiny, all-real samples from old ADM exports.
+      Obtain the matching CNN predictions from CARC and the GPT attempt log
+      from its owner. The separate 2,520-image attempts remain incomplete.
 - [x] **Complete frontier face evaluation. Owners: Jeslyn, Aditya.** On November
       26, the cleaned OpenAI runner completed a fresh smoke and all 189 frozen
       images on CARC. Summary and matched CNN/ViT comparison audits passed
@@ -46,6 +65,12 @@ questions about the project.
       [analysis](results/df40_transfer/openai_face/df40_five_method_v3_v2/README.md)
       and report draft include class-specific errors and dataset limitations.
       Final poster selection and submitted report integration remain team work.
+- [ ] **Create the consolidated result analysis. Owner: Aditya.** Build a
+      source/protocol inventory, regenerate matched metrics, and provide one
+      analysis entry point with separate clean, robustness, frontier GenImage
+      and face sections. Include coverage, class-specific errors, limitations
+      and evidence links. Use saved outputs; no new API calls or training are
+      required for consolidation. Follow the [plan](docs/results-consolidation.md).
 - [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel. (probably need more people)** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.
@@ -58,6 +83,12 @@ questions about the project.
       the team's verified contributions.
 - [ ] **Verify every figure, table and number** **Owner: Rachel.** against saved results, including
       sample counts, decision thresholds and aggregation methods.
+- [ ] **Integrate and reproduce the completed ViT confidence/error analysis.**
+      The implementation, figures and tests already exist on
+      `analysis/vit-confidence-errors`; do not list them as unimplemented.
+      Check their sources and validation-only fitting after integration. An
+      equivalent extended CNN recalibration/repeated-error study remains a
+      separate optional implementation, not a prerequisite for reporting.
 - [ ] **Explain the model comparison fairly.** CNN and ViT differ in pretraining
       and training as well as architecture. Repeated test images and dataset
       repeats are not independent samples.
@@ -96,8 +127,9 @@ questions about the project.
       CPU and P100 comparisons show one decision difference at 0.5 and nine
       at the CNN baseline validation threshold. Jad's review of the two
       exclusions remains open.
-- [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The reported
-      DF40 tests cover SimSwap, FOMM and Wav2Lip. Add methods only with
+- [ ] **Decide whether to include more manipulation methods.** **Owner: Jad.** The primary
+      DF40 tests cover SimSwap, FOMM and Wav2Lip; the exploratory five-method
+      subset also has scored InSwapper and PIRender results. Add methods only with
       documented provenance, sampling and comparable evaluation. A limited
       extension is [recommended](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md)
       if access, verification and time allow.
@@ -112,8 +144,9 @@ questions about the project.
       reliable improvement. See the [separate face and generator-objective
       plans](results/df40_transfer/FACE_FOLLOWUP_DECISIONS.md) and [paired
       review of existing runs](results/df40_transfer/adaptation_paired_review/README.md).
-      Working decision: compare the frozen face-adapted head on the fresh shared
-      test first; defer new training until the test and protocol are protected.
+      The frozen face-adapted head has now been compared on the 189-image
+      exploratory subset; it does not establish person-independent transfer.
+      Defer additional training unless a new test and protocol are protected.
 - [ ] **Coordinate the frontier-model comparison with its owner.** Include the
       teammate's verified results if ready; that work remains theirs. The
       [dataset handoff](results/df40_transfer/FRONTIER_DATA_HANDOFF.md) describes
@@ -122,6 +155,17 @@ questions about the project.
 
 ## Completed and available
 
+- Resumable OpenAI face runner, frozen protocol/manifest checks, per-image
+  checkpoints, concurrent-writer locking, bounded transient retries and
+  independent summary/comparison scripts; 17 focused tests passed.
+- OpenAI face evaluation: 189/189 successful predictions and 1,134 matched
+  model rows, archived locally and pushed on `feature/matched-frontier-comparison`.
+  CSV regeneration matched exactly; the report draft records class-specific
+  results and dataset limitations. This work is not yet in `main`.
+- Cross-branch inventory: Claude's three 630-image GenImage views, the new GPT
+  GenImage implementation/results (`7be92ec`) and the extended ViT analysis
+  were reviewed for availability. Integration and the remaining audits are
+  tracked above; this is not a blanket acceptance of those experiments.
 - Corrected clean CNN and ViT benchmarks and the 192-pair comparison.
 - Eight-holdout ViT JPEG/resize robustness and the corresponding CNN rerun.
   All 24 affected CNN clean runs matched the original scores on V100; the
@@ -132,6 +176,7 @@ questions about the project.
   data and generalization limitations are recorded in the
   [experiment log](results/df40_transfer/FINAL_REPORT_EXPERIMENT_LOG.md).
 
-**Recommended next step:** finish the matched GenImage pilot comparison, then
-review the updated face analysis and report draft for final poster/report use.
+**Recommended next step:** integrate the saved branch outputs, resolve the
+documented matching/provenance gaps, then regenerate one clear analysis for
+final poster/report use. Keep GenImage and face results separate.
 New training or a new dataset is optional; the current face set remains exploratory.

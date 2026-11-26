@@ -1,7 +1,10 @@
 # Current LLM evaluation workflow
 
 Updated November 26, 2026. This page distinguishes completed predictions from
-code that is ready to run. It supersedes older pending-work statements.
+code that is ready to run. It supersedes older pending-work statements. The
+[consolidation plan](results-consolidation.md) is the source inventory and
+integration checklist; availability on a teammate branch is recorded separately
+from integration and independent acceptance.
 
 ## What is complete
 
@@ -20,11 +23,48 @@ code that is ready to run. It supersedes older pending-work statements.
   [downloaded exports and analysis](../results/df40_transfer/openai_face/df40_five_method_v3_v2/README.md)
   are stored locally; offline regeneration reproduced the saved CSVs exactly.
 
+## Available on other branches
+
+- **Claude GenImage:** `e319d94`, included in `zero-shot-llm-evaluation`
+  (`3d73b5b`) and the GPT GenImage branch. Three views of the same 630 sources
+  have 630/630 successful scores each. All 90 pilot hashes are included.
+  CSV-level membership/raw-score/overall-metric checks passed during branch
+  review; complete image/protocol verification and integration are pending.
+- **GPT GenImage:** `7be92ec` on `zero-shot/gpt-genimage` now includes code
+  under `code/llm-eval/genimage/openai/` and saved results under
+  `results/llm_eval/openai/`. The recorded model is `gpt-6.2-sol`, separate
+  from our face model. There are 1,890 final rows across the same three
+  630-image views: 1,844 valid scores, 46 invalid outputs, no missing final
+  responses and no refusals in the saved tables. Code/results are available;
+  independent acceptance and integration are pending. This supersedes the
+  earlier finding that the GPT-named branch had no implementation.
+- **ViT calibration/errors:** `ebeba98` on `analysis/vit-confidence-errors`
+  provides extended calibration, validation-fitted recalibration/thresholds,
+  persistent-error analysis, figures and tests. It uses saved scores and
+  needs no retraining. Integration and independent regeneration are pending.
+
+These files have not been copied or merged into this branch by the documentation
+update. The [plan](results-consolidation.md) links their pinned source commits.
+The OpenAI face changes are already pushed on `feature/matched-frontier-comparison`
+but are not yet in `main`.
+
 ## What to finish
 
-1. Complete the existing GenImage pilot's matched CNN/ViT comparison. This
-   needs saved predictions, not additional API calls.
-2. Review the updated report draft and OpenAI face analysis as a team, then
+1. Integrate the reviewed branch sources and exports without duplicating the
+   Claude contribution already contained in the GPT branch. Preserve our
+   current face workflow, original audit files and source attribution.
+2. Complete the GenImage matched comparison with corrected CNN/ViT exports.
+   Gemini/Qwen have 90 pilot images; Claude/GPT have a 630-image superset.
+   Retain views and coverage separately. GPT's saved pilot comparison uses
+   88 valid GPT images but baseline metrics over 90; recompute both models on
+   the same intersection. Its existing ViT comparison has only 1–4 all-real
+   images per old ADM export and cannot support a detector-performance claim.
+3. Obtain the GPT original request-attempt log from its owner for provenance
+   verification. It is referenced by the results summary but not tracked in
+   commit `7be92ec`; preserve invalid outputs rather than calling the API again.
+4. Regenerate one consolidated analysis with separate GenImage and face sections.
+   This needs saved predictions and offline checks, not additional API calls.
+5. Review the updated report draft and OpenAI face analysis as a team, then
    integrate the selected findings into the final poster and submitted report.
    Keep API keys out of Git.
 
@@ -49,6 +89,8 @@ supervised reference, not a zero-shot model.
   always pass the OpenAI protocol and provider label as documented.
 - GenImage analysis: `results/llm_eval/compare_matched.py` and
   `results/llm_eval/summarize_gemini.py` reuse the completed pilot predictions.
+  The branch-only Claude/GPT entry points are inventoried in the consolidation
+  plan; they are not instructions to start fresh inference.
 
 `run_pilot.py`, `run_full.py`, and `evaluate_gemini.py` under `results/llm_eval/`
 are historical/reproduction entry points, not steps in the face workflow.

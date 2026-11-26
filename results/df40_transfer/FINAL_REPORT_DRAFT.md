@@ -4,6 +4,12 @@
 artifacts and identifies preliminary findings. Confirm the final course format,
 authorship, citations, figures and any teammate contributions before submission.
 
+**Integration note:** The separate Claude/GPT GenImage results and extended
+ViT confidence/error analysis are now available on teammate branches. They are
+not incorporated as accepted findings in this draft yet. Follow the
+[consolidation plan](../../docs/results-consolidation.md) to verify common
+image membership, response coverage and provenance before adding their tables.
+
 ## Abstract
 
 We study whether training on a greater number of image generators improves
