@@ -32,6 +32,9 @@ metrics. Saved checkpoints and full raw outputs remain on CARC.
 | DF40 face transfer | Celeb-DF and FaceForensics++ subsets evaluated; a supervised face-adapted head is exploratory |
 | Zero-shot comparison | CLIP evaluated on face crops; Qwen2.5-VL-3B evaluated on a 64-image ADM subset |
 | Frontier GenImage pilot | Gemini and Groq-Qwen each completed 90 images; matched CNN/ViT comparison still to finish |
+| Claude GenImage | Three 630-image views completed on the LLM branch; integration and full audit pending |
+| GPT GenImage | Code and 1,890 final image-view outputs on `zero-shot/gpt-genimage`; 1,844 valid scores and 46 invalid outputs; matching/provenance checks pending |
+| Extended ViT confidence/error analysis | Calibration, validation-only recalibration, repeated-error analysis and figures available on `analysis/vit-confidence-errors`; integration pending |
 | OpenAI face evaluation | 189/189 complete; audited six-model comparison and [local results](results/df40_transfer/openai_face/df40_five_method_v3_v2/README.md) available |
 | Generator objectives | Exploratory eight-holdout, three-seed comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
 | Midterm report | Submitted; final report, poster and demonstration remain |
@@ -44,6 +47,10 @@ saved checkpoints and writes separate outputs.
 **Current priorities and course deliverables:** see the [project backlog](BACKLOG.md).
 For current API scripts, completed pilots, preserved partial runs and the exact
 next steps, use the [LLM evaluation guide](docs/llm-evaluation.md).
+The [result consolidation plan](docs/results-consolidation.md) records the exact
+source commits, integration order and checks needed before combining outputs.
+Our OpenAI face work is pushed to `feature/matched-frontier-comparison`; it and
+the separate team contributions listed above have not yet been merged to `main`.
 
 The current [research results index](results/df40_transfer/README.md) and
 [team-review report draft](results/df40_transfer/FINAL_REPORT_DRAFT.md) record
@@ -53,18 +60,21 @@ plan; several items now have exploratory or provisional results.
 - **Extend face-manipulation transfer analysis.** Initial saved-model DF40
   results and a separate supervised face-adaptation experiment are available.
   Check source and identity overlap and evaluate additional methods if feasible.
-- **Analyze confidence and failure cases using existing predictions.** Produce
-  reliability plots and Brier/ECE summaries, inspect confident mistakes, and
-  compare CNN–ViT disagreements by holdout and generator family. Fit any
+- **Integrate the existing confidence and failure analysis.** The extended ViT
+  reliability, recalibration, repeated-error and family analyses already exist
+  on `analysis/vit-confidence-errors`; reproduce and review them after merging.
+  The equivalent extended CNN study remains optional. Fit any
   calibrator or decision threshold on validation data only. Account for reused
   test images and distinguish dataset repeats from classifier seeds.
 - **Use the verified CNN k=7 robustness results.** Four holdouts were rerun
   on V100 with clean, JPEG60 and resize conditions; all 24 affected clean
   replays matched the original scores exactly. See the [audited matched
   comparison](results/df40_transfer/cnn_robustness_v100/README.md).
-- **Extend the zero-shot multimodal comparison.** One open vision-language model
-  has been evaluated on a fixed 64-image ADM subset. Additional models, prompts,
-  generators or paid APIs require a documented protocol and team cost decision.
+- **Consolidate the saved zero-shot comparisons.** Qwen's 64-image ADM study,
+  the Gemini/Groq-Qwen pilot, Claude/GPT GenImage views and our OpenAI face study
+  are separate experiments. Reuse their outputs with explicit shared-image
+  intersections and coverage; do not pool different datasets into one ranking.
+  No additional paid inference is required for this consolidation.
 - **Verify team access and reproducibility.** Corrected CNN summaries,
   matched tables and robustness outputs are published. Verify teammate access
   to exact datasets, manifests and checkpoint backups.
