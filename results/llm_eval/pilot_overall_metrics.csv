@@ -1,0 +1,3 @@
+model,n_rows,n_unique_images,accuracy,precision,recall,specificity,f1,balanced_accuracy,auroc,tn,fp,fn,tp,mean_p_fake_real,mean_p_fake_fake
+Gemini,160,90,0.8375,1.0,0.675,1.0,0.8059701492537313,0.8375,0.97875,80,0,26,54,6.0,67.25
+Groq,160,90,0.7625,0.8620689655172413,0.625,0.9,0.7246376811594203,0.7625,0.831875,72,8,30,50,17.2,63.1
