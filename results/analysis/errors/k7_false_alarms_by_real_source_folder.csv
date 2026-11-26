@@ -1,0 +1,17 @@
+mode,source_generator,images,false_alarm_rate
+augmented,ADM,34,0.110294
+augmented,BigGAN,35,0.0357143
+augmented,Midjourney,41,0.00203252
+augmented,VQDM,29,0.058908
+augmented,glide,26,0.025641
+augmented,stable_diffusion_v_1_4,43,0.00872093
+augmented,stable_diffusion_v_1_5,31,0.0255376
+augmented,wukong,41,0.0843496
+baseline,ADM,34,0.182598
+baseline,BigGAN,35,0.0452381
+baseline,Midjourney,41,0.0264228
+baseline,VQDM,29,0.0675287
+baseline,glide,26,0.0400641
+baseline,stable_diffusion_v_1_4,43,0.0125969
+baseline,stable_diffusion_v_1_5,31,0.0201613
+baseline,wukong,41,0.101626

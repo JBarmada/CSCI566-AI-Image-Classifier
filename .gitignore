@@ -50,3 +50,7 @@ tmp/
 # Small published ViT summary figures; original dataset images remain ignored.
 !/results/vit_master_v1/summary/*.png
 !/results/vit_benchmark/figures/*.png
+
+# Confidence/failure analysis
+!/results/analysis/figures/*.png
+/results/analysis/recalibration/test_predictions_recalibrated.csv.gz

@@ -1,0 +1,31 @@
+{
+  "runs_compared": 192,
+  "expected": 192,
+  "all_ok": true,
+  "metrics": {
+    "accuracy": {
+      "max_abs_diff": 1.1102230246251565e-16,
+      "ok": true
+    },
+    "recall_fake": {
+      "max_abs_diff": 1.1102230246251565e-16,
+      "ok": true
+    },
+    "auroc": {
+      "max_abs_diff": 1.1102230246251565e-16,
+      "ok": true
+    },
+    "ece": {
+      "max_abs_diff": 1.1026901058919236e-09,
+      "ok": true
+    },
+    "brier": {
+      "max_abs_diff": 9.798126199278556e-10,
+      "ok": true
+    },
+    "log_loss": {
+      "max_abs_diff": 1.995660525722087e-09,
+      "ok": true
+    }
+  }
+}
