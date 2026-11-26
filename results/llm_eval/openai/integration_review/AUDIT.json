@@ -1,0 +1,30 @@
+{
+  "status": "passed_for_saved_csv_analysis",
+  "source_predictions_sha256": "0c7d1a5a02252d2d3d862392b17b1e0a747459ed642138219f224929f2f56377",
+  "final_rows": 1890,
+  "valid_scores": 1844,
+  "invalid_outputs": 46,
+  "pilot_common_valid_images": 88,
+  "vit_comparisons": 16,
+  "vit_matched_rows": 2204,
+  "settings": {
+    "vit_k": 7,
+    "vit_rep": 0,
+    "vit_seed": 17,
+    "vit_condition": "clean",
+    "gpt_view": "detector224"
+  },
+  "limitations": [
+    "Request-attempt JSONL unavailable; attempts and billing are not independently audited.",
+    "Shared real images recur across holdouts and both ViT modes.",
+    "Only source hashes are matched; identical model-internal preprocessing is not established."
+  ],
+  "outputs": {
+    "openai_vs_claude_matched.csv": "4e0d98cf340e023106d0d1692dbbcb17b4876e9b8e6e2fa86d61eae25b44fe8e",
+    "openai_vs_pilot_models.csv": "3a132e6abc53e93ee113022af50adf17660567639e497eef617a2bd083c25666",
+    "openai_vs_vit_matched.csv": "3fa01af9096188a98f06454e2014b1d760311088d496158ee2ce97353f5340a9",
+    "pilot_legacy_task_row_metrics.csv": "157a139bd64a17595a1fe9e2b62447b9e3747ca09f3de51b31ab0c192b9aadd6"
+  },
+  "vit_expected_unique_sources": 630,
+  "vit_valid_unique_sources": 612
+}

@@ -13,11 +13,10 @@ The pilot successfully evaluated all 90 images with:
 
 `protocol.json` records the prompt and generation settings used by `run_pilot.py`. API inference does not need to be repeated for the matched comparison.
 
-## New team outputs awaiting integration
+## Integrated team outputs
 
 The [consolidation plan](../../docs/results-consolidation.md) records the
-source commits and outstanding checks. These outputs are on other branches,
-not yet present in this working tree:
+source commits and outstanding checks. The following outputs are now integrated:
 
 - Claude: `e319d94` adds `results/llm_eval/claude/`, with the fixed 630-image
   shared list, neutral-ID preparation, isolated API runner, raw scored
@@ -30,11 +29,11 @@ not yet present in this working tree:
 
 Use the 90-image intersection for comparisons with Gemini/Qwen, and report the
 630-image Claude/GPT study separately. Match both sides on the same valid
-source hashes and view. GPT's current pilot comparison mixes 88 valid GPT
-images with 90-image baseline metrics; recomputation is required. Its saved
-ViT table has only 1–4 all-real matches per old ADM export. Use corrected
-ViT exports and obtain matching CNN predictions from CARC before a substantive
-detector comparison. The GPT request-attempt log is not tracked at `7be92ec`
+source hashes and view. The [integration review](openai/integration_review/README.md)
+corrects the earlier mixed pilot denominators and replaces old ADM-only ViT
+discovery with corrected k=7/repeat-0 exports. Original exports are preserved.
+Obtain matching CNN predictions from CARC to complete that comparison.
+The GPT request-attempt log is not tracked at `7be92ec`
 and must be obtained for its provenance audit. Do not rerun paid inference
 to perform this consolidation.
 
@@ -61,6 +60,9 @@ steps to repeat for the completed pilot. `run_full.py` now delegates to
 `run_pilot.py`; `evaluate_gemini.py` is an alternative historical runner.
 The partial full exports contain 95 Gemini rows and 91 Groq rows (one error).
 They stay in place to preserve their original paths, but are not final results.
+The alternative `evaluate_gemini.py` expects an older single-provider protocol
+with a top-level `model`; the current pilot protocol has a `providers` list.
+Its default invocation is not a validated entry point for the integrated study.
 Use the [current workflow](../../docs/llm-evaluation.md) for the face evaluation.
 
 ## Compare Gemini, Groq-Qwen, CNN, and ViT

@@ -7,9 +7,10 @@ not prerequisites for reporting the work already done.
 
 The next priority is a consolidated analysis of the saved outputs. The
 [consolidation plan](docs/results-consolidation.md) records completed code,
-branch locations, verification gaps and the order of work. Claude, GPT GenImage
-and the extended ViT confidence analysis are available on separate branches;
-their availability does not mean they are integrated or fully audited here.
+branch locations, verification gaps and the order of work. The distinct active
+branches have now been integrated and tested together; see the
+[contribution and merge review](docs/project-review-2026-11-26.md). Scientific
+acceptance remains separate from a clean merge and passing software tests.
 
 The official [course schedule](https://usc-fortis.github.io/CSCI566-F26/schedule.html)
 lists the poster and demo session on **November 30** and the final report due
@@ -40,21 +41,20 @@ questions about the project.
       available ADM validation predictions are for clean images, so they do not
       establish a 10% false-positive rate on JPEG images. A JPEG-specific check
       needs separate JPEG-processed validation predictions and a frozen rule.
-- [ ] **Integrate the completed branch contributions. Owner: to confirm.**
-      Preserve our pushed OpenAI face workflow and results (`1324ffc`), add
-      Claude/GPT GenImage outputs from `zero-shot/gpt-genimage` (`7be92ec`,
-      already including Claude), and add `analysis/vit-confidence-errors`
-      (`ebeba98`). Review conflicts and source provenance before merging.
-      `main` still lacks these contributions. See the
-      [source inventory](docs/results-consolidation.md).
+- [x] **Integrate the completed branch contributions. Owner: Aditya.**
+      Combined our OpenAI face work, Claude/GPT GenImage and the extended ViT
+      analysis in an isolated checkout. No text conflicts occurred; fixed a
+      prompt-test incompatibility and two comparison errors. The combined
+      suite passes 80 tests and 28 subtests. Core CNN/ViT training code is
+      unchanged. Older setup branches have no unmatched code patches.
 - [ ] **Finish matched frontier GenImage comparison. Owner: Shriya.** Gemini and
       Groq-Qwen completed the 90-image pilot; Claude scored a 630-image superset
       in three views, and GPT now has 1,844 valid / 1,890 image-view outputs.
-      Compare only shared valid images and matching views with the corrected
-      CNN/ViT exports. Recompute GPT's pilot comparison: its baseline metrics
-      currently use 90 images while GPT has 88 valid matches. Its existing
-      ViT intersections are tiny, all-real samples from old ADM exports.
-      Obtain the matching CNN predictions from CARC and the GPT attempt log
+      The corrected GPT pilot comparison now uses 88 valid images on both
+      sides, and corrected ViT k=7/repeat-0 matching covers both classes across
+      all eight holdouts. Original outputs are preserved; use the
+      [corrected comparisons](results/llm_eval/openai/integration_review/README.md).
+      Obtain matching CNN predictions from CARC and the GPT attempt log
       from its owner. The separate 2,520-image attempts remain incomplete.
 - [x] **Complete frontier face evaluation. Owners: Jeslyn, Aditya.** On November
       26, the cleaned OpenAI runner completed a fresh smoke and all 189 frozen
@@ -83,10 +83,11 @@ questions about the project.
       the team's verified contributions.
 - [ ] **Verify every figure, table and number** **Owner: Rachel.** against saved results, including
       sample counts, decision thresholds and aggregation methods.
-- [ ] **Integrate and reproduce the completed ViT confidence/error analysis.**
-      The implementation, figures and tests already exist on
-      `analysis/vit-confidence-errors`; do not list them as unimplemented.
-      Check their sources and validation-only fitting after integration. An
+- [x] **Integrate and reproduce the completed ViT confidence/error analysis.**
+      Integrated the implementation, figures and tests, then regenerated its
+      analyses offline. Raw calibration and aggregate errors matched exactly;
+      fitted calibration values had small dependency-related numerical
+      differences documented in the review. An
       equivalent extended CNN recalibration/repeated-error study remains a
       separate optional implementation, not a prerequisite for reporting.
 - [ ] **Explain the model comparison fairly.** CNN and ViT differ in pretraining
@@ -161,11 +162,12 @@ questions about the project.
 - OpenAI face evaluation: 189/189 successful predictions and 1,134 matched
   model rows, archived locally and pushed on `feature/matched-frontier-comparison`.
   CSV regeneration matched exactly; the report draft records class-specific
-  results and dataset limitations. This work is not yet in `main`.
+  results and dataset limitations. The work is included in the integration.
 - Cross-branch inventory: Claude's three 630-image GenImage views, the new GPT
   GenImage implementation/results (`7be92ec`) and the extended ViT analysis
-  were reviewed for availability. Integration and the remaining audits are
-  tracked above; this is not a blanket acceptance of those experiments.
+  are now integrated. The combined suite passes 80 tests; the remaining
+  provenance and CNN matching work is tracked above. This is not a blanket
+  acceptance of every experimental interpretation or historical entry point.
 - Corrected clean CNN and ViT benchmarks and the 192-pair comparison.
 - Eight-holdout ViT JPEG/resize robustness and the corresponding CNN rerun.
   All 24 affected CNN clean runs matched the original scores on V100; the
@@ -176,7 +178,7 @@ questions about the project.
   data and generalization limitations are recorded in the
   [experiment log](results/df40_transfer/FINAL_REPORT_EXPERIMENT_LOG.md).
 
-**Recommended next step:** integrate the saved branch outputs, resolve the
-documented matching/provenance gaps, then regenerate one clear analysis for
+**Recommended next step:** retrieve CNN exports and the GPT attempt log, finish
+the remaining common comparisons, then regenerate one clear analysis for
 final poster/report use. Keep GenImage and face results separate.
 New training or a new dataset is optional; the current face set remains exploratory.

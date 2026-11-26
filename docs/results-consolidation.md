@@ -3,7 +3,9 @@
 Updated November 26, 2026 after fetching the team branches. Consolidation is
 feasible using saved predictions: no new training or paid inference is needed
 to assemble and compare the available outputs. This document is the plan and
-source inventory; the cross-branch consolidation has not been executed.
+source inventory. The distinct active code/result branches are now integrated
+and tested together; the final CNN-inclusive cross-study analysis is still
+pending. See the [contribution and merge review](project-review-2026-11-26.md).
 
 ## Sources and integration state
 
@@ -16,8 +18,9 @@ source inventory; the cross-branch consolidation has not been executed.
   include the frozen run, raw scored responses, audits and matched six-model
   predictions. Local regeneration reproduced the original CSVs exactly.
   The resumable runner, protocol checks, concurrent-writer lock and offline
-  comparison are implemented; 17 focused tests passed. These changes are pushed
-  to the feature branch but are not yet in `main`.
+  comparison are implemented; 17 focused tests passed before integration and
+  the combined suite now passes 80 tests. These changes are included in the
+  integrated tree.
 - **Gemini/Groq-Qwen GenImage pilot:** the
   [90-image outputs](../results/llm_eval/README.md) are available on the current
   branch. The 160 legacy task rows reuse the same ten real images eight times.
@@ -30,7 +33,7 @@ source inventory; the cross-branch consolidation has not been executed.
   Read-only checks confirmed all 90 pilot hashes are included, the same blind-ID
   mapping across views, raw-score consistency and the saved overall metrics.
   This is CSV-level verification, not a full image/protocol audit. The files
-  are not integrated into the current branch or `main`.
+  are included in the integrated tree; original experiment limitations remain.
 - **GPT GenImage:** new source commit `7be92ec` on `zero-shot/gpt-genimage`
   adds [code](https://github.com/JBarmada/CSCI566-AI-Image-Classifier/tree/7be92ec/code/llm-eval/genimage/openai)
   and [outputs](https://github.com/JBarmada/CSCI566-AI-Image-Classifier/tree/7be92ec/results/llm_eval/openai).
@@ -38,15 +41,17 @@ source inventory; the cross-branch consolidation has not been executed.
   The same 630 GenImage sources have three views: 1,890 final rows, comprising
   1,844 valid scores and 46 invalid outputs. Valid counts are 617 original,
   615 square and 612 detector224. There are no missing final rows or refusals
-  in the saved status tables. These outputs are available on that branch,
-  not yet independently audited or integrated here. The earlier branch-review
+  in the saved status tables. These outputs are now integrated and CSV-level
+  membership/raw-score checks passed; the attempt-level audit is incomplete.
+  Corrected comparison outputs are preserved separately. The earlier branch-review
   statement that GPT GenImage code was absent is superseded by this commit.
 - **ViT confidence/error analysis:** source `ebeba98` on
   `analysis/vit-confidence-errors` contains
   [analysis, figures and tests](https://github.com/JBarmada/CSCI566-AI-Image-Classifier/tree/ebeba98/results/analysis).
   It reuses predictions, reports agreement with all 192 recorded clean-run
   metrics and fits calibrators/thresholds on validation data only. Integration
-  and independent regeneration remain pending. The extended CNN counterpart
+  and offline regeneration are complete, with small fitted-calibration
+  numerical differences documented in the review. The extended CNN counterpart
   has not been implemented; the existing raw CNN/ViT confidence audit remains
   available.
 
@@ -56,7 +61,7 @@ branch commit IDs as new experimental results. Preserve them as history.
 
 ## Consolidation sequence
 
-1. Integrate the reviewed branch contributions on a dedicated consolidation
+1. **Code integration complete.** Integrated the reviewed branch contributions on a dedicated consolidation
    branch. Preserve the current OpenAI face workflow, audit checks, original
    exports and source attribution. The GPT branch already includes the Claude
    contribution; avoid adding it twice. Resolve documentation differences
@@ -65,17 +70,18 @@ branch commit IDs as new experimental results. Preserve them as history.
    source branch/commit, model/configuration, preprocessing/view, threshold,
    checkpoint where relevant, expected/valid/invalid counts and audit status.
    Reference original files rather than moving or rewriting audited exports.
-3. Recompute comparable metrics from saved rows. First complete the GenImage
+3. **Partially complete.** Recompute comparable metrics from saved rows. Complete the GenImage
    pilot comparison using its shared 90-image membership. Include Claude and
    valid GPT intersections with exact denominators. Report the 630-image
    Claude/GPT comparison separately; Gemini/Qwen have not scored the other
    540 images. Keep original, square and detector224 views separate.
-4. Retrieve matching corrected CNN predictions from CARC and use the published
-   corrected [ViT exports](../results/vit_benchmark/README.md). Check membership,
+4. Retrieve matching corrected CNN predictions from CARC. The published
+   corrected [ViT exports](../results/vit_benchmark/README.md) are now used by
+   the repaired comparison. Check membership,
    labels, holdouts, repeats, conditions and preprocessing before comparing.
    If saved scores do not cover a proposed image set, report the missing
    coverage; restrict to supported intersections rather than fabricating rows.
-5. Integrate/reproduce the ViT confidence analysis. Keep raw scores separate
+5. **ViT integration/reproduction complete.** Keep raw scores separate
    from validation-calibrated scores and preserve the fixed-threshold benchmark.
    Decide separately whether to implement equivalent CNN recalibration.
 6. Publish one analysis entry point with separate sections for clean GenImage,
@@ -86,14 +92,16 @@ branch commit IDs as new experimental results. Preserve them as history.
 
 ## Checks required before combining results
 
-- **Common image membership:** GPT's saved Gemini/Qwen comparison reports
+- **Common image membership — fixed:** GPT's original Gemini/Qwen comparison reports
   88 valid GPT pilot images but baseline metrics with `baseline_n_valid=90`.
-  Recompute both sides on the same 88-image intersection before calling those
-  metrics matched. Preserve the full-90 baseline summary separately.
-- **Correct detector exports:** the GPT branch's current ViT table has only
+  Both sides are now recomputed on the same 88-image intersection in the
+  [integration review](../results/llm_eval/openai/integration_review/README.md).
+  Preserve the full-90 baseline summary separately.
+- **Correct detector exports — ViT fixed, CNN pending:** the original GPT ViT table has only
   72 repeated matches across 24 old ADM exports. Each intersection has 1–4
   images, all real and no fake. It cannot estimate AUROC or broad detector
-  performance. Replace it with supported corrected-export intersections, and
+  performance. The repaired comparison now has 16 corrected k=7/repeat-0
+  comparisons and 2,204 matched rows across 612 valid sources. Continue to
   obtain the CNN exports from CARC rather than treating them as nonexistent.
 - **Request provenance:** the GPT summary refers to 1,893 attempts including
   three retries, but its linked `logs/requests_gpt-6.2-sol.jsonl` is not tracked
@@ -102,7 +110,7 @@ branch commit IDs as new experimental results. Preserve them as history.
   complete from final prediction CSVs alone.
 - **Coverage:** retain GPT's 46 invalid outputs. Performance metrics use valid
   scores, while coverage uses all 630 expected sources per view. Use a common
-  valid intersection for comparisons and disclose who was excluded. Do not
+   valid intersection for comparisons and disclose who was excluded. Do not
   silently call the API again or treat invalid outputs as correct predictions.
 - **Preprocessing:** check submitted-image hashes/pixel mappings where available.
   Same source images or 224×224 dimensions do not prove identical CNN/ViT/API
@@ -124,5 +132,5 @@ source and explicit audit status; comparison rows use verified common membership
 saved metrics and figures regenerate; partial/invalid/historical outputs are
 labeled; and all report numbers link to their evidence. Preserve images and
 weights on their existing storage and keep credentials out of the repository.
-No new API key, API provider call, training job, branch merge or result rewrite
-is part of this documentation update.
+The integration preserved original exports and added separate corrected
+comparisons. No new API key, provider call or training job was used.

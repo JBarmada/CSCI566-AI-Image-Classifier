@@ -33,7 +33,7 @@ from score_openai import report_for
 
 class EvaluationTests(unittest.TestCase):
     def test_prompt_matches_existing_experiment_exactly(self) -> None:
-        source = (LLM_EVAL / "run_full.py").read_text(encoding="utf-8")
+        source = (LLM_EVAL / "run_pilot.py").read_text(encoding="utf-8")
         module = ast.parse(source)
         prompt = next(
             ast.literal_eval(node.value)
@@ -223,10 +223,22 @@ class EvaluationTests(unittest.TestCase):
             self.assertTrue((legacy["n_unique_images_in_manifest"] == 90).all())
 
             vit = compare_vit(gpt, root)
-            self.assertEqual(len(vit), 24)
-            self.assertEqual(int(vit["n_matched"].sum()), 72)
+            self.assertEqual(len(vit), 16)
+            self.assertEqual(int(vit["n_matched"].sum()), 2240)
+            self.assertTrue(vit["gpt_n_real"].eq(70).all())
+            self.assertTrue(vit["gpt_n_fake"].eq(70).all())
             self.assertIn("holdout", vit.columns)
             self.assertIn("vit_threshold_preserved", vit.columns)
+
+    def test_pilot_metrics_use_the_same_valid_image_intersection(self) -> None:
+        saved = pd.read_csv(LLM_EVAL / "openai/metrics/openai_predictions.csv")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            compared, _ = compare_pilot(saved, Path(temp_dir))
+        self.assertTrue(compared["n_matched_successful"].eq(88).all())
+        self.assertTrue(compared["gpt_n_valid"].eq(88).all())
+        self.assertTrue(compared["baseline_n_valid"].eq(88).all())
+        # Availability is retained separately from metrics on matched rows.
+        self.assertTrue(compared["n_baseline_valid"].eq(90).all())
 
     def test_scoring_retains_refusal_failure_and_missing_denominators(self) -> None:
         shared = pd.read_csv(CLAUDE_DIR / "shared_image_list.csv", dtype={"sha256": str})

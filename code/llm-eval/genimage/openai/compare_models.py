@@ -1,4 +1,5 @@
 import argparse
+import hashlib
 from pathlib import Path
 from typing import Any
 
@@ -148,12 +149,12 @@ def compare_pilot(gpt: pd.DataFrame, output_dir: Path,
             how="inner",
             validate="one_to_one",
         )
-        gpt_eval = gpt_valid.drop(columns=["label"], errors="ignore").merge(
+        gpt_eval = matched[["source_image_id", "p_fake"]].merge(
             shared[["sha256", "label"]].rename(columns={"sha256": "source_image_id"}),
             on="source_image_id",
             validate="one_to_one",
         )
-        base_eval = baseline_valid[["source_image_id", "comparison_score"]].merge(
+        base_eval = matched[["source_image_id", "comparison_score"]].merge(
             shared[["sha256", "label"]].rename(columns={"sha256": "source_image_id"}),
             on="source_image_id",
             validate="one_to_one",
@@ -164,10 +165,10 @@ def compare_pilot(gpt: pd.DataFrame, output_dir: Path,
             "pilot_intersection_images": len(intersection),
             "expected_real": int((shared["sha256"].isin(intersection) & (shared["label"] == 0)).sum()),
             "expected_fake": int((shared["sha256"].isin(intersection) & (shared["label"] == 1)).sum()),
-            "n_gpt_valid": len(gpt_eval),
-            "gpt_coverage": len(gpt_eval) / len(intersection),
-            "n_baseline_valid": len(base_eval),
-            "baseline_coverage": len(base_eval) / len(intersection),
+            "n_gpt_valid": len(gpt_valid),
+            "gpt_coverage": len(gpt_valid) / len(intersection),
+            "n_baseline_valid": len(baseline_valid),
+            "baseline_coverage": len(baseline_valid) / len(intersection),
             "n_matched_successful": len(matched),
             "n_unique_images": matched["source_image_id"].nunique(),
             "score_correlation": (
@@ -181,7 +182,8 @@ def compare_pilot(gpt: pd.DataFrame, output_dir: Path,
             ),
             "gpt_client_pixel_equivalence": "verified" if pixels_match else "not verified",
             "pilot_source_bytes_vs_gpt_png_encoding": (
-                "different encodings; decoded RGB equality checked"
+                "different encodings; decoded RGB equality "
+                + ("verified" if pixels_match else "not verified")
             ),
             "api_internal_preprocessing_equivalence": "not observable",
         }
@@ -236,81 +238,68 @@ def compare_pilot(gpt: pd.DataFrame, output_dir: Path,
     return pilot_comparison, pd.DataFrame(evaluations)
 
 
-def compare_vit(gpt: pd.DataFrame, output_dir: Path) -> pd.DataFrame:
-    vit_root = LLM_EVAL.parent / "vit_master_v1"
-    index_path = vit_root / "metadata" / "prediction_index.csv"
-    if not index_path.is_file():
-        return pd.DataFrame()
-    index = pd.read_csv(index_path, dtype=str, keep_default_na=False)
-    index = index[(index["split"] == "test") & (index["condition"] == "clean")]
+def compare_vit(gpt: pd.DataFrame, output_dir: Path,
+                vit_root: Path | None = None) -> pd.DataFrame:
+    """Match corrected k=7/rep0 clean test exports, preserving saved decisions."""
+    vit_root = vit_root or LLM_EVAL.parent / "vit_benchmark"
+    files = sorted((vit_root / "predictions").glob("*.csv.gz"))
+    if len(files) != 8:
+        raise ValueError("Expected eight corrected ViT prediction exports")
+    index = pd.read_csv(vit_root / "summary/all_results.csv", dtype=str)
+    keys = ["experiment", "mode", "seed", "condition"]
+    index = index.set_index(keys)
+    if not index.index.is_unique:
+        raise ValueError("Duplicate corrected ViT run records")
     detector = gpt[(gpt["view"] == "detector224") & (gpt["status"] == "success")]
     rows = []
-    for _, provenance in index.iterrows():
-        prediction_path = vit_root / provenance["prediction_file"]
-        if not prediction_path.is_file():
-            continue
-        data = pd.read_csv(prediction_path, dtype={"sha256": str})
-        if not {"sha256", "prob_fake", "pred_label", "threshold"} <= set(data.columns):
-            continue
-        joined = detector.merge(
-            data[["sha256", "prob_fake", "pred_label", "threshold", "label"]],
-            left_on="source_image_id",
-            right_on="sha256",
-            how="inner",
-            suffixes=("_gpt", "_vit"),
-            validate="one_to_one",
-        )
-        if joined.empty:
-            continue
-        if not (joined["label_gpt"].astype(int) == joined["label_vit"].astype(int)).all():
-            raise ValueError(f"GPT and ViT labels differ on matched hashes in {prediction_path}")
-        # Preserve the ViT's saved prediction/threshold; do not refit or retune it.
-        vit_eval = joined[[
-            "source_image_id", "label_vit", "prob_fake", "pred_label"
-        ]].rename(columns={
-            "label_vit": "label",
-            "prob_fake": "vit_score",
-        })
-        vit_metrics = score_metrics(
-            vit_eval,
-            score_column="vit_score",
-            prediction_column="pred_label",
-        )
-        gpt_eval = joined[[
-            "source_image_id", "label_gpt", "p_fake"
-        ]].rename(columns={"label_gpt": "label"})
-        gpt_metrics = score_metrics(gpt_eval)
-        rows.append({
-            "comparison": "GPT detector224 vs saved ViT clean test predictions",
-            "experiment": provenance["experiment"],
-            "holdout": provenance["holdout"],
-            "k": provenance["k"],
-            "rep": provenance["rep"],
-            "mode": provenance["mode"],
-            "condition": provenance["condition"],
-            "split": provenance["split"],
-            "seed": provenance["seed"],
-            "config_file": provenance["config_file"],
-            "protocol_hash": provenance["protocol_hash"],
-            "evaluation_hash": provenance["evaluation_hash"],
-            "vit_prediction_file": provenance["prediction_file"],
-            "vit_threshold_preserved": ";".join(sorted(joined["threshold"].astype(str).unique())),
-            "n_matched": len(joined),
-            "n_unique_images": joined["source_image_id"].nunique(),
-            "input_preparation_equivalence": (
-                "not established; compare only exact source-hash intersection"
-            ),
-            "api_internal_preprocessing_equivalence": "not observable",
-            "score_correlation": joined[["p_fake", "prob_fake"]].corr().iloc[0, 1],
-            "binary_agreement": float(
-                ((joined["p_fake"] >= THRESHOLD).astype(int)
-                 == joined["pred_label"].astype(int)).mean()
-            ),
-            "gpt_auroc_on_matched_set": gpt_metrics["auroc"],
-            "vit_auroc_on_matched_set": vit_metrics["auroc"],
-        })
-        rows[-1].update({f"gpt_{key}": value for key, value in gpt_metrics.items()})
-        rows[-1].update({f"vit_{key}": value for key, value in vit_metrics.items()})
+    for prediction_path in files:
+        data = pd.read_csv(prediction_path, dtype={"seed": str, "k": str, "rep": str})
+        data = data[(data["split"] == "test") & (data["condition"] == "clean")
+                    & (data["k"] == "7") & (data["rep"] == "0") & (data["seed"] == "17")]
+        source_digest = hashlib.sha256(prediction_path.read_bytes()).hexdigest()
+        for key, run in data.groupby(keys):
+            if run["sha256"].duplicated().any():
+                raise ValueError(f"Duplicate ViT image hashes: {key}")
+            if not np.isfinite(run["prob_fake"]).all() or not run["prob_fake"].between(0, 1).all():
+                raise ValueError(f"Invalid ViT scores: {key}")
+            if not run["pred_label"].eq((run["prob_fake"] >= run["threshold"]).astype(int)).all():
+                raise ValueError(f"Saved ViT decisions disagree with thresholds: {key}")
+            provenance = index.loc[key]
+            joined = detector.merge(run, left_on="source_image_id", right_on="sha256",
+                                    suffixes=("_gpt", "_vit"), validate="one_to_one")
+            if joined.empty:
+                continue
+            if not joined["label_gpt"].eq(joined["label_vit"]).all():
+                raise ValueError(f"GPT and ViT labels differ: {key}")
+            vit_eval = joined[["source_image_id", "label_vit", "prob_fake", "pred_label"]].rename(
+                columns={"label_vit": "label", "prob_fake": "vit_score"})
+            gpt_eval = joined[["source_image_id", "label_gpt", "p_fake"]].rename(
+                columns={"label_gpt": "label"})
+            gpt_metrics = score_metrics(gpt_eval)
+            vit_metrics = score_metrics(vit_eval, score_column="vit_score", prediction_column="pred_label")
+            rows.append({
+                "comparison": "GPT detector224 vs corrected ViT k7 rep0 clean test",
+                **dict(zip(keys, key)),
+                "holdout": provenance["holdout"], "k": 7, "rep": 0, "split": "test",
+                "config_file": provenance["run_dir"] + "/config.json",
+                "protocol_hash": provenance["protocol_hash"],
+                "evaluation_hash": provenance["evaluation_hash"],
+                "vit_prediction_file": str(prediction_path.relative_to(LLM_EVAL.parents[1]))
+                if prediction_path.is_relative_to(LLM_EVAL.parents[1]) else str(prediction_path),
+                "vit_prediction_sha256": source_digest,
+                "vit_threshold_preserved": ";".join(sorted(joined["threshold"].astype(str).unique())),
+                "n_matched": len(joined), "n_unique_images": joined["source_image_id"].nunique(),
+                "input_preparation_equivalence": "not established; exact source-hash intersection only",
+                "api_internal_preprocessing_equivalence": "not observable",
+                "score_correlation": joined[["p_fake", "prob_fake"]].corr().iloc[0, 1],
+                "binary_agreement": ((joined["p_fake"] >= THRESHOLD).astype(int) == joined["pred_label"]).mean(),
+                "gpt_auroc_on_matched_set": gpt_metrics["auroc"],
+                "vit_auroc_on_matched_set": vit_metrics["auroc"],
+                **{f"gpt_{name}": value for name, value in gpt_metrics.items()},
+                **{f"vit_{name}": value for name, value in vit_metrics.items()},
+            })
+    if len(rows) != 16:
+        raise ValueError("Expected matched baseline/augmented ViT rows for eight holdouts")
     result = pd.DataFrame(rows)
     result.to_csv(output_dir / "openai_vs_vit_matched.csv", index=False)
     return result
@@ -324,6 +313,7 @@ def main() -> None:
     parser.add_argument("--model", required=True)
     parser.add_argument("--configuration-sha256")
     parser.add_argument("--out-dir", type=Path, default=OUTPUT_DIR / "metrics")
+    parser.add_argument("--vit-root", type=Path, default=LLM_EVAL.parent / "vit_benchmark")
     args = parser.parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)
     predictions, _ = report_for(
@@ -336,7 +326,7 @@ def main() -> None:
     print(pilot.round(4).to_string(index=False))
     print("\nLegacy pilot task-row metrics (not independent-image metrics)")
     print(legacy.round(4).to_string(index=False))
-    vit = compare_vit(predictions, args.out_dir)
+    vit = compare_vit(predictions, args.out_dir, args.vit_root)
     print(f"\nMatching saved ViT test comparisons: {len(vit)}")
 
 

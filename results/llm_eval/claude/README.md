@@ -3,7 +3,8 @@
 Scores the shared 630-image GenImage set with Claude: 70 real images plus 70 fakes
 from each of the 8 generators. The set includes all 90 pilot images, so Claude can
 be compared directly with the Gemini and Qwen pilot results. The prompt is copied
-word for word from `results/llm_eval/run_full.py`.
+word for word from `results/llm_eval/run_pilot.py`; `run_full.py` now delegates
+to that canonical historical runner.
 
 Claude only sees neutrally named PNGs (`img_0001.png` …). File names, folders and
 metadata are removed so the answer can't be read off the path. The pixels are
@@ -76,7 +77,8 @@ views, keeping the same `img_XXXX` IDs:
 
 - `square`: center crop to a square at the original resolution (removes shape)
 - `detector224`: bicubic resize of the short side to 224, then a 224 center crop,
-  the same input the CNN/ViT see (removes shape and resolution)
+  a geometry/resolution control intended to approximate detector inputs.
+  Exact pixel and model-internal preprocessing equivalence is not established.
 
 ```bash
 for v in square detector224; do
@@ -182,8 +184,10 @@ model name and the dates you ran it to the section below.
 | detector224 | 0.9535 | 56.3% | 100% |
 | shape-only baseline (square = fake) | 0.9929 | 100% | 98.6% |
 
-Shape alone separates this dataset almost perfectly, but Claude's results barely change
-when shape is removed (square), so it is not relying on it. Reducing every image to
+Shape alone separates this dataset almost perfectly. Claude's aggregate recall
+is unchanged after the square crop, although 18/630 threshold decisions change.
+This suggests shape alone does not explain its performance; it does not rule
+out all shape or processing shortcuts. Reducing every image to
 224×224 lowers its scores, mostly for high-resolution generators (SD1.4/1.5, Wukong,
 Midjourney), so resolution matters. Claude never flagged a real photo in any view;
 its errors are all missed fakes, many scored just under 50.

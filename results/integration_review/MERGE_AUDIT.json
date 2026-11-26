@@ -1,0 +1,68 @@
+{
+  "review_date": "2026-11-26",
+  "scope": "Offline source integration and saved-output review; no new API requests or GPU training",
+  "source_commits": {
+    "main_before_integration": "4461244bd4120d6af81d88422c93b1f8ed1286f2",
+    "openai_face_and_pilot_cleanup": "1324ffcf8b0b0ed8d710bf0e5870af77f32e36f8",
+    "gpt_genimage_including_claude": "7be92ec1afd6492eb29a15531af1e5aaa23fca94",
+    "vit_confidence_errors": "ebeba988d905220ef5eabf60439d2fcceaf611bc",
+    "pending_documentation_preserved": "15d50391237e594f6aff3aad01affbdb9e01fada"
+  },
+  "text_merge_conflicts": 0,
+  "initial_combined_test_run": {
+    "passed": 78,
+    "failed": 1,
+    "failure": "GPT prompt test expected PROMPT in run_full.py after it became a wrapper"
+  },
+  "final_combined_test_run": {
+    "passed": 80,
+    "failed": 0,
+    "subtests_passed": 28,
+    "warnings": "Three non-interactive Matplotlib FigureCanvasAgg display warnings",
+    "command": "MPLBACKEND=Agg PYTHONPATH=tests:code/llm-eval/genimage/openai python -m pytest -q tests code/llm-eval/genimage/openai/test_openai_eval.py"
+  },
+  "corrected_issues": [
+    "Prompt test points to canonical run_pilot.py without changing the prompt",
+    "GPT and Gemini/Qwen pilot performance metrics use the same 88 valid source hashes",
+    "ViT matching uses corrected k7 rep0 clean exports instead of old ADM-only pilot exports"
+  ],
+  "training_code_and_notebooks_unchanged": [
+    "code/cnn/",
+    "code/vit/",
+    "cnn.ipynb",
+    "ViT_Master_Experiments.ipynb"
+  ],
+  "original_result_bytes_preserved": [
+    "OpenAI face CSV/JSON/JSONL exports from 1324ffc",
+    "GPT GenImage metrics CSVs from 7be92ec",
+    "Claude CSVs from e319d94"
+  ],
+  "legacy_patch_equivalence": {
+    "feature/cnn-slurm-batch": 0,
+    "fix/cnn-direct-python": 0,
+    "docs/vit-team-cleanup": 0,
+    "chore/remove-unused-placeholders": 0,
+    "backup/pre-email-rewrite-20261111": 0,
+    "unit": "Unmatched non-merge patches against integrated history"
+  },
+  "vit_offline_replay": {
+    "raw_calibration_aggregate_csv": "exact match",
+    "aggregate_error_rates_csv": "exact match",
+    "recalibration_mean_ece_brier_max_absolute_difference": 0.000001,
+    "recalibration_log_loss_summary_max_absolute_difference": 0.000233,
+    "original_outputs_replaced": false
+  },
+  "new_corrected_outputs": "results/llm_eval/openai/integration_review/",
+  "remaining_work": [
+    "Retrieve CNN prediction export and finish CNN-inclusive frontier matching",
+    "Obtain original GPT request-attempt JSONL for attempt/settings/usage provenance audit",
+    "Publish one final reproducible result inventory and analysis entry point",
+    "Review team contribution credit and complete report/poster/demo"
+  ],
+  "limitations": [
+    "Passing tests is not proof of every historical API runtime or CARC training execution",
+    "Historical evaluate_gemini.py expects a single-provider protocol and is not a validated integrated entry point",
+    "Source hashes do not establish identical internal preprocessing across model providers",
+    "Face source/identity/mirror-label limitations and repeated-image dependencies remain"
+  ]
+}

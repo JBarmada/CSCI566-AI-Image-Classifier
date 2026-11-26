@@ -1,5 +1,13 @@
 # GPT-6.2 Sol GenImage Evaluation Results
 
+**Integration review:** The original outputs below are preserved. The pilot
+comparison mixed 88 valid GPT images with 90-image Gemini/Qwen summaries, and
+the ViT discovery selected an old ADM pilot with only all-real intersections.
+Use the [corrected offline comparisons](integration_review/README.md) for those
+two analyses. Raw per-view GPT/Claude results have not been changed. The original
+request-attempt log linked below is not committed, so its retry/usage provenance
+remains to be independently checked.
+
 Run date: 2026-11-26
 Model requested and returned: `gpt-6.2-sol`
 API: OpenAI Responses API; `detail=auto`, `max_output_tokens=128`, temperature omitted, no tools, `store=false`. The prompt and decision threshold were fixed before scoring; scores `p_fake >= 50` are classified as fake. `p_fake` is a model-reported score, not a calibrated probability.

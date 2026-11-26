@@ -32,9 +32,9 @@ metrics. Saved checkpoints and full raw outputs remain on CARC.
 | DF40 face transfer | Celeb-DF and FaceForensics++ subsets evaluated; a supervised face-adapted head is exploratory |
 | Zero-shot comparison | CLIP evaluated on face crops; Qwen2.5-VL-3B evaluated on a 64-image ADM subset |
 | Frontier GenImage pilot | Gemini and Groq-Qwen each completed 90 images; matched CNN/ViT comparison still to finish |
-| Claude GenImage | Three 630-image views completed on the LLM branch; integration and full audit pending |
-| GPT GenImage | Code and 1,890 final image-view outputs on `zero-shot/gpt-genimage`; 1,844 valid scores and 46 invalid outputs; matching/provenance checks pending |
-| Extended ViT confidence/error analysis | Calibration, validation-only recalibration, repeated-error analysis and figures available on `analysis/vit-confidence-errors`; integration pending |
+| Claude GenImage | Three 630-image views complete and integrated; raw scores and overall metrics checked; image/protocol limitations retained |
+| GPT GenImage | 1,890 final rows integrated; 1,844 valid and 46 invalid; corrected pilot/ViT comparisons available; attempt-log audit and CNN matching pending |
+| Extended ViT confidence/error analysis | Integrated and regenerated offline; calibration, validation-only recalibration, repeated-error analysis, figures and tests available |
 | OpenAI face evaluation | 189/189 complete; audited six-model comparison and [local results](results/df40_transfer/openai_face/df40_five_method_v3_v2/README.md) available |
 | Generator objectives | Exploratory eight-holdout, three-seed comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
 | Midterm report | Submitted; final report, poster and demonstration remain |
@@ -49,8 +49,9 @@ For current API scripts, completed pilots, preserved partial runs and the exact
 next steps, use the [LLM evaluation guide](docs/llm-evaluation.md).
 The [result consolidation plan](docs/results-consolidation.md) records the exact
 source commits, integration order and checks needed before combining outputs.
-Our OpenAI face work is pushed to `feature/matched-frontier-comparison`; it and
-the separate team contributions listed above have not yet been merged to `main`.
+The [project contribution and merge review](docs/project-review-2026-11-26.md)
+explains who completed what, the corrected comparisons, duplicate work and
+remaining gaps. The integrated code passes 80 tests and 28 subtests.
 
 The current [research results index](results/df40_transfer/README.md) and
 [team-review report draft](results/df40_transfer/FINAL_REPORT_DRAFT.md) record
@@ -60,9 +61,9 @@ plan; several items now have exploratory or provisional results.
 - **Extend face-manipulation transfer analysis.** Initial saved-model DF40
   results and a separate supervised face-adaptation experiment are available.
   Check source and identity overlap and evaluate additional methods if feasible.
-- **Integrate the existing confidence and failure analysis.** The extended ViT
-  reliability, recalibration, repeated-error and family analyses already exist
-  on `analysis/vit-confidence-errors`; reproduce and review them after merging.
+- **Use the integrated confidence and failure analysis.** The extended ViT
+  reliability, recalibration, repeated-error and family analyses are available
+  under `results/analysis/` and were regenerated offline during integration.
   The equivalent extended CNN study remains optional. Fit any
   calibrator or decision threshold on validation data only. Account for reused
   test images and distinguish dataset repeats from classifier seeds.

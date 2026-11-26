@@ -1,5 +1,13 @@
 # OpenAI GPT zero-shot GenImage evaluation
 
+The recorded `gpt-6.2-sol` run is available in the
+[results summary](../../../../results/llm_eval/openai/RESULTS_SUMMARY.md).
+During integration, the prompt test was aligned with the canonical
+`run_pilot.py`, pilot performance metrics were restricted to common valid
+images, and ViT discovery was changed to corrected k=7/repeat-0 clean exports.
+See the [offline integration review](../../../../results/llm_eval/openai/integration_review/README.md).
+Original exports are preserved; no API requests are needed for these corrections.
+
 Scripts are kept in `code/llm-eval/genimage/openai/`; generated inputs, logs,
 and reports are kept in `results/llm_eval/openai/`. This follows the selected
 workspace location while keeping experiment outputs in the requested results
