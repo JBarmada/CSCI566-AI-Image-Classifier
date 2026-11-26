@@ -1,6 +1,6 @@
 # Generator diversity and transfer in AI-image detection
 
-**Team review draft — 23 November 2026.** This draft summarizes verified
+**Team review draft — updated 26 November 2026.** This draft summarizes verified
 artifacts and identifies preliminary findings. Confirm the final course format,
 authorship, citations, figures and any teammate contributions before submission.
 
@@ -24,7 +24,10 @@ the original detectors have high false-positive rates. A supervised
 face-adapted linear head improves results on the selected FaceForensics++
 sample, but the test had been examined previously and person-level separation
 is unverified. Small zero-shot vision-language and generator-objective
-comparisons provide additional exploratory baselines.
+comparisons provide additional exploratory baselines. On the same exploratory
+189-image face set, a fixed-prompt OpenAI model achieved 33.86% accuracy,
+50.37% balanced accuracy and 0.5783 AUROC, accepting most real crops while
+missing most manipulated crops.
 
 ## Research question and context
 
@@ -118,6 +121,35 @@ unverified; three video-ID pairs were excluded before scoring. The adapted
 head trained on three evaluated methods, so this small follow-up does not
 establish a reliable general adaptation improvement.
 
+A subsequent zero-shot OpenAI Responses API evaluation used model
+`gpt-6.1-terra` on those exact 189 image hashes, one image per request, with a
+fixed face-manipulation prompt and threshold 50/100. All predictions and the
+1,134-row, six-model comparison passed the independent result audits; local
+regeneration reproduced every summary/comparison CSV exactly. No retraining,
+prompt tuning or threshold tuning was performed for this run.
+
+| Model/configuration | Accuracy | Balanced accuracy | AUROC | Real falsely flagged /54 | Fakes detected /135 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| OpenAI, zero-shot | 33.86% | 50.37% | 0.5783 | 6 | 16 |
+| CNN, baseline | 70.90% | 50.19% | 0.5690 | 53 | 133 |
+| CNN, augmented | 60.85% | 55.37% | 0.5227 | 31 | 92 |
+| ViT, baseline | 62.43% | 50.37% | 0.4930 | 42 | 106 |
+| ViT, augmented | 58.73% | 49.44% | 0.5221 | 39 | 96 |
+| ViT, face-adapted (supervised reference) | 69.84% | 67.78% | 0.7583 | 20 | 98 |
+
+OpenAI's real-image false-positive rate was 11.11%, but its fake recall was
+only 11.85%: it missed 119/135 manipulated crops. It detected 6/27 SimSwap,
+3/27 FOMM, 3/27 Wav2Lip, 3/27 InSwapper and 1/27 PIRender crops. The baseline
+CNN and ViT showed more real false alarms and higher fake recall. Because
+135/189 images are fake, always predicting fake would achieve 71.43% accuracy
+but 50% balanced accuracy; raw accuracy does not establish a useful detector
+or a model ranking. The 54 real crops are shared across all method summaries,
+and the crops are linked by source-video groups. OpenAI scores are prompted
+estimates, not calibrated probabilities. This single model/prompt comparison
+does not resolve the candidate's identity or method-label limitations. The
+[complete exports and analysis](openai_face/df40_five_method_v3_v2/README.md)
+preserve the protocol, raw scored responses, per-method metrics and audits.
+
 An additional exploratory still-photo test used 50 IMDB-WIKI real photos and
 50 matched-path outputs for each of InsightFace and Stable Diffusion inpainting
 from DeepFakeFace. At threshold 0.5, the baseline CNN falsely flagged 23/50
@@ -188,8 +220,11 @@ Celebrity identities and source videos may overlap within DF40 subsets.
 The held-out FF video IDs are separated, but person independence is unknown.
 Fake labels follow released dataset provenance and do not prove that each
 frame exhibits a successful manipulation. Face crop preprocessing and source
-differences can create confounding cues. Qwen represents one small open VLM,
-not the proprietary models named as examples in the proposal. The CNN
+differences can create confounding cues. Qwen and OpenAI each represent one
+model with one prompt on small selected subsets, not a broad ranking of open
+or proprietary vision-language systems. OpenAI's low false-positive rate
+accompanied low fake recall; a passed output audit does not certify the
+underlying dataset labels or independence. The CNN
 robustness rerun passed the original replay tolerance; the earlier P100 results
 and their discrepancy are retained for provenance. The regularized objectives
 need more dataset repeats and a fresh test before claims about improvement.

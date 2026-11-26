@@ -33,6 +33,13 @@ Suggested caption for figure 3: “False positives on real images at threshold 0
 
 ## Other results: keep exploratory
 
+- **Matched OpenAI face evaluation:** optional supporting callout, separate
+  from the JPEG lead. On the shared 189-image subset, OpenAI falsely flagged
+  6/54 reals but detected only 16/135 fakes (50.37% balanced accuracy, 0.5783
+  AUROC). Show both classes and the source/label limitations rather than raw
+  accuracy alone. The [audited six-model analysis](../openai_face/df40_five_method_v3_v2/README.md)
+  and updated report draft are available; final poster inclusion remains the
+  team's decision.
 - **Face adaptation:** optional small callout, not a main evidence panel. The supervised head trained on all three evaluated methods and its test was previously inspected; video-ID separation does not establish person independence.
 - **Adversarial and contrastive objectives:** optional small table or discussion. Differences were small and the extension was selected after earlier test results; additional seeds used the same dataset repeat.
 - **Qwen and zero-shot CLIP:** use only if the team includes the relevant teammate's work and has room to explain its protocol. One small Qwen pilot does not represent a broad frontier-model comparison.

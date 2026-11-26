@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "failures": [],
+  "unique_images": 90,
+  "evaluation_rows": 160,
+  "successful_predictions": 90,
+  "prediction_file_sha256": "7d5c1295399d0a6a55706886352efaf7be53c859fd5231372d6b184b46191f66",
+  "unique_manifest_sha256": "0f85370bcef26562ac32fdb5d77c73fedd0c6d266ec16085b430a446a1402ce7",
+  "combined_manifest_sha256": "6b5b37f047240219c40487cd1825c74e4a9dcd92cb60360bfd6e0c2d849b6ae6",
+  "protocol_sha256": "223deb46f48340dec7a959c6e7b8fafe09ecb7e1ba7a65f5b61c6765fc858606",
+  "audited_utc": "2026-11-26T07:19:08.330371+00:00"
+}

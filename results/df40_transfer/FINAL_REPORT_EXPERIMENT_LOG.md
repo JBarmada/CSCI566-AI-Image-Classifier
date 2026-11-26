@@ -1,5 +1,36 @@
 # Final report evidence log: DF40 transfer
 
+## 2026-11-26 — OpenAI face evaluation archived and reproduced
+
+The cleaned OpenAI runner passed a separate two-image smoke and then completed
+all 189 frozen v3 candidate images on CARC using only `OPENAI_API_KEY`. The
+model was `gpt-6.1-terra`; the complete prompt, threshold and settings are frozen
+in [run.json](openai_face/df40_five_method_v3_v2/run.json). The 189 full-run
+responses all completed on their first attempt. They recorded 42,336 input
+tokens and 10,827 output tokens; these totals exclude the separate smoke.
+No model training, prompt tuning, threshold tuning or additional provider calls
+were performed for this face run.
+
+The summary audit passed 189/189 predictions with no failures. The comparison
+matched the accepted P100 CNN/ViT predictions by hashes, labels and method,
+producing 1,134 rows across six model/configuration entries. Completed exports
+were copied from CARC without images or weights. Local checks verified the
+recorded checksums, frozen manifest/protocol, event/checkpoint consistency and
+all 189 first-attempt successes. Regenerating the summary metrics, comparison
+metrics and matched prediction CSVs in a temporary directory reproduced each
+original file byte for byte. Original CARC audit timestamps are preserved.
+
+OpenAI accuracy was 33.86%, balanced accuracy 50.37% and AUROC 0.5783. It
+falsely flagged 6/54 reals and detected only 16/135 fakes. All-fake predictions
+would score 71.43% accuracy and 50% balanced accuracy on this imbalanced set;
+the higher raw baseline CNN accuracy therefore does not establish useful
+discrimination. The report draft now includes class-specific and per-method
+errors alongside the model comparison. The
+[archived analysis](openai_face/df40_five_method_v3_v2/README.md) records the
+full results and unresolved source identity, manipulation-label and paired
+sampling limitations. This is exploratory evidence, not a person-independent
+external benchmark or general LLM ranking.
+
 ## 2026-11-23 — poster preparation and face follow-up planning
 
 The main README, team handoff and report draft were corrected to reflect the

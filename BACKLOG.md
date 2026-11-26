@@ -1,6 +1,6 @@
 # CSCI 566 project backlog
 
-Updated November 23, 2026. The primary clean CNN–ViT benchmark and the V100
+Updated November 26, 2026. The primary clean CNN–ViT benchmark and the V100
 CNN robustness rerun are complete. Focus first on communicating verified
 results and completing course deliverables; additional experiments are choices,
 not prerequisites for reporting the work already done.
@@ -34,8 +34,18 @@ questions about the project.
       available ADM validation predictions are for clean images, so they do not
       establish a 10% false-positive rate on JPEG images. A JPEG-specific check
       needs separate JPEG-processed validation predictions and a frozen rule.
-- [ ] Test frontier models on GenImage **Owner: Shriya.** 
-- [ ] Test frontier models on face deepfakes **Owner: Jeslyn, Aditiya.** 
+- [ ] **Finish matched frontier GenImage comparison. Owner: Shriya.** Gemini and
+      Groq-Qwen each completed the 90-image pilot; reuse those saved predictions
+      with the matching CNN/ViT runs. The 2,520-image attempts are incomplete.
+- [x] **Complete frontier face evaluation. Owners: Jeslyn, Aditya.** On November
+      26, the cleaned OpenAI runner completed a fresh smoke and all 189 frozen
+      images on CARC. Summary and matched CNN/ViT comparison audits passed
+      (1,134 prediction rows). See the [current workflow](docs/llm-evaluation.md).
+- [x] **Archive and analyze the OpenAI face results. Owner: Aditya.** CARC
+      exports are stored locally, regenerated CSVs match exactly, and the
+      [analysis](results/df40_transfer/openai_face/df40_five_method_v3_v2/README.md)
+      and report draft include class-specific errors and dataset limitations.
+      Final poster selection and submitted report integration remain team work.
 - [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel. (probably need more people)** Explain the question, methods,
       results, limitations and conclusion. Test the demo and prepare a backup
       that does not depend on a live CARC or internet connection.
@@ -122,5 +132,6 @@ questions about the project.
   data and generalization limitations are recorded in the
   [experiment log](results/df40_transfer/FINAL_REPORT_EXPERIMENT_LOG.md).
 
-**Recommended next step:** review the draft poster figures and decide whether
-the team can assemble a fresh, traceable face test before the deadlines.
+**Recommended next step:** finish the matched GenImage pilot comparison, then
+review the updated face analysis and report draft for final poster/report use.
+New training or a new dataset is optional; the current face set remains exploratory.

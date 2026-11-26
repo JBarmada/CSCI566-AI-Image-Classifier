@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "manifest_images": 189,
+  "models": 6,
+  "matched_prediction_rows": 1134,
+  "methods": [
+    "fomm",
+    "inswap",
+    "pirender",
+    "simswap",
+    "wav2lip"
+  ],
+  "manifest_sha256": "1f18b71d5d4ebd59ff184d1db06cb33f82f99f034274f6aaaa51b72724afae51",
+  "api_label": "openai",
+  "api_model": "gpt-6.1-terra",
+  "protocol_sha256": "a41a7bc8a55fd036210f8f5b6b7add8ec26c74495603124c4af7952b8531b94b",
+  "api_predictions_sha256": "7a5f28515937a34c484bb36d61d5a12a5c148f82fb1cfb090911850e1f4b5e46",
+  "reference_predictions_sha256": "c618cf9fe9175f54a5b53fa944eeec53ff31a756c40f07fe95bd75789fa980ed",
+  "matched_predictions_sha256": "6a813e770420491e425edf655940daa9e12f8796fdd329ca3bf9a23d840b4071",
+  "metrics_sha256": "09ef79d3412a545a77c10269092a2757b58786a6bee8f5583890c1e9bf49f38d",
+  "audited_utc": "2026-11-26T10:30:54.145396+00:00",
+  "interpretation": "The face-adapted ViT is a secondary reference because it was trained on three evaluated manipulation methods; it is not a zero-shot transfer model."
+}

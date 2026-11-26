@@ -1,4 +1,7 @@
 {
+  "status": "historical_snapshot",
+  "superseded_by": "../../docs/llm-evaluation.md and new_data/fresh_candidate_results_v3/README.md",
+  "note": "Fields below preserve the November 20 state; they are not current job or data status.",
   "checked_date": "2026-11-20",
   "inference_smoke": "not_run",
   "carc_access": "restored_after_user_connected_VPN",

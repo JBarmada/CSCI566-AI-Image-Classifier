@@ -26,6 +26,7 @@ __pycache__/
 venv/
 .env
 .ipynb_checkpoints/
+/results/df40_transfer/*_face/**/RUN.lock
 
 # Slurm outputs and temporary files
 slurm-*.out

@@ -6,6 +6,11 @@ results for existing GenImage-trained CNN and CLIP ViT models. Start with the
 limitations, and the history of decisions. Historical entries describe the
 state at the time; later entries record subsequent work.
 
+Current frontier/API progress and maintained commands are in the
+[LLM evaluation guide](../../docs/llm-evaluation.md). The 189-image OpenAI run
+and matched six-model comparison passed their audits; the
+[local exports and analysis](openai_face/df40_five_method_v3_v2/README.md) are available.
+
 - [Celeb-DF evaluation and per-image predictions](shared_results_v1/README.md)
 - [DeepFakeFace still-photo CNN–ViT evaluation](still_face_v1/README.md)
 - [Still-photo geometry and JPEG follow-up](still_face_geometry_v1/README.md)

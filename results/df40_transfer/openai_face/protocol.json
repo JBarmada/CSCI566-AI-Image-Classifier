@@ -1,0 +1,13 @@
+{
+  "provider": "OpenAI Responses API",
+  "model": "gpt-6.1-terra",
+  "reasoning_effort": "low",
+  "image_detail": "high",
+  "max_output_tokens": 128,
+  "timeout_seconds": 120,
+  "decision_threshold": 50,
+  "prompt": "Analyze the provided face image and estimate the probability that the face has been digitally manipulated by a deepfake or face-manipulation method.\n\nReturn ONLY a JSON object in this format:\n{\"p_manipulated\": 0}\n\np_manipulated must be a number from 0 to 100:\n0 means certainly an unmanipulated photograph; 100 means certainly face-manipulated.\n\nDo not infer the answer from image dimensions, compression, filenames, metadata, celebrity identity, or general image quality. Base the estimate only on visible evidence in the image.",
+  "training": false,
+  "prompting": "zero-shot",
+  "notes": "One frozen prompt and threshold are shared by both face datasets. Labels, paths, method names and existing predictions are never sent to the model. API response storage is disabled."
+}

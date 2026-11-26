@@ -1,8 +1,12 @@
 # Face datasets for the frontier-model comparison
 
 For the teammate running frontier-model tests. These are **recommendations for
-discussion**, not a request to change your existing protocol. We have not run
-the frontier models on these face datasets. Keep the same image hashes when
+discussion**, not a request to change your existing protocol. The later OpenAI
+run completed all 189 five-method images and the matched comparison; see the
+[results](openai_face/df40_five_method_v3_v2/README.md) and
+[current workflow](../../docs/llm-evaluation.md). The separate 150-image
+DeepFakeFace API evaluation remains optional and has not been run.
+Keep the same image hashes when
 comparing against our CNN and ViT predictions.
 
 ## Recommended first comparison: still-photo pilot

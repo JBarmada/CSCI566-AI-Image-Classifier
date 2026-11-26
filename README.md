@@ -10,7 +10,7 @@ fixed.
 
 ## Current status
 
-**Status refreshed November 23, 2026. The midterm report has been submitted.**
+**Status refreshed November 26, 2026. The midterm report has been submitted.**
 Both corrected clean benchmarks are complete: 192 CNN runs and 192 ViT runs,
 with final CARC audits passed. The submitted midterm includes the matched
 192-pair CNN–ViT comparison. The corrected CNN and matched-comparison
@@ -31,6 +31,8 @@ metrics. Saved checkpoints and full raw outputs remain on CARC.
 | CNN k=7 robustness | Eight holdouts audited; four affected holdouts were rerun on V100 and all clean checks passed |
 | DF40 face transfer | Celeb-DF and FaceForensics++ subsets evaluated; a supervised face-adapted head is exploratory |
 | Zero-shot comparison | CLIP evaluated on face crops; Qwen2.5-VL-3B evaluated on a 64-image ADM subset |
+| Frontier GenImage pilot | Gemini and Groq-Qwen each completed 90 images; matched CNN/ViT comparison still to finish |
+| OpenAI face evaluation | 189/189 complete; audited six-model comparison and [local results](results/df40_transfer/openai_face/df40_five_method_v3_v2/README.md) available |
 | Generator objectives | Exploratory eight-holdout, three-seed comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
 | Midterm report | Submitted; final report, poster and demonstration remain |
 
@@ -40,6 +42,8 @@ saved checkpoints and writes separate outputs.
 ## Remaining work
 
 **Current priorities and course deliverables:** see the [project backlog](BACKLOG.md).
+For current API scripts, completed pilots, preserved partial runs and the exact
+next steps, use the [LLM evaluation guide](docs/llm-evaluation.md).
 
 The current [research results index](results/df40_transfer/README.md) and
 [team-review report draft](results/df40_transfer/FINAL_REPORT_DRAFT.md) record
