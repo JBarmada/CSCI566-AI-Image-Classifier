@@ -22,6 +22,16 @@ from integration and independent acceptance.
   smoke remains separate operational evidence. The
   [downloaded exports and analysis](../results/df40_transfer/openai_face/df40_five_method_v3_v2/README.md)
   are stored locally; offline regeneration reproduced the saved CSVs exactly.
+- Claude faces: the same 189 frozen sources completed on November 26 after
+  full image validation and a separate two-image smoke. Both summary and
+  six-model CNN/ViT comparison audits passed. Accuracy 70.37%, balanced accuracy
+  55.93%, AUROC 0.6198; fake recall 89.63%, real specificity 22.22%.
+  See the [Claude face guide](../results/df40_transfer/claude_face/README.md).
+  Only the Anthropic key was used for this new run; OpenAI outputs are preserved.
+  The original Claude face exports are also downloaded locally. Independent
+  offline regeneration reproduced summary and matched CNN/ViT CSVs byte for
+  byte; the response journal, source hashes and frozen membership were checked.
+  See the [run notes](../results/df40_transfer/claude_face/df40_five_method_v3_v1/README.md).
 
 ## Integrated team experiments and original sources
 
@@ -81,11 +91,11 @@ supervised reference, not a zero-shot model.
 
 ## Maintained entry points
 
-- Face API inference: `openai_face/evaluate.py` and `gemini_face/evaluate.py`
+- Face API inference: `openai_face/evaluate.py`, `claude_face/evaluate.py` and `gemini_face/evaluate.py`
   under `results/df40_transfer/`. Shared checks are in `face_eval_common.py`.
 - Face summary and comparison: `gemini_face/summarize.py` and
-  `gemini_face/compare_df40_five_method.py`. Both support OpenAI outputs;
-  always pass the OpenAI protocol and provider label as documented.
+  `gemini_face/compare_df40_five_method.py`. Both support OpenAI and Claude outputs;
+  always pass the matching provider protocol and label as documented.
 - GenImage analysis: `results/llm_eval/compare_matched.py` and
   `results/llm_eval/summarize_gemini.py` reuse the completed pilot predictions.
   The integrated Claude/GPT entry points are inventoried in the consolidation

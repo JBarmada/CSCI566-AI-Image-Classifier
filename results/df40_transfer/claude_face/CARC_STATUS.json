@@ -1,0 +1,54 @@
+{
+  "status": "completed_and_audited_on_CARC",
+  "evidence_scope": "Downloaded original CARC outputs; verified the terminal-recorded prediction checksum, internal audit hashes, source-code hashes, frozen membership, response log and byte-identical offline regenerated CSVs.",
+  "date": "2026-11-26",
+  "dataset": "df40_five_method_v3",
+  "model": "claude-opus-5-5",
+  "images": 189,
+  "real_images": 54,
+  "fake_images": 135,
+  "successful_predictions": 189,
+  "summary_audit_status": "passed",
+  "comparison_audit_status": "passed",
+  "matched_prediction_rows": 1134,
+  "comparison_models": 6,
+  "metrics": {
+    "accuracy": 0.7037037037037037,
+    "balanced_accuracy": 0.5592592592592592,
+    "auroc": 0.6197530864197531,
+    "fake_recall": 0.8962962962962963,
+    "real_specificity": 0.2222222222222222,
+    "tp": 121,
+    "tn": 12,
+    "fp": 42,
+    "fn": 14
+  },
+  "api_usage_full_run": {
+    "responses": 189,
+    "input_tokens": 54999,
+    "output_tokens": 24801,
+    "missing_usage_responses": 0
+  },
+  "smoke": {
+    "successful_predictions": 2,
+    "separate_from_full_run": true
+  },
+  "manifest_sha256": "1f18b71d5d4ebd59ff184d1db06cb33f82f99f034274f6aaaa51b72724afae51",
+  "protocol_file_sha256": "0812cb534d6b73886f3b8a10382b04baf649d6d7d315743b7865fc56c7030aac",
+  "predictions_sha256": "b9934b3864f9b51fb01946d16e55c1f48ea121b712ae1145990e95836bd98163",
+  "carc_code_root": "/project2/yzhao010_1531/csci566-genimage/claude_face_code_v1_20261126",
+  "carc_output_root": "/project2/yzhao010_1531/csci566-genimage/results/df40_transfer/claude_face/df40_five_method_v3_v1",
+  "carc_archive": "/project2/yzhao010_1531/csci566-genimage/claude_face_results_v1_20261126.tgz",
+  "archive_sha256": "87dc30dd4db0560f1d7852b6129f8185e075dcad95a69f3608b770b70bd9b0b2",
+  "execution": {
+    "slurm_allocation": "14875003",
+    "hostname": "e22-10.hpc.usc.edu",
+    "python": "3.11.9",
+    "anthropic_sdk": "0.125.0"
+  },
+  "local_download_status": "complete",
+  "local_regeneration_status": "passed",
+  "credential_handling": "Read through a hidden terminal prompt, exported only in the remote shell, then unset after inference; no key saved in code or outputs.",
+  "checksum_record_correction": "The earlier manually transcribed archive checksum had 63 characters; corrected to the SHA-256 of the downloaded archive after independently checking its saved prediction and audit hashes.",
+  "local_reproduction_record": "df40_five_method_v3_v1/LOCAL_REPRODUCTION.json"
+}

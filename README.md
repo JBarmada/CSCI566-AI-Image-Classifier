@@ -42,6 +42,11 @@ metrics. Saved checkpoints and full raw outputs remain on CARC.
 The accepted clean studies do not need retraining. Robustness evaluation reuses
 saved checkpoints and writes separate outputs.
 
+The [Claude face evaluation](results/df40_transfer/claude_face/README.md) has also
+completed all 189 matched images and passed both audits: accuracy 70.37%,
+balanced accuracy 55.93%, AUROC 0.6198. It detected 121/135 fakes but falsely
+flagged 42/54 real crops; keep these class-specific errors alongside accuracy.
+
 ## Remaining work
 
 **Current priorities and course deliverables:** see the [project backlog](BACKLOG.md).

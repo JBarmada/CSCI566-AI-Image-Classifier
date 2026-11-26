@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "failures": [],
+  "dataset": "df40_five_method_v3",
+  "expected_images": 189,
+  "successful_predictions": 189,
+  "manifest_sha256": "1f18b71d5d4ebd59ff184d1db06cb33f82f99f034274f6aaaa51b72724afae51",
+  "predictions_sha256": "b9934b3864f9b51fb01946d16e55c1f48ea121b712ae1145990e95836bd98163",
+  "protocol_sha256": "0812cb534d6b73886f3b8a10382b04baf649d6d7d315743b7865fc56c7030aac",
+  "audited_utc": "2026-11-26T22:26:14.995853+00:00",
+  "api_usage": {
+    "scope": "All recorded responses in responses.jsonl, including failed attempts",
+    "responses": 189,
+    "input_tokens": 54999,
+    "output_tokens": 24801,
+    "missing_usage_responses": 0
+  }
+}

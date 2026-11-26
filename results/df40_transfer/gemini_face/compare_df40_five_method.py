@@ -133,17 +133,18 @@ def main():
             "results/df40_transfer/gemini_face/df40_five_method_v3/comparison"
         ),
     )
-    parser.add_argument("--api-label", choices=("gemini", "openai"), default="gemini")
+    parser.add_argument("--api-label", choices=("gemini", "openai", "claude"), default="gemini")
     parser.add_argument("--dataset", default="df40_five_method_v3")
     parser.add_argument("--protocol", type=Path,
                         default=Path("results/df40_transfer/gemini_face/protocol.json"))
     args = parser.parse_args()
     protocol = json.loads(args.protocol.read_text(encoding="utf-8"))
-    providers = {"openai": "OpenAI Responses API", "gemini": "Google Gemini API"}
+    providers = {"openai": "OpenAI Responses API", "gemini": "Google Gemini API",
+                 "claude": "Anthropic Messages API"}
     if protocol.get("provider") != providers[args.api_label]:
         parser.error("--api-label must match the provider in --protocol")
-    if args.api_label == "openai" and args.output_dir == parser.get_default("output_dir"):
-        parser.error("Choose an explicit --output-dir for OpenAI results")
+    if args.api_label != "gemini" and args.output_dir == parser.get_default("output_dir"):
+        parser.error("Choose an explicit --output-dir for non-Gemini results")
 
     acceptance = json.loads(args.reference_acceptance.read_text(encoding="utf-8"))
     if acceptance.get("status") != "passed":

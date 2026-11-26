@@ -21,6 +21,14 @@ pending. See the [contribution and merge review](project-review-2026-11-26.md).
   comparison are implemented; 17 focused tests passed before integration and
   the combined suite now passes 80 tests. These changes are included in the
   integrated tree.
+- **Claude face evaluation:** completed on CARC on November 26 after full image
+  checks and a separate two-image smoke. The same 189-source face manifest,
+  prompt and threshold were used as OpenAI. Summary and matched CNN/ViT audits
+  passed; [outputs and commands](../results/df40_transfer/claude_face/README.md)
+  are separate from both OpenAI faces and Claude GenImage. Add this model to
+  the face section of the consolidated analysis, retaining provider settings.
+  Raw exports are now downloaded, and local offline regeneration reproduces
+  all summary and matched-comparison CSVs byte for byte.
 - **Gemini/Groq-Qwen GenImage pilot:** the
   [90-image outputs](../results/llm_eval/README.md) are available on the current
   branch. The 160 legacy task rows reuse the same ten real images eight times.

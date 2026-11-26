@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "dataset": "df40_five_method_v3_smoke",
+  "manifest_sha256": "1f18b71d5d4ebd59ff184d1db06cb33f82f99f034274f6aaaa51b72724afae51",
+  "selected_hashes": [
+    "0c084ce9d59a92377cda2e15390c5e4f17b9929ff5c0a1e6f624c93ce4f711bf",
+    "f8a699e59b2c5006e16a957aef8a33e5c8c7643b752daf461145e9a574829913"
+  ],
+  "protocol": {
+    "provider": "Anthropic Messages API",
+    "model": "claude-opus-5-5",
+    "max_output_tokens": 4000,
+    "timeout_seconds": 120,
+    "decision_threshold": 50,
+    "prompt": "Analyze the provided face image and estimate the probability that the face has been digitally manipulated by a deepfake or face-manipulation method.\n\nReturn ONLY a JSON object in this format:\n{\"p_manipulated\": 0}\n\np_manipulated must be a number from 0 to 100:\n0 means certainly an unmanipulated photograph; 100 means certainly face-manipulated.\n\nDo not infer the answer from image dimensions, compression, filenames, metadata, celebrity identity, or general image quality. Base the estimate only on visible evidence in the image.",
+    "training": false,
+    "prompting": "zero-shot",
+    "notes": "Same frozen face prompt, source image bytes and 50% threshold as OpenAI. One image per isolated request. No labels, paths, method names or existing predictions are sent. Claude model and output budget follow the saved GenImage Claude study; provider preprocessing and output constraints differ. No explicit thinking, temperature or structured-output overrides."
+  },
+  "protocol_sha256": "fd8118c9cb3819fe9b80ff596cda7ea7619ca10d9fb92c41fc78e1e54c07efc0"
+}

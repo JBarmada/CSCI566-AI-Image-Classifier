@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-11-26T22:55:09.173245+00:00",
+  "scope": "Offline regeneration from downloaded predictions and source/protocol/response-log checks; no API calls or image downloads.",
+  "byte_identical_csvs": {
+    "summary/metrics.csv": true,
+    "comparison/metrics.csv": true,
+    "comparison/matched_predictions.csv": true
+  },
+  "event_rows": 189,
+  "csv_event_fields_identical": true,
+  "unique_response_ids": 189,
+  "one_attempt_per_image": true,
+  "returned_models_match_protocol": true,
+  "all_stop_reasons": "end_turn",
+  "frozen_membership_matches_manifest": true,
+  "first_response_utc": "2026-11-26T22:19:42.440698+00:00",
+  "last_response_utc": "2026-11-26T22:25:36.853347+00:00",
+  "response_timestamp_span_seconds": 354.412649,
+  "source_archive_sha256": "87dc30dd4db0560f1d7852b6129f8185e075dcad95a69f3608b770b70bd9b0b2",
+  "csv_sha256": {
+    "summary/metrics.csv": "97b51020aa53db284f9919f1fc584b273a27b7800cb661c9e4eddd18299aa7ff",
+    "comparison/metrics.csv": "fcb820b070f2b394c27e7c8958e3f1b2c1014377fa29f14a1b066c1ce84a7550",
+    "comparison/matched_predictions.csv": "f24369b008bbef9a671918a66d0dd4eee7898036fbf813981090b894562cc9d8"
+  },
+  "predictions_sha256": "b9934b3864f9b51fb01946d16e55c1f48ea121b712ae1145990e95836bd98163",
+  "responses_sha256": "dba0a440c1e7bc741a23862717cea26084ab67f6a501e3ea4abc099f831a388d"
+}

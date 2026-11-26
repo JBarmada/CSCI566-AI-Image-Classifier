@@ -280,7 +280,7 @@ def main():
         run_evaluation(args, rows, protocol, api_key, OpenAI)
 
 
-def run_evaluation(args, rows, protocol, api_key, client_class):
+def run_evaluation(args, rows, protocol, api_key, client_class, evaluate_image=evaluate):
     prompt_sha256 = sha256_bytes(protocol["prompt"].encode("utf-8"))
     events_path = args.output_dir / "responses.jsonl"
     predictions_path = args.output_dir / "predictions.csv"
@@ -298,7 +298,7 @@ def run_evaluation(args, rows, protocol, api_key, client_class):
         for index, row in enumerate(rows, 1):
             if row["sha256"] in completed:
                 continue
-            event = evaluate(
+            event = evaluate_image(
                 row, args.dataset, image_path(row, args.data_root), client,
                 protocol, prompt_sha256, args.retries,
             )

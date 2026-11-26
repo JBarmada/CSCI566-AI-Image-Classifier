@@ -1,4 +1,5 @@
 # Preserve audited CSV bytes and their recorded checksums across checkouts.
 results/df40_transfer/openai_face/df40_five_method_v3_v2/**/*.csv -text whitespace=cr-at-eol
+results/df40_transfer/claude_face/**/*.csv -text whitespace=cr-at-eol
 results/llm_eval/gemini_pilot/summary/metrics.csv -text whitespace=cr-at-eol
 results/llm_eval/groq_pilot/summary/metrics.csv -text whitespace=cr-at-eol

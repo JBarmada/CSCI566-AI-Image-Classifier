@@ -1,0 +1,13 @@
+{
+  "python": "3.11.9 (main, Jun  4 2024, 14:22:24) [GCC 13.3.0]",
+  "executable": "/home1/alanjewa/cnn-python/bin/python",
+  "anthropic_sdk": "0.125.0",
+  "hostname": "e22-10.hpc.usc.edu",
+  "slurm_job_id": "14875003",
+  "source_sha256": {
+    "results/df40_transfer/face_eval_common.py": "43f337e9499814adb76d402c8a780f40f972ab65da951f92cb820de4b78254d5",
+    "results/df40_transfer/openai_face/evaluate.py": "906ea3f7b4f1834db46cdcafae3ca56cd5d1ca526e4fb921b439ee8fbcdc07a6",
+    "results/df40_transfer/claude_face/evaluate.py": "680a8b17ec7c8a4cdb5cc0e2ff9e3bdae82ee8ce50bdbd9cd052a9a205cc8977",
+    "results/df40_transfer/claude_face/protocol.json": "0812cb534d6b73886f3b8a10382b04baf649d6d7d315743b7865fc56c7030aac"
+  }
+}

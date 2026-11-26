@@ -65,6 +65,19 @@ questions about the project.
       [analysis](results/df40_transfer/openai_face/df40_five_method_v3_v2/README.md)
       and report draft include class-specific errors and dataset limitations.
       Final poster selection and submitted report integration remain team work.
+- [x] **Evaluate Claude on the same 189 face images. Owner: Aditya.** The
+      isolated runner, pinned manifest, unchanged face prompt/threshold and
+      resumable checkpoint workflow passed local tests. CARC image validation,
+      a separate two-image smoke, all 189 predictions and the six-model matched
+      comparison passed. Accuracy 70.37%, balanced accuracy 55.93%, AUROC 0.6198;
+      detected 121/135 fakes but falsely flagged 42/54 reals. See the
+      [Claude face guide](results/df40_transfer/claude_face/README.md).
+- [x] **Archive Claude face exports locally and reproduce their CSVs. Owner: Aditya.**
+      Downloaded the full and separate smoke exports, verified prediction/audit
+      hashes, source hashes and response-log consistency. Offline summary and
+      matched CNN/ViT CSVs are byte-identical to CARC. The earlier typed archive
+      checksum was corrected; see the
+      [reproduction record](results/df40_transfer/claude_face/df40_five_method_v3_v1/LOCAL_REPRODUCTION.json).
 - [ ] **Create the consolidated result analysis. Owner: Aditya.** Build a
       source/protocol inventory, regenerate matched metrics, and provide one
       analysis entry point with separate clean, robustness, frontier GenImage
