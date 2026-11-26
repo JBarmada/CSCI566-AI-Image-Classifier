@@ -1,0 +1,19 @@
+{
+  "shared_image_count": 630,
+  "real_image_count": 70,
+  "fake_image_count": 560,
+  "fake_generators": 8,
+  "pilot_intersection_images": 90,
+  "pilot_original_view_decoded_pixel_matches": 0,
+  "pilot_original_view_decoded_pixel_equality_verified": false,
+  "views": [
+    "original",
+    "square",
+    "detector224"
+  ],
+  "prepared_image_view_count": 1890,
+  "dimensions_checked_against_claude_answer_keys": 1890,
+  "original_view_metadata_only_pixel_equality_checked": 630,
+  "all_encoded_png_pixel_hashes_verified": 1890,
+  "manifest": "/Users/jeslynyang/Desktop/cs/CS566/CSCI566-AI-Image-Classifier/results/llm_eval/openai/manifests/input_manifest.csv"
+}
