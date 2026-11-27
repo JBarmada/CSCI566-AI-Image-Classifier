@@ -1,15 +1,38 @@
 # Poster handoff: draft for team review
 
-Jad selected the JPEG error tradeoff as the lead. This is a proposed story and
-figure order for the team, not an approved poster or a claim of a new general
-discovery. The [full story review](STORY_REVIEW.md) includes alternatives.
+On November 27, Jad approved the overarching research question:
 
-## Question and main result
+> **How well do AI-image detectors generalize when the generator, image
+> presentation, and type of manipulation change?**
+
+This question connects the original proposal to the post-midterm experiments.
+The team still needs to agree on the final poster layout, figures and captions.
+
+## Proposed poster structure
+
+1. **Generator change.** Show the matched clean CNN–ViT results as training
+   generator diversity increases at a fixed image budget. Explain the shared
+   holdouts and the differences between the model pipelines.
+2. **Image presentation change.** Show the saved-checkpoint robustness results
+   and/or the matched GPT/Claude image-view comparison. The paired 590-source
+   comparison holds the image IDs fixed across original, square-cropped and
+   detector224 views. Consider the calibration findings as supporting evidence.
+3. **Manipulation change.** Show how the same detectors respond to real and
+   manipulated face crops. Use the verified 189-image comparison, separate
+   real false alarms from fake recall, and label the face-adapted head as
+   supervised. Keep provenance and identity limitations visible.
+
+Use the [independent readiness audit](../../llm_eval/team_readiness_2026-11-26/README.md)
+for the latest matched results, coverage counts and scientific limitations.
+The JPEG error tradeoff and earlier story options below remain available as
+supporting results.
+
+## Supporting robustness result: JPEG error tradeoff
 
 **Question:** When detector accuracy improves on compressed images, what
 happens to false alarms on real images and missed fake images?
 
-**Main figure:** [JPEG tradeoff](06_vit_jpeg_tradeoff.svg)
+**Candidate figure:** [JPEG tradeoff](06_vit_jpeg_tradeoff.svg)
 ([PNG](06_vit_jpeg_tradeoff.png)). For the frozen CLIP ViT-L/14 pipeline at
 threshold 0.5 on JPEG quality 60 images, the augmented model flags fewer real
 images as fake (54.1% → 17.0%) but detects fewer fake images (92.6% → 69.0%).
