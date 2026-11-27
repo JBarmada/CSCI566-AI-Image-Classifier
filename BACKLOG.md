@@ -1,6 +1,6 @@
 # CSCI 566 project backlog
 
-Updated November 26, 2026. The primary clean CNN–ViT benchmark and the V100
+Updated November 27, 2026. The primary clean CNN–ViT benchmark and the V100
 CNN robustness rerun are complete. Focus first on communicating verified
 results and completing course deliverables; additional experiments are choices,
 not prerequisites for reporting the work already done.
@@ -22,14 +22,16 @@ questions about the project.
 
 - [x] **Update the main README and final report draft.** **Owner: Jad.**
       Corrected the stale replay status and linked the [audited comparison](results/df40_transfer/cnn_robustness_v100/README.md).
-- [ ] **Choose the main story and figures.** **Owner: Jad.** Cover generator diversity, the
-      CNN–ViT comparison, JPEG/resize robustness and transfer to manipulated
-      faces. A [draft story and three figures](results/df40_transfer/poster_assets/README.md)
-      are ready for team review; choose which exploratory results fit the poster.
-      Jad selected the JPEG false-alarm versus missed-fake tradeoff as the lead;
-      decide with the team which supporting figures fit. A short
+- [ ] **Finalize the poster story and figures.** **Owner: Jad.** On November 27
+      Jad selected the overarching question: **How well do AI-image detectors
+      generalize when the generator, image presentation, and type of
+      manipulation change?** Anchor the poster in the fixed-budget CNN–ViT
+      generator-diversity experiment, then show verified image-presentation
+      and face-transfer results. Treat JPEG60 class-error tradeoffs and
+      calibration as supporting evidence where space allows. Review figure
+      choices and the complete narrative with the team. See the
       [poster handoff](results/df40_transfer/poster_assets/POSTER_HANDOFF.md)
-      connects the lead figure, candidate supporting panels and limitations.
+      and [latest matched comparisons](results/llm_eval/team_readiness_2026-11-26/README.md).
 - [ ] **Review the three linked research questions.** **Owner: Jad.** Compare
       threshold accuracy with AUROC, examine real-image false positives alongside
       missed fakes, and show variation across held-out generators. See the
