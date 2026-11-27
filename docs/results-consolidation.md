@@ -4,8 +4,7 @@ Updated November 26, 2026 after fetching the team branches. Consolidation is
 feasible using saved predictions: no new training or paid inference is needed
 to assemble and compare the available outputs. This document is the plan and
 source inventory. The distinct active code/result branches are now integrated
-and tested together; the final CNN-inclusive cross-study analysis is still
-pending. See the [contribution and merge review](project-review-2026-11-26.md).
+and tested together; the final CNN-inclusive cross-study analysis has been verified and adopted in the November 27 delivery package. See the [contribution and merge review](project-review-2026-11-26.md).
 
 ## Sources and integration state
 

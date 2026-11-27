@@ -12,6 +12,7 @@ and the [November 26 independent audit](../../results/llm_eval/team_readiness_20
 | [Offline demonstration](demo.html) | Download the HTML and open it locally in a browser. Includes real saved prediction scores, no servers, GPU, images, or API calls. |
 | [Presenter guide](PRESENTER_GUIDE.md) | Two-minute walkthrough, timing, key questions and backup demo plan. |
 | [Final report PDF](final_report_review.pdf) · [editable Markdown](../../results/df40_transfer/FINAL_REPORT_DRAFT.md) | Full review draft with results, methods, caveats, and linked references. |
+| [Contribution statement draft](CONTRIBUTIONS_REVIEW.md) | Evidence-based one-page contribution statement for all seven members to confirm. |
 | [Decision register](REVIEW_DECISIONS.md) | Items for team review and the deferred user discussion. |
 
 ## Experimental evidence
@@ -76,4 +77,4 @@ The proposal and submitted midterm establish the original project scope and
 authorship order. The public [course schedule](https://usc-fortis.github.io/CSCI566-F26/schedule.html)
 lists poster/demo November 30 and final report December 7. Team members must
 check current Piazza/Gradescope submission instructions, confirm poster
-dimensions, confirm authorship/contribution statement, and rehearse.
+dimensions, approve the contribution statement, rehearse and complete the required peer evaluation. The [syllabus](https://usc-fortis.github.io/CSCI566-F26/syllabus.pdf) describes a roughly five-minute poster visit, individual questions, a research-paper-style report and the agreed one-page contribution statement.

@@ -96,6 +96,7 @@ The [final delivery package](docs/final_delivery/README.md) contains the actual 
       and evidence links. Use saved outputs; no new API calls or training are
       required for consolidation. Follow the [plan](docs/results-consolidation.md).
 - [ ] **Team-review the completed poster and demo.** **Owners: Jeslyn and Rachel.** Review the completed artifacts, rehearse the demo, and confirm course logistics. A tested standalone replay is available.
+- [ ] **Approve the required one-page contribution statement.** All seven members should review [the draft](docs/final_delivery/CONTRIBUTIONS_REVIEW.md), correct attributions, account for non-Git work and confirm the final agreed text.
 - [ ] **Practice as a team.** Make sure each member can explain the models,
       findings, limitations and their own contribution.
 

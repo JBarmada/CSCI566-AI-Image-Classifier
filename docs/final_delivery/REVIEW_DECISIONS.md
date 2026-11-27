@@ -17,7 +17,7 @@ does not require immediate user input.
 | Real errors | Report tests without claiming camera cause | Geometry and JPEG95 tests on the same still-face subset do not isolate acquisition effects | Rachel should verify phrasing and add evidence only if available |
 | Poster format | 48 × 36 landscape PDF + editable SVG | Reversible format assumption; course public schedule did not establish dimensions | Confirm printing/submission requirements on Piazza |
 | Demo | Tested local replay, clearly labeled, no provider or GPU dependency | All source scores retained; browser smoke passed | Rehearse; add live checkpoint inference only if required and verified |
-| Final report | Consolidated editable Markdown plus 11-page review PDF | Full methods, limitations, class errors, F1/AUROC, matched frontier and calibration | Confirm prescribed format, author order, contribution statement, references |
+| Final report | Consolidated editable Markdown plus 11-page review PDF | Full methods, limitations, class errors, F1/AUROC, matched frontier and calibration | Confirm prescribed format, author order, [contribution statement](CONTRIBUTIONS_REVIEW.md), references |
 
 No new training, data downloads, or API calls were necessary. Evidence and
 scope are in the [proposal/midterm coverage audit](../../results/llm_eval/team_readiness_2026-11-26/README.md).
