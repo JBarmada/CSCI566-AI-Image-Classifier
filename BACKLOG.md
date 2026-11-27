@@ -54,8 +54,13 @@ questions about the project.
       sides, and corrected ViT k=7/repeat-0 matching covers both classes across
       all eight holdouts. Original outputs are preserved; use the
       [corrected comparisons](results/llm_eval/openai/integration_review/README.md).
-      Obtain matching CNN predictions from CARC and the GPT attempt log
-      from its owner. The separate 2,520-image attempts remain incomplete.
+      Independent review recovered all 16 CNN k=7/repeat-0 prediction exports
+      from the shared Drive, verified their archived SHA-256 checksums, and
+      matched CNN/ViT to the 612-source GPT/Claude detector224 study and the
+      88-source four-frontier pilot. See the [new matched results and readiness audit](results/llm_eval/team_readiness_2026-11-26/README.md).
+      Review and adopt these tables in the consolidated analysis; obtain the
+      GPT attempt log from its owner or retain that provenance limitation.
+      The separate 2,520-image attempts remain incomplete.
 - [x] **Complete frontier face evaluation. Owners: Jeslyn, Aditya.** On November
       26, the cleaned OpenAI runner completed a fresh smoke and all 189 frozen
       images on CARC. Summary and matched CNN/ViT comparison audits passed
