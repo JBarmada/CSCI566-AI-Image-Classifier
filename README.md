@@ -1,6 +1,6 @@
 # CSCI566 - AI-Generated Image Detection
 
-Does training on more image generators improve detection of an unseen generator?
+How well do AI-image detectors generalize when generators, image presentation, and manipulation change?
 This project compares a fully fine-tuned, ImageNet-pretrained ResNet-50 with a
 frozen CLIP ViT-L/14 encoder and supervised linear classifier. Both models use
 the same corrected GenImage manifests, held-out-generator tests and experiment
@@ -10,7 +10,7 @@ fixed.
 
 ## Current status
 
-**Status refreshed November 26, 2026. The midterm report has been submitted.**
+**Status refreshed November 27, 2026. The midterm report has been submitted.**
 Both corrected clean benchmarks are complete: 192 CNN runs and 192 ViT runs,
 with final CARC audits passed. The submitted midterm includes the matched
 192-pair CNN–ViT comparison. The corrected CNN and matched-comparison
@@ -31,13 +31,14 @@ metrics. Saved checkpoints and full raw outputs remain on CARC.
 | CNN k=7 robustness | Eight holdouts audited; four affected holdouts were rerun on V100 and all clean checks passed |
 | DF40 face transfer | Celeb-DF and FaceForensics++ subsets evaluated; a supervised face-adapted head is exploratory |
 | Zero-shot comparison | CLIP evaluated on face crops; Qwen2.5-VL-3B evaluated on a 64-image ADM subset |
-| Frontier GenImage pilot | Gemini and Groq-Qwen each completed 90 images; matched CNN/ViT comparison still to finish |
+| Frontier GenImage pilot | Gemini and Groq-Qwen each completed 90 images; 88-source common valid comparison with CNN/ViT verified |
 | Claude GenImage | Three 630-image views complete and integrated; raw scores and overall metrics checked; image/protocol limitations retained |
-| GPT GenImage | 1,890 final rows integrated; 1,844 valid and 46 invalid; corrected pilot/ViT comparisons available; attempt-log audit and CNN matching pending |
+| GPT GenImage | 1,890 final rows integrated; 1,844 valid and 46 invalid; corrected pilot/ViT comparisons available; CNN/ViT matching verified; attempt-level log not available for independent audit |
 | Extended ViT confidence/error analysis | Integrated and regenerated offline; calibration, validation-only recalibration, repeated-error analysis, figures and tests available |
 | OpenAI face evaluation | 189/189 complete; audited six-model comparison and [local results](results/df40_transfer/openai_face/df40_five_method_v3_v2/README.md) available |
 | Generator objectives | Exploratory eight-holdout, three-seed comparison of binary, generator-adversarial, and supervised contrastive feature adapters |
-| Midterm report | Submitted; final report, poster and demonstration remain |
+| Claude face evaluation | 189/189 completed; all seven distinct matched configurations verified |
+| Deliverables | Review-ready poster PDF/SVG, offline demo, consolidated report PDF/Markdown; team review and course submission pending |
 
 The accepted clean studies do not need retraining. Robustness evaluation reuses
 saved checkpoints and writes separate outputs.
@@ -46,6 +47,10 @@ The [Claude face evaluation](results/df40_transfer/claude_face/README.md) has al
 completed all 189 matched images and passed both audits: accuracy 70.37%,
 balanced accuracy 55.93%, AUROC 0.6198. It detected 121/135 fakes but falsely
 flagged 42/54 real crops; keep these class-specific errors alongside accuracy.
+
+## Final delivery package
+
+The [poster, demo, and final-report review package](docs/final_delivery/README.md) includes editable source, reproducible figures, test evidence, presenter notes and decisions for team discussion.
 
 ## Remaining work
 

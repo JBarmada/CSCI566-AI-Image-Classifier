@@ -18,6 +18,10 @@ lists the poster and demo session on **November 30** and the final report due
 any updates. Everyone attending the poster session should be ready to answer
 questions about the project.
 
+## Review-ready artifacts (November 27)
+
+The [final delivery package](docs/final_delivery/README.md) contains the actual poster PDF/SVG, browser-verified offline demo, report PDF/Markdown and a presenter guide. The [decision register](docs/final_delivery/REVIEW_DECISIONS.md) records unresolved scientific and course details. Research consolidation and draft creation are complete; team approval, practice and submission remain open.
+
 ## Before the poster session
 
 - [x] **Update the main README and final report draft.** **Owner: Jad.**
@@ -49,7 +53,7 @@ questions about the project.
       prompt-test incompatibility and two comparison errors. The combined
       suite passes 80 tests and 28 subtests. Core CNN/ViT training code is
       unchanged. Older setup branches have no unmatched code patches.
-- [ ] **Finish matched frontier GenImage comparison. Owner: Shriya.** Gemini and
+- [x] **Finish matched frontier GenImage comparison. Owner: Shriya.** Gemini and
       Groq-Qwen completed the 90-image pilot; Claude scored a 630-image superset
       in three views, and GPT now has 1,844 valid / 1,890 image-view outputs.
       The corrected GPT pilot comparison now uses 88 valid images on both
@@ -60,7 +64,7 @@ questions about the project.
       from the shared Drive, verified their archived SHA-256 checksums, and
       matched CNN/ViT to the 612-source GPT/Claude detector224 study and the
       88-source four-frontier pilot. See the [new matched results and readiness audit](results/llm_eval/team_readiness_2026-11-26/README.md).
-      Review and adopt these tables in the consolidated analysis; obtain the
+      Adopted these tables in the consolidated analysis; obtain the
       GPT attempt log from its owner or retain that provenance limitation.
       The separate 2,520-image attempts remain incomplete.
 - [x] **Complete frontier face evaluation. Owners: Jeslyn, Aditya.** On November
@@ -85,21 +89,19 @@ questions about the project.
       matched CNN/ViT CSVs are byte-identical to CARC. The earlier typed archive
       checksum was corrected; see the
       [reproduction record](results/df40_transfer/claude_face/df40_five_method_v3_v1/LOCAL_REPRODUCTION.json).
-- [ ] **Create the consolidated result analysis. Owner: Aditya.** Build a
-      source/protocol inventory, regenerate matched metrics, and provide one
+- [x] **Create the consolidated result analysis. Owner: Aditya.** Built a
+      source/protocol inventory, regenerated matched metrics, and provided one
       analysis entry point with separate clean, robustness, frontier GenImage
       and face sections. Include coverage, class-specific errors, limitations
       and evidence links. Use saved outputs; no new API calls or training are
       required for consolidation. Follow the [plan](docs/results-consolidation.md).
-- [ ] **Create the poster and prepare the demo.** **Owners: Jeslyn and Rachel. (probably need more people)** Explain the question, methods,
-      results, limitations and conclusion. Test the demo and prepare a backup
-      that does not depend on a live CARC or internet connection.
+- [ ] **Team-review the completed poster and demo.** **Owners: Jeslyn and Rachel.** Review the completed artifacts, rehearse the demo, and confirm course logistics. A tested standalone replay is available.
 - [ ] **Practice as a team.** Make sure each member can explain the models,
       findings, limitations and their own contribution.
 
 ## Before the final report
 
-- [ ] **Finish the report draft.** Integrate the audited robustness results and
+- [x] **Finish the report review draft.** Integrated the audited robustness results and
       the team's verified contributions.
 - [ ] **Verify every figure, table and number** **Owner: Rachel.** against saved results, including
       sample counts, decision thresholds and aggregation methods.
@@ -186,7 +188,7 @@ questions about the project.
 - Cross-branch inventory: Claude's three 630-image GenImage views, the new GPT
   GenImage implementation/results (`7be92ec`) and the extended ViT analysis
   are now integrated. The combined suite passes 80 tests; the remaining
-  provenance and CNN matching work is tracked above. This is not a blanket
+  attempt-log provenance is tracked above; CNN matching has been verified. This is not a blanket
   acceptance of every experimental interpretation or historical entry point.
 - Corrected clean CNN and ViT benchmarks and the 192-pair comparison.
 - Eight-holdout ViT JPEG/resize robustness and the corresponding CNN rerun.
@@ -198,7 +200,7 @@ questions about the project.
   data and generalization limitations are recorded in the
   [experiment log](results/df40_transfer/FINAL_REPORT_EXPERIMENT_LOG.md).
 
-**Recommended next step:** retrieve CNN exports and the GPT attempt log, finish
-the remaining common comparisons, then regenerate one clear analysis for
-final poster/report use. Keep GenImage and face results separate.
+**Recommended next step:** review the new poster, demo and consolidated report;
+retrieve the GPT attempt log if available, then confirm the submission
+requirements and practice together. Keep GenImage and face results separate.
 New training or a new dataset is optional; the current face set remains exploratory.

@@ -142,3 +142,7 @@ labeled; and all report numbers link to their evidence. Preserve images and
 weights on their existing storage and keep credentials out of the repository.
 The integration preserved original exports and added separate corrected
 comparisons. No new API key, provider call or training job was used.
+
+## November 27 completion note
+
+The November 26 [independent audit](../results/llm_eval/team_readiness_2026-11-26/README.md) verified the matched CNN exports and regenerated the common comparisons. The [final delivery package](final_delivery/README.md) adopts these results in the consolidated report, poster and offline demo. The GPT original attempt log remains unavailable; do not claim its retries, settings or cost were independently verified.

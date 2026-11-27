@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CSCI 566 | Saved-prediction demo</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#142c3d;background:#f2f6f8;line-height:1.5}
+body{margin:0}header{background:#142c3d;color:white;padding:28px max(24px,calc((100% - 1150px)/2))}
+h1{margin:0;font-size:clamp(24px,4vw,38px)}header p{margin:.4rem 0;color:#d2e5ee}
+main{max-width:1150px;margin:24px auto;padding:0 20px}section{padding:22px;margin:16px 0;background:white;border-radius:12px;border:1px solid #d9e3e9}
+.controls{display:flex;gap:20px;flex-wrap:wrap;align-items:center}label{font-weight:650}select,input{font:inherit;padding:7px}
+h2{margin:0 0 12px;color:#155e70}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:9px;border-bottom:1px solid #d9e3e9}
+th{font-size:.9rem;color:#506675}td:nth-child(n+2){font-variant-numeric:tabular-nums}small,.muted{color:#506675}
+.note{background:#ebf5f5;border-left:5px solid #155e70;padding:12px 16px}.bad{color:#a83d15;font-weight:700}.good{color:#216845;font-weight:700}
+.bar{display:inline-block;vertical-align:middle;background:#27658b;height:.7em;border-radius:4px;min-width:2px}
+@media(max-width:680px){section{padding:12px}table{font-size:.82rem}th,td{padding:5px}}
+</style></head><body>
+<header><h1>Can detectors generalize?</h1><p>CSCI 566 · Explore the team's actual saved scores</p></header>
+<main>
+<div class="note"><strong>Offline replay, not live inference.</strong> Scores are saved predictions from the audited studies. No images, provider requests, GPU, or model downloads are required. Threshold changes are illustrative on the already-inspected test sets; they are not calibrated deployment recommendations.</div>
+<section><h2>Generator diversity at a fixed image budget</h2><p>Clean held-out-generator accuracy, weighted equally over eight holdouts (three dataset repeats each).</p><table><thead><tr><th>Training generators</th><th>Training mode</th><th>CNN accuracy</th><th>ViT accuracy</th></tr></thead><tbody id="diversity"></tbody></table></section><section><h2>1. Choose a study and decision threshold</h2>
+<div class="controls"><label>Study <select id="study"></select></label>
+<label>Threshold <input id="threshold" type="range" min="0" max="100" value="50"><output id="thresholdValue">50%</output></label>
+<button id="reset">Reset to original threshold</button></div>
+<p id="description" class="muted"></p></section>
+<section><h2>2. Compare the same sources</h2><p>Balanced accuracy weights real and fake classes equally. Real false alarms and fake recall are reported separately.</p>
+<table><thead><tr><th>Model / configuration</th><th>Real false alarms</th><th>Fake recall</th><th>Balanced accuracy</th></tr></thead><tbody id="summary"></tbody></table></section>
+<section><h2>3. Inspect an individual saved prediction</h2>
+<div class="controls"><label>Source <select id="sample"></select></label><span id="truth"></span></div>
+<table><thead><tr><th>Model / configuration</th><th>Fake score</th><th>Decision at threshold</th></tr></thead><tbody id="individual"></tbody></table>
+<p class="muted">IDs are the first 12 characters of source SHA-256. Prompted VLM scores are not calibrated probabilities. The face-adapted head is supervised and exploratory.</p></section>
+<section><h2>Presenter note</h2><p>Compare the original and detector224 GPT/Claude rows, then switch to face crops. CNN baseline tends to flag nearly everything as fake; GPT tends to accept most faces as real. Lowering a threshold can increase detections while increasing false alarms. The demo intentionally preserves the original shared image membership.</p>
+<p>Source: November 26 team readiness audit and its saved prediction files. Face identity and some mirror-label provenance remain unverified. Test labels should never be used to choose a production threshold.</p></section>
+</main><script>
+const DATA = /*SAVED_DATA*/;
+const DIVERSITY = /*DIVERSITY_DATA*/;
+const $ = id => document.getElementById(id);
+const pct = v => (100*v).toFixed(1)+"%";
+$("diversity").innerHTML = DIVERSITY.map(r=>"<tr><td>"+r.k+"</td><td>"+r.mode+"</td><td>"+pct(r.cnn_accuracy)+"</td><td>"+pct(r.vit_accuracy)+"</td></tr>").join("");
+const pretty = s => s.replaceAll("_"," ").replace("openai","GPT").replace("cnn","CNN").replace("vit","ViT").replace("claude","Claude");
+function stats(rows, key, t) {
+  const reals=rows.filter(r=>r.label===0), fakes=rows.filter(r=>r.label===1);
+  const fp=reals.filter(r=>r.scores[key]>=t).length, tp=fakes.filter(r=>r.scores[key]>=t).length;
+  return {fp,tp,nReal:reals.length,nFake:fakes.length,balanced:(1-fp/reals.length+tp/fakes.length)/2};
+}
+function render(){
+  const rows=DATA[$("study").value], t=Number($("threshold").value)/100;
+  $("thresholdValue").textContent=pct(t);
+  const keys=Object.keys(rows[0].scores);
+  $("summary").innerHTML=keys.map(k=>{const s=stats(rows,k,t);
+    return "<tr><td>"+pretty(k)+"</td><td>"+s.fp+"/"+s.nReal+" ("+pct(s.fp/s.nReal)+")</td><td>"+s.tp+"/"+s.nFake+" ("+pct(s.tp/s.nFake)+")</td><td>"+pct(s.balanced)+"</td></tr>";}).join("");
+  renderSample();
+}
+function renderSample(){
+  const r=DATA[$("study").value].find(r=>r.id===$("sample").value);
+  if(!r)return;
+  const t=Number($("threshold").value)/100;
+  $("truth").textContent="Recorded label: "+(r.label?"fake":"real")+" · "+r.group;
+  $("individual").innerHTML=Object.entries(r.scores).map(([k,v])=>{
+    const p=Number(v>=t);
+    return "<tr><td>"+pretty(k)+"</td><td>"+pct(v)+" <span class='bar' style='width:"+Math.round(v*90)+"px'></span></td><td class='"+(p===r.label?"good":"bad")+"'>"+(p?"fake":"real")+" ("+(p===r.label?"correct":"error")+")</td></tr>";
+  }).join("");
+}
+function selectStudy(){
+  const rows=DATA[$("study").value];
+  $("description").textContent=$("study").value.startsWith("GenImage")
+    ?"590 common valid sources (70 real, 520 fake). Same image IDs for both models and all three views. Forty of 630 sources lack at least one valid GPT score."
+    :"189 face crops (54 real, 135 fake; five methods). Same image IDs for all seven configurations. The face-adapted reference was trained on related methods.";
+  $("sample").replaceChildren(...rows.map(r=>new Option(r.id+" · "+(r.label?"fake":"real")+" · "+r.group,r.id)));
+  render();
+}
+$("study").replaceChildren(...Object.keys(DATA).map(s=>new Option(s,s)));
+$("study").addEventListener("change",selectStudy);
+$("threshold").addEventListener("input",render);
+$("sample").addEventListener("change",renderSample);
+$("reset").addEventListener("click",()=>{$("threshold").value=50;render();});
+selectStudy();
+</script></body></html>

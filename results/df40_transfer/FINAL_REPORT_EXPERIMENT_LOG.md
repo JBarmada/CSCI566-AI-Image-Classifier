@@ -634,3 +634,7 @@ does not show that hardware alone caused the numerical differences. Per-method
 metrics and the complete [comparison](new_data/fresh_candidate_results_v3/cpu_gpu_comparison.csv)
 are preserved for review.
 
+
+# November 27: poster, report and offline demo consolidation
+
+Created the [final delivery package](../../docs/final_delivery/README.md) from the November 26 matched audit and existing clean, robustness and face prediction tables. Figure scripts generate editable SVG and PNG; the 48 x 36 inch poster PDF was rendered and inspected. The report now includes all matched frontier results, Claude face, calibration and F1/AUROC. Verified the offline saved-score browser demo on 590 paired GenImage and 189 face sources, including threshold reset and individual-score display; it does not run inference. No new training or provider calls. Course format, author contributions, and unresolved provenance remain team-review items in the decision register.

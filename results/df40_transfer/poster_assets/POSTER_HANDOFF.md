@@ -6,7 +6,7 @@ On November 27, Jad approved the overarching research question:
 > presentation, and type of manipulation change?**
 
 This question connects the original proposal to the post-midterm experiments.
-The team still needs to agree on the final poster layout, figures and captions.
+A complete [review-ready poster PDF and SVG](../../../docs/final_delivery/README.md), new source-linked figures, report and browser-verified demo are now available. Team review of the final layout and captions remains open.
 
 ## Proposed poster structure
 
