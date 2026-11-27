@@ -15,7 +15,7 @@ Reviewed GitHub main at `b5c0f483c463db50e3a5fd4835e1a3f4c8c7da69`. The five act
 | Multimodal GenImage | Completed 90-source Gemini/Groq-Qwen pilot, 630-source Claude/GPT three-view runs (46 explicit GPT invalid scores). The new offline matched comparisons below include CNN and ViT. |
 | Domain-adversarial/contrastive learning | Exploratory feature-adapter studies complete (all eight holdouts, three optimization seeds, one dataset repeat); no established winning objective. |
 
-See the [submitted-project results draft](../df40_transfer/FINAL_REPORT_DRAFT.md), [team contribution and merge review](../../docs/project-review-2026-11-26.md) and [analysis guide](../../docs/results-consolidation.md).
+See the [submitted-project results draft](../../df40_transfer/FINAL_REPORT_DRAFT.md), [team contribution and merge review](../../../docs/project-review-2026-11-26.md) and [analysis guide](../../../docs/results-consolidation.md).
 
 ## New matched GenImage comparisons
 
