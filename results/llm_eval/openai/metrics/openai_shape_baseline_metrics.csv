@@ -1,0 +1,2 @@
+n_valid,n_unique_images,n_real,n_fake,accuracy,precision,recall,specificity,f1,balanced_accuracy,auroc,tn,fp,fn,tp,real_false_positive_rate,fake_miss_rate,baseline,view,n_expected,n_unique_source_images
+630,630,70,560,0.9984126984126984,0.9982174688057041,1.0,0.9857142857142858,0.9991079393398752,0.9928571428571429,0.9928571428571429,69,1,0,560,0.014285714285714285,0.0,shape-only (square = fake),original,630,630

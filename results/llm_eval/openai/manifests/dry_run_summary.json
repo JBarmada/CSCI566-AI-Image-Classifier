@@ -1,0 +1,18 @@
+{
+  "mode": "dry-run",
+  "model_id_requested": "gpt-6.2-sol",
+  "configuration_sha256": "40be0eda0317a7908e097d99f6df10ce1a1b2749cfbeb79d1677ea8a1bba1f93",
+  "planned_manifest_rows": 1890,
+  "already_completed_for_exact_configuration": 0,
+  "requests_planned": 1890,
+  "views": {
+    "original": 630,
+    "square": 630,
+    "detector224": 630
+  },
+  "estimated_total_evaluations": 1890,
+  "estimated_retries_excluded": true,
+  "output_file": "/Users/jeslynyang/Desktop/cs/CS566/CSCI566-AI-Image-Classifier/results/llm_eval/openai/logs/requests_gpt-6.2-sol_40be0eda0317.jsonl",
+  "api_key_required": false,
+  "paid_requests_made": 0
+}

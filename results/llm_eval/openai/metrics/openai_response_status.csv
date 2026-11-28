@@ -1,0 +1,4 @@
+view,n_expected,success,refusal,invalid_output,api_failure,api_failed_attempts,missing
+original,630,617,0,13,0,0,0
+square,630,615,0,15,0,1,0
+detector224,630,612,0,18,0,2,0
